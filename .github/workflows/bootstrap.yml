@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - ".bootstrap/main.tar.xz"
+      - ".bootstrap/**"
       - ".github/workflows/bootstrap.yml"
 
 permissions:
