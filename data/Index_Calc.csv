@@ -1,0 +1,13 @@
+﻿HO600-WIP — Index Calculation Locked Until Basket Seal,,,,,
+,,,,,
+Index,Status,Formula concept,Precondition,Current value,Meaning
+HO600-ItemEW,LOCKED,Geometric / arithmetic summary of 600 sealed concepts,Basket_600 = 600 and all evidence gates PASS,N/A,Transparent item-equal sensitivity.
+HO600-Stratified,LOCKED,Item → subcategory → 7 domains → HO600,Same as above,N/A,Primary headline design; sample counts do not become weights.
+HO600-ExpenditureWeighted,R&D ONLY,Requires compatible private household expenditure vector,Not available,N/A,Must not be fabricated.
+,,,,,
+,,,,,
+Pre-seal invariant,Value,State,Why,Next trigger,Forbidden
+Price visibility during selection,Hidden from Candidate_Pool,LOCKED,Prevents cherry-picking by observed change.,Basket seal,Using price change to select items
+Existing evidence,Migrated + Batch 1–6 exact additions,PASS,166 Exact-2020 economic concepts; Basket remains unsealed and headline calculation remains locked.,Continue shortfall-driven search,Calculating headline before seal
+Basket size,600,TARGET,Fixed final concept count.,All quotas/caps pass,Changing target to fit available data
+Calculation,Not started,CORRECT,No headline before seal.,Basket seal,Premature index publication

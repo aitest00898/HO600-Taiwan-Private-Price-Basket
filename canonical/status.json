@@ -1,0 +1,16 @@
+{
+  "project": "HO600 Taiwan Private Historical-Observable Price Basket",
+  "stage": "HO600-WIP / Shortfall-driven Search",
+  "canonical_batch": 8,
+  "formal_exact_concepts": 181,
+  "target_concepts": 600,
+  "remaining_concepts": 419,
+  "candidate_concepts": 418,
+  "evidence_records": 1566,
+  "basket_sealed": false,
+  "index_status": "LOCKED",
+  "selection_blind_to_price_change": true,
+  "canonical_workbook": "workbook/HO600-WIP_shortfall-search_batch8.xlsx",
+  "canonical_workbook_sha256": "c01bce376e45e715d9b8eac4f353c61d20b5973e1e1c4e32f90a6e512bed40b9",
+  "source_of_truth_rule": "Only an exported, re-imported, validated canonical workbook on main may change formal progress. Research branches and conversation checkpoints are non-canonical."
+}

@@ -1,0 +1,21 @@
+﻿Check,Result,Expected,Status,Interpretation
+Active sheets,7,7,PASS,Architecture unchanged; no new sheet/phase added.
+Legacy observation rows preserved,500,500,PASS,No legacy identity deleted.
+Legacy economic concepts preserved,365,365,PASS,Existing research remains available.
+Candidate concepts now,418,418,PASS,414 Batch7 concepts + 4 Batch8 exact concepts.
+Exact-2020 economic concepts,181,181,PASS,177 Batch7 + 4 Batch8 direct pairs.
+Legacy Exact concepts deleted,0,0,PASS,Grandfathered policy respected.
+Batch8 exact concepts added,4,4,PASS,Only direct Exact-2020↔2026 normal/list/base references admitted.
+Batch8 home/storage exact concepts added,2,2,PASS,Two same-product-number IKEA concepts reduce a major home shortfall without semantic matching.
+Batch8 shared-transport exact concepts added,1,1,PASS,GoShare after-six-minute normal riding tariff adds a second distinct rate component.
+Batch8 private-transport exact concepts added,1,1,PASS,Banqiao→Tainan THSR standard full fare extends the existing route family.
+IKEA cumulative Exact concepts,8,<=8,PASS,Brand reference cap reached; FREEZE NEW IKEA admissions.
+IKEA × 家居收納 Exact concepts,5,<=5,PASS,Brand×subcategory reference cap reached; FREEZE NEW in this cell.
+GoShare product-family concepts,2,<=2,PASS,Product-family reference cap reached; FREEZE additional GoShare tariff variants.
+THSR reused 2020 source cumulative concepts,6,<=6,PASS,Historical-source reference cap reached; FREEZE NEW concepts from this PTT source.
+Batch8 promotion/effective prices admitted,0,0,PASS,Only explicitly stated normal/original/base prices were recorded; promo prices excluded.
+Candidate_Pool price/change columns,0,0,PASS,Selection surface remains blind to observed prices and price changes.
+Evidence records,1566,1566,PASS,"1,558 Batch7 records + 8 Batch8 evidence records."
+Remaining exact concepts needed,419,419,PASS,600 final target unchanged.
+Basket sealed,False,False,PASS,Correct WIP state.
+Index calculation status,LOCKED,LOCKED,PASS,No headline before basket seal.

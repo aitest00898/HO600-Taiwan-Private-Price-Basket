@@ -1,0 +1,27 @@
+﻿HO600-WIP — Shortfall Search Batch 8,,,
+,,,
+Field,Value,State,Meaning
+Project goal,600 historically observable balanced economic concepts,WIP,Every final item must have Exact-2020 + Exact-2026 normal/base/list price.
+Migration source,TPI-500 v1.0 RC1,SEALED SOURCE,48ea05cb52c9de1fedc99d01fdf609caad3c532ea0d9ce2460f453a0281dccd7
+Legacy observation rows migrated,500,PASS,No existing observation identity discarded.
+Legacy economic concepts migrated,365,PASS,Quote-level duplicates consolidated to economic concepts.
+Prequalified Exact-2020 concepts,181,INCUMBENT CANDIDATES,"These are candidates, not guaranteed final members."
+Minimum additional exact concepts needed,419,LOWER BOUND,Actual search need can be higher after evidence review; final target remains 600.
+Candidate selection visibility,Prices/price-change hidden in Candidate_Pool,LOCKED,Selection remains blind to price change.
+Exact concepts added in current search batch,4,PASS,"Batch 8 added 4 direct exact concepts in underrepresented home/transport cells: 2 IKEA fixed-product-number items, 1 GoShare normal riding-rate component, and 1 THSR OD pair; no weak current-only candidate was force-upgraded."
+Lifecycle,HO600-WIP,ACTIVE,"Next step is shortfall-driven candidate expansion, not more architecture."
+,,,
+,,,
+Continuation Contract,Current decision,Next valid action,Forbidden
+Legacy data,PRESERVE ALL,Use migrated concepts/evidence before new search,Starting over from zero
+Candidate grain,Economic concept,Add new concepts only where balance requires them,Counting retailer quotes as separate items
+Existing Exact-2020,GRANDFATHERED CANDIDATES,Keep even if legacy quota/brand/source cap is exceeded; do not auto-prune,Deleting already-researched valid pairs solely to satisfy a quota
+New research,Batch 8 completed — 4 exact concepts,"Continue shortfall search with clothing first, then home/transport/education; current-only Exact-2020 first. IKEA new admissions, IKEA×home-storage, GoShare family, and the reused THSR 2020 source are now frozen at reference caps.",Adding more to frozen brand/source/product-family surfaces or force-matching mismatched historical generations
+Basket_600,NOT SEALED,Seal after 600 concepts and evidence gates pass; legacy incumbents remain eligible,Calculating headline before seal
+,,,
+,,,
+Legacy-Preservation Rule,Decision,Consequence,Reason
+Quota overage,KEEP,Existing valid Exact-2020 concepts are not deleted; overage is diluted by future additions elsewhere.,Preserves prior research investment.
+Brand/source overage,KEEP LEGACY / FREEZE NEW,Past valid concepts stay; no additional concepts from the same overrepresented brand/source until balance improves.,Avoids wasting evidence while preventing further concentration.
+Final size,600,Legacy overage is absorbed by proportionally rebalancing remaining subcategory targets.,Keeps total fixed without retroactive deletion.
+Price blindness,UNCHANGED,Candidate selection remains blind to 2020/2026 prices and price change.,Prevents cherry-picking.

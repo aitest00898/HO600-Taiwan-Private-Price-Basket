@@ -1,0 +1,63 @@
+﻿HO600 Quota Control — Existing-Data Baseline,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,Incumbent Brand Concentration — Legacy Preservation Policy,,,,,,Exact-2020 Source Concentration — Legacy Preservation Policy,,,,
+Domain,Subcategory,Original target,Prequalified Exact concepts,All migrated concepts,Legacy-preserving target,New exact needed,Balance state,New-addition rule,Brand / brand-set,Legacy Exact concepts,Reference cap,Legacy excess,Action,,Baseline source URL,Legacy Exact concepts,Reference cap,Legacy excess,Action
+食,正餐／地方小吃,30,33,59,33,0,LEGACY-OVERREPRESENTED / KEEP,FREEZE NEW ADDITIONS,50嵐,23,8,15,KEEP LEGACY / FREEZE NEW,,https://shulong888.pixnet.net/blog/posts/10353087695,24,6,18,KEEP LEGACY / FREEZE NEW
+食,早餐／西式速食,20,19,47,19,0,INCUMBENT-SATURATED,ADD TO BALANCE,MUVIE CINEMAS,10,8,2,KEEP LEGACY / FREEZE NEW,,https://www.marieclaire.com.tw/lifestyle/whats-hot/47018,10,6,4,KEEP LEGACY / FREEZE NEW
+食,咖啡／手搖,20,38,39,38,0,LEGACY-OVERREPRESENTED / KEEP,FREEZE NEW ADDITIONS,麥當勞,9,8,1,KEEP LEGACY / FREEZE NEW,,https://mypaper.pchome.com.tw/nowdz41416/post/1380357989,9,6,3,KEEP LEGACY / FREEZE NEW
+食,便利即食,15,7,28,14,7,ADD-TO-BALANCE,ADD TO BALANCE,CITY CAFE,6,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://www.4freeapp.com/2019/08/2019_11.html,6,6,0,KEEP / NEW SUBJECT TO BALANCE
+食,超市／自煮基礎食品,35,1,32,34,33,ADD-TO-BALANCE,ADD TO BALANCE,八方雲集,6,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://lanshian.pixnet.net/blog/posts/16004183346,4,6,0,KEEP / NEW SUBJECT TO BALANCE
+食,包裝食品／飲料,20,2,15,19,17,ADD-TO-BALANCE,ADD TO BALANCE,STARBUCKS 星巴克,4,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://www.zi.media/%40www4freeappcom/post/bhSmXB,4,6,0,KEEP / NEW SUBJECT TO BALANCE
+食,甜點／零食,10,0,3,10,10,ADD-TO-BALANCE,ADD TO BALANCE,肯德基,4,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://cpok.tw/1408,3,6,0,KEEP / NEW SUBJECT TO BALANCE
+衣,上衣,12,1,5,11,10,ADD-TO-BALANCE,ADD TO BALANCE,漢堡王,4,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://www.dcard.tw/f/food/p/233454916,3,6,0,KEEP / NEW SUBJECT TO BALANCE
+衣,褲裙,10,0,0,10,10,ADD-TO-BALANCE,ADD TO BALANCE,四海遊龍,4,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://judy0226kimo.pixnet.net/blog/posts/14218014602,3,6,0,KEEP / NEW SUBJECT TO BALANCE
+衣,內著／襪類,10,0,0,10,10,ADD-TO-BALANCE,ADD TO BALANCE,路易莎咖啡,3,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://eatcooktw.blog.jp/archives/6351897.html,3,6,0,KEEP / NEW SUBJECT TO BALANCE
+衣,鞋,12,1,0,11,10,ADD-TO-BALANCE,ADD TO BALANCE,MUJI 無印良品,3,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://cpok.tw/577,2,6,0,KEEP / NEW SUBJECT TO BALANCE
+衣,外套,8,0,0,8,8,ADD-TO-BALANCE,ADD TO BALANCE,三商巧福,3,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://cpok.tw/155,2,6,0,KEEP / NEW SUBJECT TO BALANCE
+衣,包袋／配件,8,1,0,8,7,ADD-TO-BALANCE,ADD TO BALANCE,爭鮮迴轉壽司,3,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://www.tainanlohas.cc/2020/11/Unity-Lions-champion-Celebration.html,2,6,0,KEEP / NEW SUBJECT TO BALANCE
+衣,機能／運動服飾,10,0,0,10,10,ADD-TO-BALANCE,ADD TO BALANCE,鼎泰豐,3,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://oxoxooxoxo.pixnet.net/blog/posts/14218643801,2,6,0,KEEP / NEW SUBJECT TO BALANCE
+住／家用,紙品,12,2,4,11,9,ADD-TO-BALANCE,ADD TO BALANCE,福勝亭,3,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://heidichao.pixnet.net/blog/posts/5068804735,2,6,0,KEEP / NEW SUBJECT TO BALANCE
+住／家用,清潔／洗衣用品,12,0,2,11,11,ADD-TO-BALANCE,ADD TO BALANCE,7-ELEVEN | 全家FamilyMart | 萊爾富 | OKmart,2,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://tpe.twagoda.com/entry/105010616.html,2,6,0,KEEP / NEW SUBJECT TO BALANCE
+住／家用,廚房耗材,12,1,6,11,10,ADD-TO-BALANCE,ADD TO BALANCE,7-ELEVEN,2,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://www.moneysmart.tw/articles/%E6%9C%80%E9%AB%98-9-%E5%9B%9E%E9%A5%8B%EF%BC%812019-netflix-%E6%96%B9%E6%A1%88-x-%E7%8F%BE%E9%87%91%E5%9B%9E%E9%A5%8B%E4%BF%A1%E7%94%A8%E5%8D%A1%E6%8E%A8%E8%96%A6/,2,6,0,KEEP / NEW SUBJECT TO BALANCE
+住／家用,家居／收納／小家具,15,6,5,14,8,ADD-TO-BALANCE,ADD TO BALANCE,Spotify,2,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://cpok.tw/4893,2,6,0,KEEP / NEW SUBJECT TO BALANCE
+住／家用,寢具／家紡,10,0,1,10,10,ADD-TO-BALANCE,ADD TO BALANCE,Netflix,2,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://wp.diary.tw/archives/5687,1,6,0,KEEP / NEW SUBJECT TO BALANCE
+住／家用,網路／通訊固定服務,12,0,0,11,11,ADD-TO-BALANCE,ADD TO BALANCE,IKEA,2,8,0,KEEP / NEW SUBJECT TO BALANCE,,https://www.ptt.cc/bbs/Lifeismoney/M.1607010023.A.7F9.html,1,6,0,KEEP / NEW SUBJECT TO BALANCE
+住／家用,小家電／家電耗材,10,0,2,10,10,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+住／家用,居家服務,12,0,0,11,11,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+行,停車,12,0,20,11,11,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+行,計程／叫車,10,0,0,10,10,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+行,共享交通,8,3,2,8,5,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+行,汽車保養,12,0,0,11,11,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+行,機車保養,12,0,0,11,11,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+行,洗車／車用耗材,8,0,0,8,8,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+行,民營交通服務,8,6,0,8,2,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+行,租車／短租交通,10,0,0,10,10,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+育,書籍,12,11,0,11,0,INCUMBENT-SATURATED,FREEZE NEW ADDITIONS,,,,,,,,,,,
+育,文具,10,1,1,10,9,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+育,補習／語言,12,0,0,11,11,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+育,線上學習,8,0,0,8,8,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+育,技能／證照,8,8,0,8,0,INCUMBENT-SATURATED,FREEZE NEW ADDITIONS,,,,,,,,,,,
+育,兒童／才藝課程,10,0,0,10,10,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+樂,電影,12,10,10,11,1,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+樂,串流影音／音樂,10,7,7,10,3,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+樂,健身／運動,12,2,15,11,9,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+樂,遊戲／數位娛樂,10,1,0,10,9,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+樂,展演／票券,10,0,0,10,10,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+樂,樂園／休閒,8,6,0,8,2,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+樂,體驗／休閒場館,8,3,0,8,5,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+日常／個人,盥洗／衛生用品,15,1,9,14,13,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+日常／個人,保養／化妝,10,2,9,10,8,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+日常／個人,理髮／美容,12,1,15,12,11,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+日常／個人,洗衣／修繕,8,0,0,8,8,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+日常／個人,寵物,15,6,25,14,8,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+日常／個人,個人數位／會員服務,8,1,1,8,7,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+日常／個人,其他日常服務,7,0,3,7,7,ADD-TO-BALANCE,ADD TO BALANCE,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+Domain,Original target,Incumbent Exact,Legacy-preserving target,New exact needed,Final share,Interpretation,,,,,,,,,,,,,
+食,150,100,167,67,0.2783333333333333,Legacy overage retained; remaining allocation rebalanced proportionally.,,,,,,,,,,,,,
+衣,70,3,68,65,0.11333333333333333,Legacy overage retained; remaining allocation rebalanced proportionally.,,,,,,,,,,,,,
+住／家用,95,9,89,80,0.14833333333333334,Legacy overage retained; remaining allocation rebalanced proportionally.,,,,,,,,,,,,,
+行,80,9,77,68,0.12833333333333333,Legacy overage retained; remaining allocation rebalanced proportionally.,,,,,,,,,,,,,
+育,60,20,58,38,0.09666666666666666,Legacy overage retained; remaining allocation rebalanced proportionally.,,,,,,,,,,,,,
+樂,70,29,68,39,0.11333333333333333,Legacy overage retained; remaining allocation rebalanced proportionally.,,,,,,,,,,,,,
+日常／個人,75,11,73,62,0.12166666666666667,Legacy overage retained; remaining allocation rebalanced proportionally.,,,,,,,,,,,,,
