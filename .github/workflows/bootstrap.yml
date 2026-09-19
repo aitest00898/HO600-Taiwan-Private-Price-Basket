@@ -31,12 +31,13 @@ jobs:
           set -euo pipefail
           tar -xJf .bootstrap/main.tar.xz -C .
           rm -rf .bootstrap
-          rm -f .github/workflows/bootstrap.yml
+          # Workflow files are installed separately by the GitHub connector.
+          rm -f .github/workflows/validate.yml
 
       - name: Validate restored canonical baseline
         run: python scripts/validate_repo.py
 
-      - name: Commit restored repository
+      - name: Commit restored repository data
         shell: bash
         run: |
           set -euo pipefail
