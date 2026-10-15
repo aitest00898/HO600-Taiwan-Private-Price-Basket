@@ -1,10 +1,10 @@
+# Research-branch safety: GitHub Actions automatically running on push is PAUSED by user decision.
+# Only the user can explicitly reauthorize Actions execution. Do not dispatch this workflow.
+# This branch-specific guard does not change main or the canonical validation policy.
 name: Validate HO600
 
 on:
-  push:
-    branches: [main, "research/**"]
-  pull_request:
-    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
