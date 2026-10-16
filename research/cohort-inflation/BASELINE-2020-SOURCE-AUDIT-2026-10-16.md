@@ -76,3 +76,16 @@ The helper writes to the operating system temporary directory by default, fails 
 - No WORK, RETIRE or high-age inflation figure has been calculated.
 - No original HO600 600-item release/selection/index state has changed.
 - No new formal Canonical batch validation is implied by this research audit.
+
+## 2026-10-16 addendum — official national all-household 2020 excerpt and 2025 report discovery
+
+This audit has moved forward **without pretending the cohort-table raw downloads succeeded**:
+
+- Official 2020 updated-host PDF `https://ws.dgbas.gov.tw/001/Upload/463/ebook/ebook_357924/pdf/full.pdf` is indexed with the 12 expense divisions and the all-household average NT$815,100 per year. We extracted each category value from indexed text and cross-checked the full 12-row vector against **two distinct tables within the same DGBAS PDF** (occupation and farm/non-farm sections), not against two independent providers. The amounts add to exactly NT$815,100. The raw PDF and 2026-02-13-corrected XLS have **not** been fetched as bytes; do not label this RAW_PASS.
+- Interim audit-only table: [`general-household-2020-indexed-v0.csv`](./general-household-2020-indexed-v0.csv), details in [`GENERAL-2020-INDEXED-AUDIT.md`](./GENERAL-2020-INDEXED-AUDIT.md), local checksum tool [`verify_general_2020_excerpt.py`](./verify_general_2020_excerpt.py).
+- **Key structural finding**: all-household housing/energy NT$198,145 and healthcare NT$139,010 total NT$337,155, **41.363636%** of average national 2020 consumption. This is **not** the share for WORK or RETIRE households and cannot be used as either cohort's weight.
+- Official DGBAS directory `https://www.stat.gov.tw/cp.aspx?n=2696` lists **114年調查報告 (2025) e-book**; official archive `https://www.stat.gov.tw/cp.aspx?n=3984` enumerates **114年平均每戶家庭收支按區域別分 (2025)**. The earlier impression that the official archive stopped at 2024 was outdated. The exact 2025 work/retiree cross-tab and raw bytes remain unverified.
+- Source register updated to **11** entries including two explicit raw-unverified navigation/excerpt entries; local-only source downloader now verifies the mandatory source IDs rather than using a fixed record count.
+
+Status by requirement: `NATIONAL_2020_GENERAL_PDF_INDEXED_EXCERPT=CHECKSUM_PASS_RAW_UNVERIFIED`, `WORK_2020_WEIGHT=BLOCKED`, `RETIRE_2020_WEIGHT=BLOCKED`, `WGT-01=BLOCKED`, `COHORT_RATE=NOT_CALCULATED`, `CANONICAL_MAIN=181/600_LOCKED`. Never promote any research-only excerpt to canonical workbook.
+
