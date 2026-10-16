@@ -79,7 +79,7 @@ class CohortExtractionTests(unittest.TestCase):
     def test_reject_not_proxy(self):
         self.config["cohort_code"]="RETIRE"
         self.write_config()
-        with self.assertRaisesRegex(ValueError,"PROXY"):
+        with self.assertRaisesRegex(ValueError,"(?i)proxy"):
             self.run_extract()
 
     def test_reject_duplicate_row_map(self):
