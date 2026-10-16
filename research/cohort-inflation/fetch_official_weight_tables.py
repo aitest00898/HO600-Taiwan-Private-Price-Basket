@@ -13,6 +13,7 @@ import csv
 import hashlib
 import json
 import pathlib
+import tempfile
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -101,7 +102,7 @@ def main():
     mx = parser.add_mutually_exclusive_group(required=True)
     mx.add_argument("--plan", action="store_true")
     mx.add_argument("--download", metavar="SOURCE_ID")
-    parser.add_argument("--output-dir", type=pathlib.Path, default=HERE / "_local-only-not-for-git")
+    parser.add_argument("--output-dir", type=pathlib.Path, default=pathlib.Path(tempfile.gettempdir()) / "HO600-official-sources")
     args = parser.parse_args()
     sources = load_sources()
     if args.plan:
