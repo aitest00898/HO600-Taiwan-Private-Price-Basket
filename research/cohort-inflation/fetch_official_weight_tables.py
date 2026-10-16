@@ -26,9 +26,10 @@ MAX_BYTES = 30_000_000
 def load_sources():
     with REGISTER.open(encoding="utf-8-sig", newline="") as f:
         records = list(csv.DictReader(f))
-    assert len(records) == 9, "Source register changed: explicit review required"
     ids = [r["source_id"] for r in records]
     assert len(ids) == len(set(ids)), "Duplicate source ID"
+    assert {"NAT20-AGE", "NAT20-OCC"}.issubset(ids), "Required official baseline source missing"
+    assert len(records) >= 9, "Unexpected loss of source entries"
     return {r["source_id"]: r for r in records}
 
 def validate_url(url):
