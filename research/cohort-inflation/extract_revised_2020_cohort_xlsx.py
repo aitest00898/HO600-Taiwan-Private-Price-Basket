@@ -131,10 +131,10 @@ def extract(file: Path, mapping_path: Path, raw_path: Path, out: Path) -> dict:
     if src not in {"NAT20-AGE", "NAT20-OCC"} or len(signature) < 12:
         raise ValueError("Original binary source is empty or invalid")
     if raw_path.suffix.lower() == ".xls":
-        if not signature.startswith(bytes.fromhex("D0CF11E0A1B11AE1")) and not signature.startswith(b"PK\\x03\\x04"):
+        if not signature.startswith(bytes.fromhex("D0CF11E0A1B11AE1")) and not signature.startswith(b"PK\x03\x04"):
             raise ValueError("Original XLS must be an OLE or ZIP spreadsheet")
     elif raw_path.suffix.lower() == ".ods":
-        if not signature.startswith(b"PK\\x03\\x04"):
+        if not signature.startswith(b"PK\x03\x04"):
             raise ValueError("Original ODF must be ZIP spreadsheet")
     else:
         raise ValueError("Only original XLS or ODS supported")
