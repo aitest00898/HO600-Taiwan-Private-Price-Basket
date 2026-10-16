@@ -1,0 +1,13 @@
+division_code,official_consumption_division,HO600_private_coverage_class,unmeasured_spending_share_pct,gap_note
+01,食品及非酒精飲料,PARTIAL_PRIVATE_BASKET,,零售食品可部分代表，生鮮／地區品種／加工商品可比性仍有限
+02,菸酒及檳榔,OUTSIDE_PRIVATE_BASKET,,HO600未配置這個消費用途，完整家庭支出份額不得消失
+03,衣著鞋襪及服飾用品,PARTIAL_PRIVATE_BASKET,,服飾商品有，但褲裙、襪類等配額短缺
+04,住宅服務水電瓦斯及其他燃料,EXTERNAL_OFFICIAL_SERIES_REQUIRED,,房租、自宅設算租金、水電與燃氣需額外指數和適當統計口徑
+05,家具設備及家務維護,PARTIAL_PRIVATE_BASKET,,家具、清潔用品可用；家務服務/維修缺口
+06,醫療保健,EXTERNAL_OFFICIAL_SERIES_REQUIRED,,醫療自付、輔具、長照、藥品需獨立來源；現HO600 50類無醫療單元
+07,交通,PARTIAL_PRIVATE_BASKET,,自用車燃油/新車、公車軌道等公定費率與民營服務不完全涵蓋
+08,通訊,PARTIAL_PRIVATE_BASKET,,固網可部分代表，行動電信及設備支出未全面涵蓋
+09,休閒與文化,PARTIAL_PRIVATE_BASKET,,娛樂票、串流及寵物；旅遊支出範圍需釐清
+10,教育,PARTIAL_PRIVATE_BASKET,,補習/課程/文具；正式教育支出不全
+11,餐廳及旅館,PARTIAL_PRIVATE_BASKET,,外食與咖啡，但住宿旅館支出不足
+12,什項消費,PARTIAL_PRIVATE_BASKET,,個人衛生/理容與其他服務，仍有未覆蓋費用
