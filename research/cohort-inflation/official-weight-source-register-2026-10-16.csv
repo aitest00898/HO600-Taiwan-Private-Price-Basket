@@ -1,0 +1,10 @@
+source_id,year,geography,data_grain,landing_url,exact_download_url,release_or_revision,source_status,raw_data_state,restrictions
+NAT20-OCC,2020,全台,經濟戶長職業別各類家庭收支,https://www.stat.gov.tw/News_Content.aspx?n=3908&s=210989,https://ws.dgbas.gov.tw/001/Upload/463/relfile/11530/235896/65.xls,2026-02-13,LANDING_AND_LINK_CONFIRMED,RAW_DOWNLOAD_FAILED,2020修正含住宅、水電及消費支出；職業別不代表所有家庭成員受僱
+NAT20-AGE,2020,全台,經濟戶長年齡別各類家庭收支,https://www.stat.gov.tw/News_Content.aspx?n=3911&s=211017,https://ws.dgbas.gov.tw/001/Upload/463/relfile/11531/235640/159-164.xls,2026-02-13,LANDING_AND_LINK_CONFIRMED,RAW_DOWNLOAD_FAILED,2020修正版；戶長65歲以上不等於已退休
+NAT20-AGE-ODF,2020,全台,戶長年齡別 ODF 替代,https://www.stat.gov.tw/News_Content.aspx?n=3911&s=211017,https://ws.dgbas.gov.tw/001/Upload/463/relfile/11531/235640/159-164.ods,2026-02-13,LANDING_AND_LINK_CONFIRMED,RAW_DOWNLOAD_FAILED,同一官方來源的替代格式，不算獨立交叉核對
+NAT25-SURVEY,2025,全台,114年家庭收支新聞稿,https://www.stat.gov.tw/News.aspx?n=2697&sms=10980,,2026-08-14,RELEASE_CONFIRMED,CATEGORY_DETAIL_NOT_EXTRACTED,調查新聞稿已發布；不能代表完整職業別/年齡別支出表已取得
+NAT25-DATA-ENTRY,2025,全台,114年統計表導覽候選,https://www.stat.gov.tw/News_Content.aspx?n=3908&s=235198,,,TARGET_SEEN_FETCH_403,AVAILABILITY_UNKNOWN,官方連結存在但直接讀取遭403，不能推論表格不存在或已可用
+NAT24-AGE-SUMMARY,2024,全台,戶長年齡與所得分組，每戶消費總額,https://data.gov.tw/dataset/108265,,2025-09-09,SCHEMA_CONFIRMED,NO_CATEGORY_MATRIX,只有每戶消費總額，不能據此拆分12類消費
+TPE20-AGE-CATEGORY,2012-2023,臺北市,戶長年齡別12類消費支出,https://data.gov.tw/dataset/133235,https://data.taipei/api/dataset/26c3817c-0713-4657-8cd8-aa842eb59f97/resource/63e4d839-ef65-46a8-b4d1-1bbfeeca5516/download,2025-12-11,DATASET_AND_LINK_CONFIRMED,RAW_DOWNLOAD_FAILED,涵蓋2020，僅台北；不得代替全國退休族權重
+TPE24PLUS-AGE-CATEGORY,2024+,臺北市,戶長年齡別12類消費支出,https://data.gov.tw/dataset/133235,https://data.taipei/api/dataset/26c3817c-0713-4657-8cd8-aa842eb59f97/resource/cab88cec-17c8-458e-9014-00b39d9534f0/download,2025-12-11,DATASET_AND_LINK_CONFIRMED,RAW_DOWNLOAD_FAILED,官方資源欄列113年以後，但最後實際年度尚未驗證
+DGBAS-ELDERLY-CPI,2018+,全台,高齡家庭官方CPI對照,https://www.stat.gov.tw/News_NoticeCalendar_Content_temp.aspx?MetaI_D=166&n=3717&year=2026,,2025-01,METHOD_REGISTERED,NUMERIC_SERIES_NOT_EXTRACTED,所有戶內成員年滿65歲，和退休家庭不是同一口徑
