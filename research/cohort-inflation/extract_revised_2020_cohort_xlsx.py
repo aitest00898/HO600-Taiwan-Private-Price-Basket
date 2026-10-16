@@ -36,6 +36,15 @@ TOKENS = {
     "12": ("什項", "消費"),
 }
 ALLOWED_SOURCE_PREFIXES = {"NAT20-AGE": "AGE_HEAD_", "NAT20-OCC": "OCC_HEAD_"}
+OFFICIAL_2020_URLS = {
+    "NAT20-AGE": {
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11531/235640/159-164.xls",
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11531/235640/159-164.ods",
+    },
+    "NAT20-OCC": {
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11530/235896/65.xls",
+    },
+}
 EXPECTED_CODES = [f"{n:02d}" for n in range(1, 13)]
 
 def sha(path: Path) -> str:
@@ -114,6 +123,21 @@ def extract(file: Path, mapping_path: Path, raw_path: Path, out: Path) -> dict:
         raise ValueError("Category rows must be distinct")
     for c in (conf["label_col"], conf["amount_col"], conf["total_label_col"]):
         col_index(c)
+    if conf["source_url"] not in OFFICIAL_2020_URLS[src]:
+        raise ValueError("Source URL must match the exact registered 2020 official table")
+    # Prevent an HTML/empty/fake file from being rubber-stamped with its own hash.
+    with raw_path.open("rb") as src_file:
+        signature = src_file.read(128)
+    if src not in {"NAT20-AGE", "NAT20-OCC"} or len(signature) < 12:
+        raise ValueError("Original binary source is empty or invalid")
+    if raw_path.suffix.lower() == ".xls":
+        if not signature.startswith(bytes.fromhex("D0CF11E0A1B11AE1")) and not signature.startswith(b"PK\\x03\\x04"):
+            raise ValueError("Original XLS must be an OLE or ZIP spreadsheet")
+    elif raw_path.suffix.lower() == ".ods":
+        if not signature.startswith(b"PK\\x03\\x04"):
+            raise ValueError("Original ODF must be ZIP spreadsheet")
+    else:
+        raise ValueError("Only original XLS or ODS supported")
     actual_raw = sha(raw_path)
     actual_converted = sha(file)
     if actual_raw != conf["raw_sha256"] or actual_converted != conf["converted_sha256"]:
