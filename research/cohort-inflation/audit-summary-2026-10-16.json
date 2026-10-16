@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-16",
+  "canonical_expected": 600,
+  "canonical_prequalified": 181,
+  "canonical_candidate_count": 418,
+  "current_only": 197,
+  "mapped_subcategories": 50,
+  "mapped_candidate_ids": 418,
+  "worker_contact_counts": {
+    "HIGH": 206,
+    "CONDITIONAL": 49,
+    "MEDIUM": 156,
+    "LOW": 7
+  },
+  "retiree_contact_counts": {
+    "MEDIUM": 115,
+    "CONDITIONAL": 49,
+    "LOW": 123,
+    "HIGH": 131
+  },
+  "weights_proven": false,
+  "index_calculated": false,
+  "selection_still_blind": true,
+  "source": "main data/Quota_Control.csv and main data/Candidate_Pool.csv"
+}
