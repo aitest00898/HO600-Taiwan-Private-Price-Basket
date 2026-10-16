@@ -33,7 +33,6 @@ def read_records(path: Path) -> tuple[list[str], list[dict[str, str]]]:
 def check() -> dict[str, object]:
     status = json.loads((ROOT / "canonical/status.json").read_text(encoding="utf-8"))
     _, candidates = read_records(ROOT / "data/Candidate_Pool.csv")
-    _, quota_raw = read_records(ROOT / "data/Quota_Control.csv")
     map_fields, mapping = read_records(HERE / "exposure-map-v0.csv")
     audit_fields, audit = read_records(HERE / "candidate-exposure-v0.csv")
 
