@@ -1,0 +1,13 @@
+expense_division,2020_taipei_household_spending_label,cpi_7_group_candidate,preliminary_mapping_state,reason,price_relative_accepted
+01,食品及非酒精飲料,食物類,POTENTIAL_MIXED,食品零售與外食在CPI食物類可能混合；須查看細項及來源定義,NO
+02,菸酒及檳榔,雜項類,POTENTIAL_MIXED,菸酒與其他雜項需辨明細分類，不能用整組雜項指數,NO
+03,衣著鞋襪及服飾用品,衣著類,SEMANTIC_CANDIDATE,名稱近似，仍須核對項目範圍、跨期一致性及資料中的分類指數,NO
+04,住宅服務水電瓦斯及其他燃料,居住類,POTENTIAL_MIXED,租屋自有住宅設算服務、能源與居住類指數需逐項對照,NO
+05,家具設備及家務維護,居住類|雜項類,SPLIT_REQUIRED,家具、家庭維護與服務的CPI分類未必相同,NO
+06,醫療保健,醫藥保健類,SEMANTIC_CANDIDATE,名稱接近，但藥品、健保醫療、長照範圍仍須確認,NO
+07,交通,交通及通訊類,SPLIT_REQUIRED,原官方7類交通及通訊合併，無法獨立推出交通價格相對數,NO
+08,通訊,交通及通訊類,SPLIT_REQUIRED,原官方7類交通及通訊合併，無法獨立推出通訊價格相對數,NO
+09,休閒與文化,教養娛樂類,SPLIT_REQUIRED,教養娛樂類含教育，不能直接作休閒與文化價格相對數,NO
+10,教育,教養娛樂類,SPLIT_REQUIRED,教養娛樂類含娛樂，不能直接作教育價格相對數,NO
+11,餐廳及旅館,食物類|教養娛樂類,SPLIT_REQUIRED,外食與旅館住宿可能屬不同CPI細項，整組食物類不能直接代替,NO
+12,什項消費,雜項類,POTENTIAL_MIXED,個人護理、保險等範圍尚須核查官方明細,NO
