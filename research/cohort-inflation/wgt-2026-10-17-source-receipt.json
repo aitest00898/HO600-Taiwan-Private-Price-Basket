@@ -1,0 +1,186 @@
+{
+  "schema_version": 1,
+  "task": "HO600 cohort inflation WGT-01 through WGT-05",
+  "recorded_at_utc": "2026-10-17T02:35:49Z",
+  "timezone": "Asia/Taipei",
+  "task_status": "PARTIAL_WITH_EXTERNAL_BLOCKERS",
+  "repository": "aitest00898/HO600-Taiwan-Private-Price-Basket",
+  "branch": "research/batch-09",
+  "base_head_sha": "3194ff4fd6bc348b536c7ae4f7966c9690bde4aa",
+  "source_pages": {
+    "NAT20-OCC": "https://www.stat.gov.tw/News_Content.aspx?n=3908&s=210989",
+    "NAT20-AGE": "https://www.stat.gov.tw/News_Content.aspx?n=3911&s=211017"
+  },
+  "official_revision_note": {
+    "revised_on": "2026-02-13",
+    "page_note_observed": true,
+    "note": "DGBAS says affected 2020 table amounts include part-time and full-time payroll, housing services, utilities, rent and water charges, consumption expenditure, saving and total receipts."
+  },
+  "raw_files": [],
+  "converted_files": [],
+  "source_attempts": [
+    {
+      "source_id": "NAT20-OCC",
+      "year": 2020,
+      "landing_url": "https://www.stat.gov.tw/News_Content.aspx?n=3908&s=210989",
+      "official_urls": [
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11530/235896/65.xls",
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11530/235896/65.ods"
+      ],
+      "attempt_window_date_local": "2026-10-17",
+      "attempts": [
+        {
+          "method": "fetch_official_weight_tables.py --download NAT20-OCC",
+          "network": "Mac local network",
+          "result": "DNS_ERROR",
+          "error": "urllib.error.URLError: [Errno 8] nodename nor servname provided, or not known",
+          "http_status": null,
+          "bytes_received": 0,
+          "sha256": null,
+          "retry_count": 0
+        },
+        {
+          "method": "curl -I",
+          "url_suffix": ".xls and .ods",
+          "network": "Mac local network",
+          "result": "DNS_ERROR",
+          "error": "curl: (6) Could not resolve host: ws.dgbas.gov.tw",
+          "http_status": null,
+          "bytes_received": 0,
+          "sha256": null,
+          "retry_count": 0
+        },
+        {
+          "method": "official page resource follow through web tool",
+          "result_by_format": {
+            "xls": "Cache miss",
+            "ods": "502 Bad Gateway"
+          },
+          "origin_http_status": null,
+          "origin_request_count": "unknown"
+        }
+      ],
+      "raw_status": "NETWORK_BLOCKED",
+      "source_file_version": "UNVERIFIED",
+      "raw_sha256": null,
+      "raw_size_bytes": null,
+      "downloaded_at_utc": null
+    },
+    {
+      "source_id": "NAT20-AGE",
+      "year": 2020,
+      "landing_url": "https://www.stat.gov.tw/News_Content.aspx?n=3911&s=211017",
+      "official_urls": [
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11531/235640/159-164.xls",
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11531/235640/159-164.ods"
+      ],
+      "attempt_window_date_local": "2026-10-17",
+      "attempts": [
+        {
+          "method": "fetch_official_weight_tables.py --download NAT20-AGE",
+          "network": "Mac local network",
+          "result": "DNS_ERROR",
+          "error": "urllib.error.URLError: [Errno 8] nodename nor servname provided, or not known",
+          "http_status": null,
+          "bytes_received": 0,
+          "sha256": null,
+          "retry_count": 0
+        },
+        {
+          "method": "fetch_official_weight_tables.py --download NAT20-AGE-ODF",
+          "network": "Mac local network",
+          "result": "DNS_ERROR",
+          "error": "urllib.error.URLError: [Errno 8] nodename nor servname provided, or not known",
+          "http_status": null,
+          "bytes_received": 0,
+          "sha256": null,
+          "retry_count": 0
+        },
+        {
+          "method": "curl -I",
+          "url_suffix": ".xls and .ods",
+          "network": "Mac local network",
+          "result": "DNS_ERROR",
+          "error": "curl: (6) Could not resolve host: ws.dgbas.gov.tw",
+          "http_status": null,
+          "bytes_received": 0,
+          "sha256": null,
+          "retry_count": 0
+        },
+        {
+          "method": "official page resource follow through web tool",
+          "result_by_format": {
+            "xls": "502 Bad Gateway",
+            "ods": "Timeout fetching (400)"
+          },
+          "origin_http_status": null,
+          "origin_request_count": "unknown"
+        }
+      ],
+      "raw_status": "NETWORK_BLOCKED",
+      "source_file_version": "UNVERIFIED",
+      "raw_sha256": null,
+      "raw_size_bytes": null,
+      "downloaded_at_utc": null
+    }
+  ],
+  "network_diagnostics": {
+    "python_getaddrinfo_www_stat_gov_tw": "Errno 8: nodename nor servname provided, or not known",
+    "curl_ws_dgbas_gov_tw": "curl error 6, host could not be resolved",
+    "safari_official_landing_page": "Certificate warning: 此連線並非私人連線; connection not continued",
+    "dns_or_tls_bypass": false,
+    "network_settings_changed": false
+  },
+  "local_artifacts": {
+    "source_cache_path": "work/source-cache/",
+    "source_cache_file_count": 0,
+    "original_sha256": null,
+    "converted_xlsx_sha256": null,
+    "numbers_conversion": "NOT_RUN_NO_ORIGINAL_SOURCE"
+  },
+  "offline_checks": {
+    "unittest": {
+      "status": "BLOCKED_TEST_COLLECTION",
+      "command": "python3 -m unittest discover -s research/cohort-inflation -p 'test_extract_revised_2020_cohort_xlsx.py'",
+      "result": "ModuleNotFoundError: No module named 'artifact_tool' in system Python 3.14 and bundled Python 3.12",
+      "tests_collected": 0,
+      "passed": 0
+    },
+    "validate_exposure": {
+      "status": "PASS_STRUCTURAL_ONLY",
+      "candidate_count": 418,
+      "candidate_exposure_rows": 418,
+      "canonical_exact": 181,
+      "quota_subcategories": 50,
+      "cohort_spend_weights_verified": false,
+      "cohort_inflation_calculated": false
+    },
+    "indexed_all_household_excerpt": {
+      "status": "PASS_INTERIM_CHECKSUM_ONLY",
+      "distinct_categories": 12,
+      "total_twd_per_household_year": 815100,
+      "housing_and_health_twd": 337155,
+      "source_raw_bytes_verified": false,
+      "cohort_proxy_weights": false,
+      "independent_arithmetic_recheck": true
+    }
+  },
+  "acceptance": {
+    "WGT-01": "HOLD_NETWORK_BLOCKED",
+    "WGT-02": "PARTIAL_LANDING_METADATA_ONLY",
+    "WGT-03": "HOLD_NO_XLSX_OR_ARTIFACT_TOOL",
+    "WGT-04": "HOLD_COHORT_SOURCE_UNVERIFIED",
+    "WGT-05": "HOLD_ZERO_OF_TWO_PROXY_GROUPS"
+  },
+  "github_actions": {
+    "used": false,
+    "workflow_trigger_on_branch": "workflow_dispatch only",
+    "dispatched": false
+  },
+  "canonical_scope": {
+    "formal_exact": "181/600",
+    "basket_sealed": false,
+    "index_status": "LOCKED",
+    "canonical_workbook_modified": false
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-17T02:35:49Z",
+  "task_status": "PARTIAL_WITH_EXTERNAL_BLOCKERS",
+  "repository": "aitest00898/HO600-Taiwan-Private-Price-Basket",
+  "branch": "research/batch-09",
+  "base_head_sha": "3194ff4fd6bc348b536c7ae4f7966c9690bde4aa",
+  "branch_files_read": {
+    "research/cohort-inflation/extract_revised_2020_cohort_xlsx.py": {
+      "github_blob_sha": "4aec6f0278d98f849fcb516748463fe03087e405"
+    },
+    "research/cohort-inflation/test_extract_revised_2020_cohort_xlsx.py": {
+      "github_blob_sha": "678131063511532fad656e70ed2fc3f0aebbbc77"
+    },
+    "research/cohort-inflation/validate_exposure.py": {
+      "github_blob_sha": "39cf83d6a1db83c0445adba7270a3cf5ca78a53b"
+    },
+    "research/cohort-inflation/verify_general_2020_excerpt.py": {
+      "github_blob_sha": "56f8af4303bd91929c49b2abfa08cbb3a4b63580"
+    },
+    "research/cohort-inflation/general-household-2020-indexed-v0.csv": {
+      "github_blob_sha": "f9e6f38f630697170b87107d035601f320f71db2",
+      "source_bytes_verified": false,
+      "cohort": "ALL_HOUSEHOLDS_GENERAL"
+    }
+  },
+  "deliverables": [
+    {
+      "local_path": "outputs/WGT-2026-10-17-acceptance-report.md",
+      "github_path": "research/cohort-inflation/WGT-2026-10-17-acceptance-report.md",
+      "sha256": "38af2e5ba1a4301b6e32a80c7ab0ca771acb85c8c9c695e73ef03010897ab336"
+    },
+    {
+      "local_path": "outputs/WGT-2026-10-17-source-receipt.json",
+      "github_path": "research/cohort-inflation/wgt-2026-10-17-source-receipt.json",
+      "sha256": "860c01c483cdfcb947bc97f22b884df0b2c13085de30627b4df2d4b55c892178"
+    },
+    {
+      "local_path": "outputs/HANDOFF-WGT-2026-10-17.md",
+      "github_path": "handoffs/2026-10-17-wgt-01-05-network-blocked-handoff.md",
+      "sha256": "ac28ea70841e55b930d743acf58145e953c42953fd7601cc20349869d14192d6"
+    }
+  ],
+  "acceptance": {
+    "WGT-01": "HOLD_NETWORK_BLOCKED",
+    "WGT-02": "PARTIAL_LANDING_METADATA_ONLY",
+    "WGT-03": "HOLD_NO_XLSX_OR_ARTIFACT_TOOL",
+    "WGT-04": "HOLD_COHORT_SOURCE_UNVERIFIED",
+    "WGT-05": "HOLD_ZERO_OF_TWO_PROXY_GROUPS",
+    "offline_structure_check": "PASS_STRUCTURAL_ONLY",
+    "indexed_all_household_arithmetic": "PASS_INTERIM_CHECKSUM_ONLY",
+    "unit_test_collection": "BLOCKED_MISSING_ARTIFACT_TOOL"
+  },
+  "raw_source_files_committed": 0,
+  "converted_workbooks_committed": 0,
+  "github_actions_used": false,
+  "main_modified": false
+}
