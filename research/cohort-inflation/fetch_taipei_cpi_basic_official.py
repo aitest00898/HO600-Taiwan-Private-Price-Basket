@@ -101,22 +101,41 @@ def fetch(source: str,out:Path)->dict:
         raise FileExistsError("Use a new empty output directory; no overwrite")
     with tempfile.TemporaryDirectory(prefix="ho600-cpi-") as tmp:
         payload=Path(tmp)/"resource.tmp"
-        cmd=["curl","--ca-native","--fail","--silent","--show-error","--location",
-            "--proto","=https","--proto-redir","=https","--max-redirs","2",
-            "--connect-timeout","12","--max-time","60","--max-filesize",str(MAX_BYTES),
-            "--output",str(payload),"--write-out",
-            "%{url_effective}\n%{http_code}\n%{content_type}\n",URLS[source]]
-        result=subprocess.run(cmd,text=True,capture_output=True,timeout=70,check=False)
-        if result.returncode!=0:
-            raise RuntimeError(f"Strict HTTPS fetch failed curl {result.returncode}: {result.stderr[:300]}")
-        fields=result.stdout.strip().splitlines()
-        if len(fields)!=3 or fields[1]!="200":
-            raise ValueError("No verifiable official HTTP 200 response")
-        parsed=urlsplit(fields[0])
-        if parsed.scheme!="https" or parsed.hostname!="data.taipei":
-            raise ValueError("Redirect to unregistered host")
-        blob=payload.read_bytes()
-        profile=decode_table(blob,source)
+        candidates=[URLS[source]]
+        if source in ALTERNATE_URLS:
+            candidates.append(ALTERNATE_URLS[source])
+        attempts=[]
+        for requested in candidates:
+            payload.unlink(missing_ok=True)
+            cmd=["curl","--ca-native","--fail","--silent","--show-error","--location",
+                "--proto","=https","--proto-redir","=https","--max-redirs","2",
+                "--connect-timeout","12","--max-time","60","--max-filesize",str(MAX_BYTES),
+                "--output",str(payload),"--write-out",
+                "%{url_effective}\\n%{http_code}\\n%{content_type}\\n",requested]
+            result=subprocess.run(cmd,text=True,capture_output=True,timeout=70,check=False)
+            if result.returncode!=0:
+                attempts.append({"requested":requested,"curl_exit":result.returncode,
+                                 "status":"TLS_OR_HTTP_FAILURE","stderr":result.stderr[:300]})
+                continue
+            fields=result.stdout.strip().splitlines()
+            if len(fields)!=3 or fields[1]!="200":
+                attempts.append({"requested":requested,"status":"NON200_OR_BAD_METADATA"})
+                continue
+            parsed=urlsplit(fields[0])
+            if parsed.scheme!="https" or parsed.hostname!="data.taipei":
+                # Fail closed; no further request to a potentially untrusted host.
+                raise ValueError("Redirect to unregistered host")
+            try:
+                blob=payload.read_bytes()
+                profile=decode_table(blob,source)
+            except (ValueError,OSError) as ex:
+                attempts.append({"requested":requested,"status":"INVALID_CPI_SOURCE",
+                                 "error":str(ex)[:500]})
+                continue
+            break
+        else:
+            raise RuntimeError("Official CPI resource did not yield verified valid CSV: "+
+                               json.dumps(attempts,ensure_ascii=False))
         out.mkdir(parents=True,exist_ok=True)
         raw=out/(source+"-official-original.csv")
         rec=out/(source+"-receipt.json")
@@ -125,7 +144,8 @@ def fetch(source: str,out:Path)->dict:
         raw.write_bytes(blob)
         record={
             "source_id":source,"status":"RAW_CPI_RETRIEVED_PROFILED_NOT_MAPPED_OR_REBASED",
-            "requested":URLS[source],"final_url":fields[0],
+            "requested":requested,"final_url":fields[0],
+            "failed_candidate_attempts":attempts,
             "content_type":fields[2],"http_code":200,
             "retrieved_utc":datetime.now(timezone.utc).isoformat(),
             "raw_bytes":len(blob),"sha256":hashlib.sha256(blob).hexdigest(),
