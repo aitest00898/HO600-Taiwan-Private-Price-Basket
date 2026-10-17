@@ -105,7 +105,7 @@ def run(original, csv_file, map_file, out_dir):
     with csv_file.open(newline="", encoding="utf-8-sig") as stream:
         rows = list(csv.reader(stream))
     needed_rows = max(*rs, conf["total_row"])
-    if len(rows) < needed_rows or any(len(row) < max(cols) for row in rows):
+    if len(rows) < needed_rows or any(len(rows[i - 1]) < max(cols) for i in set(rs + [conf["total_row"]])):
         raise ValueError("CSV dimensions do not contain all reviewed source cells")
     def cell(r, c):
         return rows[r - 1][c - 1]
