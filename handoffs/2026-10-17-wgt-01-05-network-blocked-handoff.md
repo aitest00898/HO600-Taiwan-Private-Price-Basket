@@ -3,7 +3,8 @@
 **狀態：** `PARTIAL_WITH_EXTERNAL_BLOCKERS`；核心資料 Gate 維持 `HOLD`。  
 **Repository：** `aitest00898/HO600-Taiwan-Private-Price-Basket`  
 **分支：** `research/batch-09`  
-**本輪基底 HEAD：** `3194ff4fd6bc348b536c7ae4f7966c9690bde4aa`  
+**本地更新時間：** 2026-10-17 02:44:24 UTC（台北時間 10:44:24）  
+**網路排障開始時遠端 HEAD：** `5a1fc853d96e25e413d0476d31ed5f1393460d38`（與 `research/batch-09` HEAD 相同）  
 **完整驗收報告：** `research/cohort-inflation/WGT-2026-10-17-acceptance-report.md`  
 **來源收據：** `research/cohort-inflation/wgt-2026-10-17-source-receipt.json`
 
@@ -11,14 +12,16 @@
 
 - 已完整閱讀 `research/cohort-inflation/LOCAL-CODEX-WGT-2026-10-17.md`。
 - 官方 109 年（2020）經濟戶長職業別及年齡別頁面、XLS 及 ODS 連結已確認；兩頁均載有 2026-02-13 修訂說明。
-- Mac 本機下載程式三次遇 DNS 失敗；四個格式的 `curl -I` 亦無法解析 `ws.dgbas.gov.tw`。網頁來源代理回報 cache miss、502 及 timeout。Safari 顯示官方站憑證警告；沒有繞過。
+- 在提升網路權限下 DNS 已成功解析官方主機；五個嚴格 TLS HEAD 檢查（官方職業頁及四個 XLS／ODS URL）均於簽發者驗證失敗、HTTP 000。`curl --ca-native` 亦失敗。
+- 官方下載器重試職業 XLS、年齡 XLS、年齡 ODS 三次均因 `CERTIFICATE_VERIFY_FAILED: unable to get local issuer certificate` 中止，原始快取仍為 0 檔。OpenSSL 嚴格驗證回傳 code 20；本機沒有修改 DNS／CA／憑證，也未略過 Safari 警告。
+- 網頁來源代理先前回報 cache miss、502 及 timeout。自動審查拒絕了一個含 `curl -k` 的診斷命令，理由為該旗標停用 TLS 驗證；該命令未執行，也未再試圖繞過。
 - 本機原始檔快取 `work/source-cache/` 為空。原始檔與轉檔檔案皆不存在；沒有聲稱下載、Numbers 轉檔、來源 SHA 或解析已完成。
 - `validate_exposure.py` 結構檢查為 `PASS_STRUCTURAL_ONLY`；全體家庭索引摘錄的 12 類算術重算為 815,100 元／戶／年。該 CSV 原始 bytes 未驗證，不是受僱或高齡戶長權重。
 - 指定 unit test 因系統 Python 3.14 與 bundled Python 3.12 均沒有 `artifact_tool`，無法收集任何測試；沒有改用不同解析器。
 
 ## WGT Gate
 
-- **WGT-01：HOLD_NETWORK_BLOCKED** — 兩份官方原始檔均未取得。
+- **WGT-01：HOLD_TLS_CERTIFICATE_BLOCKED** — DNS 沙箱阻礙已排除至可解析；TLS 鏈無法驗證，兩份官方原始檔均未取得。
 - **WGT-02：PARTIAL** — 官方頁確認 2020 年及 2026-02-13 修訂註記；原始檔位元組與版次未驗證。
 - **WGT-03：HOLD** — 未轉 XLSX、未執行 `--inspect`，工作表及欄列映射未知。
 - **WGT-04：HOLD** — 全體家庭索引摘錄只能作暫存算術檢查；職業與年齡兩組的原表總額均未對帳。
@@ -26,7 +29,7 @@
 
 ## 恢復工作後的執行順序
 
-1. 在 Mac 恢復 `stat.gov.tw` 與 `ws.dgbas.gov.tw` 的正常 DNS 與有效 TLS 信任。不要繞過 Safari 憑證警告；在可信網路連線可用後重新執行。
+1. 先由來源端或受信任網路環境提供可驗證的官方 TLS 憑證鏈。不要匯入未核實憑證或繞過 Safari 憑證警告；在有效 TLS 可用後重新執行下載。
 2. 先確認 `work/source-cache/` 沒有既有檔案；以 `fetch_official_weight_tables.py` 下載 `NAT20-OCC` 和 `NAT20-AGE`。若 XLS 受阻，依官方頁測試年齡別 ODS。官方頁也提供職業 ODS；目前 extractor whitelist 只列職業 XLS，若改用該 ODS，先在研究分支擴充來源登記及測試。
 3. 僅在實際拿到有效原始二進位檔後記錄下載 UTC 時間、官方 URL、HTTP 狀態、大小、簽章與 SHA-256。保留原檔，不覆寫，也不把原始 XLS／ODS 推上 GitHub。
 4. 使用 Mac Numbers 將原檔另存為獨立 XLSX；保留原檔與轉檔檔案，記錄兩份 SHA-256。不得以 XLSX 雜湊替代原檔雜湊。
