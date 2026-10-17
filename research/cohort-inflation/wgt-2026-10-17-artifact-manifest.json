@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "recorded_at_utc": "2026-10-17T02:35:49Z",
+  "recorded_at_utc": "2026-10-17T02:44:24Z",
   "task_status": "PARTIAL_WITH_EXTERNAL_BLOCKERS",
   "repository": "aitest00898/HO600-Taiwan-Private-Price-Basket",
   "branch": "research/batch-09",
-  "base_head_sha": "3194ff4fd6bc348b536c7ae4f7966c9690bde4aa",
+  "base_head_sha": "5a1fc853d96e25e413d0476d31ed5f1393460d38",
   "branch_files_read": {
     "research/cohort-inflation/extract_revised_2020_cohort_xlsx.py": {
       "github_blob_sha": "4aec6f0278d98f849fcb516748463fe03087e405"
@@ -28,21 +28,21 @@
     {
       "local_path": "outputs/WGT-2026-10-17-acceptance-report.md",
       "github_path": "research/cohort-inflation/WGT-2026-10-17-acceptance-report.md",
-      "sha256": "ee288f3bcd8a44119f4bd61efa5d52f826bd6a0f460a6e1bd00aa8b4c1a534d0"
+      "sha256": "dd3c4dc072c6b903c83f84959e12c73d66d716ee7627bfc964d9291094e106c3"
     },
     {
       "local_path": "outputs/WGT-2026-10-17-source-receipt.json",
       "github_path": "research/cohort-inflation/wgt-2026-10-17-source-receipt.json",
-      "sha256": "bd385ba7e4038607f7b4a9e315e8e51c5d176aad37e919cbb14d1f8f425f622d"
+      "sha256": "4a40338006931fa3e01aaf580b6362a7903e8725e0d823245b00b6ce73baf4be"
     },
     {
       "local_path": "outputs/HANDOFF-WGT-2026-10-17.md",
       "github_path": "handoffs/2026-10-17-wgt-01-05-network-blocked-handoff.md",
-      "sha256": "61bb35398eaaacc4a3ebaadc9e889968bff7ec0dbdb53f9409c2c32bde131b89"
+      "sha256": "3a790ba0757cea2cf4ca6e62deb3de86cec78e948b4e44e1d0daa22e10f7940a"
     }
   ],
   "acceptance": {
-    "WGT-01": "HOLD_NETWORK_BLOCKED",
+    "WGT-01": "HOLD_TLS_CERTIFICATE_BLOCKED",
     "WGT-02": "PARTIAL_LANDING_METADATA_ONLY",
     "WGT-03": "HOLD_NO_XLSX_OR_ARTIFACT_TOOL",
     "WGT-04": "HOLD_COHORT_SOURCE_UNVERIFIED",
@@ -54,5 +54,19 @@
   "raw_source_files_committed": 0,
   "converted_workbooks_committed": 0,
   "github_actions_used": false,
-  "main_modified": false
+  "main_modified": false,
+  "network_followup": {
+    "sandbox_escalation": "DNS resolution succeeded for official hosts",
+    "strict_tls": "FAILED_CA_ISSUER_VALIDATION",
+    "official_file_downloads": "0 of 3 downloader attempts succeeded; 0 bytes",
+    "formats_tested": [
+      "OCC XLS",
+      "AGE XLS",
+      "AGE ODS"
+    ],
+    "all_official_url_head_checks": "5 of 5 HTTP 000 due certificate validation",
+    "certificate_validation_bypass": "not used",
+    "source_cache_file_count": 0
+  },
+  "previous_remote_sync_commit_sha": "5a1fc853d96e25e413d0476d31ed5f1393460d38"
 }
