@@ -52,7 +52,7 @@ Recent public metadata of Taipei City Government's statistical open data catalog
 
 ## Next measurable research task
 
-- Retrieve official **2020–2026 Sept** monthly Taipei CPI category series over native validated HTTPS, capturing actual original bytes/SHA/URL/date and detailed group labels.
+- Retrieve official **2020 through the latest actually published 2026 month** monthly Taipei CPI category series over native validated HTTPS, capturing actual original bytes/SHA/URL/date and detailed group labels.
 - Create `tpe_2020_expense_to_cpi_crosswalk_v1.csv` with exactly 12 spending categories, many-to-one/one-to-many mappings and `MAPPED|SPLIT_REQUIRED|UNMAPPED` status after inspecting actual CPI series classification. Important: explicit exclusion or incomplete coverage must keep `TPE_COHORT_CPI = HOLD`, not renormalize surviving categories.
 - Verify index base rebasing, class scope, matching periods and source category balance. Compute a proper 2020 fixed weight regional age-head price index only **when** enough actual CPI relatives are independently verified, and label it `TAIPEI_AGE_HEAD_CPI_PROXY`, not HO600-WORK/RETIRE or HO600 private historical exact index.
 - National corrected 2020 XLS/ODS and genuine WORK/RETIRE household status remain blocked; no national WGT gate is changed.
