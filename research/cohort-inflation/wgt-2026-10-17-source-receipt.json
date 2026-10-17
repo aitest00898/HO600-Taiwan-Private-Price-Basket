@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "task": "HO600 cohort inflation WGT-01 through WGT-05",
-  "recorded_at_utc": "2026-10-17T02:35:49Z",
+  "recorded_at_utc": "2026-10-17T02:44:24Z",
   "timezone": "Asia/Taipei",
   "task_status": "PARTIAL_WITH_EXTERNAL_BLOCKERS",
   "repository": "aitest00898/HO600-Taiwan-Private-Price-Basket",
   "branch": "research/batch-09",
-  "base_head_sha": "3194ff4fd6bc348b536c7ae4f7966c9690bde4aa",
+  "base_head_sha": "5a1fc853d96e25e413d0476d31ed5f1393460d38",
   "source_pages": {
     "NAT20-OCC": "https://www.stat.gov.tw/News_Content.aspx?n=3908&s=210989",
     "NAT20-AGE": "https://www.stat.gov.tw/News_Content.aspx?n=3911&s=211017"
@@ -58,9 +58,18 @@
           },
           "origin_http_status": null,
           "origin_request_count": "unknown"
+        },
+        {
+          "method": "fetch_official_weight_tables.py --download NAT20-OCC",
+          "network": "Mac local network with sandbox escalation; default TLS verification",
+          "result": "TLS_CERTIFICATE_VERIFY_FAILED",
+          "error": "urllib.error.URLError: [SSL: CERTIFICATE_VERIFY_FAILED] unable to get local issuer certificate",
+          "http_status": null,
+          "bytes_received": 0,
+          "sha256": null
         }
       ],
-      "raw_status": "NETWORK_BLOCKED",
+      "raw_status": "TLS_BLOCKED_AFTER_DNS",
       "source_file_version": "UNVERIFIED",
       "raw_sha256": null,
       "raw_size_bytes": null,
@@ -115,9 +124,27 @@
           },
           "origin_http_status": null,
           "origin_request_count": "unknown"
+        },
+        {
+          "method": "fetch_official_weight_tables.py --download NAT20-AGE",
+          "network": "Mac local network with sandbox escalation; default TLS verification",
+          "result": "TLS_CERTIFICATE_VERIFY_FAILED",
+          "error": "urllib.error.URLError: [SSL: CERTIFICATE_VERIFY_FAILED] unable to get local issuer certificate",
+          "http_status": null,
+          "bytes_received": 0,
+          "sha256": null
+        },
+        {
+          "method": "fetch_official_weight_tables.py --download NAT20-AGE-ODF",
+          "network": "Mac local network with sandbox escalation; default TLS verification",
+          "result": "TLS_CERTIFICATE_VERIFY_FAILED",
+          "error": "urllib.error.URLError: [SSL: CERTIFICATE_VERIFY_FAILED] unable to get local issuer certificate",
+          "http_status": null,
+          "bytes_received": 0,
+          "sha256": null
         }
       ],
-      "raw_status": "NETWORK_BLOCKED",
+      "raw_status": "TLS_BLOCKED_AFTER_DNS",
       "source_file_version": "UNVERIFIED",
       "raw_sha256": null,
       "raw_size_bytes": null,
@@ -125,9 +152,52 @@
     }
   ],
   "network_diagnostics": {
-    "python_getaddrinfo_www_stat_gov_tw": "Errno 8: nodename nor servname provided, or not known",
-    "curl_ws_dgbas_gov_tw": "curl error 6, host could not be resolved",
-    "safari_official_landing_page": "Certificate warning: 此連線並非私人連線; connection not continued",
+    "default_sandbox_dns": "Previously failed with Errno 8 / curl error 6",
+    "elevated_dns_resolution": {
+      "www.stat.gov.tw": [
+        "104.18.0.120",
+        "104.18.1.120",
+        "2606:4700::6812:178",
+        "2606:4700::6812:78"
+      ],
+      "ws.dgbas.gov.tw": [
+        "223.200.181.106"
+      ]
+    },
+    "curl_strict_tls_head": {
+      "url_count": 5,
+      "urls": [
+        "https://www.stat.gov.tw/News_Content.aspx?n=3908&s=210989",
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11530/235896/65.xls",
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11530/235896/65.ods",
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11531/235640/159-164.xls",
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11531/235640/159-164.ods"
+      ],
+      "result": "All failed certificate verification before HTTP response",
+      "curl_error": "(60) SSL certificate problem: unable to get local issuer certificate",
+      "http_status": "000",
+      "response_bytes": 0
+    },
+    "curl_ca_native": "Failed with same issuer validation error; TLS verification remained enabled",
+    "openssl_strict_verify": {
+      "verify_hostname": "ws.dgbas.gov.tw",
+      "verify_return_code": 20,
+      "result": "unable to get local issuer certificate",
+      "leaf_subject": "C=TW, L=臺灣, O=政府機關-行政院-主計總處, CN=www.dgbas.gov.tw",
+      "leaf_issuer": "C=TW, O=TAIWAN-CA, OU=SSL Sub-CA, CN=TWCA SSL Certification Authority",
+      "leaf_validity_utc": "2026-10-07 through 2027-04-23",
+      "additional_presented_certificates": "ePKI Root Certification Authority - G2, Government Server Digital Certificate Center - G1, and ePKI Root Certification Authority; these do not provide the leaf declared TWCA issuer"
+    },
+    "python_official_downloader": "NAT20-OCC XLS, NAT20-AGE XLS and NAT20-AGE-ODF ODS all failed CERTIFICATE_VERIFY_FAILED; 0 bytes",
+    "proxy_environment_variables_present": false,
+    "system_ca_paths_present": true,
+    "safari_official_landing_page": "Certificate warning observed earlier; not bypassed",
+    "auto_review_rejection": {
+      "command": "curl diagnostic containing -k",
+      "reason": "Would disable TLS certificate verification",
+      "executed": false,
+      "retried_or_bypassed": false
+    },
     "dns_or_tls_bypass": false,
     "network_settings_changed": false
   },
@@ -142,7 +212,7 @@
     "unittest": {
       "status": "BLOCKED_TEST_COLLECTION",
       "command": "python3 -m unittest discover -s research/cohort-inflation -p 'test_extract_revised_2020_cohort_xlsx.py'",
-      "result": "ModuleNotFoundError: No module named 'artifact_tool' in system Python 3.14 and bundled Python 3.12",
+      "result": "Rerun with system Python 3.14 and bundled Python 3.12; both ModuleNotFoundError: No module named artifact_tool",
       "tests_collected": 0,
       "passed": 0
     },
@@ -163,10 +233,22 @@
       "source_raw_bytes_verified": false,
       "cohort_proxy_weights": false,
       "independent_arithmetic_recheck": true
+    },
+    "independent_reconciliation": {
+      "status": "PASS_INTERIM_CHECKSUM_ONLY",
+      "distinct_categories": 12,
+      "category_codes": "01-12",
+      "negative_amounts": 0,
+      "sum_twd_per_household_year": 815100,
+      "declared_total_twd_per_household_year": 815100,
+      "stored_percentage_sum": 99.999999,
+      "housing_and_health_twd": 337155,
+      "evidence_status": "OFFICIAL_PDF_SEARCH_INDEXED_DUAL_TABLE;RAW_BYTES_UNVERIFIED",
+      "scope": "ALL_HOUSEHOLDS_GENERAL; not cohort proxy weights"
     }
   },
   "acceptance": {
-    "WGT-01": "HOLD_NETWORK_BLOCKED",
+    "WGT-01": "HOLD_TLS_CERTIFICATE_BLOCKED",
     "WGT-02": "PARTIAL_LANDING_METADATA_ONLY",
     "WGT-03": "HOLD_NO_XLSX_OR_ARTIFACT_TOOL",
     "WGT-04": "HOLD_COHORT_SOURCE_UNVERIFIED",
@@ -188,5 +270,16 @@
     "C04": "WIP_UNCHANGED",
     "cohort_extraction_distinct_from_private_price_basket": true,
     "verification_basis": "LOCAL-CODEX-WGT-2026-10-17.md at base head"
-  }
+  },
+  "remote_branch_check": {
+    "branch": "research/batch-09",
+    "head_at_followup_start": "5a1fc853d96e25e413d0476d31ed5f1393460d38",
+    "confirmed_by_compare": "identical",
+    "ahead_by": 0,
+    "behind_by": 0
+  },
+  "raw_source_files_committed": 0,
+  "converted_workbooks_committed": 0,
+  "github_actions_used": false,
+  "main_modified": false
 }
