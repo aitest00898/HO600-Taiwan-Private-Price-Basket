@@ -6,7 +6,7 @@
   "task_status": "PARTIAL_WITH_EXTERNAL_BLOCKERS",
   "repository": "aitest00898/HO600-Taiwan-Private-Price-Basket",
   "branch": "research/batch-09",
-  "base_head_sha": "5a1fc853d96e25e413d0476d31ed5f1393460d38",
+  "base_head_sha": "7d87ef5d7ba05ba7f932f41c58642176daba637a",
   "source_pages": {
     "NAT20-OCC": "https://www.stat.gov.tw/News_Content.aspx?n=3908&s=210989",
     "NAT20-AGE": "https://www.stat.gov.tw/News_Content.aspx?n=3911&s=211017"
@@ -199,7 +199,88 @@
       "retried_or_bypassed": false
     },
     "dns_or_tls_bypass": false,
-    "network_settings_changed": false
+    "network_settings_changed": false,
+    "latest_followup": {
+      "recorded_at_utc": "2026-10-17T08:01:28Z",
+      "script": "research/cohort-inflation/diagnose_official_tls_readonly.sh",
+      "output_directory_private_local": "/tmp/ho600-tls-verified-TBJIkQ",
+      "strict_tls": true,
+      "openssl_options": [
+        "-servername",
+        "-verify_hostname",
+        "-verify_return_error",
+        "-showcerts"
+      ],
+      "hosts": {
+        "ws.dgbas.gov.tw": {
+          "openssl_exit": 1,
+          "verify_return_code": 20,
+          "verify_result": "unable to get local issuer certificate",
+          "presented_cert_count": 4,
+          "leaf_sha256_fingerprint": "EE:7E:1A:71:1E:07:72:C8:54:A4:05:4E:CE:EF:69:75:BF:83:0F:8D:84:7B:C7:E9:5E:93:F1:EC:6F:1F:FB:E3",
+          "leaf_subject": "C=TW, L=臺灣, O=政府機關-行政院-主計總處, CN=www.dgbas.gov.tw",
+          "leaf_issuer": "C=TW, O=TAIWAN-CA, OU=SSL Sub-CA, CN=TWCA SSL Certification Authority",
+          "leaf_san_includes_hostname": true,
+          "leaf_authority_key_identifier": "F2:28:D4:F9:D4:1C:7E:1A:6B:16:82:E5:EF:93:29:69:ED:CA:15:20",
+          "sent_nonleaf_subjects": [
+            "ePKI Root Certification Authority - G2",
+            "政府伺服器數位憑證管理中心 - G1",
+            "ePKI Root Certification Authority"
+          ],
+          "sent_nonleaf_subject_key_identifiers": [
+            "72:5B:BA:AA:72:38:EE:25:90:24:B5:94:22:FA:09:88:CA:8B:0A:FB",
+            "D6:EB:2D:9D:61:FE:2B:BB:70:88:2E:B8:07:B1:59:B0:F4:83:22:6A",
+            "1E:0C:F7:B6:67:F2:E1:92:26:09:45:C0:55:39:2E:77:3F:42:4A:A2"
+          ],
+          "any_sent_ski_matches_leaf_aki": false,
+          "curl_ca_native_head": {
+            "exit": 60,
+            "http_status": "000",
+            "response_body_bytes": 0
+          }
+        },
+        "www.stat.gov.tw": {
+          "openssl_exit": 1,
+          "verify_return_code": 20,
+          "verify_result": "unable to get local issuer certificate",
+          "presented_cert_count": 1,
+          "same_leaf_fingerprint_as_ws": true,
+          "leaf_san_includes_hostname": true,
+          "curl_ca_native_head": {
+            "exit": 60,
+            "http_status": "000",
+            "response_body_bytes": 0
+          }
+        },
+        "ssl.twca.com.tw": {
+          "openssl_exit": 0,
+          "verify_return_code": 0,
+          "verify_result": "ok",
+          "presented_cert_count": 3,
+          "leaf_sha256_fingerprint": "53:D5:48:E7:AD:6E:B8:E5:DD:90:CE:34:45:33:06:8C:8F:E3:D2:9E:D2:4B:B2:E0:DA:51:36:DC:45:DF:8B:02",
+          "leaf_san_includes_hostname": true,
+          "leaf_aki_matches_sent_intermediate_ski": true,
+          "curl_ca_native_head": {
+            "exit": 0,
+            "http_status": "200"
+          }
+        }
+      },
+      "macos_system_proxy_dictionary": "empty",
+      "proxy_environment_variable_names": [],
+      "classification": "TLS_ROOT_CAUSE_LIKELY",
+      "classification_detail": "DGBAS endpoints presented an incomplete or mismatched chain; a general local trust-store failure is less likely because the native-trust control passed. Transparent network interception or managed TLS inspection cannot be conclusively ruled out.",
+      "tls_verification_disabled": false,
+      "system_ca_modified": false,
+      "safari_warning_bypassed": false,
+      "network_settings_modified": false,
+      "raw_handshake_logs_sha256": {
+        "ws.dgbas.gov.tw.handshake.txt": "b9f652590f09a4736c7eee5b1f0a15f795bb12de955d6d2a8c0308160822292f",
+        "www.stat.gov.tw.handshake.txt": "1aa3f92a43e3f0e72b292414a798c2df8aa3bfb21ba8c070b18e4f29d1ffa4aa",
+        "ssl.twca.com.tw.handshake.txt": "660ab705c043342fe847a9f8b8dfa56f9c0834377acfa8e08131b9a4fb96151e"
+      },
+      "raw_logs_committed": false
+    }
   },
   "local_artifacts": {
     "source_cache_path": "work/source-cache/",
@@ -232,7 +313,19 @@
       "housing_and_health_twd": 337155,
       "source_raw_bytes_verified": false,
       "cohort_proxy_weights": false,
-      "independent_arithmetic_recheck": true
+      "independent_arithmetic_recheck": true,
+      "followup_recheck": {
+        "status": "PASS_INTERIM_CHECKSUM_ONLY",
+        "distinct_categories": 12,
+        "category_codes": "01-12",
+        "negative_amounts": 0,
+        "sum_twd_per_household_year": 815100,
+        "declared_total_twd_per_household_year": 815100,
+        "stored_percentage_sum": "99.999999",
+        "evidence_status": "OFFICIAL_PDF_SEARCH_INDEXED_DUAL_TABLE;RAW_BYTES_UNVERIFIED",
+        "scope": "ALL_HOUSEHOLDS_GENERAL",
+        "cohort_proxy_weights": false
+      }
     },
     "independent_reconciliation": {
       "status": "PASS_INTERIM_CHECKSUM_ONLY",
@@ -245,12 +338,24 @@
       "housing_and_health_twd": 337155,
       "evidence_status": "OFFICIAL_PDF_SEARCH_INDEXED_DUAL_TABLE;RAW_BYTES_UNVERIFIED",
       "scope": "ALL_HOUSEHOLDS_GENERAL; not cohort proxy weights"
+    },
+    "pure_python_csv_unittest": {
+      "status": "PASS",
+      "command": "python3 -m unittest discover -s research/cohort-inflation -p 'test_extract_revised_2020_cohort_csv.py' -v",
+      "python_version": "3.14.5",
+      "tests_collected": 11,
+      "passed": 11,
+      "failed": 0,
+      "artifact_tool_imported": false,
+      "artifact_tool_available": false,
+      "first_run_issue": "Initial run exposed that numeric 0 tolerance was converted to empty text by value-or-empty logic.",
+      "fix": "positive_number now treats None as missing while preserving numeric zero."
     }
   },
   "acceptance": {
     "WGT-01": "HOLD_TLS_CERTIFICATE_BLOCKED",
     "WGT-02": "PARTIAL_LANDING_METADATA_ONLY",
-    "WGT-03": "HOLD_NO_XLSX_OR_ARTIFACT_TOOL",
+    "WGT-03": "HOLD_NO_AUTHENTICATED_SOURCE_OR_NUMBERS_EXPORT",
     "WGT-04": "HOLD_COHORT_SOURCE_UNVERIFIED",
     "WGT-05": "HOLD_ZERO_OF_TWO_PROXY_GROUPS"
   },
@@ -281,5 +386,30 @@
   "raw_source_files_committed": 0,
   "converted_workbooks_committed": 0,
   "github_actions_used": false,
-  "main_modified": false
+  "main_modified": false,
+  "historical_initial_base_head_sha": "5a1fc853d96e25e413d0476d31ed5f1393460d38",
+  "updated_at_utc": "2026-10-17T08:03:01Z",
+  "git_followup": {
+    "branch": "research/batch-09",
+    "pull_ff_only": "Already up to date.",
+    "head_before_followup": "7d87ef5d7ba05ba7f932f41c58642176daba637a",
+    "working_tree_was_clean_before_followup_changes": true,
+    "main_modified": false,
+    "github_actions_used": false
+  },
+  "latest_followup": {
+    "source_files_downloaded": 0,
+    "numbers_conversions": 0,
+    "occupation_proxy_weights_complete": false,
+    "age_proxy_weights_complete": false,
+    "proxy_groups_completed": "0/2",
+    "WGT-01": "HOLD",
+    "WGT-02": "PARTIAL",
+    "WGT-03": "HOLD",
+    "WGT-04": "HOLD",
+    "WGT-05": "HOLD",
+    "basket": "NOT SEALED",
+    "index": "LOCKED",
+    "formal_workbook_modified": false
+  }
 }

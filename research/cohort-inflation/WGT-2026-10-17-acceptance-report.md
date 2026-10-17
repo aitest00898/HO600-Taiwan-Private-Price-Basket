@@ -73,3 +73,24 @@ Canonical HO600 仍是 **181/600**，Basket **NOT SEALED**，Index **LOCKED**；
 Batch 9 C01–C03 維持 **60 項 research-level PASS**，C04 維持 **WIP**；本次 cohort extraction 仍與 private-price Basket 分開。
 
 下一步須先由來源端或受信任網路環境提供可驗證的官方 TLS 憑證鏈；不匯入未核實憑證、不略過 TLS。之後重新下載兩份原始表（若 XLS 仍不可用，再測官方 ODS），保存原檔與時間、官方 URL、大小及 SHA-256；再用 Numbers 另存 XLSX、記錄轉檔 SHA、檢視工作表與 12 類列位，並在提供 `artifact_tool` 的本機環境完成單元測試、獨立對帳及兩組明確標為 PROXY 的樣本權重。原始資料不足時維持 HOLD。
+
+## 2026-10-17 TLS 根因與 CSV 測試追蹤
+
+本節為本次 `research/batch-09` follow-up 的新證據，記錄於 `2026-10-17T08:01:28Z` 起。遠端基準為 `7d87ef5d7ba05ba7f932f41c58642176daba637a`，先執行 `git pull --ff-only` 並回報 `Already up to date.`。完整憑證比對見 [`TLS-DIAGNOSTIC-RESULT-2026-10-17.md`](./TLS-DIAGNOSTIC-RESULT-2026-10-17.md)；機器收據及後續 Handoff 亦已更新。
+
+### TLS 判定
+
+- 診斷腳本透過嚴格 SNI/主機名/鏈驗證執行；`ws.dgbas.gov.tw` 與 `www.stat.gov.tw` 都回報 OpenSSL verify code 20（`unable to get local issuer certificate`）。兩站送出的葉憑證是同一張：SAN 含各自主機名，issuer 為 `TWCA SSL Certification Authority`，葉 AKI 為 `F2:28:D4:F9:D4:1C:7E:1A:6B:16:82:E5:EF:93:29:69:ED:CA:15:20`。
+- `ws.dgbas.gov.tw` 送出葉憑證及三張 ePKI／政府伺服器憑證；三張 SKI 都不匹配葉 AKI，亦沒有 TWCA SSL CA 簽發者。`www.stat.gov.tw` 只送出葉憑證，沒有中繼憑證。
+- `ssl.twca.com.tw` 的完整 3 張憑證鏈嚴格驗證成功（verify code 0）；TWCA 中繼 SKI 與其葉 AKI 相符。`curl --ca-native` 對控制站回 HTTP 200，對兩個官方主機則在 TLS 階段 error 60／HTTP 000。
+- `scutil --proxy` 為空 dictionary，沒有 proxy 環境變數。分類為 **`TLS_ROOT_CAUSE_LIKELY`：官方端點送出的鏈有誤或不完整**；本機整體信任庫錯誤較不可能，但僅憑本次觀測仍不能完全排除透明網路攔截或受管理的 TLS inspection。未更改信任庫、網路、DNS 或 Safari。
+
+### CSV 測試與資料驗算
+
+- 首次執行新 CSV 測試集時，11 項中有 5 項通過、4 項失敗、2 項錯誤；共同根因是解析器把數值 `0` 誤當作空值。修正 `positive_number` 對 `None` 與數值零的區分後，以 Python 3.14.5 再執行 `python3 -m unittest discover -s research/cohort-inflation -p 'test_extract_revised_2020_cohort_csv.py' -v`，**11/11 PASS**。測試與解析器未匯入 `artifact_tool`，本機亦未安裝該模組；CSV 測試路徑不需要它。
+- 重新核對既有全體家庭索引摘錄：代碼 01–12 共 12 類、負值 0、支出合計與列示總額均為 **815,100 元／戶／年**，儲存百分比合計 **99.999999%**；資料標記仍是 `RAW_BYTES_UNVERIFIED` 及 `ALL_HOUSEHOLDS_GENERAL`，因此只是算術檢查，不是族群來源驗收或權重。
+- 本次沒有任何官方原始檔通過嚴格 HTTPS；沒有下載 XLS／ODS，沒有原始檔或 Numbers 轉檔雜湊，沒有執行 Numbers、XLSX `--inspect` 或實際資料抽取。
+
+**Gate 狀態未升格：** WGT-01 `HOLD_TLS_CERTIFICATE_BLOCKED`；WGT-02 `PARTIAL_METADATA_ONLY`；WGT-03 `HOLD`；WGT-04 `HOLD`；WGT-05 `HOLD, 0/2`。任何職業戶長或高齡戶長樣本均不得宣稱為全體上班族或真正退休家庭。後續需先由 DGBAS/TWCA 或受信任網路管理者確認並修正鏈，再以嚴格驗證重試；若需要更改本機信任設定，須先取得使用者授權。
+
+Canonical HO600 仍為 **181/600、Basket NOT SEALED、Index LOCKED**；沒有使用 GitHub Actions、修改 `main`、發布族群通膨率或變更正式工作簿。

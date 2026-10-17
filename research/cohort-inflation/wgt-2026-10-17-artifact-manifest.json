@@ -68,5 +68,64 @@
     "certificate_validation_bypass": "not used",
     "source_cache_file_count": 0
   },
-  "previous_remote_sync_commit_sha": "5a1fc853d96e25e413d0476d31ed5f1393460d38"
+  "previous_remote_sync_commit_sha": "5a1fc853d96e25e413d0476d31ed5f1393460d38",
+  "followup_update": {
+    "recorded_at_utc": "2026-10-17T08:03:01Z",
+    "branch": "research/batch-09",
+    "prepared_from_head_sha": "7d87ef5d7ba05ba7f932f41c58642176daba637a",
+    "pull_ff_only": "Already up to date.",
+    "deliverables": [
+      {
+        "repository_path": "research/cohort-inflation/extract_revised_2020_cohort_csv.py",
+        "sha256": "911906dbd85cfbbdab8406228b2fec586efb62b2b59233d66e5753dd0176f20a"
+      },
+      {
+        "repository_path": "research/cohort-inflation/test_extract_revised_2020_cohort_csv.py",
+        "sha256": "37e9380ff8b00bbe673cec10fa4ca7083206ddf0f1fe50b9cda42f27e2e39349"
+      },
+      {
+        "repository_path": "research/cohort-inflation/TLS-DIAGNOSTIC-RESULT-2026-10-17.md",
+        "sha256": "b91ffc12c0f3d6e761b4a2178e27be73f48fa1c481ba40375164e2c39b49096d"
+      },
+      {
+        "repository_path": "research/cohort-inflation/WGT-2026-10-17-acceptance-report.md",
+        "sha256": "86d76c1cd60873207e2f8c3458c0bffce9d7650e6af2bcf08d3b69778a8bf5a1"
+      },
+      {
+        "repository_path": "research/cohort-inflation/wgt-2026-10-17-source-receipt.json",
+        "sha256": "1762400caf9bce792e717c11ebeb6f36d2957abf5cfb1777a5d174b0e3a26de3"
+      },
+      {
+        "repository_path": "handoffs/2026-10-17-wgt-01-05-network-blocked-handoff.md",
+        "sha256": "6924420f9e3ae921cbaebaaba5cfc45691903c87c15604e4bf31476c228143a1"
+      }
+    ],
+    "tls_classification": "TLS_ROOT_CAUSE_LIKELY",
+    "strict_tls": true,
+    "csv_unit_tests": {
+      "status": "PASS",
+      "tests": 11,
+      "passed": 11,
+      "failed": 0,
+      "artifact_tool_required": false
+    },
+    "general_household_excerpt": {
+      "categories": 12,
+      "sum_twd": 815100,
+      "declared_total_twd": 815100,
+      "evidence": "RAW_BYTES_UNVERIFIED; ALL_HOUSEHOLDS_GENERAL"
+    },
+    "raw_source_files_committed": 0,
+    "numbers_conversions": 0,
+    "proxy_groups_completed": "0/2",
+    "WGT-01": "HOLD",
+    "WGT-02": "PARTIAL",
+    "WGT-03": "HOLD",
+    "WGT-04": "HOLD",
+    "WGT-05": "HOLD",
+    "github_actions_used": false,
+    "main_modified": false,
+    "basket_sealed": false,
+    "index_unlocked": false
+  }
 }

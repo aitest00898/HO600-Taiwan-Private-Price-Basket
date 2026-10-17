@@ -57,3 +57,15 @@
 - 本機 `artifact_tool` 缺少屬**獨立環境問題**：新增 [純 Python 標準函式庫 Numbers CSV 解析器](../research/cohort-inflation/extract_revised_2020_cohort_csv.py)、[11 個合成安全測試](../research/cohort-inflation/test_extract_revised_2020_cohort_csv.py)、[未覆核的 CSV mapping 範本](../research/cohort-inflation/cohort-weight-csv-mapping.template.json)。無須安裝新的 Python 試算表套件；但仍必須先合法、安全地取得原始 XLS/ODS、保存 SHA，再由 Numbers 匯出 CSV 並**人工覆核**列欄才能執行。
 - 已將官方職業別 ODS `65.ods` 加入來源清冊、XLSX 解析器及 CSV 解析器的白名單。此為格式替代，**仍使用同一官方 TLS 主機，不能因此解決 TLS 問題**。
 - 此次新增檔案均屬研究分支，尚未於使用者本機執行。2020 職業/年齡權重仍 0/2，WGT-01~05 不變，正式 main 181/600 且 Index LOCKED，Actions 依舊停用。
+
+## Follow-up result — 2026-10-17 08:01 UTC
+
+This follow-up supersedes the earlier TLS diagnosis protocol with actual local observations. Current branch base was `7d87ef5d7ba05ba7f932f41c58642176daba637a`; `git pull --ff-only` returned `Already up to date.`
+
+- Strict OpenSSL handshakes: `ws.dgbas.gov.tw` and `www.stat.gov.tw` both failed verify code 20. Both received the same DGBAS leaf certificate; its SAN includes both hostnames, issuer is `TWCA SSL Certification Authority`, and AKI is absent from all ePKI certificates sent by `ws`. `www.stat.gov.tw` sent only the leaf. `ssl.twca.com.tw` passed verify code 0 with a key-identifier-matched chain; `curl --ca-native` to it returned HTTP 200 while the two official endpoints failed before HTTP (000).
+- Classification: `TLS_ROOT_CAUSE_LIKELY`, a wrong/incomplete chain as presented by the official DGBAS endpoints. Empty macOS proxy configuration and no proxy environment variables make a configured proxy less likely. Transparent interception or managed TLS inspection is not conclusively ruled out. No TLS bypass, Safari warning bypass, CA trust change, or network setting change was made. The diagnostic results and private raw-log SHA-256 values are in `research/cohort-inflation/TLS-DIAGNOSTIC-RESULT-2026-10-17.md` and the source receipt.
+- New pure-Python CSV tests: the first run found a zero-tolerance parsing bug. After correcting `positive_number` so numeric zero is not treated as empty, all 11 tests pass under Python 3.14.5. The test and extractor have no `artifact_tool` import; `artifact_tool` is not installed and is not needed for this CSV route.
+- Independent general-household excerpt check: 12 categories, no negative values, category sum = declared total = 815,100 TWD/household/year; stored percentages total 99.999999%. Source bytes remain unverified and scope remains `ALL_HOUSEHOLDS_GENERAL`, so this does not pass WGT-04 or establish any proxy weights.
+- No official raw XLS/ODS passed strict HTTPS. No file was downloaded, so raw and Numbers-converted SHA-256 values remain absent; Numbers conversion and actual XLSX/CSV extraction remain unperformed.
+
+WGT-01 remains `HOLD_TLS_CERTIFICATE_BLOCKED`; WGT-02 partial metadata only; WGT-03/04 HOLD; WGT-05 HOLD 0/2. Next step is for DGBAS/TWCA or a trusted network operator to confirm/correct the certificate chain. If local trust changes are proposed, stop for explicit user authorization. No Actions, `main`, canonical workbook, Basket, Index, or cohort inflation release was touched.

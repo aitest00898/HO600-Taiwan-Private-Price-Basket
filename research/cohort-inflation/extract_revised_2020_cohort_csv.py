@@ -53,7 +53,7 @@ def check_original(file):
         raise ValueError("Only original official XLS or ODS accepted")
 
 def positive_number(value):
-    s = str(value or "").strip().replace(",", "").replace("，", "")
+    s = str(value if value is not None else "").strip().replace(",", "").replace("，", "")
     try:
         num = Decimal(s)
     except (InvalidOperation, ValueError) as exc:
