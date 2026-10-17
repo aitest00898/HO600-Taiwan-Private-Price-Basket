@@ -43,6 +43,7 @@ OFFICIAL_2020_URLS = {
     },
     "NAT20-OCC": {
         "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11530/235896/65.xls",
+        "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11530/235896/65.ods",
     },
 }
 EXPECTED_CODES = [f"{n:02d}" for n in range(1, 13)]
