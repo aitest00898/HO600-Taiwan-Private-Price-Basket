@@ -69,3 +69,15 @@ This follow-up supersedes the earlier TLS diagnosis protocol with actual local o
 - No official raw XLS/ODS passed strict HTTPS. No file was downloaded, so raw and Numbers-converted SHA-256 values remain absent; Numbers conversion and actual XLSX/CSV extraction remain unperformed.
 
 WGT-01 remains `HOLD_TLS_CERTIFICATE_BLOCKED`; WGT-02 partial metadata only; WGT-03/04 HOLD; WGT-05 HOLD 0/2. Next step is for DGBAS/TWCA or a trusted network operator to confirm/correct the certificate chain. If local trust changes are proposed, stop for explicit user authorization. No Actions, `main`, canonical workbook, Basket, Index, or cohort inflation release was touched.
+
+## 2026-10-17 — Alternative official source feasibility review
+
+After verifying Codex's latest TLS diagnostic and **11/11 synthetic CSV unit test PASS**, an external review found additional official alternative datasets, detailed in [`ALTERNATE-OFFICIAL-SOURCES-2026-10-17.md`](../research/cohort-inflation/ALTERNATE-OFFICIAL-SOURCES-2026-10-17.md).
+
+- Taipei City official historical **head-age × 12 consumption division** CSV: https://data.gov.tw/dataset/133235 (the 2012–2023 source includes year 2020); **different** hostname `data.taipei`, but the raw CSV remains **NOT RETRIEVED** after web fetch errors / model-container DNS failure. This is a useful Taipei-only age proxy, *not* national WGT-01 and not actual retirees.
+- Taipei district × consumption dataset: https://data.taipei/dataset/detail?id=d4142821-6cb6-4678-8fd6-709f620ced26; district not age/occupation; useful independent structural QA only.
+- Official national account 12-consumption-group file: https://data.gov.tw/dataset/44226, but it is national accounts' private consumption not age/occupation household weights, **not** a WGT substitute. 2024 total-only age × income quintile dataset https://data.gov.tw/dataset/108265 also lacks 12-category detail.
+- A separately labelled 2024+ Taipei district schema includes **13** divisions and renamed groups, requiring a documented classification bridge; do not naively join 2020 12-category values.
+- Prior macOS TLS receipt strongly indicates bad/missing DGBAS intermediate. Optional diagnostic: authenticate the *exact* candidate intermediate using TWCA's officially HTTPS-served repository, compare AKI/SKI and cryptographic signature, run offline `openssl verify` with *system roots* remaining the exclusive trust anchors, without CA installs, `partial_chain`, or disabling TLS. Do not presume an intermediate's label establishes identity. Any later download must itself strictly validate hostname/chain; otherwise maintain WGT-01 HOLD.
+- No original or cohort expenditure data downloaded in this follow-up. No Mac work or 11 synthetic tests rerun here. All WGT-01..05 outcomes unchanged; canonical main 181/600 and Index LOCKED, Batch9 C01..03 60 research PASS, Actions paused.
+
