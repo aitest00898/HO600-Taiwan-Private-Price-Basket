@@ -49,6 +49,24 @@ class CPIAuthenticityChecks(unittest.TestCase):
         profile=cpi.decode_table(fixture(year="202001"),MONTH)
         self.assertEqual(profile["period_2020_rows"],6)
 
+    def test_new_official_stat_period_header_month(self):
+        raw=fixture(header=["縣市別代碼","統計期","基本分類","原始值[統計數值]","年增率[%]"])
+        profile=cpi.decode_table(raw,MONTH)
+        self.assertEqual(profile["date_field"],"統計期")
+        self.assertEqual(profile["period_2020_rows"],6)
+
+    def test_new_official_stat_period_header_year(self):
+        raw=fixture(source=YEAR,year="109",include2026=False,
+                    header=["縣市別代碼","統計期","基本分類","原始值[統計數值]","年增率[%]"])
+        profile=cpi.decode_table(raw,YEAR)
+        self.assertEqual(profile["date_field"],"統計期")
+        self.assertEqual(profile["period_2020_rows"],6)
+
+    def test_reject_two_competing_period_headers(self):
+        raw=fixture(header=["年月別","統計期","基本分類","原始值[統計數值]","年增率[%]"])
+        with self.assertRaisesRegex(ValueError,"ambiguous"):
+            cpi.decode_table(raw,MONTH)
+
     def test_cp950(self):
         profile=cpi.decode_table(fixture(encoding="cp950"),MONTH)
         self.assertEqual(profile["file_encoding"],"cp950")
@@ -72,12 +90,12 @@ class CPIAuthenticityChecks(unittest.TestCase):
 
     def test_reject_missing_class_column(self):
         hdr=["縣市別代碼","年月別","未分類","原始值[統計數值]","年增率[%]"]
-        with self.assertRaisesRegex(ValueError,"Missing required"):
+        with self.assertRaisesRegex(ValueError,"Missing or ambiguous"):
             cpi.decode_table(fixture(header=hdr),MONTH)
 
     def test_reject_missing_period_column(self):
         hdr=["縣市別代碼","自編年號","基本分類","原始值[統計數值]","年增率[%]"]
-        with self.assertRaisesRegex(ValueError,"Missing required"):
+        with self.assertRaisesRegex(ValueError,"Missing or ambiguous"):
             cpi.decode_table(fixture(header=hdr),MONTH)
 
     def test_reject_empty(self):
