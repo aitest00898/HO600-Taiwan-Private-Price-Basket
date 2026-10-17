@@ -61,7 +61,14 @@ def decode_table(data: bytes, source: str) -> dict:
                 raise ValueError("Missing time or class labels")
             def has_y(v,year):
                 val=v.strip()
-                return bool(re.search(rf"(?<![0-9])(?:{year}|{year-1911})(?![0-9])",val))
+                for prefix in (str(year),str(year-1911)):
+                    if val==prefix or any(val.startswith(prefix+sep) for sep in ("年","/","-","."," ")):
+                        return True
+                    if len(val)==len(prefix)+2 and val.startswith(prefix) and val[-2:].isdigit():
+                        month=int(val[-2:])
+                        if 1<=month<=12:
+                            return True
+                return False
             observed2020=sum(has_y(r[kyear],2020) for r in observed)
             observed2026=sum(has_y(r[kyear],2026) for r in observed)
             if observed2020==0:
