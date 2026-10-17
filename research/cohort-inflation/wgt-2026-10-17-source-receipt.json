@@ -182,5 +182,11 @@
     "basket_sealed": false,
     "index_status": "LOCKED",
     "canonical_workbook_modified": false
+  },
+  "batch_09_scope": {
+    "C01_C03": "60_RESEARCH_LEVEL_PASS",
+    "C04": "WIP_UNCHANGED",
+    "cohort_extraction_distinct_from_private_price_basket": true,
+    "verification_basis": "LOCAL-CODEX-WGT-2026-10-17.md at base head"
   }
 }

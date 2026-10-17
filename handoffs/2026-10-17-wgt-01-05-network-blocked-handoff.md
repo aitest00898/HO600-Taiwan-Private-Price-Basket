@@ -41,4 +41,4 @@
 - 不用不同邊際表推導年齡 × 職業聯合樣本。
 - 不從 proxy 推算 `HO600-WORK`、`HO600-RETIRE` 或「經驗通膨」。
 - 若修正版原表與索引摘錄不同，記錄 `SOURCE_CONFLICT`；不得硬配 815,100。
-- Canonical HO600 維持 181/600、Basket NOT SEALED、Index LOCKED。Branch workflow 為 `workflow_dispatch`，不派送 Actions。
+- Canonical HO600 維持 181/600、Basket NOT SEALED、Index LOCKED。Batch 9 C01–C03 維持 60 項 research-level PASS，C04 維持 WIP；cohort extraction 與 private-price Basket 分開。Branch workflow 為 `workflow_dispatch`，不派送 Actions。

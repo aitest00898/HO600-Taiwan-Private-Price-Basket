@@ -68,4 +68,6 @@
 
 Canonical HO600 仍是 **181/600**，Basket **NOT SEALED**，Index **LOCKED**；沒有修改正式工作簿、`data/*.csv` 或 canonical 狀態。分支上的 `.github/workflows/validate.yml` 僅能手動 `workflow_dispatch`；本次未使用或派送 GitHub Actions，也沒有修改 `main`、合併分支、封存 Basket 或解鎖 Index。
 
+Batch 9 C01–C03 維持 **60 項 research-level PASS**，C04 維持 **WIP**；本次 cohort extraction 仍與 private-price Basket 分開。
+
 下一步先恢復 Mac 對 `stat.gov.tw` 與 `ws.dgbas.gov.tw` 的正常 DNS 與有效 TLS 信任，再從上述官方頁下載兩份原始表（若 XLS 仍不可用，測試官方 ODS 替代格式）。保存原檔與時間、官方 URL、大小及 SHA-256；再用 Numbers 另存 XLSX、記錄轉檔 SHA、實際檢視工作表與 12 類列位，最後在提供 `artifact_tool` 的本機環境完成單元測試、獨立對帳及兩組明確標為 PROXY 的樣本權重。原始資料不足時維持 HOLD。

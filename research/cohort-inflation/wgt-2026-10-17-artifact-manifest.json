@@ -28,17 +28,17 @@
     {
       "local_path": "outputs/WGT-2026-10-17-acceptance-report.md",
       "github_path": "research/cohort-inflation/WGT-2026-10-17-acceptance-report.md",
-      "sha256": "38af2e5ba1a4301b6e32a80c7ab0ca771acb85c8c9c695e73ef03010897ab336"
+      "sha256": "ee288f3bcd8a44119f4bd61efa5d52f826bd6a0f460a6e1bd00aa8b4c1a534d0"
     },
     {
       "local_path": "outputs/WGT-2026-10-17-source-receipt.json",
       "github_path": "research/cohort-inflation/wgt-2026-10-17-source-receipt.json",
-      "sha256": "860c01c483cdfcb947bc97f22b884df0b2c13085de30627b4df2d4b55c892178"
+      "sha256": "bd385ba7e4038607f7b4a9e315e8e51c5d176aad37e919cbb14d1f8f425f622d"
     },
     {
       "local_path": "outputs/HANDOFF-WGT-2026-10-17.md",
       "github_path": "handoffs/2026-10-17-wgt-01-05-network-blocked-handoff.md",
-      "sha256": "ac28ea70841e55b930d743acf58145e953c42953fd7601cc20349869d14192d6"
+      "sha256": "61bb35398eaaacc4a3ebaadc9e889968bff7ec0dbdb53f9409c2c32bde131b89"
     }
   ],
   "acceptance": {
