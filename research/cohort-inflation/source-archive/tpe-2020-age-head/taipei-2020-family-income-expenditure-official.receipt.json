@@ -1,0 +1,19 @@
+{
+  "status": "ORIGINAL_PDF_RAW_RETRIEVED_NO_DATA_EXTRACTION",
+  "source_id": "TPE20-FAMILY-SURVEY-TABLE8-PDF",
+  "official_landing": "https://data.gov.tw/dataset/133235",
+  "requested_url": "https://www-ws.gov.taipei/Download.ashx?icon=.pdf&n=MTA55bm06Ie65YyX5biC5a625bqt5pS25pSv6Kiq5ZWP6Kq%2F5p%2Bl5aCx5ZGKLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvMzY3L3JlbGZpbGUvNDU2NzIvODQ3MTQxNy8wNjFmMDZlMy1iZjE1LTQzODYtOWNhYi1iMWM1YzdiNzBkZDMucGRm",
+  "actual_final_url": "https://www-ws.gov.taipei/Download.ashx?icon=.pdf&n=MTA55bm06Ie65YyX5biC5a625bqt5pS25pSv6Kiq5ZWP6Kq%2F5p%2Bl5aCx5ZGKLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvMzY3L3JlbGZpbGUvNDU2NzIvODQ3MTQxNy8wNjFmMDZlMy1iZjE1LTQzODYtOWNhYi1iMWM1YzdiNzBkZDMucGRm",
+  "response_type": "application/pdf",
+  "http_code": 200,
+  "retrieved_at_utc": "2026-10-17T12:16:12.635407+00:00",
+  "raw_file_size_bytes": 4438994,
+  "raw_sha256": "877a5da6e2bde0ccf860d08a19e5adbaab87a386cf78d21ac62505c2053710b8",
+  "year": 2020,
+  "geo": "TAIPEI_CITY_ONLY",
+  "table_candidate": "Table 8: Family Income and Expenditure by Age of Household Head",
+  "numeric_table_extraction_verified": false,
+  "household_age_proxy_weights_released": false,
+  "retirement_population_inferred": false,
+  "national_WGT01_satisfied": false
+}

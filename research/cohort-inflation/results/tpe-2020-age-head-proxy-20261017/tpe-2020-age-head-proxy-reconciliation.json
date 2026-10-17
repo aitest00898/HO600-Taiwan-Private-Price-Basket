@@ -1,0 +1,59 @@
+{
+  "status": "PASS_TAIPEI_CITY_AGE_HEAD_PROXY_ONLY",
+  "verified_at_utc": "2026-10-17T12:22:22.665824+00:00",
+  "scope": "TAIPEI_CITY household-head age groups; annual average expenditure per household; NT dollars",
+  "proxy_definition": "12-class expenditure shares by household-head age group; age 65+ is not retirement status",
+  "retirement_population_inferred": false,
+  "national_WGT01_satisfied": false,
+  "official_csv": {
+    "landing": "https://data.taipei/dataset/detail?id=26c3817c-0713-4657-8cd8-aa842eb59f97",
+    "final_url": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=63e4d839-ef65-46a8-b4d1-1bbfeeca5516",
+    "resource_id": "TPE-AGE-2012-2023",
+    "retrieved_at_utc": "2026-10-17T12:16:11.611699+00:00",
+    "raw_bytes": 35120,
+    "sha256": "d75682e408db19704c9c6dae726be3c54ab57560487697acc2d7a478ce801434",
+    "rows": 96,
+    "columns": 58,
+    "encoding": "cp950 / Big5",
+    "survey_year": "2020 / ROC109",
+    "age_rows_including_total_average": 8
+  },
+  "official_pdf": {
+    "landing": "https://data.gov.tw/dataset/133235",
+    "final_url": "https://www-ws.gov.taipei/Download.ashx?icon=.pdf&n=MTA55bm06Ie65YyX5biC5a625bqt5pS25pSv6Kiq5ZWP6Kq%2F5p%2Bl5aCx5ZGKLnBkZg%3D%3D&u=LzAwMS9VcGxvYWQvMzY3L3JlbGZpbGUvNDU2NzIvODQ3MTQxNy8wNjFmMDZlMy1iZjE1LTQzODYtOWNhYi1iMWM1YzdiNzBkZDMucGRm",
+    "retrieved_at_utc": "2026-10-17T12:16:12.635407+00:00",
+    "raw_bytes": 4438994,
+    "sha256": "877a5da6e2bde0ccf860d08a19e5adbaab87a386cf78d21ac62505c2053710b8",
+    "table": "Table 8, Taipei household income and expenditure by household-head age, 2020 / ROC109",
+    "pdf_table_pages_printed": "78-81"
+  },
+  "checks": {
+    "all_12_category_columns_present": true,
+    "category_values_compared_pdf_to_csv": "96/96 exact",
+    "published_totals_compared_pdf_to_csv": "8/8 exact",
+    "twelve_category_sum_max_absolute_delta_nt": 2,
+    "sum_delta_by_age_group_nt": {
+      "總平均": 0,
+      "未滿30歲": 0,
+      "30～34歲": 1,
+      "35～39歲": 0,
+      "40～44歲": -1,
+      "45～54歲": -1,
+      "55～64歲": -2,
+      "65歲及以上": 1
+    },
+    "rounding_tolerance_nt": 2,
+    "weights_generated_for_age_groups": [
+      "未滿30歲",
+      "30～34歲",
+      "35～39歲",
+      "40～44歲",
+      "45～54歲",
+      "55～64歲",
+      "65歲及以上"
+    ],
+    "weights_normalized_by": "sum of the twelve published category cells per age group; avoids spreading the source's <= NT$2 display-rounding delta"
+  },
+  "weight_output": "TPE_AGE_HEAD_EXPENDITURE_PROXY_WEIGHTS_2020.csv",
+  "weights_sha256": "10db8d58c5a38319dc7865841d214ee1b99ad61f4469eb27f8ed5ed8fdb612cc"
+}

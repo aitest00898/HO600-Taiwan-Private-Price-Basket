@@ -1,0 +1,103 @@
+...certificate verification successful.
+---
+Certificate chain
+ 0: www.dgbas.gov.tw
+    <cert(0x104a8bfc0) s: www.dgbas.gov.tw i: TWCA SSL Certification Authority>
+    Not Before: Oct 7, 2026 08:58
+    Not After : Apr 23, 2027 15:59
+ 1: TWCA SSL Certification Authority
+    <cert(0x104a8ce20) s: TWCA SSL Certification Authority i: TWCA CYBER Root CA>
+    Not Before: Feb 23, 2023 07:22
+    Not After : Feb 23, 2033 15:59
+ 2: TWCA CYBER Root CA
+    <cert(0x7984c30000) s: TWCA CYBER Root CA i: TWCA Global Root CA>
+    Not Before: Dec 9, 2022 04:00
+    Not After : Dec 9, 2030 15:59
+ 3: TWCA Global Root CA
+    <cert(0x104a8dbf0) s: TWCA Global Root CA i: TWCA Global Root CA>
+    Not Before: Jun 27, 2012 06:28
+    Not After : Dec 31, 2030 15:59
+---
+No extended validation result found
+Certificate Transparency (CT) status: [32mverified[0m
+---
+Trust evaluation results
+{
+    RevocationInfo =     (
+                {
+            crlite =             {
+                generationUsed = 8;
+                isDefinitive = 1;
+                isRevoked = 0;
+                status = 1;
+                versionUsed = 23;
+            };
+            ocsp =             {
+            };
+        },
+                {
+            ocsp =             {
+            };
+            valid =             {
+                anchorHash = {length = 32, bytes = 0x59769007 f7685d0f cd50872f 9f95d575 ... 2b610a98 672f0e1b };
+                certHash = {length = 32, bytes = 0x01af2324 d098098f 5e0cdf6f aabada43 ... b26248b2 fda3e531 };
+                checkOCSP = 0;
+                complete = 1;
+                format = 1;
+                hasDateConstraints = 0;
+                hasNameConstraints = 0;
+                hasPolicyConstraints = 0;
+                isDefinitive = 1;
+                isOnList = 0;
+                isRevoked = 0;
+                issuerHash = {length = 32, bytes = 0xc619f4e6 f7b1baa7 a6c6f244 092a3f82 ... fbaf0254 6f33133f };
+                knownOnly = 0;
+                noCACheck = 0;
+                overridable = 0;
+                requireCT = 0;
+                valid = 0;
+            };
+        },
+                {
+            ocsp =             {
+            };
+            valid =             {
+                anchorHash = {length = 32, bytes = 0x59769007 f7685d0f cd50872f 9f95d575 ... 2b610a98 672f0e1b };
+                certHash = {length = 32, bytes = 0xc619f4e6 f7b1baa7 a6c6f244 092a3f82 ... fbaf0254 6f33133f };
+                checkOCSP = 0;
+                complete = 1;
+                format = 1;
+                hasDateConstraints = 0;
+                hasNameConstraints = 0;
+                hasPolicyConstraints = 0;
+                isDefinitive = 1;
+                isOnList = 0;
+                isRevoked = 0;
+                issuerHash = {length = 32, bytes = 0x59769007 f7685d0f cd50872f 9f95d575 ... 2b610a98 672f0e1b };
+                knownOnly = 0;
+                noCACheck = 0;
+                overridable = 0;
+                requireCT = 0;
+                valid = 0;
+            };
+        },
+                {
+            ocsp =             {
+            };
+        }
+    );
+    TrustCertificateTransparency = 1;
+    TrustEvaluationDate = "2026-10-17 12:15:55 +0000";
+    TrustEvaluationID = "0E5E94A5-2BCD-466A-8119-E43654FDBE15";
+    TrustResultDetails =     (
+                {
+        },
+                {
+        },
+                {
+        },
+                {
+        }
+    );
+    TrustResultValue = 4;
+}

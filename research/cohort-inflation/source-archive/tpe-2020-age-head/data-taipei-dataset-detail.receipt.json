@@ -1,0 +1,10 @@
+{
+  "source_landing": "https://data.taipei/dataset/detail?id=26c3817c-0713-4657-8cd8-aa842eb59f97",
+  "final_url": "https://data.taipei/dataset/detail?id=26c3817c-0713-4657-8cd8-aa842eb59f97",
+  "http_status": 200,
+  "response_content_type": "text/html;charset=utf-8",
+  "retrieved_at_utc_file_mtime": "2026-10-17T12:17:22.397296+00:00",
+  "raw_bytes": 94099,
+  "sha256": "0688bfbfa75c4cefb3ba1ec62891acc57e04aca1396f9398f37ead75bd543502",
+  "note": "Fetched with curl --ca-native --fail --location and HTTPS-only redirects; preserved metadata page snapshot."
+}

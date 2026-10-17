@@ -1,0 +1,15 @@
+{
+  "status": "PASS_INDEPENDENT_WEIGHT_RECOMPUTATION",
+  "verified_at_utc": "2026-10-17T12:27:18.227950+00:00",
+  "runtime": "3.14.5",
+  "method": "stdlib csv + Decimal/Fraction; recomputed shares from preserved raw CSV without importing production verifier or artifact_tool",
+  "source_raw_csv_sha256": "d75682e408db19704c9c6dae726be3c54ab57560487697acc2d7a478ce801434",
+  "weight_output_sha256": "10db8d58c5a38319dc7865841d214ee1b99ad61f4469eb27f8ed5ed8fdb612cc",
+  "age_proxy_groups": 7,
+  "categories_per_group": 12,
+  "weight_rows": 84,
+  "all_84_amounts_and_shares_match": true,
+  "exact_unrounded_share_sum_per_group": "1",
+  "max_absolute_rounded_share_sum_delta": "2E-12",
+  "65_plus_not_retirement_classification": "TPE_AGE_HEAD_65_PLUS_PROXY; no retirement status field used"
+}

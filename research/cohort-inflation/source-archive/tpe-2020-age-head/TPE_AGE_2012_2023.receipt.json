@@ -1,0 +1,35 @@
+{
+  "source_id": "TPE-AGE-2012-2023",
+  "source_landing": "https://data.taipei/dataset/detail?id=26c3817c-0713-4657-8cd8-aa842eb59f97",
+  "requested_url": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=63e4d839-ef65-46a8-b4d1-1bbfeeca5516",
+  "final_url": "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=63e4d839-ef65-46a8-b4d1-1bbfeeca5516",
+  "http_status": 200,
+  "response_content_type": "text/csv;charset=BIG-5",
+  "utc_retrieved": "2026-10-17T12:16:11.611699+00:00",
+  "raw_bytes": 35120,
+  "sha256": "d75682e408db19704c9c6dae726be3c54ab57560487697acc2d7a478ce801434",
+  "data_profile": {
+    "encoding": "cp950",
+    "data_rows": 96,
+    "column_count": 58,
+    "year2020_rows": 8,
+    "age_groups_2020": [
+      "30～34歲",
+      "35～39歲",
+      "40～44歲",
+      "45～54歲",
+      "55～64歲",
+      "65歲及以上",
+      "未滿30歲",
+      "總平均"
+    ],
+    "header_sha256": "90098e0989fd8665de219dbf6ada58410d4609a1b2ef7a1743e31bfdcf2d6fc6",
+    "category_2020_values_verified": false,
+    "cohort_proxy_weights_generated": false,
+    "geographic_scope": "TAIPEI_ONLY",
+    "national_WGT01_satisfied": false
+  },
+  "classification": "OFFICIAL_RAW_RETRIEVED_SCHEMA_INSPECTED_NOT_NATIONAL",
+  "weights_status": "NOT_EXTRACTED",
+  "cannot_replace_national_WGT01": true
+}

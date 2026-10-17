@@ -1,0 +1,4 @@
+# Preserve the downloaded government originals and metadata snapshot byte-for-byte.
+*.csv -text -diff
+*.pdf -text -diff
+*.html -text -diff

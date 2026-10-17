@@ -1,5 +1,7 @@
 # HO600 WGT — assistant-run acquisition attempts and minimal Mac-only residual work
 
+> **Execution update (2026-10-17):** `git pull --ff-only` completed on `research/batch-09`. The residual Mac tasks in this handoff were then executed. See [`MAC-EXECUTION-RESULTS-2026-10-17.md`](./MAC-EXECUTION-RESULTS-2026-10-17.md) for the verified TWCA chain, official Taipei originals and receipts, 18 offline tests, PDF/CSV reconciliation, regional proxy output, and remaining national HOLD gates. The original national DGBAS XLS/ODS remain HOLD.
+
 **When:** 2026-10-17, Asia/Taipei. Branch `research/batch-09`; all WGT-01..05 remain on existing HOLD except the known WGT-02 landing-page metadata. This is not a publication approval. GitHub Actions remain disabled.
 
 ## Assistant actually attempted (not just planned)

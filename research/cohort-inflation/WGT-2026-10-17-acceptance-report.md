@@ -94,3 +94,9 @@ Batch 9 C01–C03 維持 **60 項 research-level PASS**，C04 維持 **WIP**；�
 **Gate 狀態未升格：** WGT-01 `HOLD_TLS_CERTIFICATE_BLOCKED`；WGT-02 `PARTIAL_METADATA_ONLY`；WGT-03 `HOLD`；WGT-04 `HOLD`；WGT-05 `HOLD, 0/2`。任何職業戶長或高齡戶長樣本均不得宣稱為全體上班族或真正退休家庭。後續需先由 DGBAS/TWCA 或受信任網路管理者確認並修正鏈，再以嚴格驗證重試；若需要更改本機信任設定，須先取得使用者授權。
 
 Canonical HO600 仍為 **181/600、Basket NOT SEALED、Index LOCKED**；沒有使用 GitHub Actions、修改 `main`、發布族群通膨率或變更正式工作簿。
+
+## Mac residual execution update — 2026-10-17
+
+The newer local Mac execution supersedes this report's earlier statement that Taipei raw data and the new 11/7 tests had not yet been executed. Strict HTTPS retrieved the official Taipei age-head CSV (35,120 bytes; SHA-256 `d75682e408db19704c9c6dae726be3c54ab57560487697acc2d7a478ce801434`) and 2020 survey PDF (4,438,994 bytes; SHA-256 `877a5da6e2bde0ccf860d08a19e5adbaab87a386cf78d21ac62505c2053710b8`). PDF Table 8 and CSV agree for all 96 category cells and all eight totals; rounding deltas between the sum of displayed categories and the displayed total are at most NT$2. Seven separate Taipei household-head-age proxy vectors were produced and independently recomputed. They are not national weights or retirement classifications.
+
+The 11 CSV and 7 PDF offline tests now pass, and the exact TWCA intermediate chain validates against an existing Mac system anchor. The live DGBAS strict TLS HEAD still fails with curl 60, so the corrected national 2020 files were not retrieved. **National WGT-01 remains HOLD; national WGT-02 remains metadata-only; national WGT-03/04 remain HOLD without national raw data; national WGT-05 remains 0/2.** This regional alternate source does not change those national gates. See [`MAC-EXECUTION-RESULTS-2026-10-17.md`](./MAC-EXECUTION-RESULTS-2026-10-17.md).

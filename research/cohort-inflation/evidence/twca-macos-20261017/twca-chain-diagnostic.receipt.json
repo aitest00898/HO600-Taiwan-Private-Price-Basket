@@ -1,0 +1,59 @@
+{
+  "run_date_taipei": "2026-10-17",
+  "verification_time_utc": "2026-10-17T12:15:55Z",
+  "tool": "verify_twca_chain_macos_readonly.sh",
+  "os": "Darwin 27.0 arm64",
+  "curl": "8.7.1 SecureTransport, --ca-native",
+  "leaf_file": "ws.dgbas.gov.tw.leaf.pem",
+  "leaf_file_sha256": "62ee162c784ec13e20fa7bd21e9f981c723d0104941907fa202f47cb3607d6c7",
+  "leaf_certificate_sha256_fingerprint": "ee7e1a711e0772c854a4054eceef6975bf830f8d847bc7e95e93f1ec6f1ffbe3",
+  "leaf_subject": "C=TW, L=臺灣, O=政府機關-行政院-主計總處, CN=www.dgbas.gov.tw",
+  "leaf_issuer": "C=TW, O=TAIWAN-CA, OU=SSL Sub-CA, CN=TWCA SSL Certification Authority",
+  "leaf_san": [
+    "www.dgbas.gov.tw",
+    "eng.dgbas.gov.tw",
+    "www.stat.gov.tw",
+    "eng.stat.gov.tw",
+    "ia.dgbas.gov.tw",
+    "ebook.dgbas.gov.tw",
+    "ws.dgbas.gov.tw",
+    "ebasnew.dgbas.gov.tw"
+  ],
+  "leaf_authority_key_identifier": "F2:28:D4:F9:D4:1C:7E:1A:6B:16:82:E5:EF:93:29:69:ED:CA:15:20",
+  "official_intermediate": {
+    "url": "https://sslserver.twca.com.tw/cacert/Cyber_SSL_2023.crt",
+    "file": "TWCA_SSL_2023.crt",
+    "raw_sha256": "01af2324d098098f5e0cdf6faabada430b21cce777f47eacb26248b2fda3e531",
+    "subject": "C=TW, O=TAIWAN-CA, OU=SSL Sub-CA, CN=TWCA SSL Certification Authority",
+    "issuer": "C=TW, O=TAIWAN-CA, OU=Root CA, CN=TWCA CYBER Root CA",
+    "subject_key_identifier": "F2:28:D4:F9:D4:1C:7E:1A:6B:16:82:E5:EF:93:29:69:ED:CA:15:20",
+    "matches_leaf_aki": true
+  },
+  "official_cross_signed_chain_certificate": {
+    "url": "https://sslserver.twca.com.tw/cacert/GlobalCrossCyber_2022.crt",
+    "file": "TWCA_GlobalCrossCyber_2022.crt",
+    "raw_sha256": "c619f4e6f7b1baa7a6c6f244092a3f82e46a6d67bee26337fbaf02546f33133f",
+    "subject": "C=TW, O=TAIWAN-CA, OU=Root CA, CN=TWCA CYBER Root CA",
+    "issuer": "C=TW, O=TAIWAN-CA, OU=Root CA, CN=TWCA Global Root CA",
+    "subject_key_identifier": "9D:85:61:14:7C:C1:62:6F:97:68:E4:4F:37:40:E1:AD:E0:0D:56:37",
+    "authority_key_identifier": "48:DB:CD:DE:8E:E9:49:72:5A:88:E8:B1:D8:3D:07:B3:B9:6B:66:50"
+  },
+  "macos_security_verify_cert": {
+    "exit_code": 0,
+    "result": "certificate verification successful",
+    "policy": "SSL hostname ws.dgbas.gov.tw",
+    "chain_inputs_are_untrusted_candidates": true,
+    "system_anchor_source": "pre-existing macOS system trust only",
+    "root_override_or_keychain_write": false,
+    "certificate_transparency": "verified"
+  },
+  "live_dgbas_strict_https_head": {
+    "command_used_ca_native": true,
+    "exit_code": 60,
+    "http_status": null,
+    "error": "SSL certificate problem: unable to get local issuer certificate"
+  },
+  "classification": "LIKELY_DGBAS_SERVER_DELIVERED_CHAIN_INCOMPLETE_OR_MISMATCHED; existing local trust successfully validates the supplied official chain, while native strict live HEAD still fails. Endpoint-specific transparent TLS inspection cannot be fully excluded.",
+  "trust_store_modified": false,
+  "tls_validation_disabled": false
+}

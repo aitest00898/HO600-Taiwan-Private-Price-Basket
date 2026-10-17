@@ -72,3 +72,9 @@ The Taipei historic 2012–2023 12-category scheme should not be spliced to its 
 | Canonical HO600 | 181/600, Basket NOT SEALED, Index LOCKED | No promotion allowed |
 
 **Result: new authenticated sourcing/verification route CREATED; not SUCCESSFULLY EXECUTED on user Mac.** No contacts with agencies initiated. No GitHub Actions, branch merges, canonical data writes or published inflation rates.
+
+## Mac execution update — 2026-10-17
+
+The read-only Mac verifier later retrieved both exact TWCA certificate files over strict HTTPS. The DGBAS leaf AKI matches `Cyber_SSL_2023.crt` SKI; `security verify-cert` validated the complete candidate chain to an existing macOS system anchor (exit 0). The separate strict live DGBAS HEAD still fails with curl 60, `unable to get local issuer certificate`, so the likely endpoint-delivered chain problem remains. No trust settings changed. See [`evidence/twca-macos-20261017/twca-chain-diagnostic.receipt.json`](./evidence/twca-macos-20261017/twca-chain-diagnostic.receipt.json).
+
+The official Taipei CSV and report PDF were both retrieved and hash-preserved. PDF Table 8 and CSV match across 96 category cells and eight consumption totals. Seven age-of-household-head **Taipei-only expenditure proxy** vectors were generated and independently recomputed; the 65+ grouping is not retirement status. National WGT-01 remains HOLD. Full receipts and outputs: [`MAC-EXECUTION-RESULTS-2026-10-17.md`](./MAC-EXECUTION-RESULTS-2026-10-17.md).
