@@ -45,3 +45,15 @@
 - 不從 proxy 推算 `HO600-WORK`、`HO600-RETIRE` 或「經驗通膨」。
 - 若修正版原表與索引摘錄不同，記錄 `SOURCE_CONFLICT`；不得硬配 815,100。
 - Canonical HO600 維持 181/600、Basket NOT SEALED、Index LOCKED。Batch 9 C01–C03 維持 60 項 research-level PASS，C04 維持 WIP；cohort extraction 與 private-price Basket 分開。Branch workflow 為 `workflow_dispatch`，不派送 Actions。
+
+## 補充：2026-10-17 TLS 鏈問題與無相依的 CSV 驗收路徑
+
+此段是新增研究計畫，不修改前述 Codex 原始執行紀錄、也不將任何 Gate 升格。
+
+- 官方 TWCA 在 2026-04-15 公告 2026-05-04 更新新 CYBER Root 鏈，並警告部分 IIS 站台在 macOS/iOS 可能顯示不信任；公告：https://ssl.twca.com.tw/news_detail/ad2496ee-39cf-4d74-b44a-410470f99570 。此為**背景線索，並非已證實 DGBAS 使用 IIS**。
+- 本機收據顯示 DGBAS leaf issuer = `TWCA SSL Certification Authority`，但另一批伺服器送出的憑證為 ePKI 政府 CA；應優先檢查伺服器中繼鏈是否缺失／不符，並確認 leaf SAN 是否包含 `ws.dgbas.gov.tw`。僅憑 leaf CN 為 `www.dgbas.gov.tw` 不能判斷 SAN 是否吻合。也不能排除本機系統 TLS 代理或憑證信任問題。
+- [只讀 TLS 診斷程式](../research/cohort-inflation/diagnose_official_tls_readonly.sh) 使用 OpenSSL SNI+完整主機名驗證，比較 ws.dgbas、www.stat 及 TWCA 自有 HTTPS 站，收集葉憑證 SAN/issuer/AIA；**不安裝 CA、不停用驗證、不下載研究資料**。
+- [原因判斷與排障規格](../research/cohort-inflation/TLS-ROOT-CAUSE-AND-CSV-FALLBACK-2026-10-17.md)。遇到需修改 Mac 信任庫時必須先取得明確許可；優先由伺服器/官方提供正確憑證鏈或已驗證的官方替代路徑。
+- 本機 `artifact_tool` 缺少屬**獨立環境問題**：新增 [純 Python 標準函式庫 Numbers CSV 解析器](../research/cohort-inflation/extract_revised_2020_cohort_csv.py)、[11 個合成安全測試](../research/cohort-inflation/test_extract_revised_2020_cohort_csv.py)、[未覆核的 CSV mapping 範本](../research/cohort-inflation/cohort-weight-csv-mapping.template.json)。無須安裝新的 Python 試算表套件；但仍必須先合法、安全地取得原始 XLS/ODS、保存 SHA，再由 Numbers 匯出 CSV 並**人工覆核**列欄才能執行。
+- 已將官方職業別 ODS `65.ods` 加入來源清冊、XLSX 解析器及 CSV 解析器的白名單。此為格式替代，**仍使用同一官方 TLS 主機，不能因此解決 TLS 問題**。
+- 此次新增檔案均屬研究分支，尚未於使用者本機執行。2020 職業/年齡權重仍 0/2，WGT-01~05 不變，正式 main 181/600 且 Index LOCKED，Actions 依舊停用。
