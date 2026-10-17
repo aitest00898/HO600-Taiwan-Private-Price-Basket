@@ -1,0 +1,30 @@
+{
+  "source_id": "NAT20-AGE",
+  "source_url": "https://ws.dgbas.gov.tw/001/Upload/463/relfile/11531/235640/159-164.xls",
+  "reference_year": 2020,
+  "cohort_code": "AGE_HEAD_65PLUS_PROXY",
+  "source_sheet": "REPLACE_VERIFIED_NUMBERS_SHEET",
+  "numbers_export_confirmed": false,
+  "manual_reviewed": false,
+  "original_sha256": "REPLACE_TRUE_ORIGINAL_64_HEX_SHA",
+  "csv_sha256": "REPLACE_TRUE_CSV_64_HEX_SHA",
+  "label_column": 1,
+  "amount_column": 2,
+  "category_rows": {
+    "10": null,
+    "11": null,
+    "12": null,
+    "01": null,
+    "02": null,
+    "03": null,
+    "04": null,
+    "05": null,
+    "06": null,
+    "07": null,
+    "08": null,
+    "09": null
+  },
+  "total_row": null,
+  "total_label_column": 1,
+  "total_tolerance_twd": 12
+}
