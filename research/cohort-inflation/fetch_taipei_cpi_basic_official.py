@@ -111,7 +111,7 @@ def fetch(source: str,out:Path)->dict:
                 "--proto","=https","--proto-redir","=https","--max-redirs","2",
                 "--connect-timeout","12","--max-time","60","--max-filesize",str(MAX_BYTES),
                 "--output",str(payload),"--write-out",
-                "%{url_effective}\\n%{http_code}\\n%{content_type}\\n",requested]
+                "%{url_effective}\n%{http_code}\n%{content_type}\n",requested]
             result=subprocess.run(cmd,text=True,capture_output=True,timeout=70,check=False)
             if result.returncode!=0:
                 attempts.append({"requested":requested,"curl_exit":result.returncode,
