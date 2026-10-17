@@ -20,9 +20,14 @@ from urllib.parse import urlsplit
 
 URLS={
     "TPE-CPI-BASIC-MONTH":
-        "https://data.taipei/api/dataset/f47d7930-c507-4b5d-9ad3-907746a28342/resource/4a4ea957-c620-4056-89bb-50c7a4bd7325/download",
+        "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=4a4ea957-c620-4056-89bb-50c7a4bd7325",
     "TPE-CPI-BASIC-YEAR":
         "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=3e6ed9d0-0e86-4d99-8047-2fa68fb4ec90",
+}
+# The annual and monthly data are one source each. Alternative official URL
+# routes are transport fallbacks, NOT independently observed confirmation.
+ALTERNATE_URLS={
+    "TPE-CPI-BASIC-MONTH": "https://data.taipei/api/dataset/f47d7930-c507-4b5d-9ad3-907746a28342/resource/4a4ea957-c620-4056-89bb-50c7a4bd7325/download",
 }
 MAX_BYTES=15_000_000
 
@@ -40,17 +45,19 @@ def decode_table(data: bytes, source: str) -> dict:
             header=rows[0]
             if not (4<=len(header)<=60) or len(set(header))!=len(header):
                 raise ValueError("Unexpected or duplicate headings")
-            checks=(
-                ("年月別","基本分類","原始值") if source.endswith("MONTH")
-                else ("年別","基本分類","原始值")
-            )
-            if not all(any(k in h for h in header) for k in checks):
-                raise ValueError(f"Missing required CPI columns {checks}")
+            # Official open-data catalog documents both historical "年月別"/"年別"
+            # and updated "統計期" headers. Either is valid after checking grain.
+            time_aliases=("年月別","統計期") if source.endswith("MONTH") else ("年別","統計期")
+            period_columns=[i for i,h in enumerate(header) if h.strip() in time_aliases]
+            class_columns=[i for i,h in enumerate(header) if h.strip()=="基本分類"]
+            value_columns=[i for i,h in enumerate(header) if "原始值" in h]
+            if len(period_columns)!=1 or len(class_columns)!=1 or len(value_columns)!=1:
+                raise ValueError(f"Missing or ambiguous required CPI columns: time={period_columns}, class={class_columns}, value={value_columns}")
             if any(len(r)!=len(header) for r in rows[1:] if any(x.strip() for x in r)):
                 raise ValueError("Nonrectangular CPI table; inspect actual delimiter/format")
-            kyear=next(i for i,h in enumerate(header) if checks[0] in h)
-            kcategory=next(i for i,h in enumerate(header) if checks[1] in h)
-            kval=next(i for i,h in enumerate(header) if checks[2] in h)
+            kyear=period_columns[0]
+            kcategory=class_columns[0]
+            kval=value_columns[0]
             observed=[r for r in rows[1:] if any(x.strip() for x in r)]
             if len(observed)<5:
                 raise ValueError("Too few observations for historical price series")
