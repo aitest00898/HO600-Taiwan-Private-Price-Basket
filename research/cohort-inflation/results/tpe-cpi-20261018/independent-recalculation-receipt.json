@@ -1,0 +1,15 @@
+{
+  "status": "PASS_INDEPENDENT_FRACTION_RECALCULATION",
+  "method": "Independent Fraction arithmetic from original official CSVs and 2020 spending records; no import of the primary analysis module",
+  "summaries_checked": 14,
+  "contribution_rows_checked": 42,
+  "expected_mapped_classes": {
+    "3": "二.衣著類",
+    "9": "(二)娛樂費用",
+    "10": "(一)教養費用"
+  },
+  "max_abs_numeric_delta": "4.99991007245599E-13",
+  "summary_errors": [],
+  "contribution_errors": [],
+  "full_age_head_rate_release": "HOLD_NO_NORMALIZATION"
+}

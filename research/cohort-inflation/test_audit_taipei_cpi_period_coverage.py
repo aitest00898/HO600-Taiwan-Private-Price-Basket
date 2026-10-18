@@ -31,6 +31,7 @@ class Tests(unittest.TestCase):
         self.assertEqual(parse_month("202609"),(2026,9))
     def test_complete_grid(self):
         raw,r=fixture()
+        r["final_url"]="https://tsis.dbas.gov.taipei/statis/webMain.aspx?outkind=3"
         x=audit(raw,r)
         self.assertEqual(x["full_pair_class_count"],2)
         self.assertFalse(x["2020_to_2026_inflation_computed"])

@@ -12,6 +12,7 @@ import re
 from urllib.parse import urlsplit
 
 PERIOD_NAME = {"統計期", "年月別"}
+OFFICIAL_CPI_HOSTS = {"data.taipei", "tsis.dbas.gov.taipei"}
 
 
 def parse_month(text: str) -> tuple[int, int]:
@@ -52,7 +53,7 @@ def audit(raw: bytes, receipt: dict) -> dict:
     if digest != receipt.get("sha256") or len(raw) != receipt.get("raw_bytes"):
         raise ValueError("Government original bytes do not match pinned SHA or size")
     url = urlsplit(receipt.get("final_url", ""))
-    if url.scheme != "https" or url.hostname != "data.taipei" or receipt.get("http_code") != 200:
+    if url.scheme != "https" or url.hostname not in OFFICIAL_CPI_HOSTS or receipt.get("http_code") != 200:
         raise ValueError("Unverified government HTTPS source receipt")
     if receipt.get("source_id") != "TPE-CPI-BASIC-MONTH":
         raise ValueError("Only official monthly basic-category CPI is accepted")
@@ -60,10 +61,15 @@ def audit(raw: bytes, receipt: dict) -> dict:
     ip = next(i for i, x in enumerate(header) if x.strip() in PERIOD_NAME)
     ic = header.index("基本分類")
     iv = next(i for i, x in enumerate(header) if "原始值" in x)
+    if "縣市別代碼" not in header:
+        raise ValueError("Missing city-scope field")
+    igeo = header.index("縣市別代碼")
     values = {}
+    city_codes = set()
     for row in rows:
         if len(row) != len(header):
             raise ValueError("Nonrectangular CPI CSV")
+        city_codes.add(row[igeo].strip())
         period, label = parse_month(row[ip]), row[ic].strip()
         if not label:
             raise ValueError("Empty CPI classification")
@@ -77,6 +83,8 @@ def audit(raw: bytes, receipt: dict) -> dict:
         if not index.is_finite() or index <= 0:
             raise ValueError(f"Nonpositive/nonfinite price index at {key}")
         values[key] = index
+    if city_codes != {"63000"}:
+        raise ValueError(f"Expected Taipei City 63000 only, observed {sorted(city_codes)}")
     all_classes = sorted(set(k[1] for k in values))
     wanted = list(range(1, 10))
     eligible = []
@@ -93,6 +101,7 @@ def audit(raw: bytes, receipt: dict) -> dict:
         "source_raw_sha256": digest,
         "encoding": encoding,
         "official_month_rows": len(values),
+        "city_codes": sorted(city_codes),
         "number_distinct_classes": len(all_classes),
         "period_2020_months_present": sorted(set(p[1] for (p, label) in values if p[0] == 2020)),
         "period_2026_months_present": sorted(set(p[1] for (p, label) in values if p[0] == 2026)),

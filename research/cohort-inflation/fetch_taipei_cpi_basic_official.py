@@ -20,14 +20,23 @@ from urllib.parse import urlsplit
 
 URLS={
     "TPE-CPI-BASIC-MONTH":
-        "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=4a4ea957-c620-4056-89bb-50c7a4bd7325",
+        "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=8701&kind=21&type=0&funid=A21000102&cycle=1&outmode=12&compmode=00&outkind=3&deflst=2",
     "TPE-CPI-BASIC-YEAR":
-        "https://data.taipei/api/frontstage/tpeod/dataset/resource.download?rid=3e6ed9d0-0e86-4d99-8047-2fa68fb4ec90",
+        "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=8700&kind=21&type=0&funid=A21000101&cycle=4&outmode=12&compmode=00&outkind=3&deflst=2",
 }
 # The annual and monthly data are one source each. Alternative official URL
 # routes are transport fallbacks, NOT independently observed confirmation.
 ALTERNATE_URLS={
     "TPE-CPI-BASIC-MONTH": "https://data.taipei/api/dataset/f47d7930-c507-4b5d-9ad3-907746a28342/resource/4a4ea957-c620-4056-89bb-50c7a4bd7325/download",
+}
+OFFICIAL_HOSTS={"data.taipei", "tsis.dbas.gov.taipei"}
+LANDING_URLS={
+    "TPE-CPI-BASIC-MONTH": "https://data.taipei/dataset/detail?id=f47d7930-c507-4b5d-9ad3-907746a28342",
+    "TPE-CPI-BASIC-YEAR": "https://data.taipei/dataset/detail?id=7ee57050-4d27-482c-bae5-ebd15ca86702",
+}
+LANDING_METADATA={
+    "TPE-CPI-BASIC-MONTH": {"period_start":"1998-01-01", "period_end":"2026-09-30", "metadata_updated":"2026-10-07 18:58:16"},
+    "TPE-CPI-BASIC-YEAR": {"period_start":"1998-01-01", "period_end":"2025-12-31", "metadata_updated":"2026-09-16 16:03:53"},
 }
 MAX_BYTES=15_000_000
 
@@ -122,7 +131,7 @@ def fetch(source: str,out:Path)->dict:
                 attempts.append({"requested":requested,"status":"NON200_OR_BAD_METADATA"})
                 continue
             parsed=urlsplit(fields[0])
-            if parsed.scheme!="https" or parsed.hostname!="data.taipei":
+            if parsed.scheme!="https" or parsed.hostname not in OFFICIAL_HOSTS:
                 # Fail closed; no further request to a potentially untrusted host.
                 raise ValueError("Redirect to unregistered host")
             try:
@@ -144,9 +153,12 @@ def fetch(source: str,out:Path)->dict:
         raw.write_bytes(blob)
         record={
             "source_id":source,"status":"RAW_CPI_RETRIEVED_PROFILED_NOT_MAPPED_OR_REBASED",
+            "official_landing_url":LANDING_URLS[source],
+            "official_landing_metadata":LANDING_METADATA[source],
             "requested":requested,"final_url":fields[0],
             "failed_candidate_attempts":attempts,
             "content_type":fields[2],"http_code":200,
+            "tls_verification":"PASS: curl --ca-native strict system trust and hostname verification; HTTPS-only redirects",
             "retrieved_utc":datetime.now(timezone.utc).isoformat(),
             "raw_bytes":len(blob),"sha256":hashlib.sha256(blob).hexdigest(),
             "scope":"TAIPEI_CITY_NOT_NATIONAL",

@@ -58,3 +58,7 @@ Recent public metadata of Taipei City Government's statistical open data catalog
 - National corrected 2020 XLS/ODS and genuine WORK/RETIRE household status remain blocked; no national WGT gate is changed.
 
 **WGT status after this analysis:** `TAIPEI_2020_AGE_SPEND=PASSED_RECONCILIATION`, `TAIPEI_PRICE_SERIES=NOT_RETRIEVED`, `TAIPEI_CPI_RATE=NOT_CALCULATED`, `NATIONAL_WGT01=HOLD`, `WORK/RETIRE=0/2`, `CANONICAL_MAIN=181/600_NOT_SEALED_LOCKED`. No GitHub Actions.
+
+## Follow-up — 2026-10-18
+
+The price-source statement above is the state at the original report date. Official Taipei monthly and annual basic CPI originals were subsequently retrieved and accepted for source, period, and base checks. The 12-division crosswalk still supports only partial contributions: see [the 2026-10-18 result](./TAIPEI-CPI-2026-10-18-DATA-CROSSWALK-PARTIAL-RESULT.md). The existing 84 Taipei age-head expenditure weights remain unchanged; national WGT-01 and any complete Taipei age-head rate remain HOLD.

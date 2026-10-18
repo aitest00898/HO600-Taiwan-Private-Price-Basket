@@ -60,3 +60,7 @@ The 12-row [conservative proposed category map](./taipei-2020-spending-vs-7-cpi-
 8. `TPE-PRICE-08 LABEL`: only `TAIPEI_AGE_HEAD_*_CPI_PROXY`, **not** actual retired households, worker households, national DGBAS WGT-01 or the original private HO600 600-item basket.
 
 Until all gates, **cohort age inflation = NOT_CALCULATED**. The published official September 2026 general CPI still serves as a verifiable benchmark for its own population and periods.
+
+## Follow-up — 2026-10-18
+
+The dated status above records the 2026-10-17 source state. On 2026-10-18, official monthly and annual Taipei basic CPI CSVs were retrieved from the current download anchors on the official dataset pages with strict native TLS, then audited over the requested periods. See [the 2026-10-18 source, crosswalk, and partial-contribution result](./TAIPEI-CPI-2026-10-18-DATA-CROSSWALK-PARTIAL-RESULT.md). The source/period/base gates passed, but only 3 of 12 household divisions were mapped; weighted coverage remains 7.57%–15.26%, below the 95% policy threshold, with mandatory food, housing, and medical categories unresolved. Full age-head CPI remains HOLD.

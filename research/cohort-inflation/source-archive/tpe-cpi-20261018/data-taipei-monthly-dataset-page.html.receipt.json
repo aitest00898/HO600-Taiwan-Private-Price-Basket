@@ -1,0 +1,12 @@
+{
+  "source_id": "TPE-CPI-BASIC-MONTHLY-LANDING-PAGE",
+  "requested_url": "https://data.taipei/dataset/detail?id=f47d7930-c507-4b5d-9ad3-907746a28342",
+  "final_url": "https://data.taipei/dataset/detail?id=f47d7930-c507-4b5d-9ad3-907746a28342",
+  "http_code": 200,
+  "content_type": "text/html;charset=utf-8",
+  "retrieved_utc_started": "2026-10-17T23:58:12.461495+00:00",
+  "retrieved_utc_completed": "2026-10-17T23:58:13.016405+00:00",
+  "raw_bytes": 83702,
+  "sha256": "640a9a3bad2263187352030c2e537ce83f41932018784d0a152b58217f363d36",
+  "tls_verification": "PASS: curl --ca-native strict system trust and hostname verification; HTTPS-only redirects"
+}

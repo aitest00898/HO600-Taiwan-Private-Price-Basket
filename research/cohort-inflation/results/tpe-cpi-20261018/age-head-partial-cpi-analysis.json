@@ -1,0 +1,833 @@
+{
+  "result": "PARTIAL_WITH_EXTERNAL_BLOCKERS",
+  "label": "TAIPEI_AGE_HEAD_CPI_PROXY",
+  "status": "VERIFIED_CLASS_CONTRIBUTIONS_ONLY_FULL_AGE_RATE_HOLD",
+  "weight_scope": "Taipei City household-head-age expenditure proxy; not nationwide, not worker-only, and not retired-household status",
+  "source_receipts": {
+    "monthly": {
+      "sha256": "7d3d3b3f09080cd0f9f374a0bcf8e5c89750f1c54374734159221429618ed8ed",
+      "raw_bytes": 881570,
+      "http_code": 200,
+      "final_url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=8701&kind=21&type=0&funid=A21000102&cycle=1&outmode=12&compmode=00&outkind=3&deflst=2",
+      "retrieved_utc": "2026-10-17T23:56:25.829701+00:00",
+      "tls_verification": "PASS: curl --ca-native strict system trust and hostname verification; HTTPS-only redirects"
+    },
+    "annual": {
+      "sha256": "318de9dbcd7e95e4e626d1327a9284a38c955b08f7c167020db1da774f2f0d40",
+      "raw_bytes": 64481,
+      "http_code": 200,
+      "final_url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=8700&kind=21&type=0&funid=A21000101&cycle=4&outmode=12&compmode=00&outkind=3&deflst=2",
+      "retrieved_utc": "2026-10-17T23:56:26.413780+00:00",
+      "tls_verification": "PASS: curl --ca-native strict system trust and hostname verification; HTTPS-only redirects"
+    }
+  },
+  "input_profiles": {
+    "monthly": {
+      "encoding": "utf-8-sig",
+      "rows": 16560,
+      "classes": 48,
+      "class_labels": [
+        "(一)交通及通訊設備",
+        "(一)成衣",
+        "(一)房租",
+        "(一)教養費用",
+        "(一)穀類及其製品",
+        "(一)醫療費用",
+        "(一)香菸及檳榔",
+        "(七)蔬菜",
+        "(三)交通服務及維修零件",
+        "(三)個人隨身用品",
+        "(三)家庭用品",
+        "(三)肉類製品",
+        "(三)衣著服務及配件",
+        "(三)醫療保健器材",
+        "(九)水果",
+        "(二)住宅維修費",
+        "(二)娛樂費用",
+        "(二)油料費",
+        "(二)美容及衛生用品",
+        "(二)肉類",
+        "(二)藥品及保健食品",
+        "(二)鞋類",
+        "(五)水產品",
+        "(五)水電燃氣",
+        "(五)理容服務費",
+        "(八)加工蔬菜",
+        "(六)其他",
+        "(六)加工水產品",
+        "(十)加工水果",
+        "(十一)乳類",
+        "(十七)外食費",
+        "(十三)調味品",
+        "(十二)食用油",
+        "(十五)非酒精性飲料及材料",
+        "(十八)其他食品",
+        "(十六)調理食品",
+        "(十四)酒",
+        "(四)個人照顧服務費",
+        "(四)家庭管理費用",
+        "(四)蛋類",
+        "一.食物類",
+        "七.雜項類",
+        "三.居住類",
+        "二.衣著類",
+        "五.醫藥保健類",
+        "六.教養娛樂類",
+        "四.交通及通訊類",
+        "總指數"
+      ],
+      "month_count": 345,
+      "first_period": "1998-01",
+      "last_period": "2026-09",
+      "2020_jan_sep_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "2020_jan_sep_rows": 432,
+      "2026_jan_sep_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "2026_jan_sep_rows": 432,
+      "city_codes": [
+        "63000"
+      ]
+    },
+    "annual": {
+      "encoding": "utf-8-sig",
+      "rows": 1344,
+      "classes": 48,
+      "class_labels": [
+        "(一)交通及通訊設備",
+        "(一)成衣",
+        "(一)房租",
+        "(一)教養費用",
+        "(一)穀類及其製品",
+        "(一)醫療費用",
+        "(一)香菸及檳榔",
+        "(七)蔬菜",
+        "(三)交通服務及維修零件",
+        "(三)個人隨身用品",
+        "(三)家庭用品",
+        "(三)肉類製品",
+        "(三)衣著服務及配件",
+        "(三)醫療保健器材",
+        "(九)水果",
+        "(二)住宅維修費",
+        "(二)娛樂費用",
+        "(二)油料費",
+        "(二)美容及衛生用品",
+        "(二)肉類",
+        "(二)藥品及保健食品",
+        "(二)鞋類",
+        "(五)水產品",
+        "(五)水電燃氣",
+        "(五)理容服務費",
+        "(八)加工蔬菜",
+        "(六)其他",
+        "(六)加工水產品",
+        "(十)加工水果",
+        "(十一)乳類",
+        "(十七)外食費",
+        "(十三)調味品",
+        "(十二)食用油",
+        "(十五)非酒精性飲料及材料",
+        "(十八)其他食品",
+        "(十六)調理食品",
+        "(十四)酒",
+        "(四)個人照顧服務費",
+        "(四)家庭管理費用",
+        "(四)蛋類",
+        "一.食物類",
+        "七.雜項類",
+        "三.居住類",
+        "二.衣著類",
+        "五.醫藥保健類",
+        "六.教養娛樂類",
+        "四.交通及通訊類",
+        "總指數"
+      ],
+      "years": [
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "first_year": 1998,
+      "last_year": 2025,
+      "2020_2025_years": [
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "2020_2025_rows": 288,
+      "city_codes": [
+        "63000"
+      ]
+    },
+    "weights_sha256": "10db8d58c5a38319dc7865841d214ee1b99ad61f4469eb27f8ed5ed8fdb612cc",
+    "weights_encoding": "utf-8-sig",
+    "crosswalk_sha256": "5e57f24572e7523e1bcacca76e859dd94c1ff25b165cf2e95fd3b94c7c6ab8c4",
+    "crosswalk_encoding": "utf-8-sig"
+  },
+  "classification_and_integrity": {
+    "monthly_annual_class_sets_identical": true,
+    "monthly_complete_all_classes_all_months_1998_01_to_2026_09": true,
+    "annual_complete_all_classes_1998_to_2025": true,
+    "positive_finite_index_values_only": true,
+    "duplicate_period_class_rows": 0,
+    "2021_annual_all_class_indices_unique_values": [
+      "100.00"
+    ],
+    "official_2021_base_headline_reconciliation": {
+      "official_2026_09_all_items": "113.95",
+      "raw_series_2026_09_all_items": "113.95",
+      "match": true
+    },
+    "monthly_average_vs_official_annual_max_abs_index_delta_2020_2025": "0.005",
+    "monthly_average_vs_official_annual_pairs_checked": 288,
+    "monthly_average_vs_official_annual_within_half_cent_index_rounding": true,
+    "recent_month_over_month_pairs_2020_01_to_2026_09": 3888,
+    "absolute_month_over_month_changes_at_least_20_percent": 8,
+    "largest_absolute_month_over_month_changes": [
+      {
+        "class": "(一)成衣",
+        "previous_period": "2025-09",
+        "period": "2025-10",
+        "change_percent": "28.093455823976",
+        "previous_index": "88.17",
+        "index": "112.94"
+      },
+      {
+        "class": "(四)蛋類",
+        "previous_period": "2023-02",
+        "period": "2023-03",
+        "change_percent": "24.950298210736",
+        "previous_index": "130.78",
+        "index": "163.41"
+      },
+      {
+        "class": "(一)成衣",
+        "previous_period": "2020-09",
+        "period": "2020-10",
+        "change_percent": "22.340195016251",
+        "previous_index": "92.3",
+        "index": "112.92"
+      },
+      {
+        "class": "(一)成衣",
+        "previous_period": "2022-09",
+        "period": "2022-10",
+        "change_percent": "22.137570744449",
+        "previous_index": "91.88",
+        "index": "112.22"
+      },
+      {
+        "class": "(七)蔬菜",
+        "previous_period": "2025-07",
+        "period": "2025-08",
+        "change_percent": "21.94927279177",
+        "previous_index": "112.76",
+        "index": "137.51"
+      },
+      {
+        "class": "(一)成衣",
+        "previous_period": "2021-09",
+        "period": "2021-10",
+        "change_percent": "21.735799496552",
+        "previous_index": "91.37",
+        "index": "111.23"
+      },
+      {
+        "class": "(一)成衣",
+        "previous_period": "2023-09",
+        "period": "2023-10",
+        "change_percent": "21.436934539649",
+        "previous_index": "93.95",
+        "index": "114.09"
+      },
+      {
+        "class": "(二)油料費",
+        "previous_period": "2020-03",
+        "period": "2020-04",
+        "change_percent": "-20.273905600391",
+        "previous_index": "81.78",
+        "index": "65.2"
+      },
+      {
+        "class": "(七)蔬菜",
+        "previous_period": "2024-07",
+        "period": "2024-08",
+        "change_percent": "19.828776581055",
+        "previous_index": "108.63",
+        "index": "130.17"
+      },
+      {
+        "class": "(一)成衣",
+        "previous_period": "2024-09",
+        "period": "2024-10",
+        "change_percent": "18.892988929889",
+        "previous_index": "94.85",
+        "index": "112.77"
+      }
+    ],
+    "large_monthly_moves_are_flagged_for_review_not_silently_smoothed": true
+  },
+  "crosswalk": {
+    "total_divisions": 12,
+    "status_counts": {
+      "MAPPED": 3,
+      "SPLIT_REQUIRED": 8,
+      "UNMAPPED": 1
+    },
+    "mapped_price_classes": {
+      "3": "二.衣著類",
+      "9": "(二)娛樂費用",
+      "10": "(一)教養費用"
+    }
+  },
+  "release_gate": {
+    "minimum_coverage": "0.95",
+    "mandatory_categories": [
+      1,
+      4,
+      6
+    ],
+    "unmapped_or_split_mandatory_categories": [
+      1,
+      4,
+      6
+    ],
+    "full_rate_release": "HOLD_NO_NORMALIZATION"
+  },
+  "mapped_category_price_results": [
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "expense_division": 3,
+      "expense_label_zh": "衣著鞋襪及服飾用品",
+      "cpi_class": "二.衣著類",
+      "baseline_index": "96.567777777778",
+      "target_index": "97.158888888889",
+      "price_relative": "1.006121204451",
+      "price_change_percent": "0.612120445053"
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "expense_division": 9,
+      "expense_label_zh": "休閒與文化",
+      "cpi_class": "(二)娛樂費用",
+      "baseline_index": "100.032222222222",
+      "target_index": "136.955555555556",
+      "price_relative": "1.369114396472",
+      "price_change_percent": "36.911439647225"
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "expense_division": 10,
+      "expense_label_zh": "教育",
+      "cpi_class": "(一)教養費用",
+      "baseline_index": "100.463333333333",
+      "target_index": "106.437777777778",
+      "price_relative": "1.059468905184",
+      "price_change_percent": "5.946890518376"
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "expense_division": 3,
+      "expense_label_zh": "衣著鞋襪及服飾用品",
+      "cpi_class": "二.衣著類",
+      "baseline_index": "98.96",
+      "target_index": "98.7",
+      "price_relative": "0.997372675829",
+      "price_change_percent": "-0.262732417138"
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "expense_division": 9,
+      "expense_label_zh": "休閒與文化",
+      "cpi_class": "(二)娛樂費用",
+      "baseline_index": "99.9",
+      "target_index": "133.51",
+      "price_relative": "1.336436436436",
+      "price_change_percent": "33.643643643644"
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "expense_division": 10,
+      "expense_label_zh": "教育",
+      "cpi_class": "(一)教養費用",
+      "baseline_index": "100.22",
+      "target_index": "104.41",
+      "price_relative": "1.041808022351",
+      "price_change_percent": "4.180802235083"
+    }
+  ],
+  "age_head_partial_summary": [
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "未滿30歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.102384799787",
+      "uncovered_share": "0.897615200213",
+      "partial_mapped_contribution_percentage_points": "2.345265502151",
+      "official_general_cpi_change_percent": "14.216793962128",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "30～34歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.095472348172",
+      "uncovered_share": "0.904527651828",
+      "partial_mapped_contribution_percentage_points": "2.110724408949",
+      "official_general_cpi_change_percent": "14.216793962128",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "35～39歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.114709983268",
+      "uncovered_share": "0.885290016732",
+      "partial_mapped_contribution_percentage_points": "2.358091288829",
+      "official_general_cpi_change_percent": "14.216793962128",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "40～44歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.143800574601",
+      "uncovered_share": "0.856199425399",
+      "partial_mapped_contribution_percentage_points": "2.5054990456",
+      "official_general_cpi_change_percent": "14.216793962128",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "45～54歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.152570868478",
+      "uncovered_share": "0.847429131522",
+      "partial_mapped_contribution_percentage_points": "2.713017596795",
+      "official_general_cpi_change_percent": "14.216793962128",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "55～64歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.119991609694",
+      "uncovered_share": "0.880008390306",
+      "partial_mapped_contribution_percentage_points": "2.676450445376",
+      "official_general_cpi_change_percent": "14.216793962128",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "65歲及以上",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.075699858608",
+      "uncovered_share": "0.924300141392",
+      "partial_mapped_contribution_percentage_points": "1.901797440024",
+      "official_general_cpi_change_percent": "14.216793962128",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "未滿30歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.102384799787",
+      "uncovered_share": "0.897615200213",
+      "partial_mapped_contribution_percentage_points": "2.099118805736",
+      "official_general_cpi_change_percent": "12.296913078798",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "30～34歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.095472348172",
+      "uncovered_share": "0.904527651828",
+      "partial_mapped_contribution_percentage_points": "1.887097358581",
+      "official_general_cpi_change_percent": "12.296913078798",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "35～39歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.114709983268",
+      "uncovered_share": "0.885290016732",
+      "partial_mapped_contribution_percentage_points": "2.091081194396",
+      "official_general_cpi_change_percent": "12.296913078798",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "40～44歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.143800574601",
+      "uncovered_share": "0.856199425399",
+      "partial_mapped_contribution_percentage_points": "2.188660477893",
+      "official_general_cpi_change_percent": "12.296913078798",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "45～54歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.152570868478",
+      "uncovered_share": "0.847429131522",
+      "partial_mapped_contribution_percentage_points": "2.373433953593",
+      "official_general_cpi_change_percent": "12.296913078798",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "55～64歲",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.119991609694",
+      "uncovered_share": "0.880008390306",
+      "partial_mapped_contribution_percentage_points": "2.387528152189",
+      "official_general_cpi_change_percent": "12.296913078798",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "65歲及以上",
+      "mapped_categories": [
+        3,
+        9,
+        10
+      ],
+      "mapped_coverage_share": "0.075699858608",
+      "uncovered_share": "0.924300141392",
+      "partial_mapped_contribution_percentage_points": "1.710302581526",
+      "official_general_cpi_change_percent": "12.296913078798",
+      "mandatory_unmapped_categories": [
+        1,
+        4,
+        6
+      ],
+      "coverage_threshold": "0.95",
+      "full_age_head_rate_release_eligible": false
+    }
+  ],
+  "partial_65_plus_vs_45_54_contribution_difference": [
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "measure": "difference in mapped-category contributions only; not a full cohort inflation gap",
+      "65_plus_minus_45_54_percentage_points": "-0.811220156771"
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "measure": "difference in mapped-category contributions only; not a full cohort inflation gap",
+      "65_plus_minus_45_54_percentage_points": "-0.663131372067"
+    }
+  ],
+  "partial_mapping_sensitivity": [
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "未滿30歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.04116398828",
+      "uncovered_share": "0.95883601172",
+      "partial_mapped_contribution_percentage_points": "0.085517213067",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "30～34歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.040244996082",
+      "uncovered_share": "0.959755003918",
+      "partial_mapped_contribution_percentage_points": "0.072203335375",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "35～39歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.05599466676",
+      "uncovered_share": "0.94400533324",
+      "partial_mapped_contribution_percentage_points": "0.190824427152",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "40～44歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.08582809496",
+      "uncovered_share": "0.91417190504",
+      "partial_mapped_contribution_percentage_points": "0.365651362148",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "45～54歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.089505026068",
+      "uncovered_share": "0.910494973932",
+      "partial_mapped_contribution_percentage_points": "0.385166560854",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "55～64歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.051646427043",
+      "uncovered_share": "0.948353572957",
+      "partial_mapped_contribution_percentage_points": "0.153731360769",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "A_2020_JAN_SEP_TO_2026_JAN_SEP",
+      "household_head_age_group": "65歲及以上",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.025388376387",
+      "uncovered_share": "0.974611623613",
+      "partial_mapped_contribution_percentage_points": "0.044728200473",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "未滿30歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.04116398828",
+      "uncovered_share": "0.95883601172",
+      "partial_mapped_contribution_percentage_points": "0.03942763983",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "30～34歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.040244996082",
+      "uncovered_share": "0.959755003918",
+      "partial_mapped_contribution_percentage_points": "0.029048005457",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "35～39歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.05599466676",
+      "uncovered_share": "0.94400533324",
+      "partial_mapped_contribution_percentage_points": "0.115684009356",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "40～44歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.08582809496",
+      "uncovered_share": "0.91417190504",
+      "partial_mapped_contribution_percentage_points": "0.238255031728",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "45～54歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.089505026068",
+      "uncovered_share": "0.910494973932",
+      "partial_mapped_contribution_percentage_points": "0.251669225443",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "55～64歲",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.051646427043",
+      "uncovered_share": "0.948353572957",
+      "partial_mapped_contribution_percentage_points": "0.088147182313",
+      "full_rate_release": "NO_HOLD"
+    },
+    {
+      "comparison": "B_2020_FULL_YEAR_TO_2025_FULL_YEAR",
+      "household_head_age_group": "65歲及以上",
+      "scenario": "withhold_division_09_leisure_entertainment_mapping",
+      "mapped_coverage_share": "0.025388376387",
+      "uncovered_share": "0.974611623613",
+      "partial_mapped_contribution_percentage_points": "0.017641002511",
+      "full_rate_release": "NO_HOLD"
+    }
+  ],
+  "not_calculated": [
+    "complete age-head CPI rate",
+    "national worker/retired inflation",
+    "HO600 official index"
+  ]
+}

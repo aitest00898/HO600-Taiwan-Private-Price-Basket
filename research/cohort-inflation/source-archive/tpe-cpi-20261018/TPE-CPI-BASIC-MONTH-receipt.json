@@ -1,0 +1,38 @@
+{
+  "source_id": "TPE-CPI-BASIC-MONTH",
+  "status": "RAW_CPI_RETRIEVED_PROFILED_NOT_MAPPED_OR_REBASED",
+  "official_landing_url": "https://data.taipei/dataset/detail?id=f47d7930-c507-4b5d-9ad3-907746a28342",
+  "official_landing_metadata": {
+    "period_start": "1998-01-01",
+    "period_end": "2026-09-30",
+    "metadata_updated": "2026-10-07 18:58:16"
+  },
+  "requested": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=8701&kind=21&type=0&funid=A21000102&cycle=1&outmode=12&compmode=00&outkind=3&deflst=2",
+  "final_url": "https://tsis.dbas.gov.taipei/statis/webMain.aspx?sys=220&ymf=8701&kind=21&type=0&funid=A21000102&cycle=1&outmode=12&compmode=00&outkind=3&deflst=2",
+  "failed_candidate_attempts": [],
+  "content_type": "application/octet-stream",
+  "http_code": 200,
+  "tls_verification": "PASS: curl --ca-native strict system trust and hostname verification; HTTPS-only redirects",
+  "retrieved_utc": "2026-10-17T23:56:25.829701+00:00",
+  "raw_bytes": 881570,
+  "sha256": "7d3d3b3f09080cd0f9f374a0bcf8e5c89750f1c54374734159221429618ed8ed",
+  "scope": "TAIPEI_CITY_NOT_NATIONAL",
+  "survey_weight_base": "Taipei 2020 household-head-age official survey",
+  "raw_cpi_profile": {
+    "file_encoding": "utf-8-sig",
+    "total_data_rows": 16560,
+    "columns": 5,
+    "date_field": "統計期",
+    "class_field": "基本分類",
+    "index_field": "原始值[統計數值]",
+    "distinct_class_labels": 48,
+    "period_2020_rows": 576,
+    "period_2026_rows": 432,
+    "has_2026_data": true,
+    "numeric_cpi_cells_verified": false,
+    "all_12_spending_categories_mapped": false,
+    "2020_to_2026_rebased": false,
+    "published_inflation_rate": false
+  },
+  "no_index_or_inflation_rate_generated": true
+}

@@ -104,7 +104,9 @@ class CPIAuthenticityChecks(unittest.TestCase):
 
     def test_official_origins_allowlist(self):
         self.assertEqual(set(cpi.URLS),{MONTH,YEAR})
-        self.assertTrue(all(x.startswith("https://data.taipei/") for x in cpi.URLS.values()))
+        self.assertTrue(all(x.startswith("https://tsis.dbas.gov.taipei/") for x in cpi.URLS.values()))
+        self.assertEqual(cpi.OFFICIAL_HOSTS,{"data.taipei","tsis.dbas.gov.taipei"})
+        self.assertEqual(set(cpi.LANDING_URLS),{MONTH,YEAR})
 
 if __name__=="__main__":
     unittest.main()

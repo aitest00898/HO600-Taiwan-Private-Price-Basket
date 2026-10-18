@@ -1,0 +1,2 @@
+*.csv -text -diff
+*.html -text -diff
