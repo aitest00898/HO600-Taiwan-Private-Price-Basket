@@ -56,6 +56,18 @@
     close.style.cssText="background:#185b51;color:white;border:0;border-radius:7px;padding:7px 11px";
     close.addEventListener("click",()=>host.remove());host.appendChild(close);
     window.HO600_BROWSER_SMOKE_RESULT={passed,failed,total:messages.length,cases:messages.map(m=>({...m})),viewport:{w:innerWidth,h:innerHeight},userAgent:navigator.userAgent};
+    const detail=document.createElement("details");
+    detail.style.cssText="margin-top:8px;font-size:11px";
+    const summary=document.createElement("summary");
+    summary.textContent="展開可複製的驗收 JSON（含瀏覽器與視窗資訊）";
+    detail.appendChild(summary);
+    const output=document.createElement("textarea");
+    output.readOnly=true;
+    output.value=JSON.stringify(window.HO600_BROWSER_SMOKE_RESULT,null,2);
+    output.style.cssText="display:block;width:100%;height:110px;max-width:100%;font-size:10px;margin-top:7px";
+    output.addEventListener("focus",()=>output.select());
+    detail.appendChild(output);
+    host.appendChild(detail);
     console.info("HO600_BROWSER_SMOKE_RESULT",JSON.stringify(window.HO600_BROWSER_SMOKE_RESULT));
   }
 
