@@ -283,6 +283,7 @@
       document.getElementById("workspace").classList.toggle("menu-open",opened);
       document.getElementById("menuToggle").setAttribute("aria-expanded",String(opened));
     });
+    document.getElementById("mobileBackdrop").addEventListener("click",closeNav);
     document.addEventListener("keydown",e=>{if(e.key==="Escape")closeNav()});
     app.addEventListener("click",e=>{
       const period=e.target.closest("[data-period]");
