@@ -168,7 +168,7 @@ class DashboardV0Acceptance(unittest.TestCase):
 
     @unittest.skipUnless(shutil.which("node"),"Node.js unavailable; validate JS in Safari")
     def test_js_syntax(self):
-        for path in (APP,JS_SNAP):
+        for path in (APP,JS_SNAP,ROOT/"tests"/"browser-smoke.js"):
             proc=subprocess.run(["node","--check",str(path)],capture_output=True,text=True,timeout=15)
             self.assertEqual(proc.returncode,0,proc.stderr)
 
