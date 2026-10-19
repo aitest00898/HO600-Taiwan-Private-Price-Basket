@@ -134,6 +134,34 @@ class DashboardV0Acceptance(unittest.TestCase):
         self.assertNotIn("https://cdn.",self.html)
         self.assertFalse(any(x for x in ("<form","input type=\"password\"") if x in self.html.lower()))
 
+    def test_smoke_mode_is_explicit_opt_in(self):
+        self.assertIn('get("smoke") === "1"', self.html)
+        self.assertIn("./tests/browser-smoke.js", self.html)
+        self.assertNotIn('<script defer src="./tests/browser-smoke.js">', self.html)
+
+    def test_mobile_navigation_tap_outside_closes(self):
+        self.assertIn('id="mobileBackdrop"', self.html)
+        self.assertIn('getElementById("mobileBackdrop").addEventListener("click",closeNav)',self.app)
+        self.assertIn('.workspace.menu-open .mobile-backdrop',self.css)
+        self.assertNotIn(".topbar::after",self.css)
+
+    def test_browser_smoke_has_export_period_mapping_checks(self):
+        smoke=(ROOT/"tests"/"browser-smoke.js").read_text(encoding="utf-8")
+        for term in (
+            'data-mode="strict"',
+            'data-mode="provisional"',
+            'data-period="B"',
+            '"45～54歲"',
+            'HOLD_NOT_A_FULL_RATE',
+            'exportedBlob',
+            'scrollWidth',
+            'mobileBackdrop',
+            'HO600_BROWSER_SMOKE_RESULT',
+        ):
+            self.assertIn(term,smoke)
+        self.assertNotIn("fetch(",smoke)
+        self.assertNotIn("localStorage",smoke)
+
     def test_workflow_pause_preserved(self):
         self.assertEqual(self.data["controls"]["githubActions"],"PAUSED_BY_USER")
         self.assertEqual(self.data["controls"]["indexRelease"],"LOCKED")
