@@ -65,6 +65,14 @@
       assertion("首頁正常渲染",!!node(".kpi-grid")&&text().includes("181 / 600"));
       assertion("首頁正式 419 缺口",text().includes("419"));
       assertion("首頁沒有完整年齡通膨率",text().includes("0 / 7"));
+      if (innerWidth <= 760) {
+        await click("#menuToggle");
+        assertion("手機選單可觸控開啟",node("#sidebar")?.classList.contains("open") && node("#menuToggle")?.getAttribute("aria-expanded")==="true");
+        await click("#mobileBackdrop");
+        assertion("點擊遮罩關閉手機選單",!node("#sidebar")?.classList.contains("open") && node("#menuToggle")?.getAttribute("aria-expanded")==="false");
+      } else {
+        assertion("行動選單遮罩元件已建立",!!node("#mobileBackdrop"));
+      }
 
       await click('[data-tab="basket"]');
       assertion("價格籃分頁可切換",node("#pageTitle")?.textContent==="價格籃與研究配額");
