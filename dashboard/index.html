@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111b22">
+  <meta name="description" content="HO600 IUI 唯讀研究監測面板：正式價格籃、Batch 9 與臺北市 CPI 代理研究，保留資料來源和發布門檻。">
+  <title>HO600 · Research Intelligence</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script defer src="./snapshot.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <div class="workspace" id="workspace">
+    <aside class="sidebar" id="sidebar" aria-label="HO600 導覽">
+      <a class="brand" href="#overview" aria-label="HO600 首頁">
+        <span class="brand-mark" aria-hidden="true">H<span>6</span></span>
+        <span class="brand-copy"><strong>HO600</strong><small>RESEARCH INTELLIGENCE</small></span>
+      </a>
+      <div class="sidebar-label">工作台</div>
+      <nav class="navigation" aria-label="報告分頁">
+        <button class="nav-btn active" data-tab="overview" aria-current="page"><span class="nav-ico">◫</span> 總覽 <span class="nav-arrow">↗</span></button>
+        <button class="nav-btn" data-tab="basket"><span class="nav-ico">▥</span> 價格籃與配額 <span class="nav-arrow">↗</span></button>
+        <button class="nav-btn" data-tab="cohorts"><span class="nav-ico">◉</span> 戶長年齡與 CPI <span class="nav-arrow">↗</span></button>
+        <button class="nav-btn" data-tab="evidence"><span class="nav-ico">◇</span> 證據與驗收 <span class="nav-arrow">↗</span></button>
+      </nav>
+      <div class="sidebar-foot">
+        <div class="sidebar-state"><span class="signal"></span> 研究快照已固定</div>
+        <p>不連接帳號、不執行交易、不寫入正式工作簿。</p>
+        <div class="branch"><span>CANONICAL</span><strong>main</strong></div>
+        <div class="branch"><span>RESEARCH</span><strong>research/batch-09</strong></div>
+      </div>
+    </aside>
+    <div class="main-shell">
+      <header class="topbar">
+        <button id="menuToggle" class="icon-button menu-toggle" aria-label="開啟選單" aria-controls="sidebar" aria-expanded="false">☰</button>
+        <div class="breadcrumb">HO600 <span>/</span> <strong id="breadcrumb">總覽</strong></div>
+        <div class="top-actions">
+          <span class="header-capture" id="snapshotDate">快照</span>
+          <button class="quiet-button" id="exportBtn" type="button" title="依目前分頁匯出所見資料">↓ 匯出 CSV</button>
+          <a class="primary-button" id="githubLink" href="https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        </div>
+      </header>
+      <main id="main" class="main-content" tabindex="-1">
+        <div class="page-intro">
+          <div><div class="eyebrow">HO600 / PROJECT RESEARCH OS <span class="eyebrow-line"></span> 唯讀模式</div>
+            <h1 id="pageTitle">研究全貌</h1>
+            <p id="pageSubtitle" class="page-subtitle">正式進度、候選研究與代理 CPI 分開呈現。</p></div>
+          <div class="page-meta"><span class="pill neutral">SNAPSHOT · 非即時</span><span class="pill warning" id="indexPill">INDEX LOCKED</span></div>
+        </div>
+        <div class="data-warning" role="note"><span class="warning-ico">ⓘ</span><div id="globalDisclaimer">研究分支中的候選不納入正式 181/600；臺北市 CPI 只保留部分貢獻，不發布完整年齡通膨率。</div></div>
+        <section id="app-content" aria-live="polite"></section>
+        <footer class="site-footer"><span>HO600 / Research Intelligence · 唯讀靜態報告 V0</span><span>主分支為唯一正式來源 · <a id="footerSource" href="#" target="_blank" rel="noopener noreferrer">查看原始狀態 ↗</a></span></footer>
+      </main>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="no-js">此 Dashboard 需要啟用 JavaScript。原始資料與來源證據可直接在 GitHub 檢視。</p></noscript>
+</body>
+</html>
