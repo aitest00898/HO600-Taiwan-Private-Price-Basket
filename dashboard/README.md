@@ -83,6 +83,7 @@ python3 dashboard/tools/rebuild_snapshot_js.py --check
 python3 -m unittest discover -s dashboard/tests -v
 node --check dashboard/app.js
 node --check dashboard/snapshot.js
+node --check dashboard/tests/browser-smoke.js
 ```
 
 如果沒有安裝 `node`，Python 的數據及靜態語意測試（目前 18 項）仍可先執行；瀏覽器腳本語法與實際互動需由 Safari 及其他可用環境進一步核對。
