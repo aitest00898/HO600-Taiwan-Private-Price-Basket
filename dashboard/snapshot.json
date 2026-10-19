@@ -1,0 +1,540 @@
+{
+  "schemaVersion": "1.0.0",
+  "snapshotDate": "2026-10-19",
+  "identity": {
+    "name": "HO600",
+    "subtitle": "Taiwan Private Historical-Observable Price Basket",
+    "mode": "RESEARCH_PREVIEW",
+    "privacy": "PUBLIC_REPOSITORY_NO_TOKENS",
+    "authoritativeBranch": "main",
+    "researchBranch": "research/batch-09",
+    "canonicalCommit": "88fa2b53774067faf740868bb8e168a04e47a8bf",
+    "researchCommit": "fd30af9e3ba08e7855c289ad347fd0f2bec4d909",
+    "notes": "固定唯讀快照。正式與研究資料隔離；不代表 GitHub 即時狀態。"
+  },
+  "canonical": {
+    "target": 600,
+    "accepted": 181,
+    "remaining": 419,
+    "candidates": 418,
+    "evidence": 1566,
+    "workbookSheets": 7,
+    "validationPass": 20,
+    "validationChecks": 20,
+    "batch": 8,
+    "basketSealed": false,
+    "indexStatus": "LOCKED",
+    "quota": [
+      {
+        "domain": "食",
+        "accepted": 100,
+        "needed": 67,
+        "target": 167,
+        "originalTarget": 150
+      },
+      {
+        "domain": "衣",
+        "accepted": 3,
+        "needed": 65,
+        "target": 68,
+        "originalTarget": 70
+      },
+      {
+        "domain": "住／家用",
+        "accepted": 9,
+        "needed": 80,
+        "target": 89,
+        "originalTarget": 95
+      },
+      {
+        "domain": "行",
+        "accepted": 9,
+        "needed": 68,
+        "target": 77,
+        "originalTarget": 80
+      },
+      {
+        "domain": "育",
+        "accepted": 20,
+        "needed": 38,
+        "target": 58,
+        "originalTarget": 60
+      },
+      {
+        "domain": "樂",
+        "accepted": 29,
+        "needed": 39,
+        "target": 68,
+        "originalTarget": 70
+      },
+      {
+        "domain": "日常／個人",
+        "accepted": 11,
+        "needed": 62,
+        "target": 73,
+        "originalTarget": 75
+      }
+    ]
+  },
+  "research": {
+    "checkpoints": [
+      {
+        "id": "C01",
+        "accepted": 20,
+        "status": "PASS",
+        "url": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/batch-09/checkpoint-01.md"
+      },
+      {
+        "id": "C02",
+        "accepted": 20,
+        "status": "PASS",
+        "url": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/batch-09/checkpoint-02.md"
+      },
+      {
+        "id": "C03",
+        "accepted": 20,
+        "status": "PASS",
+        "url": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/batch-09/checkpoint-03.md"
+      },
+      {
+        "id": "C04",
+        "accepted": 0,
+        "provisional": 1,
+        "hold": 1,
+        "status": "WIP",
+        "url": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/batch-09/checkpoint-04-wip.md"
+      }
+    ],
+    "qualityRisks": [
+      "C04 尚未取得 20 筆認證",
+      "C01–C03 尚未經正式工作簿匯入驗收",
+      "Candidate_Pool 必須持續對價格漲幅盲選"
+    ]
+  },
+  "cohort": {
+    "scope": "TAIPEI_AGE_HEAD_CPI_PROXY",
+    "yearWeights": 2020,
+    "groupCount": 7,
+    "weightCells": 84,
+    "officialAgeCsvPdfParentChecks": "96/96",
+    "publishedTotals": "8/8",
+    "cpiMonthlyRows": 16560,
+    "cpiAnnualRows": 1344,
+    "cpiClassCount": 48,
+    "cpiThrough": "2026-09",
+    "minCoverage": 95,
+    "crosswalkSummary": {
+      "mapped": 2,
+      "provisional": 1,
+      "split": 8,
+      "unmapped": 1
+    },
+    "crosswalk": [
+      {
+        "code": "01",
+        "label": "食品及非酒精飲料",
+        "status": "SPLIT_REQUIRED",
+        "cpi": "一.食物類; (十七)外食費",
+        "issue": "Cannot remove the eating-out component from the food parent without an official within-division expenditure split and an explicit aggregation rule."
+      },
+      {
+        "code": "02",
+        "label": "菸酒及檳榔",
+        "status": "SPLIT_REQUIRED",
+        "cpi": "(十四)酒; (一)香菸及檳榔",
+        "issue": "No 2020 age-head split between alcohol and tobacco/betel is available in the 12-division weights."
+      },
+      {
+        "code": "03",
+        "label": "衣著鞋襪及服飾用品",
+        "status": "MAPPED",
+        "cpi": "二.衣著類",
+        "issue": "Parent-class weights are the official CPI aggregation and are used as published; no subcategory household reweighting is attempted."
+      },
+      {
+        "code": "04",
+        "label": "住宅服務水電瓦斯及其他燃料",
+        "status": "SPLIT_REQUIRED",
+        "cpi": "三.居住類; (一)房租; (五)水電燃氣",
+        "issue": "The 12-category household data do not provide the subcategory shares needed to isolate rent and utilities from the CPI residence parent; housing service/imputed-rent scope also requires item-level alignment."
+      },
+      {
+        "code": "05",
+        "label": "家具設備及家務維護",
+        "status": "SPLIT_REQUIRED",
+        "cpi": "(二)住宅維修費; (三)家庭用品; (四)家庭管理費用",
+        "issue": "No 12-division-level price series or age-head expenditure split among these CPI subgroups is available."
+      },
+      {
+        "code": "06",
+        "label": "醫療保健",
+        "status": "SPLIT_REQUIRED",
+        "cpi": "五.醫藥保健類; (一)醫療費用; (二)藥品及保健食品; (三)醫療保健器材",
+        "issue": "DGBAS states National Health Insurance premiums are outside CPI scope; the published household 12-division table has no separate NHI-premium row, so inclusion and the matching price scope cannot be reconciled here."
+      },
+      {
+        "code": "07",
+        "label": "交通",
+        "status": "SPLIT_REQUIRED",
+        "cpi": "四.交通及通訊類; (一)交通及通訊設備; (二)油料費; (三)交通服務及維修零件",
+        "issue": "A transport-only relative cannot be obtained from the combined equipment class without an official split and corresponding household weights."
+      },
+      {
+        "code": "08",
+        "label": "通訊",
+        "status": "UNMAPPED",
+        "cpi": "四.交通及通訊類; (一)交通及通訊設備",
+        "issue": "The combined parent/equipment classes cannot identify a separate communications price relative."
+      },
+      {
+        "code": "09",
+        "label": "休閒與文化",
+        "status": "PROVISIONAL",
+        "cpi": "(二)娛樂費用",
+        "issue": "Use the detailed entertainment class only; do not substitute the full 教養娛樂類 parent."
+      },
+      {
+        "code": "10",
+        "label": "教育",
+        "status": "MAPPED",
+        "cpi": "(一)教養費用",
+        "issue": "Use the detailed education/teaching class only; do not substitute the full 教養娛樂類 parent."
+      },
+      {
+        "code": "11",
+        "label": "餐廳及旅館",
+        "status": "SPLIT_REQUIRED",
+        "cpi": "(十七)外食費; no separate lodging class",
+        "issue": "Restaurant meal prices are only a partial match; hotel lodging has no separate basic class in this source and the full CPI food class would overlap division 01."
+      },
+      {
+        "code": "12",
+        "label": "什項消費",
+        "status": "SPLIT_REQUIRED",
+        "cpi": "七.雜項類; (一)香菸及檳榔; (三)個人隨身用品; (四)個人照顧服務費; (五)理容服務費",
+        "issue": "The broad household remainder cannot be aligned without subcategory expenditure shares or an official item-level crosswalk that identifies the included consumption components."
+      }
+    ],
+    "age": [
+      {
+        "group": "未滿30歲",
+        "year": 2020,
+        "annualSpend": 1126300,
+        "annual12Sum": 1126300,
+        "housing": 277997,
+        "health": 194729,
+        "housingShare": 24.6823,
+        "healthShare": 17.2893,
+        "housingHealthShare": 41.9716,
+        "educationShare": 1.1307,
+        "transportShare": 6.3621,
+        "restaurantShare": 14.7613,
+        "periods": {
+          "A": {
+            "coverage": 10.23848,
+            "strictCoverage": 4.116399,
+            "partial": 2.345266,
+            "strictPartial": 0.085517,
+            "assumption09": 2.259748,
+            "assumptionContributionPct": 96.353623,
+            "released": false
+          },
+          "B": {
+            "coverage": 10.23848,
+            "strictCoverage": 4.116399,
+            "partial": 2.099119,
+            "strictPartial": 0.039428,
+            "assumption09": 2.059691,
+            "assumptionContributionPct": 98.121705,
+            "released": false
+          }
+        }
+      },
+      {
+        "group": "30～34歲",
+        "year": 2020,
+        "annualSpend": 1113976,
+        "annual12Sum": 1113977,
+        "housing": 316709,
+        "health": 157471,
+        "housingShare": 28.4305,
+        "healthShare": 14.1359,
+        "housingHealthShare": 42.5664,
+        "educationShare": 0.8917,
+        "transportShare": 5.9494,
+        "restaurantShare": 14.4007,
+        "periods": {
+          "A": {
+            "coverage": 9.547235,
+            "strictCoverage": 4.0245,
+            "partial": 2.110724,
+            "strictPartial": 0.072203,
+            "assumption09": 2.038521,
+            "assumptionContributionPct": 96.579215,
+            "released": false
+          },
+          "B": {
+            "coverage": 9.547235,
+            "strictCoverage": 4.0245,
+            "partial": 1.887097,
+            "strictPartial": 0.029048,
+            "assumption09": 1.858049,
+            "assumptionContributionPct": 98.460704,
+            "released": false
+          }
+        }
+      },
+      {
+        "group": "35～39歲",
+        "year": 2020,
+        "annualSpend": 1147520,
+        "annual12Sum": 1147520,
+        "housing": 299156,
+        "health": 157559,
+        "housingShare": 26.0698,
+        "healthShare": 13.7304,
+        "housingHealthShare": 39.8002,
+        "educationShare": 2.9345,
+        "transportShare": 8.1199,
+        "restaurantShare": 13.8298,
+        "periods": {
+          "A": {
+            "coverage": 11.470998,
+            "strictCoverage": 5.599467,
+            "partial": 2.358091,
+            "strictPartial": 0.190824,
+            "assumption09": 2.167267,
+            "assumptionContributionPct": 91.907674,
+            "released": false
+          },
+          "B": {
+            "coverage": 11.470998,
+            "strictCoverage": 5.599467,
+            "partial": 2.091081,
+            "strictPartial": 0.115684,
+            "assumption09": 1.975397,
+            "assumptionContributionPct": 94.467742,
+            "released": false
+          }
+        }
+      },
+      {
+        "group": "40～44歲",
+        "year": 2020,
+        "annualSpend": 1157326,
+        "annual12Sum": 1157325,
+        "housing": 303440,
+        "health": 149792,
+        "housingShare": 26.2191,
+        "healthShare": 12.943,
+        "housingHealthShare": 39.162,
+        "educationShare": 5.8693,
+        "transportShare": 6.7429,
+        "restaurantShare": 13.6814,
+        "periods": {
+          "A": {
+            "coverage": 14.380057,
+            "strictCoverage": 8.582809,
+            "partial": 2.505499,
+            "strictPartial": 0.365651,
+            "assumption09": 2.139848,
+            "assumptionContributionPct": 85.406047,
+            "released": false
+          },
+          "B": {
+            "coverage": 14.380057,
+            "strictCoverage": 8.582809,
+            "partial": 2.18866,
+            "strictPartial": 0.238255,
+            "assumption09": 1.950405,
+            "assumptionContributionPct": 89.114116,
+            "released": false
+          }
+        }
+      },
+      {
+        "group": "45～54歲",
+        "year": 2020,
+        "annualSpend": 1189599,
+        "annual12Sum": 1189598,
+        "housing": 295414,
+        "health": 157252,
+        "housingShare": 24.8331,
+        "healthShare": 13.2189,
+        "housingHealthShare": 38.052,
+        "educationShare": 6.1929,
+        "transportShare": 6.8585,
+        "restaurantShare": 13.6127,
+        "periods": {
+          "A": {
+            "coverage": 15.257087,
+            "strictCoverage": 8.950503,
+            "partial": 2.713018,
+            "strictPartial": 0.385167,
+            "assumption09": 2.327851,
+            "assumptionContributionPct": 85.80302,
+            "released": false
+          },
+          "B": {
+            "coverage": 15.257087,
+            "strictCoverage": 8.950503,
+            "partial": 2.373434,
+            "strictPartial": 0.251669,
+            "assumption09": 2.121765,
+            "assumptionContributionPct": 89.396409,
+            "released": false
+          }
+        }
+      },
+      {
+        "group": "55～64歲",
+        "year": 2020,
+        "annualSpend": 1172784,
+        "annual12Sum": 1172782,
+        "housing": 315680,
+        "health": 158844,
+        "housingShare": 26.9172,
+        "healthShare": 13.5442,
+        "housingHealthShare": 40.4614,
+        "educationShare": 2.2891,
+        "transportShare": 7.0804,
+        "restaurantShare": 14.0405,
+        "periods": {
+          "A": {
+            "coverage": 11.999161,
+            "strictCoverage": 5.164643,
+            "partial": 2.67645,
+            "strictPartial": 0.153731,
+            "assumption09": 2.522719,
+            "assumptionContributionPct": 94.256148,
+            "released": false
+          },
+          "B": {
+            "coverage": 11.999161,
+            "strictCoverage": 5.164643,
+            "partial": 2.387528,
+            "strictPartial": 0.088147,
+            "assumption09": 2.299381,
+            "assumptionContributionPct": 96.308015,
+            "released": false
+          }
+        }
+      },
+      {
+        "group": "65歲及以上",
+        "year": 2020,
+        "annualSpend": 883356,
+        "annual12Sum": 883357,
+        "housing": 303048,
+        "health": 153271,
+        "housingShare": 34.3064,
+        "healthShare": 17.351,
+        "housingHealthShare": 51.6574,
+        "educationShare": 0.5471,
+        "transportShare": 4.6862,
+        "restaurantShare": 11.1375,
+        "periods": {
+          "A": {
+            "coverage": 7.569986,
+            "strictCoverage": 2.538838,
+            "partial": 1.901797,
+            "strictPartial": 0.044728,
+            "assumption09": 1.857069,
+            "assumptionContributionPct": 97.648109,
+            "released": false
+          },
+          "B": {
+            "coverage": 7.569986,
+            "strictCoverage": 2.538838,
+            "partial": 1.710303,
+            "strictPartial": 0.017641,
+            "assumption09": 1.692662,
+            "assumptionContributionPct": 98.968545,
+            "released": false
+          }
+        }
+      }
+    ],
+    "fullCohortRatesReleased": 0,
+    "nationalWeightStatus": "HOLD",
+    "nationalWorkerRetireProxies": "0/2",
+    "periods": {
+      "A": "2020 年 1–9 月 → 2026 年 1–9 月",
+      "B": "2020 全年 → 2025 全年"
+    },
+    "generalCpi": {
+      "A": 14.2168,
+      "B": 12.2969
+    },
+    "studyCaveats": [
+      "戶長年齡不代表退休狀態；臺北市不代表全國。",
+      "年度支出占比為 2020 年固定權重，不是家庭生活成本指數。",
+      "第 09 類休閒文化對 CPI 娛樂費用對照有範圍疑義，預設使用保守排除版本。",
+      "部分貢獻為原始總預算權重乘已核對價格相對數；不能加總成完整年齡通膨率。"
+    ]
+  },
+  "links": {
+    "repository": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket",
+    "canonicalStatus": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/88fa2b53774067faf740868bb8e168a04e47a8bf/canonical/status.json",
+    "quota": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/88fa2b53774067faf740868bb8e168a04e47a8bf/data/Quota_Control.csv",
+    "validation": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/88fa2b53774067faf740868bb8e168a04e47a8bf/data/Validation_Release.csv",
+    "researchHandoff": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/handoffs/2026-10-17-wgt-01-05-network-blocked-handoff.md",
+    "originalAge": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/cohort-inflation/source-archive/tpe-2020-age-head/TPE_AGE_2012_2023_official_raw.csv",
+    "crosswalk": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/cohort-inflation/taipei-2020-age-head-to-cpi-basic-crosswalk-20261018.csv",
+    "monthlyReceipt": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/cohort-inflation/source-archive/tpe-cpi-20261018/TPE-CPI-BASIC-MONTH-receipt.json",
+    "annualReceipt": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/cohort-inflation/source-archive/tpe-cpi-20261018/TPE-CPI-BASIC-YEAR-receipt.json",
+    "partial": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/cohort-inflation/results/tpe-cpi-20261018/age-head-partial-contributions.csv",
+    "sensitivity": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/cohort-inflation/results/tpe-cpi-20261018/division09-mapping-hold-sensitivity.csv",
+    "study": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/cohort-inflation/TAIPEI-2020-CHILD-SPENDING-AND-ENTERTAINMENT-SENSITIVITY-2026-10-18.md"
+  },
+  "sources": [
+    {
+      "name": "status",
+      "ref": "main",
+      "blobSha": "43666312fd8ade68adbb867e43c9691dff1fbd37",
+      "link": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/88fa2b53774067faf740868bb8e168a04e47a8bf/canonical/status.json"
+    },
+    {
+      "name": "quota",
+      "ref": "main",
+      "blobSha": "3500e23d01d5b48a3dde0438ac56c2f1f2772420",
+      "link": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/88fa2b53774067faf740868bb8e168a04e47a8bf/data/Quota_Control.csv"
+    },
+    {
+      "name": "validation",
+      "ref": "main",
+      "blobSha": "add8484e55497ad16dda2a29ba25eec51c952f43",
+      "link": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/88fa2b53774067faf740868bb8e168a04e47a8bf/data/Validation_Release.csv"
+    },
+    {
+      "name": "age",
+      "ref": "research/batch-09",
+      "blobSha": "050b1ae3852392cb39bc12ec80d167013a0b79ee",
+      "link": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/cohort-inflation/results/tpe-2020-age-head-proxy-20261017/tpe-2020-age-share-summary.csv"
+    },
+    {
+      "name": "cpi",
+      "ref": "research/batch-09",
+      "blobSha": "d2ace0ef6f7170b01ef4fe036441c4f1d5688b74",
+      "link": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/cohort-inflation/results/tpe-cpi-20261018/age-head-partial-cpi-analysis.json"
+    },
+    {
+      "name": "sensitivity",
+      "ref": "research/batch-09",
+      "blobSha": "da3fcf4616cd1951d26c5dad24fe7ce79960df44",
+      "link": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/cohort-inflation/results/tpe-cpi-20261018/division09-mapping-hold-sensitivity.csv"
+    },
+    {
+      "name": "crosswalk",
+      "ref": "research/batch-09",
+      "blobSha": "722b94eff730ca266ead73a20424186485319371",
+      "link": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/fd30af9e3ba08e7855c289ad347fd0f2bec4d909/research/cohort-inflation/taipei-2020-age-head-to-cpi-basic-crosswalk-20261018.csv"
+    }
+  ],
+  "controls": {
+    "githubActions": "PAUSED_BY_USER",
+    "mainPushActionRisk": "MAIN_WORKFLOW_HAS_PUSH_TRIGGER",
+    "repoVisibility": "PUBLIC",
+    "indexRelease": "LOCKED"
+  }
+}
