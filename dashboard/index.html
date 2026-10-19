@@ -56,5 +56,13 @@
   </div>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <noscript><p class="no-js">此 Dashboard 需要啟用 JavaScript。原始資料與來源證據可直接在 GitHub 檢視。</p></noscript>
+  <!-- Explicit opt-in only; normal users never load test code. -->
+  <script>
+    if (new URLSearchParams(window.location.search).get("smoke") === "1") {
+      const script = document.createElement("script");
+      script.src = "./tests/browser-smoke.js";
+      document.body.appendChild(script);
+    }
+  </script>
 </body>
 </html>
