@@ -23,7 +23,7 @@ A new mobile-responsive, read-only, no-dependency static app resides in [`dashbo
 
 - Used GitHub connector to retrieve and validate the authentic `main` and research data, independently assemble snapshot and check quota sums `181+419=600`, 7 age-head rows, both A/B windows, 12 crosswalk rows and zero full cohort rates.
 - After commits, **fetched all browser assets and both snapshot formats back from GitHub** and executed **13 connector-side structural and quantitative invariant checks: 13/13 PASS**. Those include exact JSON/JS equality, seven quota totals, 60 research-only checkpoints, provisional 09, complete no-release gate, four navigation tabs, responsive CSS, real event controls and CSV export code, and no network-fetch use.
-- A Python `unittest` suite with **15 authored cases** now exists, including one optional Node.js syntax check. **Not yet run in a local checkout; do not call it PASS.** Browser/Safari rendering and actual UI click/CSV export also **not yet executed** in this assistant environment because its container could not DNS-resolve even public GitHub raw files. The page was inspected via source and readback, not a browser screenshot.
+- A Python `unittest` suite with **18 authored cases** now exists, including one optional Node.js syntax check. **Not yet run in a local checkout; do not call it PASS.** Browser/Safari rendering and actual UI click/CSV export also **not yet executed** in this assistant environment because its container could not DNS-resolve even public GitHub raw files. The page was inspected via source and readback, not a browser screenshot.
 - Generated assets remain **research-only** and do not modify canonical workbook or official release status.
 
 ## Minimal Mac/native verification (remaining genuine environment blocker)
@@ -47,3 +47,37 @@ If a specific tested behavior fails, fix **research branch only**, rerun and rec
 No full WORK/RETIRE rates; no national 2020 corrected source; no HO600 historical headline or final Index; no write-capable manager, backend, scheduled refresh, authorization, live apps or deployed domain.
 
 **Delivery status:** `CODE_AND_VERIFIED_SNAPSHOT_COMMITTED`; `CONNECTOR_STATIC_CONTRACT_13_OF_13_PASS`; `NATIVE_BROWSER_ACCEPTANCE_PENDING`; `GITHUB_PAGES_NOT_CONFIGURED`; `CANONICAL_181_OF_600_LOCKED`.
+
+
+## Native Safari/iPhone opt-in browser acceptance — 2026-10-19
+
+**Outcome: code committed, user-device acceptance still PENDING.** The assistant confirmed the container has Node.js and system Chromium, but could **not** bring the exact private/public GitHub source files into its container runtime: external `raw.githubusercontent.com` DNS was blocked. Thus it did NOT execute real browser interactions against the pinned dashboard source, and has **not** seen the user's actual Mac Safari or iPhone screens.
+
+Added [`tests/browser-smoke.js`](./tests/browser-smoke.js), automatically included **only** when opening the real Dashboard with `?smoke=1`. It performs real current-browser DOM interactions against the actual app: Overview values, Basket quotas and C04 WIP, CPI default conservative 65+ values, optional 09 inclusion, comparison A/B, another age cohort, crosswalk status filter, intercepted real Blob CSV export and selected conditions, traceable evidence links. It displays PASS/FAIL on screen, provides a copyable JSON report containing viewport width and browser user-agent, and explicitly distinguishes mobile-width overflow from desktop test results.
+
+Fixed mobile navigation: [`index.html`](./index.html) has an explicit accessible `mobileBackdrop` button; [`styles.css`](./styles.css) places it behind the sidebar and above the page for narrow screens, replacing an unreliable pseudo-element overlay; [`app.js`](./app.js) closes the menu on backdrop tap, menu item selection or Escape. No network calls or source mutations were added.
+
+Expanded [`tests/test_dashboard.py`](./tests/test_dashboard.py) from 15 to **18 test methods**, including smoke opt-in isolation, mobile backdrop click handling and smoke coverage checks. The existing optional `node --check` test now also parses the smoke JavaScript. These tests are authored and committed **but not executed on the Mac**, and therefore are not represented as passing test executions.
+
+Mac Safari:
+
+```bash
+git switch research/batch-09
+git pull --ff-only
+python3 dashboard/tools/rebuild_snapshot_js.py --check
+python3 -m unittest discover -s dashboard/tests -v
+node --check dashboard/app.js
+node --check dashboard/snapshot.js
+node --check dashboard/tests/browser-smoke.js
+open -a Safari "$(python3 -c 'from pathlib import Path; print(Path("dashboard/index.html").resolve().as_uri()+"?smoke=1")')"
+```
+
+iPhone Safari (same trusted local Wi-Fi; not a publicly published website):
+
+```bash
+python3 -m http.server 8765 --bind 0.0.0.0 --directory dashboard
+```
+
+Then open `http://<MAC_LAN_IP>:8765/?smoke=1` in iPhone Safari, inspect responsiveness and test results. Stop with Ctrl+C. This local web server is unauthenticated; do not expose to public Internet. Neither Pages nor Actions are enabled.
+
+**Native release gate:** only mark `SAFARI_ACCEPTED` when real Safari reports zero smoke failures, Python/Node tests pass, actual A/B filters and export are verified and reported; only mark `IPHONE_ACCEPTED` when an actual iPhone Safari reports zero failures and its viewport/scroll measurements are credible. Simulated narrow Chromium, even if available, must never be reported as actual iPhone acceptance. No public deployment, formal rate publication, branch merge or GH Actions until separately approved.
