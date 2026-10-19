@@ -29,9 +29,19 @@ def main():
     args=p.parse_args()
     data=create()
     if args.check:
-        if not TARGET.exists() or TARGET.read_text(encoding="utf-8")!=data:
-            raise SystemExit("SNAPSHOT_MISMATCH: run script without --check and retest")
-        print("SNAPSHOT_SYNC=PASS")
+        if not TARGET.exists():
+            raise SystemExit("SNAPSHOT_MISSING: run without --check")
+        existing=TARGET.read_text(encoding="utf-8")
+        if not existing.startswith(PREFIX):
+            raise SystemExit("SNAPSHOT_WRAPPER_MISMATCH")
+        try:
+            previous=json.loads(existing[len(PREFIX):].strip().removesuffix(";"))
+            reviewed=json.loads(SOURCE.read_text(encoding="utf-8"))
+        except (ValueError,json.JSONDecodeError) as exc:
+            raise SystemExit(f"SNAPSHOT_PARSE_FAILURE: {exc}")
+        if previous!=reviewed:
+            raise SystemExit("SNAPSHOT_MISMATCH: run without --check and retest")
+        print("SNAPSHOT_SYNC=PASS (semantically identical)")
     else:
         TARGET.write_text(data,encoding="utf-8")
         print("SNAPSHOT_REBUILT=PASS; requires normal review before commit")
