@@ -56,6 +56,7 @@ dashboard/
 ## 本機驗收
 
 ```bash
+python3 dashboard/tools/rebuild_snapshot_js.py --check
 python3 -m unittest discover -s dashboard/tests -v
 node --check dashboard/app.js
 node --check dashboard/snapshot.js
