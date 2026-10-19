@@ -18,6 +18,28 @@ python3 -m http.server 8765 --directory dashboard
 ```
 之後在手機 Safari 使用 Mac 實際 LAN IP 和埠號 8765 開啟；請在私人可信網路中操作，並注意此伺服器未設定登入保護。這不是雲端部署。
 
+## Mac Safari／iPhone 實際互動驗收（無須安裝套件）
+
+本專案提供僅在網址指定 `?smoke=1` 才會載入的 **真實 DOM 互動測試**。一般檢視不會載入測試程式，測試也不寫入檔案或遠端系統。
+
+Mac Safari 開啟驗收版：
+
+```bash
+open -a Safari "$(python3 -c 'from pathlib import Path; print(Path("dashboard/index.html").resolve().as_uri()+"?smoke=1")')"
+```
+
+測試會操作目前的真實頁面，包含首頁、正式配額、手機導覽（僅窄螢幕）、年齡代理分頁、A/B 期間切換、保守排除 09／暫定納入 09、45–54／65+ 年齡切換、crosswalk 篩選、CSV 匯出內容與來源 SHA 連結。CSV 測試會攔截自己的下載，不會留下測試檔案。右下角顯示 **PASS／FAIL 與可選取的 JSON 收據**，請保留失敗項目及使用的瀏覽器／視窗寬度。
+
+如需實體 iPhone 與 Mac 同 Wi-Fi 的測試，在受信任的私人網路上執行：
+
+```bash
+python3 -m http.server 8765 --bind 0.0.0.0 --directory dashboard
+```
+
+在 Mac 上 `ipconfig getifaddr en0` 取得 Wi-Fi IPv4，iPhone Safari 開啟 `http://<Mac區網IPv4>:8765/?smoke=1`。iPhone 畫面寬度約 390 px 時，驗收會另外檢查全頁橫向溢出與側邊選單點遮罩關閉。停止測試時按 Mac 終端機 `Ctrl+C`。
+
+**注意：** Python 開發伺服器沒有登入驗證，不可用於公網或不信任的 Wi-Fi。此流程不是 GitHub Pages 或正式網站部署，也不變更 Mac 系統設定。互動測試在使用者 Mac/iPhone 尚未完成以前不得冒稱裝置驗收通過。
+
 ## V0 可操作內容
 
 | 分頁 | 內容 | 互動 |
@@ -50,7 +72,8 @@ dashboard/
   snapshot.js        # 和 snapshot.json 等值的 file:// 可用離線資料
   README.md
   tests/
-    test_dashboard.py # 本機 V0 唯讀規格和快照一致性測試
+    test_dashboard.py # 18 項本機快照與介面規格測試
+    browser-smoke.js # ?smoke=1 才載入的真實瀏覽器 DOM 測試
 ```
 
 ## 本機驗收
@@ -62,7 +85,7 @@ node --check dashboard/app.js
 node --check dashboard/snapshot.js
 ```
 
-如果沒有安裝 `node`，Python 的數據及靜態語意測試仍可先執行；瀏覽器腳本語法與實際互動需由 Safari 及其他可用環境進一步核對。
+如果沒有安裝 `node`，Python 的數據及靜態語意測試（目前 18 項）仍可先執行；瀏覽器腳本語法與實際互動需由 Safari 及其他可用環境進一步核對。
 
 ### V0 尚不包含
 
