@@ -21,12 +21,22 @@
 | **P0／緊急** | **6** |
 | **P1／高** | **27** |
 | **P2／中** | **9** |
-| Todo | 42 |
+| Todo | **39** |
+| In Progress | **1**（OO1-147） |
+| **Done** | **2**（OO1-131、OO1-135） |
+| **尚未完成** | **40**（Todo + In Progress） |
 | Linear 明確前置依賴的 issue | 9 |
 | 已設定的 blockedBy 邊 | 24 |
-| Done | 0 |
 
 所有 `blockedBy` 是**必要的前置證據／測試**，不是解鎖正式發布的充分條件。完成後仍須遵循權限和使用者明確核准。
+
+
+## 2026-10-21 實際執行收斂（非單純盤點）
+
+- **OO1-131 = Done**：2026-10-15 UTC 三個 GitHub Actions `push` run 已查明是當時含 `research/**` 自動觸發的 workflow；比對三個 commit 的原始 YAML SHA 皆為 `048a5022...`。研究分支後以 `c3e292a` 改為手動觸發。**平台層是否全停用依然 UNKNOWN**，由 [OO1-130](https://linear.app/001dev/issue/OO1-130) 接續唯讀確認。詳細：[歷史根因收據](./research/triage/HO600-ACTIONS-HISTORICAL-ROOTCAUSE-2026-10-21.md)。
+- **OO1-135 = Done**：從 `main` 三份配額／候選／證據 CSV 完成 [50 子分類 gap/來源索引](./research/triage/HO600-50-SUBCATEGORY-GAP-2026-10-21.csv)：`181 + 419 = 600`、418 候選、22 子分類零 Exact、16 子分類零候選。按 candidate_id 可連結 1,267 筆證據；餘下 299 筆是 **candidate_id 空白的 LEGACY_EVIDENCE_LEDGER**，非遺失、不得重複計入候選；來源 URL/2020 quote 仍未逐筆重新認證。
+- **OO1-147 = In Progress**：臺北市 2024 年 3 月官方 CPI 新聞稿明列 `娛樂費用` 包含 **國內／外旅遊團費**；修正「套裝旅遊本身在娛樂 CPI 之外」的錯誤前提，但 2020 家庭休閒支出的書報文具／器材等尚缺精確歸屬，所以第 09 類仍 **PROVISIONAL**，七組完整率仍 **HOLD**。詳見 [官方納入範圍查證](./research/cohort-inflation/CPI-09-OFFICIAL-TOUR-INCLUSION-REVIEW-2026-10-21.md)。
+- **Remaining 40**：包含 Mac Python 18 項、Safari／iPhone 真機、全國 WGT、正式 419 概念等。任務權威是 [Linear TPI-001](https://linear.app/001dev/project/tpi-001ho600-台灣私人物價籃-46e14167f961)，詳細當前狀態以 Linear 為準；本 CSV 是 2026-10-21 校準後的狀態快照（保留原檔名 2026-10-20 以免破壞既有連結）。
 
 ## P0｜首先核對
 
