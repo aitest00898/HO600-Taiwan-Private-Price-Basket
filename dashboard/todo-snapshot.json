@@ -1,0 +1,563 @@
+{
+  "schemaVersion": "1.0.0",
+  "asOf": "2026-10-22",
+  "classification": "HO600_LINEAR_PROJECT_MANUAL_READONLY_SNAPSHOT",
+  "authority": {
+    "taskSource": "Linear TPI-001",
+    "projectUrl": "https://linear.app/001dev/project/tpi-001ho600-台灣私人物價籃-46e14167f961",
+    "githubTaskCsv": "research/todo/HO600-TODO-2026-10-20.csv",
+    "githubTaskCsvBlobSha": "a86f3efdc6e3d2d0c7069835743921d490e094d6",
+    "refresh": "EXPLICIT_MANUAL_ONLY_NO_ACTIONS",
+    "mainRelease": "NOT_AUTHORIZED",
+    "note": "Task Done denotes issue acceptance only; it does not certify price index or official workbook."
+  },
+  "summary": {
+    "todo": 39,
+    "inProgress": 1,
+    "done": 2,
+    "p0": 6,
+    "p1": 27,
+    "p2": 9,
+    "blockedByCount": 9,
+    "relations": 24
+  },
+  "tasks": [
+    {
+      "id": "OO1-130",
+      "todoId": "TPI-G01",
+      "priority": "P0",
+      "group": "安全／治理",
+      "status": "TODO",
+      "title": "GitHub Actions 停用狀態與 main 自動觸發風險核實",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-130/tpi-g01-github-actions-停用狀態與-main-自動觸發風險核實",
+      "blockedBy": [],
+      "acceptance": "提供設定及觸發實況、受影響分支、需要的最小修復方案；任何修改 main/workflow 前另取得明確核准，且本輪不觸發 Actions。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/.github/workflows/validate.yml"
+    },
+    {
+      "id": "OO1-131",
+      "todoId": "TPI-G02",
+      "priority": "P0",
+      "group": "安全／治理",
+      "status": "DONE",
+      "title": "調查 2026/10/15 Actions push 紀錄與重啟風險",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-131/tpi-g02-調查-20261015-actions-push-紀錄與重啟風險",
+      "blockedBy": [],
+      "acceptance": "逐 run ID 列出 createdAt/event/ref/workflow revision、判斷是歷史執行或新觸發、附 GitHub 收據並提出不執行 Actions 的修復與預防控制。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/actions"
+    },
+    {
+      "id": "OO1-147",
+      "todoId": "TPI-C01",
+      "priority": "P0",
+      "group": "臺北市 CPI",
+      "status": "IN_PROGRESS",
+      "title": "核實第09類休閒文化與 CPI 娛樂費用的官方範圍",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-147/tpi-c01-核實第09類休閒文化與-cpi-娛樂費用的官方範圍",
+      "blockedBy": [],
+      "acceptance": "取得臺北市/DGBAS 2021基期 CPI 詳細 item 定義，逐項核對套裝旅遊、文化服務、書報、休閒器材的 2020 歲別金額，產出可／不可映射矩陣與增量敏感度；未通過前固定排除09、不稱完整率。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/TAIPEI-2020-CHILD-SPENDING-AND-ENTERTAINMENT-…"
+    },
+    {
+      "id": "OO1-160",
+      "todoId": "TPI-I01",
+      "priority": "P0",
+      "group": "IUI Dashboard",
+      "status": "TODO",
+      "title": "IUI Dashboard V0 本機Python 18項與Node語法驗收",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-160/tpi-i01-iui-dashboard-v0-本機python-18項與node語法驗收",
+      "blockedBy": [],
+      "acceptance": "git pull--ff-only確認HEAD、snapshot語意同步、Python unittest 18例、node --check三腳本、版本與SHA輸出；任何FAIL先研究分支修復，絕不稱已實測PASS。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/dashboard/README.md"
+    },
+    {
+      "id": "OO1-161",
+      "todoId": "TPI-I02",
+      "priority": "P0",
+      "group": "IUI Dashboard",
+      "status": "TODO",
+      "title": "IUI Dashboard V0 Mac Safari 四頁互動與CSV匯出原生驗收",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-161/tpi-i02-iui-dashboard-v0-mac-safari-四頁互動與csv匯出原生驗收",
+      "blockedBy": [
+        "OO1-160"
+      ],
+      "acceptance": "Mac Safari實測四頁、切換、跨期間/戶長65+與45–54、保守覆蓋2.54%/貢獻0.0447pp及暫定7.57%/1.9018pp、CSV內容選擇、無console錯；保存有UA/寬度及所有PASS/FAIL收據。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/dashboard/tests/browser-smoke.js"
+    },
+    {
+      "id": "OO1-162",
+      "todoId": "TPI-I03",
+      "priority": "P0",
+      "group": "IUI Dashboard",
+      "status": "TODO",
+      "title": "IUI Dashboard V0 真正 iPhone Safari 窄螢幕觸控驗收",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-162/tpi-i03-iui-dashboard-v0-真正-iphone-safari-窄螢幕觸控驗收",
+      "blockedBy": [
+        "OO1-160",
+        "OO1-161"
+      ],
+      "acceptance": "可信LAN暫時server的實際iPhone Safari測390px CSS寬、無全頁橫向溢出、側欄開合/遮罩關閉、四頁切換、篩選、CSV匯出；保存真機UA/viewport/互動收據。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/dashboard/README.md"
+    },
+    {
+      "id": "OO1-102",
+      "todoId": "OO1-102",
+      "priority": "P1",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "HO600｜Batch 9 C01–C03 60 筆研究級證據複驗與 C04 接續",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-102/ho600batch-9-c01-c03-60-筆研究級證據複驗與-c04-接續",
+      "blockedBy": [],
+      "acceptance": "產出真實 Git 路徑、每份 SHA、概念數與缺口；未取得 checkpoint-03 則標 NOT_FOUND 而非擅自推定。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket"
+    },
+    {
+      "id": "OO1-103",
+      "todoId": "OO1-103",
+      "priority": "P1",
+      "group": "正式匯入驗收",
+      "status": "TODO",
+      "title": "HO600｜181/600 正式概念增量與工作簿匯出驗證程序",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-103/ho600181600-正式概念增量與工作簿匯出驗證程序",
+      "blockedBy": [
+        "OO1-102",
+        "OO1-145",
+        "OO1-146"
+      ],
+      "acceptance": "只有本次正式 workbook 完整驗證且經明確合併許可才允許修改 main 進度；研究候選與正式概念分開計數。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/canonical/status.json"
+    },
+    {
+      "id": "OO1-104",
+      "todoId": "OO1-104",
+      "priority": "P1",
+      "group": "臺北市 CPI",
+      "status": "TODO",
+      "title": "TPI｜臺北市七年齡代理 CPI 的 12 類家庭支出缺口補證",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-104/tpi臺北市七年齡代理-cpi-的-12-類家庭支出缺口補證",
+      "blockedBy": [],
+      "acceptance": "每組加權來源、類別映射比例、未知殘差與實際範圍證據，必要時繼續 PARTIAL/NOT_PUBLISHABLE；不可冒稱全臺家庭通膨。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket"
+    },
+    {
+      "id": "OO1-106",
+      "todoId": "OO1-106",
+      "priority": "P1",
+      "group": "安全／治理",
+      "status": "TODO",
+      "title": "HO600｜Public 倉庫公開範圍、來源授權與敏感檔稽核",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-106/ho600public-倉庫公開範圍來源授權與敏感檔稽核",
+      "blockedBy": [],
+      "acceptance": "給出公開內容稽核、權利與是否需調整 visibility 建議；不自行改公開權限或移除檔案。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket"
+    },
+    {
+      "id": "OO1-132",
+      "todoId": "TPI-G03",
+      "priority": "P1",
+      "group": "安全／治理",
+      "status": "TODO",
+      "title": "對研究分支 127 commits 做分期審查與 PR 分界",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-132/tpi-g03-對研究分支-127-commits-做分期審查與-pr-分界",
+      "blockedBy": [],
+      "acceptance": "輸出影響面/檔案 diff manifest、至少按 Canonical/Batch9/CPI/IUI 分區、潛在衝突與獨立審核次序；僅提 PR 計畫，不合併、不修改 main。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/tree/research/batch-09"
+    },
+    {
+      "id": "OO1-133",
+      "todoId": "TPI-G04",
+      "priority": "P1",
+      "group": "安全／治理",
+      "status": "TODO",
+      "title": "建立非 GitHub Actions 的本機重現與完整驗收清單",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-133/tpi-g04-建立非-github-actions-的本機重現與完整驗收清單",
+      "blockedBy": [],
+      "acceptance": "提供無 Actions 的命令、環境依賴、expected counts、正式/研究分開驗證與不可成功時的 FAIL/HOLD 收據；不執行發布或 main 寫入。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/scripts/validate_repo.py"
+    },
+    {
+      "id": "OO1-135",
+      "todoId": "TPI-B01",
+      "priority": "P1",
+      "group": "價格籃／Batch 9",
+      "status": "DONE",
+      "title": "建立 50 子分類／22 空白子分類的缺口補證索引",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-135/tpi-b01-建立-50-子分類22-空白子分類的缺口補證索引",
+      "blockedBy": [],
+      "acceptance": "逐子分類記錄 Exact、target、remaining、來源多樣性、已查來源、可追溯候選 URL、原因與驗收 Gate；總合必須 181+419=600。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/data/Quota_Control.csv"
+    },
+    {
+      "id": "OO1-136",
+      "todoId": "TPI-B02",
+      "priority": "P1",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "食品：自煮基礎食品缺33、包裝食品飲料缺17 的 Exact 2020 搜尋",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-136/tpi-b02-食品自煮基礎食品缺33包裝食品飲料缺17-的-exact-2020-搜尋",
+      "blockedBy": [],
+      "acceptance": "以 2020 當期公開可追溯價格及 2026 對照、日期/規格/通路/標準價格查核；不以 2019/2021、促銷、會員價或換包裝替代。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/data/Quota_Control.csv"
+    },
+    {
+      "id": "OO1-137",
+      "todoId": "TPI-B03",
+      "priority": "P1",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "衣著：4 個零 Exact 子分類與全領域65缺口回補",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-137/tpi-b03-衣著4-個零-exact-子分類與全領域65缺口回補",
+      "blockedBy": [],
+      "acceptance": "輸出四子類搜尋 ledger、2020/2026 款式與規格比對、正常價、可比性分級、品牌上限；不得把研究級候選加為正式進度。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/data/Quota_Control.csv"
+    },
+    {
+      "id": "OO1-138",
+      "todoId": "TPI-B04",
+      "priority": "P1",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "住家：5 個零 Exact 子分類與80缺口回補",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-138/tpi-b04-住家5-個零-exact-子分類與80缺口回補",
+      "blockedBy": [],
+      "acceptance": "分類搜尋 ledger、官方或當期可查 2020/2026 正常價、規格可比與來源帽上限核對，保留未證實項 HOLD。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/data/Quota_Control.csv"
+    },
+    {
+      "id": "OO1-139",
+      "todoId": "TPI-B05",
+      "priority": "P1",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "交通：6 個零 Exact 子分類與68缺口回補",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-139/tpi-b05-交通6-個零-exact-子分類與68缺口回補",
+      "blockedBy": [],
+      "acceptance": "紀錄相同路線/場站/車型/保養項目/租用條件、稅及一般計價規格的2020與2026原始來源；禁止優惠或推算等價。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/data/Quota_Control.csv"
+    },
+    {
+      "id": "OO1-140",
+      "todoId": "TPI-B06",
+      "priority": "P1",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "日常個人：衛生用品13及理美容11等剩餘62缺口",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-140/tpi-b06-日常個人衛生用品13及理美容11等剩餘62缺口",
+      "blockedBy": [],
+      "acceptance": "建立子類分工與去重，保留品牌集中度、來源等級、同通路與年度直接觀測證據，不能只把多服務拆數筆灌水。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/data/Quota_Control.csv"
+    },
+    {
+      "id": "OO1-143",
+      "todoId": "TPI-B09",
+      "priority": "P1",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "Batch 9 C04 兩個 WIP 候選的2020及現行規格補證",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-143/tpi-b09-batch-9-c04-兩個-wip-候選的2020及現行規格補證",
+      "blockedBy": [],
+      "acceptance": "逐筆取得官方或可靠當期可驗證 2020/2026、條碼/尺寸、一般價，分級 ACCEPT/HOLD/REJECT；不冒稱 C04 已完成20筆。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/batch-09/checkpoint-04-wip.md"
+    },
+    {
+      "id": "OO1-144",
+      "todoId": "TPI-B10",
+      "priority": "P1",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "Batch 9 後續 Checkpoints 至合理 75–100 筆研究級驗收",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-144/tpi-b10-batch-9-後續-checkpoints-至合理-75-100-筆研究級驗收",
+      "blockedBy": [],
+      "acceptance": "新增有逐筆原始證據的實際研究 Checkpoints，拒收項與去重、子類缺口分配和來源帽留痕；未到標準不得封批或變更正式181。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/tree/research/batch-09/research/batch-09"
+    },
+    {
+      "id": "OO1-145",
+      "todoId": "TPI-B11",
+      "priority": "P1",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "重新驗證 Batch 9 品牌／來源集中上限與20筆可比性 B",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-145/tpi-b11-重新驗證-batch-9-品牌來源集中上限與20筆可比性-b",
+      "blockedBy": [],
+      "acceptance": "產出逐來源/品牌/家族計數與違規報告；20筆 B 額外核對商品/服務規格變動並 HOLD 不可比較項，不 retroactive 刪合法 legacy。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/docs/concentration-policy.md"
+    },
+    {
+      "id": "OO1-146",
+      "todoId": "TPI-B12",
+      "priority": "P1",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "維持 Candidate_Pool 價格變化盲選與跨批去重",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-146/tpi-b12-維持-candidate-pool-價格變化盲選與跨批去重",
+      "blockedBy": [],
+      "acceptance": "原始選股（候選）帳本不得有 2020/2026 價格、差值、通膨欄；選取/拒收各附事前理由與 identity/SKU/source 去重收據。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/docs/methodology.md"
+    },
+    {
+      "id": "OO1-148",
+      "todoId": "TPI-C02",
+      "priority": "P1",
+      "group": "臺北市 CPI",
+      "status": "TODO",
+      "title": "CPI 01食品與11餐廳旅館：外食及住宿拆分證據",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-148/tpi-c02-cpi-01食品與11餐廳旅館外食及住宿拆分證據",
+      "blockedBy": [],
+      "acceptance": "查核同年度臺北市戶長年齡別食品、自炊/外食、餐廳/住宿權重與 CPI 品目定義；僅對可確認份額產生價格相對數，留未覆蓋額並保留官方 URL/SHA。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/taipei-2020-age-head-to-cpi-basic-crosswalk-20261018.csv"
+    },
+    {
+      "id": "OO1-149",
+      "todoId": "TPI-C03",
+      "priority": "P1",
+      "group": "臺北市 CPI",
+      "status": "TODO",
+      "title": "CPI 04住宅能源及05家具家務：租金／水／燃料口徑對帳",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-149/tpi-c03-cpi-04住宅能源及05家具家務租金水燃料口徑對帳",
+      "blockedBy": [],
+      "acceptance": "尋找同年同市同戶長年齡更細住宅/水費/電費/燃料/家庭維護/家具支出，提供可追溯 crosswalk；不能把合併欄位當作單純租金。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/results/tpe-cpi-20261018/tpe-2020-recovered-child-expenditure-audit.csv"
+    },
+    {
+      "id": "OO1-150",
+      "todoId": "TPI-C04",
+      "priority": "P1",
+      "group": "臺北市 CPI",
+      "status": "TODO",
+      "title": "CPI 06醫療保健與健保費：確認價格指數涵蓋範圍",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-150/tpi-c04-cpi-06醫療保健與健保費確認價格指數涵蓋範圍",
+      "blockedBy": [],
+      "acceptance": "核實2020臺北家庭醫療細項與健保費分類；核對官方 CPI 2021基期政策範圍；計算已驗證權重覆蓋及無法涵蓋份額，未取得則HOLD。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/taipei-2020-age-head-to-cpi-basic-crosswalk-20261018.csv"
+    },
+    {
+      "id": "OO1-151",
+      "todoId": "TPI-C05",
+      "priority": "P1",
+      "group": "臺北市 CPI",
+      "status": "TODO",
+      "title": "CPI 07交通與08通訊：拆分設備、服務及通訊缺失",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-151/tpi-c05-cpi-07交通與08通訊拆分設備服務及通訊缺失",
+      "blockedBy": [],
+      "acceptance": "逐項核對交通細項與 CPI 油料/維修/交通服務；通訊須找官方獨立可比指數或顯示 UNMAPPED；不得從合併設備指數硬拆。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/results/tpe-cpi-20261018/tpe-2020-recovered-child-expenditure-audit.csv"
+    },
+    {
+      "id": "OO1-153",
+      "todoId": "TPI-C07",
+      "priority": "P1",
+      "group": "臺北市 CPI",
+      "status": "TODO",
+      "title": "調查2020臺北市戶長年齡更細支出表／公開微資料",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-153/tpi-c07-調查2020臺北市戶長年齡更細支出表公開微資料",
+      "blockedBy": [],
+      "acceptance": "列舉官方公開年報附表、同年主計處時點資料、合法可得微資料；驗證市別/歲別/年分/品目/授權；資料不足保留原始缺口，不能把別年度結構外推。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/MAC-EXECUTION-RESULTS-2026-10-17.md"
+    },
+    {
+      "id": "OO1-154",
+      "todoId": "TPI-C08",
+      "priority": "P1",
+      "group": "臺北市 CPI",
+      "status": "TODO",
+      "title": "臺北7年齡代理CPI覆蓋率≥95%與獨立重算 Gate",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-154/tpi-c08-臺北7年齡代理cpi覆蓋率95percent與獨立重算-gate",
+      "blockedBy": [
+        "OO1-147",
+        "OO1-148",
+        "OO1-149",
+        "OO1-150",
+        "OO1-151",
+        "OO1-152",
+        "OO1-153"
+      ],
+      "acceptance": "每組滿足研究自訂≥95%加權覆蓋及01/04/06完整分類、A/B同月/全年日期同口徑、2021=100基期/來源SHA、獨立Fraction重算；不過門檻輸出PARTIAL而非完整族群率。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/TAIPEI-CPI-2026-10-18-DATA-CROSSWALK-PARTIAL-RESULT.md"
+    },
+    {
+      "id": "OO1-156",
+      "todoId": "TPI-W01",
+      "priority": "P1",
+      "group": "全國工作／退休權重",
+      "status": "TODO",
+      "title": "DGBAS 全國2020修正版 XLS／ODS 嚴格 TLS 原始取得",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-156/tpi-w01-dgbas-全國2020修正版-xlsods-嚴格-tls-原始取得",
+      "blockedBy": [],
+      "acceptance": "僅採嚴格HTTPS/可驗證官方替代host/合法來源，核對原檔 bytes、SHA、UTC、版次與文件內容；不得 curl -k、安裝 CA 根憑證、將臺北市原始資料冒充全國。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/MAC-EXECUTION…"
+    },
+    {
+      "id": "OO1-157",
+      "todoId": "TPI-W02",
+      "priority": "P1",
+      "group": "全國工作／退休權重",
+      "status": "TODO",
+      "title": "全國 WGT02 2020 修正版來源與版次一致性",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-157/tpi-w02-全國-wgt02-2020-修正版來源與版次一致性",
+      "blockedBy": [],
+      "acceptance": "識別全國年齡/職業源文件、發布與修正版日期、欄列結構、原始SHA，兩表同年同地理範圍且沒有混用前版；尚未取得則維持PARTIAL/HOLD。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/official-weight-source-register-2026-10-16.csv"
+    },
+    {
+      "id": "OO1-158",
+      "todoId": "TPI-W03",
+      "priority": "P1",
+      "group": "全國工作／退休權重",
+      "status": "TODO",
+      "title": "全國 WGT03 定義工作與退休家庭，不以戶長年齡冒充",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-158/tpi-w03-全國-wgt03-定義工作與退休家庭不以戶長年齡冒充",
+      "blockedBy": [],
+      "acceptance": "制定人口母體、工作/退休可觀測定義、戶長 versus 成員、權重基數、樣本涵蓋與未知值規則；取得官方明確欄位或另標PROXY，未證者HOLD。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/TAIPEI-2020-COHORT-BUDGET-EXPOSURE-ANALYSIS-2026-10-17.md"
+    },
+    {
+      "id": "OO1-159",
+      "todoId": "TPI-W04",
+      "priority": "P1",
+      "group": "全國工作／退休權重",
+      "status": "TODO",
+      "title": "全國 WGT04／05 兩類12目的支出權重計算及驗收",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-159/tpi-w04-全國-wgt0405-兩類12目的支出權重計算及驗收",
+      "blockedBy": [
+        "OO1-156",
+        "OO1-157",
+        "OO1-158"
+      ],
+      "acceptance": "在 WGT01–03 通過後，依 12大類完成兩母體權重逐列對帳、總和1、非負、原始金額及發布門檻收據；若來源母體不可直接界定則只做明確標記的代理且不發布。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/SELF-EXECUTION-AND-RESIDUAL-HANDOFF-2026-10-17.md"
+    },
+    {
+      "id": "OO1-163",
+      "todoId": "TPI-I04",
+      "priority": "P1",
+      "group": "IUI Dashboard",
+      "status": "TODO",
+      "title": "Dashboard 實機FAIL修復、無障礙與安全回歸",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-163/tpi-i04-dashboard-實機fail修復無障礙與安全回歸",
+      "blockedBy": [
+        "OO1-161",
+        "OO1-162"
+      ],
+      "acceptance": "每個Bug附裝置/版本/重現步驟/截圖與修正commit；18項Python、Node、DOM smoke、focus/ARIA驗證重跑全部PASS後才標完成。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/dashboard/ACCEPTANCE-2026-10-19.md"
+    },
+    {
+      "id": "OO1-105",
+      "todoId": "OO1-105",
+      "priority": "P2",
+      "group": "正式指數發布",
+      "status": "TODO",
+      "title": "HO600｜Basket SEALED 與指數解除 LOCKED 的 600 概念驗收",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-105/ho600basket-sealed-與指數解除-locked-的-600-概念驗收",
+      "blockedBy": [
+        "OO1-103",
+        "OO1-135"
+      ],
+      "acceptance": "公開 sealed/checkpoint 報告之前，必須 600/600 可驗、版本/權重/公式完整、完整工作簿可重建，否則維持 NOT SEALED/LOCKED。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket"
+    },
+    {
+      "id": "OO1-134",
+      "todoId": "TPI-G05",
+      "priority": "P2",
+      "group": "安全／治理",
+      "status": "TODO",
+      "title": "設計 Linear↔GitHub TODO 對帳與快照防漂移機制",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-134/tpi-g05-設計-lineargithub-todo-對帳與快照防漂移機制",
+      "blockedBy": [],
+      "acceptance": "輸出唯一 task ID、Linear issue URL、來源 commit SHA、驗收收據位置、修改權限矩陣、待人工更新的 drift 警告；不得啟用 Actions。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/tree/research/batch-09/dashboard"
+    },
+    {
+      "id": "OO1-141",
+      "todoId": "TPI-B07",
+      "priority": "P2",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "教育：補習語言、線上學習、兒童才藝等38缺口補證",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-141/tpi-b07-教育補習語言線上學習兒童才藝等38缺口補證",
+      "blockedBy": [],
+      "acceptance": "課程學費/時數/期限/教師/服務內容及當期定價證據雙年份核驗，至少各子分類有獨立候選/拒收明細；不將課程改版視為 Exact A。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/data/Quota_Control.csv"
+    },
+    {
+      "id": "OO1-142",
+      "todoId": "TPI-B08",
+      "priority": "P2",
+      "group": "價格籃／Batch 9",
+      "status": "TODO",
+      "title": "休閒：展演票券等39缺口與超額類凍結管理",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-142/tpi-b08-休閒展演票券等39缺口與超額類凍結管理",
+      "blockedBy": [],
+      "acceptance": "標記已達配額類 FREEZE NEW、蒐集未滿類別有相同服務/方案證據的正常價；來源上限與授權均記錄。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/data/Quota_Control.csv"
+    },
+    {
+      "id": "OO1-152",
+      "todoId": "TPI-C06",
+      "priority": "P2",
+      "group": "臺北市 CPI",
+      "status": "TODO",
+      "title": "CPI 02菸酒檳榔及12什項消費細分對照",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-152/tpi-c06-cpi-02菸酒檳榔及12什項消費細分對照",
+      "blockedBy": [],
+      "acceptance": "同年/同市/同年齡官方分項金額及 CPI 2021基期類別對照、來源權利與未涵蓋比例；禁以整組什項指數替代。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/taipei-2020-age-head-to-cpi-basic-crosswalk-20261018.csv"
+    },
+    {
+      "id": "OO1-155",
+      "todoId": "TPI-C09",
+      "priority": "P2",
+      "group": "臺北市 CPI",
+      "status": "TODO",
+      "title": "臺北官方 CPI 資料版本、異動月份與原始收據持續檢核",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-155/tpi-c09-臺北官方-cpi-資料版本異動月份與原始收據持續檢核",
+      "blockedBy": [],
+      "acceptance": "對官方 source resource id、分類版本、基期和逐月/年度SHA做比對稽核，新增版本不能覆寫前版；任何新資料先驗證48類日期與同比窗口，不能自動改完整族群率。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/source-archive/tpe-cpi-20261018/TPE-CPI-BASIC-MONTH-receipt.json"
+    },
+    {
+      "id": "OO1-164",
+      "todoId": "TPI-I05",
+      "priority": "P2",
+      "group": "IUI Dashboard",
+      "status": "TODO",
+      "title": "IUI Dashboard 靜態部署方式與公開資料授權決策",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-164/tpi-i05-iui-dashboard-靜態部署方式與公開資料授權決策",
+      "blockedBy": [
+        "OO1-106",
+        "OO1-161",
+        "OO1-162"
+      ],
+      "acceptance": "比較唯讀Mac file/私網伺服器/Pages/Netlify等，安全權利、更新、外網iPhone存取與成本；先有 Public source audit + native PASS，再由使用者另批部署，不自動啟用任何服務。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/dashboard/README.md"
+    },
+    {
+      "id": "OO1-165",
+      "todoId": "TPI-I06",
+      "priority": "P2",
+      "group": "IUI Dashboard",
+      "status": "TODO",
+      "title": "Dashboard 快照刷新、來源 SHA 與版本漂移警示（無 Actions）",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-165/tpi-i06-dashboard-快照刷新來源-sha-與版本漂移警示無-actions",
+      "blockedBy": [],
+      "acceptance": "規劃可審核的本機非Actions更新命令：核實本次Git SHA、schema、quota合計、來源SHA、分支隔離及安全發布 Gate，輸出版本收據與drift警示；禁止靜默改正式進度。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/dashboard/tools/rebuild_snapshot_js.py"
+    },
+    {
+      "id": "OO1-166",
+      "todoId": "TPI-I07",
+      "priority": "P2",
+      "group": "IUI Dashboard",
+      "status": "TODO",
+      "title": "在 IUI Dashboard 新增唯讀 TODO／Linear 工作線面板",
+      "linearUrl": "https://linear.app/001dev/issue/OO1-166/tpi-i07-在-iui-dashboard-新增唯讀-todolinear-工作線面板",
+      "blockedBy": [
+        "OO1-134"
+      ],
+      "acceptance": "設計按G/B/C/W/I分類P0-P2狀態與來源連結、Blocked/Ready/Draft、同步時間、唯讀快照；保持Linear任務權威、GitHub程式權威，不做寫入或背景調度。",
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/tree/research/batch-09/dashboard"
+    }
+  ]
+}
