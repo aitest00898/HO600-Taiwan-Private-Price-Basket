@@ -40,6 +40,34 @@ python3 -m http.server 8765 --bind 0.0.0.0 --directory dashboard
 
 **注意：** Python 開發伺服器沒有登入驗證，不可用於公網或不信任的 Wi-Fi。此流程不是 GitHub Pages 或正式網站部署，也不變更 Mac 系統設定。互動測試在使用者 Mac/iPhone 尚未完成以前不得冒稱裝置驗收通過。
 
+## 2026-10-22：第五分頁「專案 TODO」與漂移檢核
+
+新增 `dashboard/todo-snapshot.json` / `todo-snapshot.js`，從 **Linear 專案 TPI-001** 的 42 張 Issue 與研究分支原有 CSV 逐 ID 核對後封存；狀態 39 Todo、1 In Progress、2 Done，含 P0/P1/P2、工作線、24 條 blockedBy 連結與逐項驗收條件。
+
+- 網頁新增「專案 TODO」分頁；預設顯示 40 張未結工作，支援優先序、工作線、狀態篩選與 CSV 匯出，僅列出已登錄的依賴，**不將未列前置誤判為可以立即執行**。
+- 使用者直接按 Issue ID 進 Linear；來源連結已修復原有三個截斷／錯誤 URL。
+- **不會從 Linear/GitHub 即時讀取**，畫面快照 `asOf=2026-10-22`；原四頁價格/CPI 基準仍是較早的固定快照，分開顯示時點。
+- 可讀性、安全界限不變：不使用 GitHub Actions、不啟用 API Token、不修改 Linear 任務狀態、不變更 `main`。
+
+在專案根目錄執行本機資料驗證：
+
+```bash
+python3 dashboard/tools/check_todo_snapshot.py
+python3 -m unittest discover -s dashboard/tests -v
+node --check dashboard/app.js
+node --check dashboard/todo-snapshot.js
+node --check dashboard/tests/browser-smoke.js
+```
+
+**警告：** `check_todo_snapshot.py` 的預設模式只能驗證本地 GitHub TODO CSV、精確 Git blob SHA、JSON／JS 與任務邊，成功訊息會明寫 `LIVE_LINEAR_DRIFT=UNVERIFIED_NO_EXPORT`。它**不能代替即時 Linear 查詢**。如已由授權 Linear 查詢取得**最新完整 42 筆**，存成 JSON `{"issues":[{"id":"OO1-...", "status":"Todo", "priority":{"value":1}, "url":"..."}, ...]}` 後，可另執行：
+
+```bash
+python3 dashboard/tools/check_todo_snapshot.py --linear-export /path/to/fresh-linear-export.json
+```
+
+如果有任何任務狀態、優先級、來源 SHA 或組件不同，程式將退出非零並提示 drift；它**只讀檔、不自動修改任務或重新下載**。更新快照須先核實 Linear、再覆核 GitHub 任務表、重新產生 JSON/JS，最後重新執行本機與真實 Safari 檢查。
+
+
 ## V0 可操作內容
 
 | 分頁 | 內容 | 互動 |
@@ -48,6 +76,7 @@ python3 -m http.server 8765 --bind 0.0.0.0 --directory dashboard
 | 價格籃 | 七大領域配額、C01–C03 PASS、C04 WIP、正式 workbook 20/20 驗證記錄 | 詳細表、Checkpoint 追溯、匯出 |
 | 戶長年齡與 CPI | 臺北市七組 2020 支出、48/48 CPI 分類、A/B 期間的**部分**貢獻、權重覆蓋、12 類 crosswalk | 期間切換、保守排除 09／暫定納入 09、年齡組切換、對照狀態過濾、匯出目前情境 |
 | 證據與驗收 | pinned GitHub blob SHA、main 與 research 分流、安全與方法學風險 | 點選原始來源、匯出來源清單 |
+| 專案 TODO | Linear TPI-001 42 張 Issue 固定快照、依賴、驗收條件 | 優先序／工作線／狀態篩選、Issue／來源連結、匯出當前工作清單 |
 
 ## 資料與方法約束
 
@@ -72,7 +101,7 @@ dashboard/
   snapshot.js        # 和 snapshot.json 等值的 file:// 可用離線資料
   README.md
   tests/
-    test_dashboard.py # 18 項本機快照與介面規格測試
+    test_dashboard.py # 24 項本機快照與介面規格測試
     browser-smoke.js # ?smoke=1 才載入的真實瀏覽器 DOM 測試
 ```
 
