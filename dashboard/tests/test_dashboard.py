@@ -113,7 +113,7 @@ class DashboardV0Acceptance(unittest.TestCase):
             self.assertIn(s["ref"],("main","research/batch-09"))
 
     def test_html_four_valid_pages_with_mobile_layout(self):
-        for tab in ("overview","basket","cohorts","evidence"):
+        for tab in ("overview","basket","cohorts","evidence","tasks"):
             self.assertIn(f'data-tab="{tab}"',self.html)
         self.assertIn('aria-label="HO600 導覽"',self.html)
         self.assertIn('name="viewport"',self.html)
@@ -208,6 +208,23 @@ class DashboardV0Acceptance(unittest.TestCase):
             self.assertIn(term,self.app)
         self.assertNotIn("fetch(",self.app)
         self.assertNotIn("XMLHttpRequest",self.app)
+
+    def test_task_source_refs_are_nontruncated_and_csv_pinned(self):
+        task=json.loads(TODO_JSON.read_text(encoding="utf-8"))
+        self.assertRegex(task["authority"]["githubTaskCsvBlobSha"],r"^[0-9a-f]{40}$")
+        for issue in task["tasks"]:
+            self.assertNotIn("…",issue["sourceUrl"])
+            self.assertTrue(issue["sourceUrl"].startswith(
+                "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket"))
+            self.assertTrue(issue["linearUrl"].startswith("https://linear.app/001dev/issue/"))
+
+    def test_todo_drift_checker_guards_git_blob_and_freshness_limit(self):
+        checker=(ROOT/"tools"/"check_todo_snapshot.py").read_text(encoding="utf-8")
+        for term in ("git_blob_sha","githubTaskCsvBlobSha","--linear-export",
+                     "LIVE_LINEAR_DRIFT=UNVERIFIED_NO_EXPORT","TODO_DRIFT_OR_INTEGRITY_FAILURE"):
+            self.assertIn(term,checker)
+        self.assertNotIn("requests.get",checker)
+        self.assertNotIn("subprocess.run",checker)
 
     def test_workflow_pause_preserved(self):
         self.assertEqual(self.data["controls"]["githubActions"],"PAUSED_BY_USER")
