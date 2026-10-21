@@ -4,6 +4,7 @@
 (function () {
   "use strict";
   const D = window.HO600_SNAPSHOT;
+  const TD = window.HO600_TODO_SNAPSHOT;
   const app = document.getElementById("app-content");
   const title = document.getElementById("pageTitle");
   const subtitle = document.getElementById("pageSubtitle");
@@ -12,9 +13,10 @@
     overview: ["研究全貌", "從正式價格籃到研究驗收：只顯示可追溯的已確認進度。", "總覽"],
     basket: ["價格籃與研究配額", "正式主線和 Batch 9 研究分流；配額依保留歷史樣本政策。", "價格籃"],
     cohorts: ["戶長年齡與 CPI", "臺北市 2020 支出結構與 CPI 局部對照，不是完整族群通膨率。", "年齡與 CPI"],
-    evidence: ["證據與驗收", "逐項查看提交、原始來源與不能跨越的正式發布門檻。", "證據"]
+    evidence: ["證據與驗收", "逐項查看提交、原始來源與不能跨越的正式發布門檻。", "證據"],
+    tasks: ["專案 TODO", "以 Linear TPI-001 為唯一任務狀態來源；此頁僅為固定快照。", "待辦管理"]
   };
-  const state = {tab: "overview", period: "A", mode: "strict", age: "65歲及以上", status: "ALL"};
+  const state = {tab: "overview", period: "A", mode: "strict", age: "65歲及以上", status: "ALL", taskPriority: "ALL", taskGroup: "ALL", taskStatus: "OPEN"};
   const nf = new Intl.NumberFormat("zh-TW");
   const fmt = (n, digits = 1) => Number(n).toLocaleString("zh-TW", {minimumFractionDigits:digits, maximumFractionDigits:digits});
   const esc = (value) => String(value == null ? "" : value).replace(/[&<>"']/g, c => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[c]));
@@ -31,6 +33,7 @@
   function verify() {
     if (!D || D.schemaVersion !== "1.0.0") throw Error("Snapshot is missing or incompatible.");
     const c = D.canonical, co = D.cohort;
+    if(!TD || TD.schemaVersion!=="1.0.0" || TD.tasks.length!==42 || TD.summary.todo+TD.summary.inProgress+TD.summary.done!==42 || TD.authority.refresh!=="EXPLICIT_MANUAL_ONLY_NO_ACTIONS") throw Error("TODO snapshot missing or unverified");
     if (c.basketSealed || c.indexStatus !== "LOCKED" || c.accepted + c.remaining !== c.target) throw Error("Formal basket release invariant violated.");
     const v = c.quota.reduce((acc, e) => {acc.accepted += e.accepted; acc.needed += e.needed; acc.target += e.target; return acc;}, {accepted:0,needed:0,target:0});
     if (c.quota.length !== 7 || v.accepted !== c.accepted || v.needed !== c.remaining || v.target !== c.target) throw Error("Official quota mismatch.");
@@ -180,6 +183,50 @@
       '<div class="full">'+warn+'</div></div>';
   }
 
+  function activeTaskRows() {
+    return TD.tasks.filter(t =>
+      (state.taskStatus === "OPEN" ? t.status !== "DONE" : state.taskStatus === "ALL" || state.taskStatus === t.status) &&
+      (state.taskPriority === "ALL" || t.priority === state.taskPriority) &&
+      (state.taskGroup === "ALL" || t.group === state.taskGroup));
+  }
+  function tasksView() {
+    const q=TD.summary, selected=activeTaskRows();
+    const groupOptions=[...new Set(TD.tasks.map(t=>t.group))].sort((a,b)=>a.localeCompare(b,"zh-Hant"));
+    const selector=(id,label,items,value)=>'<label class="control-label" for="'+id+'">'+esc(label)+'</label><select class="select" id="'+id+'">'+items.map(x=>'<option value="'+attr(x[0])+'" '+(value===x[0]?"selected":"")+'>'+esc(x[1])+'</option>').join("")+'</select>';
+    const filter='<div class="controls">'+
+      selector("taskPriority","優先序",[["ALL","全部"],["P0","P0"],["P1","P1"],["P2","P2"]],state.taskPriority)+
+      selector("taskGroup","工作線",[["ALL","全部"],...groupOptions.map(g=>[g,g])],state.taskGroup)+
+      selector("taskStatus","狀態",[["OPEN","未完成"],["ALL","全部"],["TODO","Todo"],["IN_PROGRESS","進行中"],["DONE","Done"]],state.taskStatus)+
+      '</div>';
+    const statuses={TODO:["neutral","Todo"],IN_PROGRESS:["warning","進行中"],DONE:["good","Done"]};
+    const body=selected.map(t=>{
+      const blockers=t.blockedBy.filter(id=>TD.tasks.some(x=>x.id===id&&x.status!=="DONE"));
+      const block=blockers.length?pill("warning",blockers.length+" 個未結前置"):(t.blockedBy.length?pill("good","已列前置關閉"):'<span class="secondary-text">未列前置</span>');
+      return '<tr><td><strong>'+link(t.linearUrl,t.id,"noline-link")+'</strong><div class="secondary-text">'+esc(t.todoId)+'</div></td>'+
+        '<td><strong>'+esc(t.title)+'</strong><div class="secondary-text">'+esc(t.group)+'</div></td>'+
+        '<td>'+pill(t.priority==="P0"?"danger":t.priority==="P1"?"warning":"neutral",t.priority)+'</td>'+
+        '<td>'+pill(...statuses[t.status])+'</td><td>'+block+'</td>'+
+        '<td>'+link(t.sourceUrl,"來源","noline-link")+'</td></tr>';
+    }).join("");
+    const table='<div class="data-table-scroll"><table class="data-table"><thead><tr>'+
+      '<th>Linear ID</th><th>待解事項／工作線</th><th>優先</th><th>任務狀態</th><th>前置依賴</th><th>來源</th>'+
+      '</tr></thead><tbody>'+body+'</tbody></table></div>';
+    const line='<div class="mini-banner"><strong>此處不是即時 Linear：</strong>快照 '+esc(TD.asOf)+'，已人工對帳 42 張 Issue。'+
+      ' 任務 Done 不等於正式價目驗收；前置依賴僅顯示已登錄的 Linear 關係。</div>';
+    return '<div class="kpi-grid">'+
+      card("尚未完成",q.todo+q.inProgress+" / "+TD.tasks.length,"Todo "+q.todo+" · In Progress "+q.inProgress)+
+      card("已結案",""+q.done,"只表示任務驗收完成","teal")+
+      card("P0 任務",""+q.p0,"需優先注意，不代表皆可立即執行","warn")+
+      card("已登錄前置關係",q.relations+" 條",q.blockedByCount+" 張任務含依賴")+
+      '</div><div style="margin-bottom:15px">'+line+'</div>'+
+      '<div class="panel"><div class="panel-header"><div><h2 class="panel-title">任務清單</h2>'+
+      '<p class="panel-desc">可依優先序、工作線、狀態篩選；表格只讀，不會更改 Linear。</p></div>'+
+      link(TD.authority.projectUrl,"開啟 Linear")+'</div>'+
+      '<div class="table-filter">'+filter+'<div class="secondary-text">目前顯示 '+selected.length+' / '+TD.tasks.length+' 項</div></div>'+
+      table+'<div class="line-note">來源：'+link(D.links.repository+"/blob/"+D.identity.researchBranch+"/research/todo/HO600-TODO-2026-10-20.csv","GitHub 任務快照")+
+      ' · 必須由人工重新對帳 Linear 後更新頁面。</div></div>';
+  }
+
   function evidence() {
     const C = D.canonical, T=D.cohort;
     const status = '<div class="state-list">'+[
@@ -224,7 +271,11 @@
   }
   function csvRows() {
     let head,rows,basename;
-    if(state.tab==="cohorts"){
+    if(state.tab==="tasks"){
+      head=["linear_id","todo_id","priority","group","status","title","blocked_by_ids","linear_url","acceptance","source_url"];
+      rows=activeTaskRows().map(t=>[t.id,t.todoId,t.priority,t.group,t.status,t.title,t.blockedBy.join(";"),t.linearUrl,t.acceptance,t.sourceUrl]);
+      basename="ho600_linear_todo_snapshot";
+    }else if(state.tab==="cohorts"){
       head=["year","age_head","window","mapping_mode","coverage_pct","partial_contribution_pp","uncovered_pct","full_rate_status"];
       rows=D.cohort.age.map(x=>{const t=x.periods[state.period],k=state.mode==="strict"?"strictCoverage":"coverage",v=state.mode==="strict"?"strictPartial":"partial";return [2020,x.group,state.period,state.mode,t[k],t[v],100-t[k],"HOLD_NOT_A_FULL_RATE"]});
       basename="ho600_taipei_age_head_partial";
@@ -263,7 +314,7 @@
       const selected=e.dataset.tab===tab;e.classList.toggle("active",selected);
       if(selected) e.setAttribute("aria-current","page");else e.removeAttribute("aria-current");
     });
-    app.innerHTML = (tab==="overview"?overview():tab==="basket"?basket():tab==="cohorts"?cohort():evidence());
+    app.innerHTML = (tab==="overview"?overview():tab==="basket"?basket():tab==="cohorts"?cohort():tab==="tasks"?tasksView():evidence());
     document.getElementById("exportBtn").setAttribute("title",tab==="cohorts"?"匯出所選假設與期間的局部貢獻":"匯出目前分頁資料");
     closeNav();
   }
@@ -294,6 +345,9 @@
     app.addEventListener("change",e=>{
       if(e.target.id==="ageSelect"){state.age=e.target.value;switchTab("cohorts");}
       else if(e.target.id==="statusSelect"){state.status=e.target.value;switchTab("cohorts");}
+      else if(e.target.id==="taskPriority"){state.taskPriority=e.target.value;switchTab("tasks");}
+      else if(e.target.id==="taskGroup"){state.taskGroup=e.target.value;switchTab("tasks");}
+      else if(e.target.id==="taskStatus"){state.taskStatus=e.target.value;switchTab("tasks");}
     });
     document.getElementById("exportBtn").addEventListener("click",exportCSV);
     window.addEventListener("hashchange",()=>{switchTab(tabFromHash());window.scrollTo({top:0,behavior:"auto"})});
