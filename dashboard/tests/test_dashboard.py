@@ -15,6 +15,8 @@ JS_SNAP = ROOT / "snapshot.js"
 APP = ROOT / "app.js"
 HTML = ROOT / "index.html"
 CSS = ROOT / "styles.css"
+TODO_JSON = ROOT / "todo-snapshot.json"
+TODO_JS = ROOT / "todo-snapshot.js"
 
 
 class DashboardV0Acceptance(unittest.TestCase):
@@ -162,13 +164,58 @@ class DashboardV0Acceptance(unittest.TestCase):
         self.assertNotIn("fetch(",smoke)
         self.assertNotIn("localStorage",smoke)
 
+    def test_task_snapshot_identical_json_and_offline_js(self):
+        task=json.loads(TODO_JSON.read_text(encoding="utf-8"))
+        js=TODO_JS.read_text(encoding="utf-8")
+        prefix="window.HO600_TODO_SNAPSHOT = "
+        self.assertIn(prefix,js)
+        decoded=json.loads(js.split(prefix,1)[1].strip().removesuffix(";"))
+        self.assertEqual(task,decoded)
+
+    def test_task_snapshot_reconciles_42_linear_issues(self):
+        task=json.loads(TODO_JSON.read_text(encoding="utf-8"))
+        self.assertEqual(task["schemaVersion"],"1.0.0")
+        self.assertEqual(task["authority"]["refresh"],"EXPLICIT_MANUAL_ONLY_NO_ACTIONS")
+        self.assertEqual(len(task["tasks"]),42)
+        self.assertEqual(task["summary"]["todo"],39)
+        self.assertEqual(task["summary"]["inProgress"],1)
+        self.assertEqual(task["summary"]["done"],2)
+        self.assertEqual(task["summary"]["p0"],6)
+        self.assertEqual(task["summary"]["p1"],27)
+        self.assertEqual(task["summary"]["p2"],9)
+        self.assertEqual(len(set(x["id"] for x in task["tasks"])),42)
+        self.assertEqual(sorted(x["id"] for x in task["tasks"] if x["status"]=="DONE"),["OO1-131","OO1-135"])
+
+    def test_task_dependencies_do_not_invent_accepted_releases(self):
+        task=json.loads(TODO_JSON.read_text(encoding="utf-8"))
+        ids={x["id"] for x in task["tasks"]}
+        self.assertEqual(sum(len(x["blockedBy"]) for x in task["tasks"]),24)
+        for x in task["tasks"]:
+            self.assertIn(x["priority"],("P0","P1","P2"))
+            self.assertIn(x["status"],("DONE","TODO","IN_PROGRESS"))
+            self.assertTrue(x["linearUrl"].startswith("https://linear.app/001dev/issue/"))
+            self.assertTrue(set(x["blockedBy"]).issubset(ids))
+            self.assertTrue(x["acceptance"])
+        self.assertEqual(self.data["canonical"]["accepted"],181)
+        self.assertEqual(self.data["canonical"]["indexStatus"],"LOCKED")
+
+    def test_task_controls_and_filtered_export_are_wired(self):
+        self.assertIn('data-tab="tasks"',self.html)
+        self.assertIn('./todo-snapshot.js',self.html)
+        for term in ('function tasksView()','function activeTaskRows()',
+                     'taskPriority','taskGroup','taskStatus',
+                     'state.tab==="tasks"','basename="ho600_linear_todo_snapshot"'):
+            self.assertIn(term,self.app)
+        self.assertNotIn("fetch(",self.app)
+        self.assertNotIn("XMLHttpRequest",self.app)
+
     def test_workflow_pause_preserved(self):
         self.assertEqual(self.data["controls"]["githubActions"],"PAUSED_BY_USER")
         self.assertEqual(self.data["controls"]["indexRelease"],"LOCKED")
 
     @unittest.skipUnless(shutil.which("node"),"Node.js unavailable; validate JS in Safari")
     def test_js_syntax(self):
-        for path in (APP,JS_SNAP,ROOT/"tests"/"browser-smoke.js"):
+        for path in (APP,JS_SNAP,TODO_JS,ROOT/"tests"/"browser-smoke.js"):
             proc=subprocess.run(["node","--check",str(path)],capture_output=True,text=True,timeout=15)
             self.assertEqual(proc.returncode,0,proc.stderr)
 
