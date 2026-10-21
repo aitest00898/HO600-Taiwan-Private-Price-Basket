@@ -310,6 +310,7 @@
     if(!headings[tab]) tab="overview";
     state.tab=tab;
     const header=headings[tab];title.textContent=header[0];subtitle.textContent=header[1];crumb.textContent=header[2];
+    document.getElementById("snapshotDate").textContent="快照 "+(tab==="tasks"?TD.asOf:D.snapshotDate);
     document.querySelectorAll("[data-tab]").forEach(e=>{
       const selected=e.dataset.tab===tab;e.classList.toggle("active",selected);
       if(selected) e.setAttribute("aria-current","page");else e.removeAttribute("aria-current");
