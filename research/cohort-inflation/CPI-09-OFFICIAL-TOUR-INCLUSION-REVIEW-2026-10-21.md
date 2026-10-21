@@ -36,3 +36,10 @@ Additional item-scope research leads: [DGBAS 2021-base CPI item/weight tables (o
 4. Until complete, remain `PARTIAL` with no 95%/full-cohort publication.
 
 No changes to main, CPI raw data, previously reported rates, official workbook, branch merges, or GitHub Actions.
+
+
+## 2026-10-22 second independent first-party confirmation (Sep 2026)
+
+Taipei City Department of Budget, Accounting and Statistics published its [115年9月臺北市物價變動概況](https://dbas.gov.taipei/News_Content.aspx?n=61D456768E73CD92&s=E89309C4919E6F57&sms=72544237BBE4C5F6). The September 2026 release explicitly attributes the reported **CPI 娛樂費用 month-over-month −1.76%** to falling **國外旅遊團費** after summer peak, and the **year-over-year 娛樂費用 +4.84%** to rising **國外旅遊團費**. This provides a second 2021-base Taipei-government original indicating that package-tour pricing genuinely contributes to **the entertainment expense subindex**.
+
+**Boundary of this new evidence:** This is a reported effect within the entertainment class, **not** a list of 2020 survey recreational sub-items or a complete one-to-one CPI/HIES crosswalk. It does not establish that books, stationery, electronics, sport equipment or every leisure service belong to the same price basket, and it does not supply 2020 age-specific price relatives or reweighting. Current decision remains **09_PROVISIONAL**, approved full cohort inflation rates remain **0/7**. Do not publish the +1.9018pp exploratory scenario as a complete rate.
