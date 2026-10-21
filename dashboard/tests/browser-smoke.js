@@ -145,6 +145,20 @@
       assertion("GitHub Actions 標記暫停",text().includes("PAUSED"));
       assertion("正式指數依然 LOCKED",text().includes("LOCKED"));
 
+      await click('[data-tab="tasks"]');
+      assertion("Linear TODO 第五頁可切換",node("#pageTitle")?.textContent==="專案 TODO");
+      assertion("42張快照預設僅顯示40張未結任務",document.querySelectorAll("#app-content table tbody tr").length===40);
+      assertion("Linear狀態為39 Todo 1進行中 2已完成",text().includes("39")&&text().includes("2"));
+      await change("#taskPriority","P0");
+      assertion("P0 篩選只保留未完成任務",document.querySelectorAll("#app-content table tbody tr").length===5);
+      await change("#taskStatus","ALL");
+      assertion("P0 全部含結案共6張",document.querySelectorAll("#app-content table tbody tr").length===6);
+      await change("#taskGroup","IUI Dashboard");
+      assertion("IUI P0 共三張真機驗收任務",document.querySelectorAll("#app-content table tbody tr").length===3);
+      assertion("依賴狀態可見",text().includes("未結前置"));
+      await change("#taskStatus","OPEN");
+      assertion("IUI P0 三張仍未完成",document.querySelectorAll("#app-content table tbody tr").length===3);
+
       const pageWidth=document.documentElement.scrollWidth;
       if(innerWidth<=500){
         assertion("手機寬度下無全頁橫向溢出",pageWidth<=innerWidth+2,"scrollWidth="+pageWidth+", innerWidth="+innerWidth);
