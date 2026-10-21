@@ -6,7 +6,7 @@
     "taskSource": "Linear TPI-001",
     "projectUrl": "https://linear.app/001dev/project/tpi-001ho600-台灣私人物價籃-46e14167f961",
     "githubTaskCsv": "research/todo/HO600-TODO-2026-10-20.csv",
-    "githubTaskCsvBlobSha": "a86f3efdc6e3d2d0c7069835743921d490e094d6",
+    "githubTaskCsvBlobSha": "5e5ddd2f9d394d6dd5ea9112081c21b61f2fe8b4",
     "refresh": "EXPLICIT_MANUAL_ONLY_NO_ACTIONS",
     "mainRelease": "NOT_AUTHORIZED",
     "note": "Task Done denotes issue acceptance only; it does not certify price index or official workbook."
@@ -32,7 +32,7 @@
       "linearUrl": "https://linear.app/001dev/issue/OO1-130/tpi-g01-github-actions-停用狀態與-main-自動觸發風險核實",
       "blockedBy": [],
       "acceptance": "提供設定及觸發實況、受影響分支、需要的最小修復方案；任何修改 main/workflow 前另取得明確核准，且本輪不觸發 Actions。",
-      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/.github/workflows/validate.yml"
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/main/.github/workflows/validate.yml"
     },
     {
       "id": "OO1-131",
@@ -56,7 +56,7 @@
       "linearUrl": "https://linear.app/001dev/issue/OO1-147/tpi-c01-核實第09類休閒文化與-cpi-娛樂費用的官方範圍",
       "blockedBy": [],
       "acceptance": "取得臺北市/DGBAS 2021基期 CPI 詳細 item 定義，逐項核對套裝旅遊、文化服務、書報、休閒器材的 2020 歲別金額，產出可／不可映射矩陣與增量敏感度；未通過前固定排除09、不稱完整率。",
-      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/TAIPEI-2020-CHILD-SPENDING-AND-ENTERTAINMENT-…"
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/CPI-09-OFFICIAL-TOUR-INCLUSION-REVIEW-2026-10-21.md"
     },
     {
       "id": "OO1-160",
@@ -385,7 +385,7 @@
       "linearUrl": "https://linear.app/001dev/issue/OO1-156/tpi-w01-dgbas-全國2020修正版-xlsods-嚴格-tls-原始取得",
       "blockedBy": [],
       "acceptance": "僅採嚴格HTTPS/可驗證官方替代host/合法來源，核對原檔 bytes、SHA、UTC、版次與文件內容；不得 curl -k、安裝 CA 根憑證、將臺北市原始資料冒充全國。",
-      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/MAC-EXECUTION…"
+      "sourceUrl": "https://github.com/aitest00898/HO600-Taiwan-Private-Price-Basket/blob/research/batch-09/research/cohort-inflation/MAC-EXECUTION-RESULTS-2026-10-17.md"
     },
     {
       "id": "OO1-157",
