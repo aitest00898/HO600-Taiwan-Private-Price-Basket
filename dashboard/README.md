@@ -42,7 +42,7 @@ python3 -m http.server 8765 --bind 0.0.0.0 --directory dashboard
 
 ## 2026-10-22：第五分頁「專案 TODO」與漂移檢核
 
-新增 `dashboard/todo-snapshot.json` / `todo-snapshot.js`，從 **Linear 專案 TPI-001** 的 42 張 Issue 與研究分支原有 CSV 逐 ID 核對後封存；狀態 39 Todo、1 In Progress、2 Done，含 P0/P1/P2、工作線、24 條 blockedBy 連結與逐項驗收條件。
+新增 `dashboard/todo-snapshot.json` / `todo-snapshot.js`，從 **Linear 專案 TPI-001** 的 42 張 Issue 與研究分支原有 CSV 逐 ID 核對後封存；狀態 36 Todo、4 In Progress、2 Done，含 P0/P1/P2、工作線、24 條 blockedBy 連結與逐項驗收條件。
 
 - 網頁新增「專案 TODO」分頁；預設顯示 40 張未結工作，支援優先序、工作線、狀態篩選與 CSV 匯出，僅列出已登錄的依賴，**不將未列前置誤判為可以立即執行**。
 - 使用者直接按 Issue ID 進 Linear；來源連結已修復原有三個截斷／錯誤 URL。
