@@ -12,6 +12,7 @@ claim that Linear has not changed since the pinned snapshot was created.
 """
 import argparse
 import csv
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -62,6 +63,10 @@ def check(fresh_path=None):
         "relations":sum(len(t["blockedBy"]) for t in tasks)}
     if observed!=summary: fail("summary mismatch")
 
+    raw=CSV.read_bytes()
+    git_blob_sha=hashlib.sha1(b"blob "+str(len(raw)).encode("ascii")+b"\x00"+raw).hexdigest()
+    if git_blob_sha!=snap["authority"]["githubTaskCsvBlobSha"]:
+        fail("pinned Git blob SHA mismatch: reviewed TODO CSV changed")
     with CSV.open(newline="",encoding="utf-8-sig") as f:
         records=list(csv.DictReader(f))
     if len(records)!=len(tasks): fail("GitHub TODO CSV row count drift")
@@ -70,7 +75,9 @@ def check(fresh_path=None):
     for t in tasks:
         x=by_id[t["id"]]
         for prop,field in (("todoId","todo_id"),("priority","priority"),
-                           ("group","group"),("status","status"),("title","title")):
+                           ("group","group"),("status","status"),("title","title"),
+                           ("linearUrl","linear_url"),("acceptance","acceptance_criteria"),
+                           ("sourceUrl","source_url")):
             if t[prop]!=x[field]: fail("CSV "+t["id"]+" "+prop+" drift")
         if t["blockedBy"]!=[v for v in x["blocked_by_linear_ids"].split(";") if v]:
             fail("dependency drift "+t["id"])
