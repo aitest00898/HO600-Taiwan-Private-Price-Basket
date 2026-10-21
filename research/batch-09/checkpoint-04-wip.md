@@ -45,3 +45,13 @@
 5. Do not touch `main`, the seven-sheet formal workbook, the canonical status, seal state, index, or GitHub Actions without explicit validated release workflow.
 
 Source-of-truth: `research/batch-09/HANDOFF-2026-10-16.md`, `docs/evidence-gate.md`, `docs/concentration-policy.md`, `data/Quota_Control.csv` and canonical `main` artifacts.
+
+
+## 2026-10-22 independent cross-year recheck — A3 remains HOLD
+
+1. Official [MUJI 2020-03-06 spring/summer new-products statement](https://shop.muji.tw/muji-journal/news/news/200306.html) says A3 黄麻袋 original NT$79 and explicitly **「新品預計6月上市」**, *not actual on-sale confirmation*.
+2. [Girlstalk 2021-05-21 retrospective](https://www.girlstalk.cc/article/72391) describes the three sizes B5/A4/A3 at 59/69/79 and says **「近期台灣也悄悄上市啦」**. This is a **2021 dated secondary report of available goods**, and **does not certify 2020 introduction date**. Relative language 「近期」 cannot be backdated to June 2020.
+3. [Vogue Taiwan 2020 spring/summer](https://www.vogue.com.tw/lifestyle/article/muji-2020-ss) also says **預計於6月上市** and contains an internally ambiguous image-caption mapping of B5/A4/A3 to 79/69/59. Prioritize the dated official text for *planned* sizes/prices, but do not infer actual 2020 store distribution.
+4. Current [MUJI category](https://shop.muji.tw/v2/official/SalePageCategory/483062) lists an A3 jute bag at NT$89, with another A3 listing sold out; variant continuity/barcode still lacks 2020 contemporaneous identity evidence.
+
+**Disposition (no change): `B09-C04-002 = HOLD_2020_IN_MARKET`**, C04 checkpoint PASS = 0/20, Batch9 previous 60 PASS unchanged, canonical 181/600. The exact missing evidence is (a) **after launch** in-year 2020 Taiwanese first-party in-store/on-sale material (not just an announcement), (b) A3 model/color/specimen parity with the current retail unit, and (c) observed 2020 **normal selling** price. Do not reclassify from this 2021 secondary article alone.
