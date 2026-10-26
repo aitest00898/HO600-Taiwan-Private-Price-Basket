@@ -131,3 +131,26 @@ Evidence triangulation for B09-C04-002:
 **Next concrete evidence to change this decision (no added gate):** obtain readable archived 2020 COSMED flyer page with original issue date or a dated original 2020 COSMED listing, and independently link the 2020 34cm10pcs pack identity to current COSMED eShop item; otherwise leave HOLD and move to another underfilled older-current candidate. Do not retry this same redirect twice without a different original URL.
 
 **Counts unchanged at release boundary:** C04 **4 WIP leads = 1 provisional + 3 HOLD**, C04 checkpoint-certified **0**, C01–C03 **60 research-qualified**, `main` **181/600**, NOT SEALED, LOCKED. Mac Dashboard accepted; iPhone acceptance postponed by user, unrelated to price evidence.
+
+
+## 2026-10-26 original-source continuation — C04-001 barcode back-bridge and three legacy bag triage
+
+This pass followed the user's evidence-first rule: prefer directly readable original publisher pages and do not append a new HOLD-priced C04 candidate when the 2020 price is missing. Historical source dates and channel/country boundaries are explicit.
+
+### C04-001: same barcode independently confirmed from 2021 (Japan only)
+
+- **Taiwan original retail price in 2020:** [MUJI Taiwan original 2020-06-29 release](https://shop.muji.tw/muji-journal/news/news/200629.html) directly readable, lines show **洗臉用網狀起泡網 NT$39** and describe fine kitchen-type mesh generating foam. It still omits original barcode and dimensions.
+- **First-party dated cross-year barcode evidence:** [MUJI Japan, official IDEA PARK request #53054](https://idea.muji.net/request/detail/53054) has a **MUJI official response dated 2021-11-16 16:59** explicitly marking the product *販売中* ("on sale") and linking to **洗顔用泡立てネット barcode 4550182045031**. A 2021-11-10 user comment on the same original page independently links the identical MUJI catalog barcode; original body and timestamps directly load, not a search-only snippet. Thus the **same current barcode is demonstrably documented as offered in Japan by November 2021**, which strengthens the **2021→2026 product identity bridge**.
+- **Taiwan current side:** [MUJI Taiwan official item](https://shop.muji.tw/SalePage/Index/8919853?lang=zh-TW) states 21cm, polyethylene, barcode **4550182045031**; normal published Taiwan retail reference **NT$39** is independently consistent with the preexisting item note. Korea MUJI also currently lists that same barcode, but no foreign KR/JP price is substituted for Taiwan.
+- **Important limit:** 2021 Japanese availability **does not establish barcode, SKU or design for 2020 Taiwan**, or even 2021 Taiwan distribution. No 2020 barcode is exposed by the 2020 Taiwan MUJI release. C04-001 therefore remains **PROVISIONAL_ADMISSIBLE / comparability B**, **not** certified Exact A or a C04 checkpoint PASS. Do not reinterpret the 2021 Japanese catalog as a Taiwan 2020 observation.
+
+### Legacy current-only exclusion-risk scan (no C04 candidate IDs)
+
+`main/data/Candidate_Pool.csv` `LEG-EC-151/152/153` are S/M/L MUJI **再生聚乙烯垃圾袋**, each current-only with **zero 2020** observation; current original prices **NT$59** already appear in `main/data/Evidence.csv`. Two dated primary MUJI Taiwan releases set source chronology:
+
+1. [MUJI Taiwan 2023-08-24 summer cleaning release](https://shop.muji.tw/muji-journal/news/news/230824.html), first-party and directly readable, **says the locally developed 100% recycled-polyethylene garbage bags were being introduced with *two sizes***, surface essential-oil treatment and a round-bottom design, and describes a reference price NT$49. This directly confirms a 2023 product-family appearance, but **does not logically prove no predecessor of the same economic function existed in 2020**; do not assert 2023 was a legally unique first-ever introduction without product launch records.
+2. [MUJI Taiwan 2026-08-05 price change notice](https://www.muji.tw/muji-journal/news/news/260805.html), directly readable, explicitly lists **S/M/L (three sizes)** price change **NT$49→59 effective 2026-09-01**. This confirms the current family and its three-size range, but the **two 2023 sizes may not cover the exact present S, M and L SKUs**; no old barcode/sizes matching all three is supplied.
+
+**Research decision:** **LEG-EC-151/152/153 stay current-only**, with **2020 product/variant presence UNVERIFIED and size-lineage HIGH_RISK**; they should not be converted into 2020 baseline from the 2023 NT$49 or the 2026 pre-change NT$49. The `2023→2026` 49→59 change is *not a 2020→2026 price pair*. Do not create 3 separate C04 HOLD rows or chase identical missing 2020 data repeatedly; prioritize other underfilled legacy 2020-dated first-party candidates instead. This is a **screening result**, not proof of market absence or formal rejection.
+
+**After this source update:** C04 remains **4 WIP (1 provisional + 3 HOLD), 0 checkpoint-certified**; C01–C03 research **60 PASS**; canonical `main` **181/600**, basket **NOT SEALED**, index **LOCKED**. No addition to governance prerequisites, no new candidate rows, no main/workbook edits or GitHub Actions. iPhone OO1-162 is deferred independently.
