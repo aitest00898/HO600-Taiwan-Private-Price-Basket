@@ -9,7 +9,7 @@
 - 本次 TODO 登錄前研究 HEAD `a8e1532389cd9b89b033c6c60b18ff4775e55e36`；Batch 9 C01–C03 = 60 研究級 PASS；C04 1 PROVISIONAL + 1 HOLD；正式新增 0。
 - 臺北市 2020 年 7 組 × 12 類 84 權重已完成部分來源查核；CPI 48 類月資料 16,560 筆／年資料 1,344 筆；第 09 類屬暫定映射，完整七組通膨率 0/7。
 - 全國 WGT-01–05 部分 HOLD／PARTIAL；全國工作/退休權重 0/2。
-- IUI Dashboard V0 原始程式有 10 檔；18 項本機 Python 測試、Mac Safari、iPhone 原生與部署皆待驗收。
+- IUI Dashboard V0：本機 Python 24/24、Mac Safari DOM 37/37 已驗收；OO1-162 實體 iPhone 仍待驗收，部署未執行。
 
 ## TODO 統計
 
@@ -21,11 +21,11 @@
 | **P0／緊急** | **6** |
 | **P1／高** | **26** |
 | **P2／中** | **10** |
-| Todo | **35** |
+| Todo | **33** |
 | Backlog | **1**（OO1-154；由 P1 轉 P2） |
 | In Progress | **4**（OO1-147、OO1-134、OO1-166、OO1-143） |
-| **Done** | **2**（OO1-131、OO1-135） |
-| **尚未完成** | **40**（Todo + Backlog + In Progress） |
+| **Done** | **4**（OO1-131、OO1-135、OO1-160、OO1-161） |
+| **尚未完成** | **38**（Todo + Backlog + In Progress） |
 | Linear 明確前置依賴的 issue | 9 |
 | 已設定的 blockedBy 邊 | 24 |
 
@@ -52,7 +52,7 @@
 ## 2026-10-26 GitHub / Linear 對帳及交接
 
 - **從 Linear 真實讀回唯一漂移**：[OO1-154](https://linear.app/001dev/issue/OO1-154) 由 `Todo / P1` 改為 `Backlog / P2`；其餘 41 張狀態、優先序、Linear URL 與上次快照一致。**沒有擅改 Linear Issue**。
-- 最新 42 張分類：**35 Todo、1 Backlog、4 In Progress、2 Done**；優先序 **P0 6、P1 26、P2 10**，未結任務仍是 40 張、既有前置連結 24 條。
+- 最新完整 Linear 讀回與 Mac 驗收後，42 張分類為 **33 Todo、1 Backlog、4 In Progress、4 Done**；優先序 **P0 6、P1 26、P2 10**，未結任務 38 張、既有前置連結 24 條。OO1-160/161 已附本機與 Safari 收據結案；OO1-162 真正 iPhone 驗收仍為 Todo。
 - 已更新 CSV、IUI `todo-snapshot.json` / `todo-snapshot.js`、Backlog 篩選、測試與唯讀檢查器；該畫面顯示**任務快照 2026-10-26**，價格/CPI 仍是舊經認證的獨立快照，**不冒稱全頁實時更新**。
 - GitHub Actions 按使用者指示保持暫停使用；`main` 及原始價格證據、正式工作簿和指數 Gate 均未修改。驗收與續作詳見 [2026-10-26 Handoff](./handoffs/2026-10-26-ho600-synced-handoff.md)。
 

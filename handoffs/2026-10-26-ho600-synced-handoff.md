@@ -5,6 +5,8 @@
 **Research branch:** `research/batch-09`  
 **Directive:** GitHub Actions remain USER-PAUSED. Never dispatch, rerun, enable, or add Actions, and do not edit `main`, main workflow, canonical workbook, release controls or indexes in this handoff.
 
+**Update note:** The sections below preserve the initial 2026-10-26 sync as history. The native acceptance continuation at the end supersedes its pending-test conclusions and earlier task counts.
+
 ## 1. Actual work synchronized on 2026-10-26
 
 The latest authorized Linear TPI-001 readback contains 42 issue records. Compared with the existing committed GitHub CSV, **exactly one issue changed**:
@@ -13,7 +15,7 @@ The latest authorized Linear TPI-001 readback contains 42 issue records. Compare
 |---|---|---|---|
 | [OO1-154](https://linear.app/001dev/issue/OO1-154) | `Todo / P1` | `Backlog / P2` | Preserve Linear decision, update research-branch snapshots and tests, no Linear issue mutation |
 
-All other 41 issue IDs, statuses, priorities and Linear issue URLs matched existing snapshot. **Latest state: 35 Todo, 1 Backlog, 4 In Progress, 2 Done** = 42, **40 unresolved**. Priorities: **P0 6, P1 26, P2 10**. 24 registered `blockedBy` dependencies across 9 issues. This latest snapshot is **2026-10-26**; it is not a recurring or live synchronization.
+At that initial readback, all other 41 issue IDs, statuses, priorities and Linear issue URLs matched the existing snapshot. **Initial same-day state: 35 Todo, 1 Backlog, 4 In Progress, 2 Done** = 42, **40 unresolved**. Priorities: **P0 6, P1 26, P2 10**. 24 registered `blockedBy` dependencies across 9 issues. This manual snapshot was dated **2026-10-26**; it was not a recurring or live synchronization.
 
 The only two Done issues remain [OO1-131](https://linear.app/001dev/issue/OO1-131) (historical Actions trigger forensics) and [OO1-135](https://linear.app/001dev/issue/OO1-135) (50-subcategory gap ledger). Existing In Progress: [OO1-147](https://linear.app/001dev/issue/OO1-147) (CPI class 09), [OO1-143](https://linear.app/001dev/issue/OO1-143) (Batch9 C04), [OO1-134](https://linear.app/001dev/issue/OO1-134) (snapshot consistency checks), [OO1-166](https://linear.app/001dev/issue/OO1-166) (IUI TODO tab). **No new Done has been claimed.**
 
@@ -94,3 +96,221 @@ The continuation fetched **actual committed sources** from `research/batch-09` u
 - **Total newly executed logic assertions: 23/23 PASS, 0 FAIL**. Input app Git blob `2663d30955cb870533ee4b89d9a3a54efa1d73a3`; research report snapshot blob `be2be324ed67cb25c52d29f2f4c828cc34edf22c`; task snapshot blob `bf7dbbf5de28a118f35fc57185daa5f5eefd463c`. Mocked event tests are not counted as browser-native receipts or added to the authored 24 Python methods.
 - **Environment blocker:** a direct GitHub clone from the separate execution container failed at DNS resolution (`Could not resolve host: github.com`); the repository was accessed instead through the authorized GitHub connector. Consequently the user's local Mac repository, 24 Python tests, Node runtime, Safari DOM, and actual iPhone are **not** claimed validated.
 - **Remaining original gate, unchanged:** run the existing commands in section 4 on the user's Mac, retain actual Python/Node/real Safari smoke receipts; iPhone acceptance separate. No new Gate or new issue. OO1-160 stays Todo, OO1-166 In Progress, `main` 181/600 Basket NOT SEALED Index LOCKED. No Actions.
+## 2026-10-26 continuation: native Mac checks and Safari DOM acceptance
+
+This continuation supersedes the earlier pending-native-acceptance statements and status counts in the historical handoff above.
+
+- Starting branch was `research/batch-09` at `ace4dbb39c2c9a9d9a0c47cb473fa759352accbf`; the worktree was clean before `git pull --ff-only`, which fast-forwarded successfully. No local edits were discarded.
+- Runtime: Python 3.15.1, Node v22.23.1, macOS 27.0.1, Safari 27.0.1, Git 2.54.0 (Apple Git-157).
+- `python3 dashboard/tools/check_todo_snapshot.py`: exit 0, local snapshot PASS; by design the no-export invocation reports `LIVE_LINEAR_DRIFT=UNVERIFIED_NO_EXPORT`. Fresh full 42-issue Linear export parity: exit 0, `PROVIDED_LINEAR_EXPORT_DRIFT=NONE`; counts 33 Todo / 1 Backlog / 4 In Progress / 4 Done.
+- `python3 dashboard/tools/rebuild_snapshot_js.py --check`: exit 0, `SNAPSHOT_SYNC=PASS (semantically identical)`.
+- `python3 -m unittest discover -s dashboard/tests -v`: exit 0, **24/24** cases passed.
+- Node `--check`: exit 0 for `dashboard/app.js`, `dashboard/snapshot.js`, `dashboard/todo-snapshot.js`, and `dashboard/tests/browser-smoke.js` (4/4). `git diff --check`: exit 0.
+- Task snapshot source CSV Git blob SHA: `f37a4e65bd2de56d6e55ba72ffa6507819caae2c`; JSON and offline JS are semantically identical. Snapshot totals are 42 issues, 38 unresolved, 24 dependency edges; priorities remain P0 6 / P1 26 / P2 10.
+- The first real Safari smoke found one stale test expectation: after OO1-160/161 became Done, OO1-162 correctly displayed its prerequisites as closed. The smoke assertion was updated to match that verified state. A reload that retained `#tasks` also started away from the Overview page; the final run used the clean `?smoke=1` URL without a fragment.
+- Native Mac Safari loaded the local `dashboard/index.html?smoke=1` page and exercised real DOM clicks, select changes, tabs, cohort modes/periods, CSV Blob content (download intercepted by the smoke), task filters, and dependency display. Final result: **37/37 PASS, 0 FAIL**, viewport 1470 × 746. Safari Web Inspector Console showed the single `HO600_BROWSER_SMOKE_RESULT` info record and no error or warning entries.
+- Safari UA: `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15`.
+- Linear TPI-001 still contains 42 issues: **33 Todo / 1 Backlog / 4 In Progress / 4 Done**. OO1-160 and OO1-161 are Done with actual receipts; OO1-162 remains Todo for its separate physical-iPhone acceptance. The physical iPhone was not tested.
+- Formal boundary unchanged: main 181/600, Basket NOT SEALED, Index LOCKED. No formal workbook edits, Actions, deployment, merge, or main changes.
+
+### Complete captured `HO600_BROWSER_SMOKE_RESULT`
+
+```json
+{
+  "passed": 37,
+  "failed": 0,
+  "total": 37,
+  "cases": [
+    {
+      "name": "首頁正常渲染",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "首頁正式 419 缺口",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "首頁沒有完整年齡通膨率",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "行動選單遮罩元件已建立",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "價格籃分頁可切換",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "七個正式領域都有進度條",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "研究 C04 不視為正式完成",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "臺北市 CPI 分頁可切換",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "保守排除 09 為預設",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "保守 65+ A 覆蓋率 2.54%",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "保守 65+ A 部分貢獻 +0.0447 pp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "完整年齡率仍 HOLD",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "暫定含 09 切換有效",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "暫定 65+ A 為 7.57%、+1.9018 pp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "期間 B 可切換",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "暫定 65+ B 為 +1.7103 pp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "年齡組切換可用",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "暫定 45–54 B 為 +2.3734 pp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "需拆分類別篩選為八筆",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CSV 匯出按鈕實際運作且測試下載被攔截",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "匯出檔反映 A 與 strict 模式",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "匯出檔明確 HOLD 非完整通膨率",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "匯出檔包含七個年齡組",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "證據分頁載入",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "至少七筆來源與 SHA 追溯",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GitHub Actions 標記暫停",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "正式指數依然 LOCKED",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Linear TODO 第五頁可切換",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "42張快照預設僅顯示38張未結任務",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Linear狀態為33 Todo 1 Backlog 4進行中 4已完成",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Backlog僅 OO1-154 一項",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "P0 篩選只保留未完成任務",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "P0 全部含結案共6張",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "IUI P0 共三張真機驗收任務",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "已完成前置狀態可見",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "IUI P0 僅 OO1-162 未完成",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "瀏覽器 viewport 有效",
+      "passed": true,
+      "detail": "手機寬度請在 Safari 響應式模式另測"
+    }
+  ],
+  "viewport": {
+    "w": 1470,
+    "h": 746
+  },
+  "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15"
+}
+```

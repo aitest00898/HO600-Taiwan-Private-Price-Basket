@@ -147,20 +147,20 @@
 
       await click('[data-tab="tasks"]');
       assertion("Linear TODO 第五頁可切換",node("#pageTitle")?.textContent==="專案 TODO");
-      assertion("42張快照預設僅顯示40張未結任務",document.querySelectorAll("#app-content table tbody tr").length===40);
-      assertion("Linear狀態為35 Todo 1 Backlog 4進行中 2已完成",text().includes("35")&&text().includes("Backlog")&&text().includes("2"));
+      assertion("42張快照預設僅顯示38張未結任務",document.querySelectorAll("#app-content table tbody tr").length===38);
+      assertion("Linear狀態為33 Todo 1 Backlog 4進行中 4已完成",text().includes("38 / 42")&&text().includes("Todo 33")&&text().includes("Backlog 1")&&text().includes("In Progress 4")&&text().includes("已結案"));
       await change("#taskStatus","BACKLOG");
       assertion("Backlog僅 OO1-154 一項",document.querySelectorAll("#app-content table tbody tr").length===1&&text().includes("OO1-154"));
       await change("#taskStatus","OPEN");
       await change("#taskPriority","P0");
-      assertion("P0 篩選只保留未完成任務",document.querySelectorAll("#app-content table tbody tr").length===5);
+      assertion("P0 篩選只保留未完成任務",document.querySelectorAll("#app-content table tbody tr").length===3);
       await change("#taskStatus","ALL");
       assertion("P0 全部含結案共6張",document.querySelectorAll("#app-content table tbody tr").length===6);
       await change("#taskGroup","IUI Dashboard");
       assertion("IUI P0 共三張真機驗收任務",document.querySelectorAll("#app-content table tbody tr").length===3);
-      assertion("依賴狀態可見",text().includes("未結前置"));
+      assertion("已完成前置狀態可見",text().includes("已列前置關閉"));
       await change("#taskStatus","OPEN");
-      assertion("IUI P0 三張仍未完成",document.querySelectorAll("#app-content table tbody tr").length===3);
+      assertion("IUI P0 僅 OO1-162 未完成",document.querySelectorAll("#app-content table tbody tr").length===1&&text().includes("OO1-162"));
 
       const pageWidth=document.documentElement.scrollWidth;
       if(innerWidth<=500){

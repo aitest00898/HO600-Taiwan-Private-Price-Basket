@@ -16,7 +16,11 @@ The frozen issue set is **42** (as of 2026-10-22): **36 Todo, 4 In Progress, 2 D
 
 ## 2026-10-26 revision (additive to the 2026-10-22 baseline)
 
-Fresh authorized Linear readback yielded exactly **one issue change**: `OO1-154` transitioned from `Todo / P1` to `Backlog / P2`. The older counts below are historical as-of 2026-10-22; latest task snapshot is dated **2026-10-26**: **35 Todo, 1 Backlog, 4 In Progress, 2 Done**; **6 P0, 26 P1, 10 P2**; still 42 total / 40 unfinished / 24 links. Readback and sync are manual, not periodic/background and do not authorize workflow automation. `BACKLOG` is an unresolved planning state, not `DONE`, nor a hold/release decision in canonical pricing.
+Fresh authorized Linear readback yielded exactly **one issue change**: `OO1-154` transitioned from `Todo / P1` to `Backlog / P2`. The 2026-10-26 first snapshot recorded **35 Todo, 1 Backlog, 4 In Progress, 2 Done**; **6 P0, 26 P1, 10 P2**; 42 total / 40 unfinished / 24 links. A later same-day native Dashboard acceptance continuation is recorded below. Readback and sync are manual, not periodic/background and do not authorize workflow automation. `BACKLOG` is an unresolved planning state, not `DONE`, nor a hold/release decision in canonical pricing.
+
+### 2026-10-26 native Dashboard acceptance continuation
+
+After the initial task snapshot above, local Mac checks and real Safari DOM interaction passed. Linear OO1-160 and OO1-161 were then updated to `Done` with execution receipts; latest same-day distribution is **33 Todo, 1 Backlog, 4 In Progress, 4 Done** (38 unresolved; priorities P0 6 / P1 26 / P2 10; 24 dependency edges). The research CSV and offline JSON/JS snapshot pin these two completed records. OO1-162 remains `Todo` pending its separate physical-iPhone test. The Dashboard reflects the latest manual task readback only; this does not alter the separate CPI snapshot or canonical state.
 
 ## Update protocol (explicit/manual, not a background sync)
 
@@ -34,7 +38,7 @@ Fresh authorized Linear readback yielded exactly **one issue change**: `OO1-154`
 - `Todo`, `Backlog`, `In Progress`, `Done` are **workflow states**, not formal index release gates. `Done` means that one issue's specific deliverable has receipts; an upstream completed blocker does not automatically finish a downstream issue.
 - `blockedBy` includes only **explicitly registered** dependencies. Empty dependency list is **NOT** proof the issue is immediately executable; external sources, approvals, hardware or official classification can still block.
 - Tasks paused by user (especially GH Actions) remain as research work history but must **not** be executed or automatically resumed. This update explicitly does not use GH Actions.
-- Current Dashboard view defaults to the **40 unresolved tasks**. `taskStatus=ALL` reveals two historical Done issues. Filters affect only presentation/export; nothing writes to Linear.
+- At the first 2026-10-26 snapshot the Dashboard defaulted to 40 unresolved tasks; following native acceptance, the current default is **38 unresolved tasks**. `taskStatus=ALL` reveals four Done issues (two earlier completions plus OO1-160/161). Filters affect only presentation/export; nothing writes to Linear.
 - Freshness cannot be verified by a GitHub file alone. Report `NO_FRESH_LINEAR_EXPORT` rather than claiming current Linear state unless the connector was actually queried in that turn.
 
 ## Known unverified elements
