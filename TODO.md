@@ -19,12 +19,13 @@
 | 新建（本輪） | 37 |
 | 既有去重更新（本輪） | 5 |
 | **P0／緊急** | **6** |
-| **P1／高** | **27** |
-| **P2／中** | **9** |
-| Todo | **36** |
+| **P1／高** | **26** |
+| **P2／中** | **10** |
+| Todo | **35** |
+| Backlog | **1**（OO1-154；由 P1 轉 P2） |
 | In Progress | **4**（OO1-147、OO1-134、OO1-166、OO1-143） |
 | **Done** | **2**（OO1-131、OO1-135） |
-| **尚未完成** | **40**（Todo + In Progress） |
+| **尚未完成** | **40**（Todo + Backlog + In Progress） |
 | Linear 明確前置依賴的 issue | 9 |
 | 已設定的 blockedBy 邊 | 24 |
 
@@ -47,6 +48,13 @@
 - **OO1-143 = In Progress**：C04 黃麻袋 2020 年 **預計上市** 與 2021 年才有台灣上市回顧的證據存在日期缺口，保留 `HOLD_2020_IN_MARKET`，不新增研究級合格筆數。
 - 本輪修復三個原 GitHub TODO 來源 URL 錯誤／截斷，並同步至 `dashboard/todo-snapshot.json` 與 `todo-snapshot.js`。
 - **狀態現況：36 Todo、4 In Progress、2 Done；尚未完成 40/42。** 任務管理數值不代表 HO600 指數進度，正式 `181/600` 不變。
+
+## 2026-10-26 GitHub / Linear 對帳及交接
+
+- **從 Linear 真實讀回唯一漂移**：[OO1-154](https://linear.app/001dev/issue/OO1-154) 由 `Todo / P1` 改為 `Backlog / P2`；其餘 41 張狀態、優先序、Linear URL 與上次快照一致。**沒有擅改 Linear Issue**。
+- 最新 42 張分類：**35 Todo、1 Backlog、4 In Progress、2 Done**；優先序 **P0 6、P1 26、P2 10**，未結任務仍是 40 張、既有前置連結 24 條。
+- 已更新 CSV、IUI `todo-snapshot.json` / `todo-snapshot.js`、Backlog 篩選、測試與唯讀檢查器；該畫面顯示**任務快照 2026-10-26**，價格/CPI 仍是舊經認證的獨立快照，**不冒稱全頁實時更新**。
+- GitHub Actions 按使用者指示保持暫停使用；`main` 及原始價格證據、正式工作簿和指數 Gate 均未修改。驗收與續作詳見 [2026-10-26 Handoff](./handoffs/2026-10-26-ho600-synced-handoff.md)。
 
 ## P0｜首先核對
 
