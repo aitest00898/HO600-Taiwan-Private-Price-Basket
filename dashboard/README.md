@@ -68,6 +68,12 @@ python3 dashboard/tools/check_todo_snapshot.py --linear-export /path/to/fresh-li
 如果有任何任務狀態、優先級、來源 SHA 或組件不同，程式將退出非零並提示 drift；它**只讀檔、不自動修改任務或重新下載**。更新快照須先核實 Linear、再覆核 GitHub 任務表、重新產生 JSON/JS，最後重新執行本機與真實 Safari 檢查。
 
 
+## 2026-10-26：Backlog 與來源漂移修正
+
+Linear TPI-001 最新真實讀回發現只有 **OO1-154** 出現變動（`Todo/P1 → Backlog/P2`）。IUI 固定任務快照更新至 **2026-10-26**，狀態改為 **35 Todo、1 Backlog、4 In Progress、2 Done**，優先序改為 **P0 6、P1 26、P2 10**，仍有 40 張未結；沒有更改任何 Linear Issue。任務狀態篩選現在包括 Backlog，可將該項單獨顯示／匯出。**價格／CPI 的既有固定快照未更新，不能解讀為 2026-10-26 新行情。**
+
+離線驗證維持：`python3 dashboard/tools/check_todo_snapshot.py`。Mac 上如已獲得可信、最新完整 Linear JSON 匯出，可使用 `--linear-export` 比較；沒有匯出時嚴格回報 `LIVE_LINEAR_DRIFT=UNVERIFIED_NO_EXPORT`。Safari 與 iPhone 實機驗收依然待取得真正收據。
+
 ## V0 可操作內容
 
 | 分頁 | 內容 | 互動 |
@@ -115,7 +121,7 @@ node --check dashboard/snapshot.js
 node --check dashboard/tests/browser-smoke.js
 ```
 
-如果沒有安裝 `node`，Python 的數據及靜態語意測試（目前 18 項）仍可先執行；瀏覽器腳本語法與實際互動需由 Safari 及其他可用環境進一步核對。
+如果沒有安裝 `node`，Python 的數據及靜態語意測試（目前 24 項）仍可先執行；瀏覽器腳本語法與實際互動需由 Safari 及其他可用環境進一步核對。
 
 ### V0 尚不包含
 
