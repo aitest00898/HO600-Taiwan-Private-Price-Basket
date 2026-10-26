@@ -83,3 +83,14 @@ Price/CPI work can proceed independently from [OO1-143](https://linear.app/001de
 **Task authority:** [Linear TPI-001](https://linear.app/001dev/project/tpi-001ho600-台灣私人物價籃-46e14167f961).  
 **Working branch:** `research/batch-09`.  
 **No new governance project, no automatic schedules, no GitHub Actions, no canonical writes.**
+
+
+## 2026-10-26 continuation: actual V8 interaction-logic execution (not device acceptance)
+
+The continuation fetched **actual committed sources** from `research/batch-09` using the authorized GitHub connection and executed `dashboard/app.js` in the V8 JavaScript engine with a deliberately **mocked document/window, synthetic DOM event dispatch, URL and Blob**. Unlike earlier static string inspection and syntax parsing, this exercised real app initialization, filtering, view rendering and CSV generation logic. It is **not** a real browser engine/DOM, Apple Safari, Mac Node, native Python, or an iPhone test.
+
+- **13/13 PASS**: price JSON/offline JS equivalence, task JSON/offline JS equivalence, original task CSV Git blob SHA matching snapshot pin (`20751e59f495c975fbef99a118ca221d82997695`), canonical lock invariants, tasks page initialization, default 40 unresolved rows, sole OO1-154 Backlog row, filtered Backlog CSV content, task export `2026-10-26` filename, OPEN P0 = 5 rows, ALL P0 = 6 rows, IUI P0 = 3 rows and IUI OPEN P0 = 3 rows.
+- **10/10 PASS**: cohort page initialization, conservative 65+ A = 2.54%/+0.0447pp, full-rate HOLD guard, provisional 65+ A = 7.57%/+1.9018pp, provisional 65+ B = +1.7103pp, provisional 45–54 B = +2.3734pp, SPLIT_REQUIRED = 8 rows, actual generated CSV A/strict with 7 age rows, CSV explicitly `HOLD_NOT_A_FULL_RATE`, and CPI export retains independent older `2026-10-19` snapshot date.
+- **Total newly executed logic assertions: 23/23 PASS, 0 FAIL**. Input app Git blob `2663d30955cb870533ee4b89d9a3a54efa1d73a3`; research report snapshot blob `be2be324ed67cb25c52d29f2f4c828cc34edf22c`; task snapshot blob `bf7dbbf5de28a118f35fc57185daa5f5eefd463c`. Mocked event tests are not counted as browser-native receipts or added to the authored 24 Python methods.
+- **Environment blocker:** a direct GitHub clone from the separate execution container failed at DNS resolution (`Could not resolve host: github.com`); the repository was accessed instead through the authorized GitHub connector. Consequently the user's local Mac repository, 24 Python tests, Node runtime, Safari DOM, and actual iPhone are **not** claimed validated.
+- **Remaining original gate, unchanged:** run the existing commands in section 4 on the user's Mac, retain actual Python/Node/real Safari smoke receipts; iPhone acceptance separate. No new Gate or new issue. OO1-160 stays Todo, OO1-166 In Progress, `main` 181/600 Basket NOT SEALED Index LOCKED. No Actions.
