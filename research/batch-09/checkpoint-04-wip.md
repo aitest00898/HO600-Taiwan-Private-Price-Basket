@@ -6,7 +6,7 @@
 
 - Canonical `main`: Batch 8, **181/600**, remaining 419, candidate 418, evidence 1,566, Basket NOT SEALED, Index LOCKED.
 - C01/C02/C03: 20/20/20 **research ADMISSIBLE**, cumulative **60**; these ledgers are not revised.
-- C04 WIP: **2 leads**, of which **1 PROVISIONAL_ADMISSIBLE** and **1 HOLD**. **Zero C04 checkpoint-certified new rows**. DO NOT call this 61 or 62 fully certified research rows, or 182/600 canonical.
+- C04 WIP: **3 leads**, of which **1 PROVISIONAL_ADMISSIBLE** and **2 HOLD** (including B09-C04-003 added 2026-10-26). **Zero C04 checkpoint-certified new rows**. DO NOT call this 61 or 62 fully certified research rows, or 182/600 canonical.
 - Workflow correction: two C04 WIP pushes **automatically triggered** `Validate HO600` via the existing push workflow, even though nobody manually invoked Actions. They completed `success` (run IDs `38815794034` and `38815800007`). The research branch workflow was subsequently changed in commit `c3e292a28668ba5a5d40140afd028bd97f8c7244` to **manual-only** `workflow_dispatch`. Immediately after that commit, the checked run list showed no run for the guard commit. Do not dispatch it. The `main` workflow remains unchanged and can auto-trigger on future pushes/PRs; preserve the user's global Actions pause.
 - Visibility audit: live GitHub repository metadata reports `visibility=public` on 2026-10-16, despite the 2026-10-16 previous handoff labeling the repository `private`. Confirm intended visibility separately; no visibility setting changed in this research run.
 - No `main` mutation and no canonical workbook change.
@@ -17,6 +17,7 @@
 | --- | --- | --- | --- | --- |
 | B09-C04-001 | 日常／個人 / 保養／化妝 | 39 → 39 | PROVISIONAL_ADMISSIBLE, comparability B | Dated 2020 MUJI first-party price and contemporaneous descriptive identification match 2026 MUJI product/function and normal price; historical barcode and dimensions absent |
 | B09-C04-002 | 衣 / 包袋／配件 | 79 → 89 | HOLD_2020_IN_MARKET | 2020 official price was disclosed with **planned June launch**; need contemporaneous proof of retail normal price after actual release and current A3 variant continuity |
+| B09-C04-003 | 食 / 超市／自煮基礎食品 | 93 → 93 (both list/nonpromotion benchmark) | HOLD_FIXED_CHANNEL_AND_SKU | 2020 FamilyMart standard one-bottle price and 2026 Wanjiafu regular/struck-through list price agree; not same channel, and 2020 barcode not independently confirmed. Do not confuse 2026 NT$88 sale price with NT$93 ordinary reference. |
 
 ### Evidence directly retrieved 2026-10-16
 
@@ -81,3 +82,19 @@ Evidence triangulation for B09-C04-002:
 **Updated research interpretation:** “No 2020 on-sale evidence at all” is no longer accurate; the 2020 on-sale report is **evidence found (secondary, dated by search index)**. But the existing strict C04 working disposition stays **`HOLD_2020_IN_MARKET` for compatibility** because **(i)** first-party dated actual on-sale proof has not been authenticated, **(ii)** the 2020 A3 barcode, model and dimensions have not been linked to a particular 2026 live listing, and **(iii)** final brand/source/semantic duplicate and concentration QC has not run. Do **not** turn secondary corroboration into an Exact-A admission, or treat planned March 2020 price as proven checkout transaction. Candidate remains B-lineage, **0 additional C04 checkpoint-certified rows**; previous **60** Batch-9 research PASS and main **181/600, NOT SEALED, LOCKED** unchanged.
 
 **Next evidence that could change disposition (not a new Gate):** original timestamp and text of [MUJI Taiwan's first-party “全門市販售中” Facebook post](https://www.facebook.com/muji.tw/posts/3499166323460790/), or a dated post-June-2020 MUJI store/catalog product record; pair its A3 model/spec to the specific currently buyable A3 listing before full C04 QC. If unavailable, stop retrying this identical blocker and switch to other underfilled legacy candidates.
+
+
+## 2026-10-26 legacy food candidate — B09-C04-003 (LEG-EC-311)
+
+**Target reused (not a new invented concept):** canonical `main/data/Candidate_Pool.csv` `LEG-EC-311`, 光泉全脂鮮乳 936ml, `RESEARCHABLE-CURRENT-ONLY`, 食／超市／自煮基礎食品 (baseline 1/34; 33 missing). In `main/data/Evidence.csv`, the same candidate has already been recorded with a 2026 **NT$93** source from 萬家福, and **NT$88** from 全聯, but **no 2020 observation**. The research concept therefore reuses its ID rather than creating a second price-basket item.
+
+**New 2020 original observation:** [班班美食生活圈, publication visibly dated **2020-04-08**](https://benlife.tw/20200408famimartnew/), contemporaneous published coverage of FamilyMart's 04/08–05/05 retail campaign, explicitly specifies **「光泉 全脂/低脂鮮乳936ML (原價93元，特價任選兩件169元)」**. The **2020 normal single-unit reference is NT$93**: the multi-buy promotion **NT$169/2 must not be entered** as a normal-price observation. Source is an independent dated secondary report of an operator promotion, **not first-party archived FamilyMart tariff/list**. The source groups full-fat and low-fat products; only the stated full-fat SKU concept is considered here.
+
+**2026 current corroboration:**
+- The [Wanjiafu / Uni-Prosperity live merchant product page](https://online.uni-prosperity.com.tw/zh/%E5%85%89%E6%B3%89/1501003300101.html) names **光泉100%純全脂鮮乳(無調整) 936ml**, shows **NT$93 crossed-out/list reference** and **NT$88 actual promotional selling price**. For a comparison of regular/reference prices, use **93** only, recording the active **88** discount as excluded; do **not** claim NT$93 is its payable 2026 checkout price. Official indexed [Taiwan GreenPoint product entry](https://sys.greenpoint.org.tw/GpConsumerApp/Function/CommodityMgt/Edit.aspx?SystemId=76ce91a4-4b09-40e2-a125-e70a6240322e), when searchable, additionally shows barcode **4710105010113**, product 936ml and **recommended price NT$93**, with program listing period 2023-10-01 to 2030-12-31; the GreenPoint direct open gives HTTP **403**, so this is *search-indexed supplementary metadata*, **not directly fetched first-party evidence**.
+- [FamilyMart's currently indexed 2026 official eligible-products list](https://500.gov.tw/registrant/intro/vendor-1.html) includes 光泉全脂鮮乳936ml, establishing item availability but **does not state a 2026 normal selling price at FamilyMart**.
+- The original **2020 label “全脂鮮乳”** and current **“100%純全脂鮮乳(無調整)”** need 2020 barcode, formulation and packaging continuity check; numeric volume/brand alone are not proof of same SKU.
+
+**Disposition: `HOLD_FIXED_CHANNEL_AND_SKU`, comparability B provisional, evidence 2020 = secondary dated non-sale-price (B), evidence 2026 = direct merchant price with explicitly excluded discount (A).** The source pair **93 → 93** is a useful cross-channel *reference-price lead only*, **not** a verified fixed-channel historic basket pair. Missing old-channel FamilyMart 2026 normal price or 2020 Wanjiafu normal price, and source of 2020 barcode. If the source/channel mismatch cannot be resolved, retain HOLD rather than promote. Check identity, concentration quotas and duplicate semantics as part of existing C04 QC, no new Gate.
+
+**Counts:** C04 WIP now **3 leads** (1 provisional, 2 HOLD); **C04 checkpoint PASS 0/20**; C01–C03 **60 research PASS**; `main` **181/600**, basket **NOT SEALED**, index **LOCKED**. No canonical workbook or GitHub Actions change.
