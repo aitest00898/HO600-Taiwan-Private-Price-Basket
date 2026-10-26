@@ -33,7 +33,7 @@
   function verify() {
     if (!D || D.schemaVersion !== "1.0.0") throw Error("Snapshot is missing or incompatible.");
     const c = D.canonical, co = D.cohort;
-    if(!TD || TD.schemaVersion!=="1.0.0" || TD.tasks.length!==42 || TD.summary.todo+TD.summary.inProgress+TD.summary.done!==42 || TD.authority.refresh!=="EXPLICIT_MANUAL_ONLY_NO_ACTIONS") throw Error("TODO snapshot missing or unverified");
+    if(!TD || TD.schemaVersion!=="1.0.0" || TD.tasks.length!==42 || TD.summary.todo+TD.summary.backlog+TD.summary.inProgress+TD.summary.done!==42 || TD.authority.refresh!=="EXPLICIT_MANUAL_ONLY_NO_ACTIONS") throw Error("TODO snapshot missing or unverified");
     if (c.basketSealed || c.indexStatus !== "LOCKED" || c.accepted + c.remaining !== c.target) throw Error("Formal basket release invariant violated.");
     const v = c.quota.reduce((acc, e) => {acc.accepted += e.accepted; acc.needed += e.needed; acc.target += e.target; return acc;}, {accepted:0,needed:0,target:0});
     if (c.quota.length !== 7 || v.accepted !== c.accepted || v.needed !== c.remaining || v.target !== c.target) throw Error("Official quota mismatch.");
@@ -196,9 +196,9 @@
     const filter='<div class="controls">'+
       selector("taskPriority","優先序",[["ALL","全部"],["P0","P0"],["P1","P1"],["P2","P2"]],state.taskPriority)+
       selector("taskGroup","工作線",[["ALL","全部"],...groupOptions.map(g=>[g,g])],state.taskGroup)+
-      selector("taskStatus","狀態",[["OPEN","未完成"],["ALL","全部"],["TODO","Todo"],["IN_PROGRESS","進行中"],["DONE","Done"]],state.taskStatus)+
+      selector("taskStatus","狀態",[["OPEN","未完成"],["ALL","全部"],["TODO","Todo"],["IN_PROGRESS","進行中"],["BACKLOG","Backlog"],["DONE","Done"]],state.taskStatus)+
       '</div>';
-    const statuses={TODO:["neutral","Todo"],IN_PROGRESS:["warning","進行中"],DONE:["good","Done"]};
+    const statuses={TODO:["neutral","Todo"],IN_PROGRESS:["warning","進行中"],BACKLOG:["neutral","Backlog"],DONE:["good","Done"]};
     const body=selected.map(t=>{
       const blockers=t.blockedBy.filter(id=>TD.tasks.some(x=>x.id===id&&x.status!=="DONE"));
       const block=blockers.length?pill("warning",blockers.length+" 個未結前置"):(t.blockedBy.length?pill("good","已列前置關閉"):'<span class="secondary-text">未列前置</span>');
@@ -214,7 +214,7 @@
     const line='<div class="mini-banner"><strong>此處不是即時 Linear：</strong>快照 '+esc(TD.asOf)+'，已人工對帳 42 張 Issue。'+
       ' 任務 Done 不等於正式價目驗收；前置依賴僅顯示已登錄的 Linear 關係。</div>';
     return '<div class="kpi-grid">'+
-      card("尚未完成",q.todo+q.inProgress+" / "+TD.tasks.length,"Todo "+q.todo+" · In Progress "+q.inProgress)+
+      card("尚未完成",q.todo+q.backlog+q.inProgress+" / "+TD.tasks.length,"Todo "+q.todo+" · Backlog "+q.backlog+" · In Progress "+q.inProgress)+
       card("已結案",""+q.done,"只表示任務驗收完成","teal")+
       card("P0 任務",""+q.p0,"需優先注意，不代表皆可立即執行","warn")+
       card("已登錄前置關係",q.relations+" 條",q.blockedByCount+" 張任務含依賴")+
@@ -296,7 +296,7 @@
     const content="\uFEFF"+[head.map(wrap).join(","),...rows.map(r=>r.map(wrap).join(","))].join("\r\n")+"\r\n";
     const blob=new Blob([content],{type:"text/csv;charset=utf-8"});
     const url=URL.createObjectURL(blob),a=document.createElement("a");
-    a.href=url;a.download=basename+"_"+D.snapshotDate+".csv";a.style.display="none";
+    a.href=url;a.download=basename+"_"+(state.tab==="tasks"?TD.asOf:D.snapshotDate)+".csv";a.style.display="none";
     document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1200);
     showToast("已匯出目前分頁資料 · "+rows.length+" 筆");
   }
