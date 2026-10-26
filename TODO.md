@@ -85,7 +85,6 @@
 | [OO1-150](https://linear.app/001dev/issue/OO1-150/tpi-c04-cpi-06醫療保健與健保費確認價格指數涵蓋範圍) | 臺北市 CPI | CPI 06醫療保健與健保費：確認價格指數涵蓋範圍 | — |
 | [OO1-151](https://linear.app/001dev/issue/OO1-151/tpi-c05-cpi-07交通與08通訊拆分設備服務及通訊缺失) | 臺北市 CPI | CPI 07交通與08通訊：拆分設備、服務及通訊缺失 | — |
 | [OO1-153](https://linear.app/001dev/issue/OO1-153/tpi-c07-調查2020臺北市戶長年齡更細支出表公開微資料) | 臺北市 CPI | 調查2020臺北市戶長年齡更細支出表／公開微資料 | — |
-| [OO1-154](https://linear.app/001dev/issue/OO1-154/tpi-c08-臺北7年齡代理cpi覆蓋率95percent與獨立重算-gate) | 臺北市 CPI | 臺北7年齡代理CPI覆蓋率≥95%與獨立重算 Gate | [OO1-147](https://linear.app/001dev/issue/OO1-147/tpi-c01-核實第09類休閒文化與-cpi-娛樂費用的官方範圍)、[OO1-148](https://linear.app/001dev/issue/OO1-148/tpi-c02-cpi-01食品與11餐廳旅館外食及住宿拆分證據)、[OO1-149](https://linear.app/001dev/issue/OO1-149/tpi-c03-cpi-04住宅能源及05家具家務租金水燃料口徑對帳)、[OO1-150](https://linear.app/001dev/issue/OO1-150/tpi-c04-cpi-06醫療保健與健保費確認價格指數涵蓋範圍)、[OO1-151](https://linear.app/001dev/issue/OO1-151/tpi-c05-cpi-07交通與08通訊拆分設備服務及通訊缺失)、[OO1-152](https://linear.app/001dev/issue/OO1-152/tpi-c06-cpi-02菸酒檳榔及12什項消費細分對照)、[OO1-153](https://linear.app/001dev/issue/OO1-153/tpi-c07-調查2020臺北市戶長年齡更細支出表公開微資料) |
 | [OO1-102](https://linear.app/001dev/issue/OO1-102/ho600batch-9-c01-c03-60-筆研究級證據複驗與-c04-接續) | 價格籃／Batch 9 | HO600｜Batch 9 C01–C03 60 筆研究級證據複驗與 C04 接續 | — |
 | [OO1-135](https://linear.app/001dev/issue/OO1-135/tpi-b01-建立-50-子分類22-空白子分類的缺口補證索引) | 價格籃／Batch 9 | 建立 50 子分類／22 空白子分類的缺口補證索引 | — |
 | [OO1-136](https://linear.app/001dev/issue/OO1-136/tpi-b02-食品自煮基礎食品缺33包裝食品飲料缺17-的-exact-2020-搜尋) | 價格籃／Batch 9 | 食品：自煮基礎食品缺33、包裝食品飲料缺17 的 Exact 2020 搜尋 | — |
@@ -103,6 +102,7 @@
 
 | 編號 | 工作線 | 待辦項目 | 前置阻擋 |
 |---|---|---|---|
+| [OO1-154](https://linear.app/001dev/issue/OO1-154/tpi-c08-臺北7年齡代理cpi覆蓋率95percent與獨立重算-gate) | 臺北市 CPI | 臺北7年齡代理CPI覆蓋率≥95%與獨立重算 Gate（Backlog） | [OO1-147](https://linear.app/001dev/issue/OO1-147/tpi-c01-核實第09類休閒文化與-cpi-娛樂費用的官方範圍)、[OO1-148](https://linear.app/001dev/issue/OO1-148/tpi-c02-cpi-01食品與11餐廳旅館外食及住宿拆分證據)、[OO1-149](https://linear.app/001dev/issue/OO1-149/tpi-c03-cpi-04住宅能源及05家具家務租金水燃料口徑對帳)、[OO1-150](https://linear.app/001dev/issue/OO1-150/tpi-c04-cpi-06醫療保健與健保費確認價格指數涵蓋範圍)、[OO1-151](https://linear.app/001dev/issue/OO1-151/tpi-c05-cpi-07交通與08通訊拆分設備服務及通訊缺失)、[OO1-152](https://linear.app/001dev/issue/OO1-152/tpi-c06-cpi-02菸酒檳榔及12什項消費細分對照)、[OO1-153](https://linear.app/001dev/issue/OO1-153/tpi-c07-調查2020臺北市戶長年齡更細支出表公開微資料) |
 | [OO1-105](https://linear.app/001dev/issue/OO1-105/ho600basket-sealed-與指數解除-locked-的-600-概念驗收) | 正式指數發布 | HO600｜Basket SEALED 與指數解除 LOCKED 的 600 概念驗收 | [OO1-103](https://linear.app/001dev/issue/OO1-103/ho600181600-正式概念增量與工作簿匯出驗證程序)、[OO1-135](https://linear.app/001dev/issue/OO1-135/tpi-b01-建立-50-子分類22-空白子分類的缺口補證索引) |
 | [OO1-134](https://linear.app/001dev/issue/OO1-134/tpi-g05-設計-lineargithub-todo-對帳與快照防漂移機制) | 安全／治理 | 設計 Linear↔GitHub TODO 對帳與快照防漂移機制 | — |
 | [OO1-152](https://linear.app/001dev/issue/OO1-152/tpi-c06-cpi-02菸酒檳榔及12什項消費細分對照) | 臺北市 CPI | CPI 02菸酒檳榔及12什項消費細分對照 | — |
