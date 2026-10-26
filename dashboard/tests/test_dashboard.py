@@ -112,7 +112,7 @@ class DashboardV0Acceptance(unittest.TestCase):
             self.assertIn("https://github.com/",s["link"])
             self.assertIn(s["ref"],("main","research/batch-09"))
 
-    def test_html_four_valid_pages_with_mobile_layout(self):
+    def test_html_five_valid_pages_with_mobile_layout(self):
         for tab in ("overview","basket","cohorts","evidence","tasks"):
             self.assertIn(f'data-tab="{tab}"',self.html)
         self.assertIn('aria-label="HO600 導覽"',self.html)
@@ -177,14 +177,17 @@ class DashboardV0Acceptance(unittest.TestCase):
         self.assertEqual(task["schemaVersion"],"1.0.0")
         self.assertEqual(task["authority"]["refresh"],"EXPLICIT_MANUAL_ONLY_NO_ACTIONS")
         self.assertEqual(len(task["tasks"]),42)
-        self.assertEqual(task["summary"]["todo"],36)
+        self.assertEqual(task["summary"]["todo"],35)
+        self.assertEqual(task["summary"]["backlog"],1)
         self.assertEqual(task["summary"]["inProgress"],4)
         self.assertEqual(task["summary"]["done"],2)
         self.assertEqual(task["summary"]["p0"],6)
-        self.assertEqual(task["summary"]["p1"],27)
-        self.assertEqual(task["summary"]["p2"],9)
+        self.assertEqual(task["summary"]["p1"],26)
+        self.assertEqual(task["summary"]["p2"],10)
         self.assertEqual(len(set(x["id"] for x in task["tasks"])),42)
         self.assertEqual(sorted(x["id"] for x in task["tasks"] if x["status"]=="DONE"),["OO1-131","OO1-135"])
+        delayed=next(x for x in task["tasks"] if x["id"]=="OO1-154")
+        self.assertEqual((delayed["status"],delayed["priority"]),("BACKLOG","P2"))
 
     def test_task_dependencies_do_not_invent_accepted_releases(self):
         task=json.loads(TODO_JSON.read_text(encoding="utf-8"))
@@ -192,7 +195,7 @@ class DashboardV0Acceptance(unittest.TestCase):
         self.assertEqual(sum(len(x["blockedBy"]) for x in task["tasks"]),24)
         for x in task["tasks"]:
             self.assertIn(x["priority"],("P0","P1","P2"))
-            self.assertIn(x["status"],("DONE","TODO","IN_PROGRESS"))
+            self.assertIn(x["status"],("DONE","TODO","BACKLOG","IN_PROGRESS"))
             self.assertTrue(x["linearUrl"].startswith("https://linear.app/001dev/issue/"))
             self.assertTrue(set(x["blockedBy"]).issubset(ids))
             self.assertTrue(x["acceptance"])
