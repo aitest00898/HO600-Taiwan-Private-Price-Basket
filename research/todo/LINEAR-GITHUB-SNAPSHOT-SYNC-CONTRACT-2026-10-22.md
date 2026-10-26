@@ -14,6 +14,10 @@
 
 The frozen issue set is **42** (as of 2026-10-22): **36 Todo, 4 In Progress, 2 Done**, 6 P0, 27 P1, 9 P2; 24 registered dependency edges across nine issues. **40 not Done**. Provenance: Linear TPI-001 connector readback compared with actual GitHub TODO CSV; no GitHub Actions used.
 
+## 2026-10-26 revision (additive to the 2026-10-22 baseline)
+
+Fresh authorized Linear readback yielded exactly **one issue change**: `OO1-154` transitioned from `Todo / P1` to `Backlog / P2`. The older counts below are historical as-of 2026-10-22; latest task snapshot is dated **2026-10-26**: **35 Todo, 1 Backlog, 4 In Progress, 2 Done**; **6 P0, 26 P1, 10 P2**; still 42 total / 40 unfinished / 24 links. Readback and sync are manual, not periodic/background and do not authorize workflow automation. `BACKLOG` is an unresolved planning state, not `DONE`, nor a hold/release decision in canonical pricing.
+
 ## Update protocol (explicit/manual, not a background sync)
 
 1. **Read** fresh complete Linear TPI-001 issues and their blockers (including exact issue IDs and URLs). Scope exact project `P-OO1-11`. Check correct membership, count, title, status, priority and updated-at time.
@@ -27,7 +31,7 @@ The frozen issue set is **42** (as of 2026-10-22): **36 Todo, 4 In Progress, 2 D
 
 ## Safety and status semantics
 
-- `Todo`, `In Progress`, `Done` are **workflow states**, not formal index release gates. `Done` means that one issue's specific deliverable has receipts; an upstream completed blocker does not automatically finish a downstream issue.
+- `Todo`, `Backlog`, `In Progress`, `Done` are **workflow states**, not formal index release gates. `Done` means that one issue's specific deliverable has receipts; an upstream completed blocker does not automatically finish a downstream issue.
 - `blockedBy` includes only **explicitly registered** dependencies. Empty dependency list is **NOT** proof the issue is immediately executable; external sources, approvals, hardware or official classification can still block.
 - Tasks paused by user (especially GH Actions) remain as research work history but must **not** be executed or automatically resumed. This update explicitly does not use GH Actions.
 - Current Dashboard view defaults to the **40 unresolved tasks**. `taskStatus=ALL` reveals two historical Done issues. Filters affect only presentation/export; nothing writes to Linear.
