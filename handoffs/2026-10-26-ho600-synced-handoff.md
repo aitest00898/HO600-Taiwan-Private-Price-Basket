@@ -100,7 +100,7 @@ The continuation fetched **actual committed sources** from `research/batch-09` u
 
 This continuation supersedes the earlier pending-native-acceptance statements and status counts in the historical handoff above.
 
-- Starting branch was `research/batch-09` at `ace4dbb39c2c9a9d9a0c47cb473fa759352accbf`; the worktree was clean before `git pull --ff-only`, which fast-forwarded successfully. No local edits were discarded.
+- The local `research/batch-09` checkout was clean at `10a9bd48b7fd0602798267898778dc77a63f4202` before `git pull --ff-only`; the pull fast-forwarded it to `ace4dbb39c2c9a9d9a0c47cb473fa759352accbf` (confirmed by Git reflog). No local edits were discarded.
 - Runtime: Python 3.15.1, Node v22.23.1, macOS 27.0.1, Safari 27.0.1, Git 2.54.0 (Apple Git-157).
 - `python3 dashboard/tools/check_todo_snapshot.py`: exit 0, local snapshot PASS; by design the no-export invocation reports `LIVE_LINEAR_DRIFT=UNVERIFIED_NO_EXPORT`. Fresh full 42-issue Linear export parity: exit 0, `PROVIDED_LINEAR_EXPORT_DRIFT=NONE`; counts 33 Todo / 1 Backlog / 4 In Progress / 4 Done.
 - `python3 dashboard/tools/rebuild_snapshot_js.py --check`: exit 0, `SNAPSHOT_SYNC=PASS (semantically identical)`.
