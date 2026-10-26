@@ -314,3 +314,16 @@ This continuation supersedes the earlier pending-native-acceptance statements an
   "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/27.0.1 Safari/605.1.15"
 }
 ```
+
+
+## 2026-10-26 next research continuation — C04 3 WIP leads; current-only food 2020 quote
+
+**Price research resumed at user request; iPhone OO1-162 intentionally deferred (unchanged Todo), independent of Batch 9.** Following original 197 `RESEARCHABLE-CURRENT-ONLY` candidates on `main`, target selected by original underfilled food subcategory (超市／自煮基礎食品 1/34, 33 missing), **not by observed price changes**.
+
+- Existing `LEG-EC-311` = 光泉全脂鮮乳 936ml (not a new economic concept). Fresh verified contemporary [2020-04-08 FamilyMart campaign record](https://benlife.tw/20200408famimartnew/) explicitly reports **single-unit original/normal retail list NT$93**; **two-unit discount NT$169 is excluded**. This is dated third-party reporting and does not identify old barcode.
+- [2026 live Wanjiafu merchant listing](https://online.uni-prosperity.com.tw/zh/%E5%85%89%E6%B3%89/1501003300101.html): 光泉100%純全脂鮮乳無調整 936ml **normal/struck-through NT$93**, **actual current promotion NT$88**. Original `main/data/Evidence.csv` already contained both 2026 normal 93 and other-channel 88, so do not reissue an existing current-price admission. Additional [search-indexed GreenPoint entry](https://sys.greenpoint.org.tw/GpConsumerApp/Function/CommodityMgt/Edit.aspx?SystemId=76ce91a4-4b09-40e2-a125-e70a6240322e) indicates barcode 4710105010113 and suggested 93 from the current registration, but direct opening 403 means this is **supplementary unverified source metadata**.
+- **Price pair 93 → 93 is presently a cross-channel *benchmark* only**, **not an admissible Exact pair**. Historical FamilyMart vs current Wanjiafu merchant, old barcode/formulation unverified; status `HOLD_FIXED_CHANNEL_AND_SKU` and comparability provisional B. No 2020 shopping transaction price, no in-channel matching, no false 2026 93 payable-price claim.
+- Appended **B09-C04-003** to existing [C04 WIP ledger](../research/batch-09/checkpoint-04-wip-ledger.csv) and detailed [C04 note](../research/batch-09/checkpoint-04-wip.md). C04 now **3 WIP leads: 1 PROVISIONAL, 2 HOLD**. The prior B09-C04-002 MUJI jute 2020 on-sale finding remains HOLD for primary dated and SKU continuity, despite contemporaneous third-party evidence.
+- Prior MUJI 2026 adjustments for `LEG-EC-151/152/153/171/172`, and 2026 price increases for `LEG-EC-154/157/158/162/163`, were **already in canonical Evidence**, and were not rewritten or double-counted.
+- **Still C04 0 checkpoint-certified**, C01–C03 **60 research-qualified**, `main` **181/600**, 419 formal missing, NOT SEALED, LOCKED. No Actions, main, workbook, release, new gate or deployment.
+- **Target for next legitimate advancement:** find original 2020/2026 **same-channel** normal list evidence and old identity continuity for `LEG-EC-311`; otherwise retain HOLD and immediately pivot to another underfilled legacy candidate. Do not search this same blocker indefinitely. Mac Dashboard acceptance remains closed (OO1-160/161 Done) and physical iPhone Todo is not a blocker.
