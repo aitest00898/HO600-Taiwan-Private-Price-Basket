@@ -1,23 +1,24 @@
 {
   "schemaVersion": "1.0.0",
-  "asOf": "2026-10-22",
+  "asOf": "2026-10-26",
   "classification": "HO600_LINEAR_PROJECT_MANUAL_READONLY_SNAPSHOT",
   "authority": {
     "taskSource": "Linear TPI-001",
     "projectUrl": "https://linear.app/001dev/project/tpi-001ho600-台灣私人物價籃-46e14167f961",
     "githubTaskCsv": "research/todo/HO600-TODO-2026-10-20.csv",
-    "githubTaskCsvBlobSha": "e582049ba38ea6460dd3c841da96eb2a0c3ba693",
+    "githubTaskCsvBlobSha": "20751e59f495c975fbef99a118ca221d82997695",
     "refresh": "EXPLICIT_MANUAL_ONLY_NO_ACTIONS",
     "mainRelease": "NOT_AUTHORIZED",
     "note": "Task Done denotes issue acceptance only; it does not certify price index or official workbook."
   },
   "summary": {
-    "todo": 36,
+    "todo": 35,
+    "backlog": 1,
     "inProgress": 4,
     "done": 2,
     "p0": 6,
-    "p1": 27,
-    "p2": 9,
+    "p1": 26,
+    "p2": 10,
     "blockedByCount": 9,
     "relations": 24
   },
@@ -358,9 +359,9 @@
     {
       "id": "OO1-154",
       "todoId": "TPI-C08",
-      "priority": "P1",
+      "priority": "P2",
       "group": "臺北市 CPI",
-      "status": "TODO",
+      "status": "BACKLOG",
       "title": "臺北7年齡代理CPI覆蓋率≥95%與獨立重算 Gate",
       "linearUrl": "https://linear.app/001dev/issue/OO1-154/tpi-c08-臺北7年齡代理cpi覆蓋率95percent與獨立重算-gate",
       "blockedBy": [
