@@ -6,7 +6,7 @@ Run from any working directory:
   python3 dashboard/tools/check_todo_snapshot.py --linear-export /path/to/fresh-linear-export.json
 
 The optional export must be a fresh user-provided JSON array or {"issues": [...]}
-containing id, status (Todo / In Progress / Done), priority.value, and url.
+containing id, status (Todo / Backlog / In Progress / Done), priority.value, and url.
 Without it, we can assert only internal GitHub snapshot consistency; we CANNOT
 claim that Linear has not changed since the pinned snapshot was created.
 """
@@ -25,8 +25,8 @@ def fail(msg):
     raise RuntimeError("TODO_DRIFT_OR_INTEGRITY_FAILURE: " + msg)
 
 def state(value):
-    values={"Todo":"TODO","In Progress":"IN_PROGRESS","Done":"DONE",
-            "TODO":"TODO","IN_PROGRESS":"IN_PROGRESS","DONE":"DONE"}
+    values={"Todo":"TODO","Backlog":"BACKLOG","In Progress":"IN_PROGRESS","Done":"DONE",
+            "TODO":"TODO","BACKLOG":"BACKLOG","IN_PROGRESS":"IN_PROGRESS","DONE":"DONE"}
     if value not in values: fail("unknown state " + str(value))
     return values[value]
 
@@ -47,13 +47,14 @@ def check(fresh_path=None):
     ids={t["id"] for t in tasks}
     if len(ids)!=len(tasks): fail("duplicate Linear issue IDs")
     for t in tasks:
-        if t["status"] not in ("TODO","IN_PROGRESS","DONE"): fail("invalid task state")
+        if t["status"] not in ("TODO","BACKLOG","IN_PROGRESS","DONE"): fail("invalid task state")
         if not t["linearUrl"].startswith("https://linear.app/001dev/issue/"): fail("wrong project URL")
         if not set(t["blockedBy"]).issubset(ids): fail("cross-project or unknown dependencies")
         if not t["acceptance"]: fail("missing acceptance criteria")
     summary=snap["summary"]
     observed={
         "todo":sum(t["status"]=="TODO" for t in tasks),
+        "backlog":sum(t["status"]=="BACKLOG" for t in tasks),
         "inProgress":sum(t["status"]=="IN_PROGRESS" for t in tasks),
         "done":sum(t["status"]=="DONE" for t in tasks),
         "p0":sum(t["priority"]=="P0" for t in tasks),
@@ -83,7 +84,7 @@ def check(fresh_path=None):
             fail("dependency drift "+t["id"])
     if fresh_path is None:
         print("LOCAL_SNAPSHOT=PASS; LIVE_LINEAR_DRIFT=UNVERIFIED_NO_EXPORT")
-        print("TASKS=42 TODO={todo} IN_PROGRESS={inProgress} DONE={done}".format(**observed))
+        print("TASKS=42 TODO={todo} BACKLOG={backlog} IN_PROGRESS={inProgress} DONE={done}".format(**observed))
         return
     live=json.loads(Path(fresh_path).read_text(encoding="utf-8"))
     if isinstance(live,dict): live=live.get("issues")
@@ -98,7 +99,7 @@ def check(fresh_path=None):
         if state(x.get("status"))!=t["status"]: fail("state drift "+t["id"])
         if x.get("url")!=t["linearUrl"]: fail("issue URL drift "+t["id"])
     print("LOCAL_SNAPSHOT=PASS; PROVIDED_LINEAR_EXPORT_DRIFT=NONE")
-    print("TASKS=42 TODO={todo} IN_PROGRESS={inProgress} DONE={done}".format(**observed))
+    print("TASKS=42 TODO={todo} BACKLOG={backlog} IN_PROGRESS={inProgress} DONE={done}".format(**observed))
 
 if __name__ == "__main__":
     parser=argparse.ArgumentParser()
