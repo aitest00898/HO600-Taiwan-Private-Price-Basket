@@ -327,3 +327,18 @@ This continuation supersedes the earlier pending-native-acceptance statements an
 - Prior MUJI 2026 adjustments for `LEG-EC-151/152/153/171/172`, and 2026 price increases for `LEG-EC-154/157/158/162/163`, were **already in canonical Evidence**, and were not rewritten or double-counted.
 - **Still C04 0 checkpoint-certified**, C01–C03 **60 research-qualified**, `main` **181/600**, 419 formal missing, NOT SEALED, LOCKED. No Actions, main, workbook, release, new gate or deployment.
 - **Target for next legitimate advancement:** find original 2020/2026 **same-channel** normal list evidence and old identity continuity for `LEG-EC-311`; otherwise retain HOLD and immediately pivot to another underfilled legacy candidate. Do not search this same blocker indefinitely. Mac Dashboard acceptance remains closed (OO1-160/161 Done) and physical iPhone Todo is not a blocker.
+
+
+## 2026-10-26 continuing product research — same-merchant milk list-price time bridge
+
+User requested next substantive step and explicitly deferred physical-iPhone acceptance. No Dashboard retest, Actions use, or main release.
+
+Reusing current-only `LEG-EC-311` / `B09-C04-003` (no new concept), independent retrieved observations:
+
+- **2020-04-08**: [FamilyMart third-party contemporaneous campaign account](https://benlife.tw/20200408famimartnew/), 光泉全脂/低脂鮮乳936ml *one bottle normal/original list price NT$93*, excluding promo two for NT$169.
+- **2024-03-20 to 2024-04-16**: [onelife's FamilyMart event account](https://onelife.tw/a/20391), 光泉全脂鮮乳936ml **original single-item price NT$100**. This is the same **merchant** retail normal-price benchmark as the 2020 FamilyMart report, but **2024, not 2026**; exclude the bundled toast combination NT$109.
+- **2026 indexed current delivery listing**: [Uber Eats FamilyMart (Sanchong) store catalogue](https://www.ubereats.com/tw/brand-city/sanchong-nwt/family-mart), 光泉全脂鮮乳936ml **NT$100**, source retrievable in the search index but not as directly opened product page without location/session. **Delivery-channel listing != FamilyMart walk-in shelf normal price**, so not a completed 2020→2026 price pair. [FamilyMart actual redemption table](https://nevent.family.com.tw/Preorder/EA/) supports current product availability, **not a dated price**.
+
+**Interpretation:** the additional evidence shows a plausible **93 (2020)→100 (2024)** time bridge *within FamilyMart*, but **not** a formally accepted 2020→2026 pair. The existing WIP-ledger `93→93` continues to be a **cross-retailer benchmark** between 2020 FamilyMart and 2026 Wanjiafu list price, not an admitted observation; no inflation gain is computed from mixing those prices. 2020 full-fat UPC and 2026 in-store ordinary price still missing. B09-C04-003 stays `HOLD_FIXED_CHANNEL_AND_SKU`. See detailed [checkpoint-04-wip](../research/batch-09/checkpoint-04-wip.md) and original [WIP ledger](../research/batch-09/checkpoint-04-wip-ledger.csv). Recheck against real first-party evidence only; no repeated searches of the same unavailable primary source without new lead.
+
+**Unchanged release/accounting:** C04 3 WIP (1 provisional + 2 HOLD), C04 checkpoint-certified 0, C01–C03 60 research PASS, formal main 181/600, NOT SEALED, Index LOCKED; Mac Dashboard OO1-160/161 Done, iPhone OO1-162 Todo deferred. No Actions.
