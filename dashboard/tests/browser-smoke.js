@@ -148,7 +148,10 @@
       await click('[data-tab="tasks"]');
       assertion("Linear TODO 第五頁可切換",node("#pageTitle")?.textContent==="專案 TODO");
       assertion("42張快照預設僅顯示40張未結任務",document.querySelectorAll("#app-content table tbody tr").length===40);
-      assertion("Linear狀態為36 Todo 4進行中 2已完成",text().includes("36")&&text().includes("2"));
+      assertion("Linear狀態為35 Todo 1 Backlog 4進行中 2已完成",text().includes("35")&&text().includes("Backlog")&&text().includes("2"));
+      await change("#taskStatus","BACKLOG");
+      assertion("Backlog僅 OO1-154 一項",document.querySelectorAll("#app-content table tbody tr").length===1&&text().includes("OO1-154"));
+      await change("#taskStatus","OPEN");
       await change("#taskPriority","P0");
       assertion("P0 篩選只保留未完成任務",document.querySelectorAll("#app-content table tbody tr").length===5);
       await change("#taskStatus","ALL");
