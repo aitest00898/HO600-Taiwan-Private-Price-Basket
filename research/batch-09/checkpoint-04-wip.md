@@ -249,3 +249,40 @@ This pass followed the user's evidence-first rule: prefer directly readable orig
 **One immediate evidence improvement achieved:** independent **2021 Taiwan** producer price/description continuity now directly documented for C04-001; independent **2019 listed Sony Taiwan pricing** before the 2020 observation anchors C04-005. Cross-country Japanese 2021 barcode and 2022 Sony migration remain correctly marked as distinct lineage evidence. Exact 2020 Taiwan MUJI barcode, 2020 Microsoft purchase page, and changing service benefits remain legitimately unproven, so **NO grade inflation or reclassification of the 3 provisional rows**.
 
 This closes *the three-provisional scoped preflight* without creating a further workstream or repeating the same source queries. C04 remains **6 WIP (3 PROVISIONAL_ADMISSIBLE / 3 HOLD), certified 0**; C01–C03 **60 research PASS**; main formal **181/600**, Basket NOT SEALED, Index LOCKED. iPhone OO1-162 remains user-deferred; no main/workbook or Actions change.
+
+
+## 2026-10-28 quota-aware original-price selection — no new C04 row
+
+**Goal and outcome:** Reviewed new actual, dated Taiwan 2020 *ordinary* prices outside the repeated older C04 source loops. The key test is whether an otherwise comparable quote has a **genuinely unfilled subcategory slot after including earlier Batch 9 research**, not just after the canonical 181/600 snapshot. **No new C04 concept was promoted or held** because two leads fail distinct, concrete admission requirements. This is a targeted evidence-selection receipt, **not a new governance process or release Gate**.
+
+### Capacity must subtract already-qualified research rows from the legacy remaining slots
+
+Directly parsed `main/data/Quota_Control.csv` ("New exact needed") and the three C01–C03 ledgers (60 research ADMISSIBLE), plus C04's already recorded three `PROVISIONAL_ADMISSIBLE` leads where projected. **Research-projected remaining = (main legacy-preserving target − main incumbent Exact) − C01/C02/C03 research rows − C04 provisional rows**. Do **not** imply these research admissions were already added to main. Seven particular subcategories project to exactly **0 additional research slots**, pending eventual formal eligibility:
+
+| Subcategory | Canonical remaining | C01–C03 research additions + C04 provisional | Research-projected additional room |
+|---|---:|---:|---:|
+| 樂／體驗／休閒場館 | 5 | 5 | **0** |
+| 日常／個人／個人數位／會員服務 | 7 | 7 | **0** |
+| 日常／個人／其他日常服務 | 7 | 7 | **0** |
+| 樂／串流影音／音樂 | 3 | 3 | **0** |
+| 樂／電影 | 1 | 1 | **0** |
+| 樂／樂園／休閒 | 2 | 2 | **0** |
+| 行／民營交通服務 | 2 | 2 | **0** |
+
+**Important terminology:** official `main` remains 181/600 and these research slots are only projected. Preserve research-eligible legacy items; do not add competing new brands to a now-full projected category merely to expand C04. A better evidence-backed replacement could be proposed only by an explicit side-by-side evaluation against a prior qualified research concept—not by shifting category labels. `樂／展演／票券` remains 10 target research-available slots; `樂／遊戲／數位娛樂` remains 7 after C04-005/006; `育／文具` remains 4 after C01's five PILOT stationery rows. No new full-repository certification prerequisite is created.
+
+### Screened out a well-sourced 2020→2026 museum price due to already-filled venue category
+
+**The Museum of Contemporary Art, Taipei (台北當代藝術館)**, ordinary non-discounted walk-in general adult ticket (per person, no member/student/group discount):
+
+- [2020-08-06 contemporaneous independent Traveler Luxe report](https://www.travelerluxe.com/article/desc/200004274) explicitly reports normal admission **NT$50** during its 2020/05/23–08/09 exhibition; a separately published [2020-10-22 visitor first-person account](https://www.unclediary.com/2020/10/museum-of-contemporary-art%20-in-taipei.html) indexes **regular person NT$50**, not an age/member discount; the latter site currently yields **HTTP 429 on direct opening**, so cite it as indexed corroboration **only**.
+- [2022-04-11 official ticketing-partner announcement, Taipei Fun Pass](https://funpass.travel.taipei/news/info/Q25) explicitly states general admission moved from **NT$50 → NT$100**, distinguishing the prior anniversary **all-ticket NT$50 special** ending by 2022-04-10. The 2020-03-03 article projecting a price hike in late May **cannot be treated as evidence the hike actually took effect in 2020**; original 2020 Aug/Oct observers and subsequent 2022 notice document the actual chronology.
+- [2026 original venue operator normal-ticket tariff](https://www.mocataipei.org.tw/tw/Visit/%E6%99%82%E9%96%93%E8%88%87%E7%A5%A8%E5%83%B9) directly lists **ordinary NT$100**, concessions NT$50 separately. Therefore **2020 50→2026 100 is a defensible ordinary general-admission nominal price lead**, 2020 secondary but dated B / 2026 maker A; it compares **admission to same venue**, not identical changing exhibition content.
+- **Do not add C04-007.** Exactly the same service type (venue general admission) is classified **樂／體驗／休閒場館**, and the canonical need for **5** was already matched by C03 five research-qualified distinct venue/attraction concepts (`B09-C03-010`... `014`). Forcing this new museum into `樂／展演／票券` just to bypass quota would be **semantic category gaming**. Keep this cited lead as **replacement-grade reserve only**, not a seventh WIP concept, formal 2020/2026 exact or extra research passing row.
+
+### Screened out an original producer-2020 price FLOOR, not an exact named SKU price
+
+- [Pentel Taiwan official 2020-05-01 graduation promo](https://www.pentel.com.tw/news-in?cls=1&id=73) is a genuine dated Taiwan first-party page: selected metal pen models have **manufacturer suggested prices starting at NT$350**. It lists several series but **does not identify which exact model had 350 in 2020**. Do not convert a **"350元起" floor** into a 2020 original single-item price.
+- [Pentel Taiwan direct custom engraving product](https://novelty.pentel.com.tw/product/f96ZTB8NS7TZ3qt9) presently lists **K620W-AT (Sterling rose 0.7mm ballpoint) NT$350**; a pre-2020 third-party marketplace listing indexed as 2018 uses K620W/350, which is **not a directly dated 2020 first-party K620 model quote**. The 2020 press article's selected list is insufficient to prove this exact current model or its 2020 MSRP. No new candidate. `育／文具` projected remaining 4 across brands, but `PILOT×文具` is already at 5 cap, so a non-PILOT exact-model price would be preferred.
+
+**Continuation:** target categories with genuine post-research room *and exact historical model + ordinary price* (e.g. 住／家用 clean/laundry, 樂／遊戲／數位娛樂, 育／文具 outside Pilot, 食／超市), not fake 2020 from future prices, partial MSRP floors or crossed channel. No repeated recheck of museum/Pentel unless a genuinely new identity/normal-price link emerges. This line of research is closed with explicit admissions impact: **C04 remains 6 WIP, 3 provisional/3 HOLD, 0 certified; C01–C03 research 60; main 181/600, NOT SEALED, LOCKED.** No original checkpoint, canonical workbook, Actions, iPhone or main write.
