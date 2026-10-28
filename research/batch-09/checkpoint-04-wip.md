@@ -6,7 +6,7 @@
 
 - Canonical `main`: Batch 8, **181/600**, remaining 419, candidate 418, evidence 1,566, Basket NOT SEALED, Index LOCKED.
 - C01/C02/C03: 20/20/20 **research ADMISSIBLE**, cumulative **60**; these ledgers are not revised.
-- C04 WIP: **12 leads**, of which **9 PROVISIONAL_ADMISSIBLE** and **3 HOLD** (C04-010 added after cross-year producer price reduction and 2026 canonical price-freshness audit on 2026-10-28). **Zero C04 checkpoint-certified new rows**. DO NOT call this 61 or 62 fully certified research rows, or 182/600 canonical.
+- C04 WIP: **19 leads**, of which **16 PROVISIONAL_ADMISSIBLE** and **3 HOLD** (C04-010 added after cross-year producer price reduction and 2026 canonical price-freshness audit on 2026-10-28). **Zero C04 checkpoint-certified new rows**. DO NOT call this 61 or 62 fully certified research rows, or 182/600 canonical.
 - Workflow correction: two C04 WIP pushes **automatically triggered** `Validate HO600` via the existing push workflow, even though nobody manually invoked Actions. They completed `success` (run IDs `38815794034` and `38815800007`). The research branch workflow was subsequently changed in commit `c3e292a28668ba5a5d40140afd028bd97f8c7244` to **manual-only** `workflow_dispatch`. Immediately after that commit, the checked run list showed no run for the guard commit. Do not dispatch it. The `main` workflow remains unchanged and can auto-trigger on future pushes/PRs; preserve the user's global Actions pause.
 - Visibility audit: live GitHub repository metadata reports `visibility=public` on 2026-10-16, despite the 2026-10-16 previous handoff labeling the repository `private`. Confirm intended visibility separately; no visibility setting changed in this research run.
 - No `main` mutation and no canonical workbook change.
@@ -28,6 +28,14 @@
 
 | B09-C04-011 | 行 / 停車 | 20 → 20 | PROVISIONAL_ADMISSIBLE, comparability A, 2020 B / 2026 A | 林口三井OUTLET原I館平日小客車未折抵正常每小時20元；2020-07/10兩篇當期獨立資料 + 較早原廠2017費率PDF，2026業者可讀官網；嚴格非2020直接原廠公告、未完成C04整體QC。 |
 | B09-C04-012 | 行 / 停車 | 40 → 40 | PROVISIONAL_ADMISSIBLE, comparability A, 2020 B / 2026 A | 同一原I館假日正常每小時40元；不將鄰近不同營運者『林口三井停車場』合併，不採會員/折抵；與011合計同停車場family=2上限。 |
+
+| B09-C04-013 | 行 / 停車 | 30 → 30 | PROVISIONAL_ADMISSIBLE, comparability A, 2020 B / 2026 B | 華泰名品城園區汽車未折抵平日每小時標準停車費；2020一般價有當期獨立文獻，2026另有現價，保留來源與範圍限制，**C04未認證**。 |
+| B09-C04-014 | 行 / 停車 | 50 → 50 | PROVISIONAL_ADMISSIBLE, comparability A, 2020 B / 2026 B | 華泰名品城園區汽車未折抵假日每小時標準停車費；2020一般價有當期獨立文獻，2026另有現價，保留來源與範圍限制，**C04未認證**。 |
+| B09-C04-015 | 樂 / 健身／運動 | 1 → 1.3 | PROVISIONAL_ADMISSIBLE, comparability B, 2020 B / 2026 B | 健身魂大安店一般離峰自主訓練每分鐘使用費；2020一般價有當期獨立文獻，2026另有現價，保留來源與範圍限制，**C04未認證**。 |
+| B09-C04-016 | 樂 / 健身／運動 | 1 → 1 | PROVISIONAL_ADMISSIBLE, comparability B, 2020 B / 2026 B | 芳鄰健身景美店一般非尖峰自主訓練每分鐘使用費；2020一般價有當期獨立文獻，2026另有現價，保留來源與範圍限制，**C04未認證**。 |
+| B09-C04-017 | 樂 / 健身／運動 | 100 → 200 | PROVISIONAL_ADMISSIBLE, comparability B, 2020 B / 2026 B | 三健客板橋店普通自主訓練單次入場費；2020一般價有當期獨立文獻，2026另有現價，保留來源與範圍限制，**C04未認證**。 |
+| B09-C04-018 | 樂 / 健身／運動 | 1 → 1.3 | PROVISIONAL_ADMISSIBLE, comparability B, 2020 B / 2026 A | 好客健身房汐止館一般自主訓練每分鐘使用費；2020一般價有當期獨立文獻，2026另有現價，保留來源與範圍限制，**C04未認證**。 |
+| B09-C04-019 | 樂 / 健身／運動 | 1.1 → 1.3 | PROVISIONAL_ADMISSIBLE, comparability A, 2020 B / 2026 B | 體育客和平店一般自助訓練每分鐘使用費；2020一般價有當期獨立文獻，2026另有現價，保留來源與範圍限制，**C04未認證**。 |
 
 ### Evidence directly retrieved 2026-10-16
 
@@ -473,3 +481,30 @@ Separate **first-party maker amount evidence**: [MUJI Taiwan 2025-12-29 directly
 **Actual preflight at branch 3982db9935d7:** compared all original 418 `Candidate_Pool.csv` concepts and 1,566 `Evidence.csv` records, C01–C03 research entries 60, and previous C04 entries 10. Exactly **0 original Mitsui Linkou matched same economic concept**, research IDs **011/012** free. Parking quota `Quota_Control.csv` incremental allocation **11**; C03 already allocated 3, former C04 台茂 1, these new 2 => **6/11** used, **5** unallocated; two together respect brand≤8, group≤16, brand×subcategory≤5, family≤2, historical source≤6, and same-origin count≤6 within this newly inspected concept set. The 2017 map is supporting first-party historical evidence, not an additional 2020 source. Quota still needs checkpoint-wide QC before certification; source rights and 2020 operator receipt unconfirmed.
 
 **New current status:** C04 working **12** = **9 provisional / 3 HOLD**, C04 certified checkpoint **0**, original objective **20 actually qualified** not reached. C01–C03 research PASS **60** unchanged, canonical main **181/600**, Basket NOT SEALED, Index LOCKED. New rows are *not* 62 newly certified or 183 formal Exact. Existing 003/004/007 still HOLD and the grade downgrades of 005/010 remain **B**. No official/government price series used, no GitHub Actions, no main/workbook/index/merge/deployment or iPhone testing.
+
+
+## 2026-10-28 continuation — multi-source 100-item target research phase, 7 new scoped WIP only
+
+User requested **100 genuinely usable/qualified historical-to-current price pairs in a substantial batch**. This phase screened historical marketplace archives and contemporary merchants across parking, fitness, food, digital subscriptions, household and educational categories; **only 7 new evidence-anchored concept pairs** survived minimum dated 2020 normal-price + current 2026 identification preflight. They are **NOT 100 certified pairs** and none was promoted; counting candidates as completed deliverables would be incorrect. The previous 12 C04 WIP are preserved.
+
+### New non-MUJI C04 WIP additions (no price-direction selection)
+
+| ID | Provider / fixed concept | 2020 normal rate | 2026 supported rate | Source grades 2020/2026; scope grade |
+|---|---|---:|---:|---|
+| B09-C04-013 | 華泰名品城園區汽車未折抵平日每小時標準停車費 | 30 | 30 | B/B; A |
+| B09-C04-014 | 華泰名品城園區汽車未折抵假日每小時標準停車費 | 50 | 50 | B/B; A |
+| B09-C04-015 | 健身魂大安店一般離峰自主訓練每分鐘使用費 | 1 | 1.3 | B/B; B |
+| B09-C04-016 | 芳鄰健身景美店一般非尖峰自主訓練每分鐘使用費 | 1 | 1 | B/B; B |
+| B09-C04-017 | 三健客板橋店普通自主訓練單次入場費 | 100 | 200 | B/B; B |
+| B09-C04-018 | 好客健身房汐止館一般自主訓練每分鐘使用費 | 1 | 1.3 | B/A; B |
+| B09-C04-019 | 體育客和平店一般自助訓練每分鐘使用費 | 1.1 | 1.3 | B/B; A |
+
+**Evidence hierarchy:** For Gloria Outlets I (not nearby third-party lots), two distinct 2020 contemporaneous visitor records specifically identify **weekday30 / weekend50 car parking per hour**. [2020 market original](https://janice.life/gloria-christmas2020/) and [independent 2020 second source](https://momoblog.tw/gloriaoutlets-xmas2020/). Current [Xpark original official access page](https://www.xpark.com.tw/visit) independently displays Gloria partner parking weekday30/weekend50; the [Gloria original published 2025 site map](https://www.gloriaoutlets.com/files/GO_CenterMap/CM_Download/MAP202501.pdf) also shows same rates, but a **2025 first-party PDF does not establish 2026 manufacturer checkout**. Thus 2026 grade B, not A. Only weekday and holiday passenger-car normal rates chosen; family cap is 2/2. Exclude separate 桃園置地廣場, 京都 or A8win lots.
+
+Five existing private gyms with 2020 public normal price references come from [2020-02-07 published list](https://www.pttweb.cc/bbs/MuscleBeach/M.1581043453.A.F24) and additional corroboration where available: **Soulfit Da'an 1→1.3/min** (2020 PTT + contemporaneously updated [2020 gym review](https://yvonhuang.com/blog/2018/12/22/taipei-pay-as-you-go-gyms), current [gym-operator-provided 2025-10 source](https://www.gymnomadtw.com/gym/soulfit-Daan) with later 2026 social 1.3); **芳鄰景美 1→1/min** (2026 secondary identifies peak special rate separately and same address; comparison holds nonpeak only); **三健客板橋 single entry100→200** (2026-08-15 price-change on [gym-specific page](https://www.gymnomadtw.com/gym/3musclers-banqiao), no 2020 entry duration preserved); **好客汐止 1→1.3/min** ([2026 operator rate](https://www.howkindfitness.com/) + [manufacturer's own company-history entry](https://www.104.com.tw/company/1a2x6bl4i4) first Xizhi site opened 2020-02; 2020 historical public listing did not state location); **體育客和平 1.1→1.3/min** ([current location-specific listed tariff](https://www.gymnomadtw.com/gym/1STFitness-heping), not 500+100 promotion). These fees are **not** a current verified paid checkout or proof of additional joining costs. Partial 2025-provided rate pages are not labeled direct 2026 first-party observations.
+
+**Selection / duplicate / quota:** Existing core 418 candidates, 1,566 Evidence records, research C01–C03 60 and old C04 12 screened across full concept names (e.g. original `LEG-EC-049 Soulfit` represents **monthly** fee, not studied **per-minute**; no existing Gloria parking). Current parking research allocations 6 + new2 = **8/11**, three remaining. Fitness research allocations 0 + new5 = **5/9**, four remaining. Brand additions all ≤2, same facility/family Gloria weekday+weekend 2/2; one historical 2020 PTT rate list used for 5 different gym concepts (≤6); original 2020 Gloria narrative source serves 2 entries (≤6). Operator-specific original 2026 direct verification missing for many gym rows and source grade remains B. Strict formal admission and all originally required C04 QC remain unfinished.
+
+**Multiple-category negative screens rather than fake productivity:** Nintendo Taiwan eShop 2025 launch means its 2026 TWD NSO prices cannot stand in for an equivalent **2020 Taiwan eShop normal price**. Refine/LifeLab data had no fixed 2020 same-branch tariff; gym 'FitMania' 2026 consumer-reported NT$100 conflicts with other undated NT$120 vendor reposts, so **excluded rather than fabricate stable 2026 amount**. 2020 iRent 99/hour was promotion, not ordinary price; old cosmetic/fresh food grocery circulars lacked 2020 non-promotion same-SKU and 2026 channel evidence; generic parking operator lots changed or mixed operator facilities. No new HOLD entries fabricated from excluded items.
+
+**Controlling counts after this phase:** C01–C03 = 60 research-grade ADMISSIBLE unchanged; C04 **19 work candidates = 16 provisional / 3 HOLD, checkpoint-certified 0**. Canonical `main` Batch 8 **181/600**, remaining 419, Basket NOT SEALED, Index LOCKED unchanged. 100 usable new price pairs **NOT ACHIEVED**; this phase has seven new *provisional* rows, **zero newly certified usable pairs**. No main/workbook/index, GitHub Actions, merging, production release or iPhone test.

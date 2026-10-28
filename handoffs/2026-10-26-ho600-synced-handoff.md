@@ -8,6 +8,12 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## 2026-10-28 later continuation — 100-item research request, evidence-bound 7 WIP additions
+
+This newest section supersedes older C04 WIP **12 / 9 provisional / 3 HOLD** snapshots. **Actual result: 7 newly researched non-MUJI provisional economic concepts** (C04-013–019), **not 100 qualified price pairs**. Two Gloria Outlets ordinary weekday/holiday car parking tariff pairs (30→30 and 50→50), and five independent private gyms' priced use concepts (Soulfit Da'an 1→1.3/min; Family Fitness Jingmei 1→1/min; 3musclers Banqiao one-day 100→200; Howkind Xizhi 1→1.3/min; 1ST Fitness Heping 1.1→1.3/min). Dated 2020 citations, current 2026 source levels, station/branch identity, exclusion criteria and concentration noted in [existing C04 report](../research/batch-09/checkpoint-04-wip.md) and [23-column CSV](../research/batch-09/checkpoint-04-wip-ledger.csv). Sources sometimes 2026 B rather than first-party A; neither 2025 maker tariff nor third-party mirror is misrepresented as direct 2026 operator checkout. **New C04 status 19 WIP / 16 PROVISIONAL_ADMISSIBLE / 3 HOLD / 0 checkpoint-certified PASS.** C01–C03 unchanged 60 research PASS; formal `main` unchanged 181/600, Basket NOT SEALED, Index LOCKED. The user wanted **100 actually usable pairs**; **0 new formally certified**, only 7 new provisional source-backed pairs, so target remains **UNMET**, no false 100 claim. Parking research 8/11 slots used and fitness research 5/9 slots used (after this phase). No Actions, main, workbook, index, merge, deployment or deferred iPhone.
+
+---
+
 ## Latest C04 research continuation — 2026-10-28 (supersedes the 16:31 sync counts)
 
 **Actual new research: 2 non-MUJI provisional pricing pairs, NOT checkpoint certification.** B09-C04-011/012 MITSUI OUTLET PARK 林口原I館小型車普通未折抵停車：2020→2026 平日每小時 NT$20→20、假日 NT$40→40。2020-07-19 & 2020-10-26 independent contemporaneous reports, prior maker 2017 floor-map rate, and directly readable 2026 operator site were checked. Historical maker document is **2017**, not a 2020 official tariff; 2020 evidence B, 2026 A, comparability A; both statuses `PROVISIONAL_ADMISSIBLE`, no operator 2020 receipt and no formal C04 QC PASS. Two weekday/holiday tariffs exhaust this parking lot product family cap 2. Neither figure was cherry-picked by price movement.
