@@ -8,6 +8,12 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## 2026-10-29 later C05 household food and paper batch — 3 additional qualified
+
+Added C05-005 FMC超柔抽取式衛生紙110抽×8包 FamilyMart 2020 ordinary original200 → 2026 FamilyMart Foodpanda crossed-out reference248 (**discounted sale109 excluded; current true paid full-price not asserted**), 006 樂事經典原味洋芋片64g FamilyMart30→35, 007 統一陽光無糖高纖豆漿400ml FamilyMart20→25. 2020 original ordinary price text is two distinct, dated independent consumer transcriptions of FamilyMart APP promotions (2020-09-29 and 2020-07-07), never use discount values; 2026 comparable full item/volume in branded FamilyMart delivery storefront with seller-scope B. Paper 2021 manufacturer identity + suggested 200 is only a lineage clue, not a government price or 2026 receipt; 2026 paper reference248 is *crossed-out list value*, not checkout proof. Old EAN absent and newer formulation unknown: B/B/B research only. Full source URLs and risks in [C05 WIP report](../research/batch-09/checkpoint-05-wip.md) and [ledger](../research/batch-09/checkpoint-05-wip-ledger.csv). C05 latest **7 rows =5 individually research ADMISSIBLE, 2 provisional, C05 Checkpoint OPEN**; prior four checkpoint 80 frozen; user additional target **25/100**, research-grade aggregate85; canonical main181/600 NOT SEALED Index LOCKED. No Actions, main, workbook, merge, Index, deployed output or phone test.
+
+---
+
 ## 2026-10-29 C05 民生日常商品研究開始 — 2新研究級PASS、2暫定
 
 **C05 WIP 正式建立，非Checkpoint 05整批PASS**：C05-001義美奶茶400ml／全家 2020 35→2026 35 與 C05-002義美錫蘭紅茶400ml／全家 25→25 經2020-11-02當期全家APP原價列表、2016/2017/2018同款容量身份旁證及2026全家品牌門市Foodpanda一般公開價比較，個別研究ADMISSIBLE（B/B/B）。2020同一PTT原始來源原C04已用3/6，本輪再用2/6後達5/6；新款義美與先前C04豆奶不同，來源、品牌及次類配額未超。C05-003立得清酒精擦濕巾35抽x3與C05-004白帥帥超淨亮洗衣精補充包1650g是2020康是美DM搜尋索引原價180／79對2026康是美品牌網店／品牌外送180／79，**歷史原PDF現址轉首頁**，故保留PROVISIONAL，不謊報合格。資料與限制詳見[checkpoint-05-wip.md](../research/batch-09/checkpoint-05-wip.md)、[WIP ledger](../research/batch-09/checkpoint-05-wip-ledger.csv)。原C01-C04 4×20研究正式checkpoint固定80不變。**使用者追加100筆目標22/100；累計研究82；正式main181/600, NOT SEALED, INDEX LOCKED。** 沒有Actions、main、workbook、Index、PR merge、部署、iPhone驗收。
