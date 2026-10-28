@@ -8,6 +8,12 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## 2026-10-29 C05 民生日常商品研究開始 — 2新研究級PASS、2暫定
+
+**C05 WIP 正式建立，非Checkpoint 05整批PASS**：C05-001義美奶茶400ml／全家 2020 35→2026 35 與 C05-002義美錫蘭紅茶400ml／全家 25→25 經2020-11-02當期全家APP原價列表、2016/2017/2018同款容量身份旁證及2026全家品牌門市Foodpanda一般公開價比較，個別研究ADMISSIBLE（B/B/B）。2020同一PTT原始來源原C04已用3/6，本輪再用2/6後達5/6；新款義美與先前C04豆奶不同，來源、品牌及次類配額未超。C05-003立得清酒精擦濕巾35抽x3與C05-004白帥帥超淨亮洗衣精補充包1650g是2020康是美DM搜尋索引原價180／79對2026康是美品牌網店／品牌外送180／79，**歷史原PDF現址轉首頁**，故保留PROVISIONAL，不謊報合格。資料與限制詳見[checkpoint-05-wip.md](../research/batch-09/checkpoint-05-wip.md)、[WIP ledger](../research/batch-09/checkpoint-05-wip-ledger.csv)。原C01-C04 4×20研究正式checkpoint固定80不變。**使用者追加100筆目標22/100；累計研究82；正式main181/600, NOT SEALED, INDEX LOCKED。** 沒有Actions、main、workbook、Index、PR merge、部署、iPhone驗收。
+
+---
+
 ## 2026-10-28 definitive research-only checkpoint-04 closeout — PASS, 20/20 fixed
 
 **CHECKPOINT-04 = PASS (RESEARCH-ONLY).** Fixed exact20 source-checked `ADMISSIBLE` economic normal-price pairs from former33 working rows into [checkpoint-04-ledger.csv](../research/batch-09/checkpoint-04-ledger.csv); [research-only QC and original quota/concentration review](../research/batch-09/checkpoint-04.md) recorded. Originals 33 C04 WIP unchanged as evidence ledger, of which 20 ADMISSIBLE,10 PROVISIONAL,3 HOLD; **remaining13 do not delay this 20-row checkpoint**, nor qualify for automatic promotion. Prior C01/C02/C03 checkpoint 20 each are unchanged: **total80 research checkpoint-qualified** (60 earlier+20 new). User requested +100 newly usable pairs still **20/100** (remaining80), and no misleading claim of +80 new. Pricing evidence still carries original 2020 B/A and 2026 A/B and comparability A/B; current seller menu is not actual in-store checkout; unknown EAN and recipe changes don't get silently upgraded. Aggregate C01–C04 top5 brands28/40, top10 42/60, largest 2020 source4/6, all allocated cells under cap. Formal canonical **main181/600, remaining419, NOT SEALED and Index LOCKED**, no published index. No GitHub Actions, main/workbook/index/merge/release/deployment/iPhone changes.
