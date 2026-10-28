@@ -8,6 +8,16 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## 2026-10-29 新增研究C05-010~012｜GitHub可驗收接續基準
+
+**本段為最新交接權威，下面舊的7/9與27/100都是歷史快照。** 原始C05 WIP 9筆不刪除；本輪在 [C05 ledger](../research/batch-09/checkpoint-05-wip-ledger.csv) 追加3條真正新研究配對：老楊經典原味方塊酥70g全家25→28、來一客鮮蝦魚板63g全家25→25、來一客牛肉蔬菜65g全家25→25。來源、歷史規格旁證、未核實舊EAN、同源上限及詳細QC見 [C05報告最新段](../research/batch-09/checkpoint-05-wip.md)。
+
+**C05 WIP=12（ADMISSIBLE 10, PROVISIONAL 2），Checkpoint 05 OPEN，目標20尚差10；C01–C04=80原本PASS，研究級共90；使用者追加目標30/100尚差70；main正式181/600（尚差419），Basket NOT SEALED、Index LOCKED。** 2020-07-07單一原文計數5/6，不可藉不同轉載規避；便利即食7/7已滿，轉向自煮、清潔、紙品、盥洗與獨立2020證據。FMC110×8 2026 248為平台劃線原價、非已證實一般成交，原限制維持。
+
+**授權邊界：** 只在research/batch-09延續；不動main、正式工作簿、Index或C01–C04固定checkpoint；不merge、deploy、重新啟用Actions或作iPhone驗收。沒有達C05整批QC不得宣稱PASS。
+
+---
+
 ## 2026-10-29 最新 GitHub 同步與交接｜C05 9筆、研究合格7筆、追加目標27/100
 
 **這是目前最上層權威快照，優先於下方歷次交接記錄。** 本輪僅同步既有進度及交接，**沒有新增、提升或撤回商品准入**。以研究分支原 HEAD `f2e7d40c2ceb1b783cfb5c6334b2505619e9c50b` 為本次唯讀核對起點；C05 工作帳本經讀回為 **9條（7 `ADMISSIBLE`、2 `PROVISIONAL_ADMISSIBLE`）**，C05 整批 Checkpoint 仍 **OPEN**。C01–C04 四個正式研究級 Checkpoint 各20，共80；累計研究級 **87**。使用者指定新增100筆已達 **27/100，剩73**。正式 `main` **181/600，尚缺419，Basket NOT SEALED，Index LOCKED**，沒有合併/上線。
