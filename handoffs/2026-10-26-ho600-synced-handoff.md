@@ -8,6 +8,16 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## Latest C04 research continuation — 2026-10-28 (supersedes the 16:31 sync counts)
+
+**Actual new research: 2 non-MUJI provisional pricing pairs, NOT checkpoint certification.** B09-C04-011/012 MITSUI OUTLET PARK 林口原I館小型車普通未折抵停車：2020→2026 平日每小時 NT$20→20、假日 NT$40→40。2020-07-19 & 2020-10-26 independent contemporaneous reports, prior maker 2017 floor-map rate, and directly readable 2026 operator site were checked. Historical maker document is **2017**, not a 2020 official tariff; 2020 evidence B, 2026 A, comparability A; both statuses `PROVISIONAL_ADMISSIBLE`, no operator 2020 receipt and no formal C04 QC PASS. Two weekday/holiday tariffs exhaust this parking lot product family cap 2. Neither figure was cherry-picked by price movement.
+
+**Preflight:** canonical 418 candidates + 1,566 evidence rows + 60 existing research records + original C04 10 checked, same Linkou Mitsui parking concept matches **0**. Parking quota research allocation 11; with existing 3 C03 + 台茂 C04-008 1 + 2 new = **6/11** allocated. Existing data grade B corrections for 005 Sony and 010 MUJI preserved.
+
+**New authoritative counts:** C01–03 60 research PASS; C04 **12 WIP = 9 provisional + 3 HOLD, 0 C04 checkpoint PASS**; canonical `main` still **181/600**, 419 short, Basket NOT SEALED, Index LOCKED. Existing WIP [report](../research/batch-09/checkpoint-04-wip.md) and [23-column ledger](../research/batch-09/checkpoint-04-wip-ledger.csv) updated without canonical promotion. All subsequent older chronological references to 10/7/3 below are now historical, not controlling. No Actions, main changes, workbook writes, merge, deployed app or deferred iPhone hardware acceptance.
+
+---
+
 ## Current handoff — 2026-10-28 16:31 Asia/Taipei
 
 **This is an up-to-date, remote-verified synchronization snapshot and a concrete next-stage handoff; it does not claim an additional research batch or newly accepted prices.** Earlier chronological sections are retained for evidence history. When an earlier observation or grade conflicts with this snapshot, follow the current ledger and the later 2026 source-grade correction, not a superseded 2026-A claim.
