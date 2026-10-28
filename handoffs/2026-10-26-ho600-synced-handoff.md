@@ -8,6 +8,12 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## 2026-10-29 C05 follow-on packaged foods: two more research-only pairs
+
+C05-008 多力多滋超濃起司玉米片 **72g** in FamilyMart ordinary 2020 price30→2026 branded-store menu35, and C05-009 純喫茶**無糖綠茶650ml** in same FamilyMart chain2020 25→2026 25. Historical directly dated 2020 Sep29 and July07 contemporaneous independent FamilyMart APP normal-price transcriptions (as search-index originals because direct opens may return403), current 2026 FamilyMart merchant storefront listings; same size/brand/tier, current EAN only for unsweet green, B/B/B internal research comparability. No mixing ordinary red tea LEG-EC-015 or Doritos 84g. Sources and quota/dup QC in [C05-WIP](../research/batch-09/checkpoint-05-wip.md) and [ledger](../research/batch-09/checkpoint-05-wip-ledger.csv). **C05 WIP 9 =7 row research ADMISSIBLE +2 PROVISIONAL, Checkpoint 05 OPEN. User new100 objective27/100, research total87, formal main181/600 NOT SEALED Index LOCKED.** No Actions, main/workbook/index/merge/release/iPhone.
+
+---
+
 ## 2026-10-29 later C05 household food and paper batch — 3 additional qualified
 
 Added C05-005 FMC超柔抽取式衛生紙110抽×8包 FamilyMart 2020 ordinary original200 → 2026 FamilyMart Foodpanda crossed-out reference248 (**discounted sale109 excluded; current true paid full-price not asserted**), 006 樂事經典原味洋芋片64g FamilyMart30→35, 007 統一陽光無糖高纖豆漿400ml FamilyMart20→25. 2020 original ordinary price text is two distinct, dated independent consumer transcriptions of FamilyMart APP promotions (2020-09-29 and 2020-07-07), never use discount values; 2026 comparable full item/volume in branded FamilyMart delivery storefront with seller-scope B. Paper 2021 manufacturer identity + suggested 200 is only a lineage clue, not a government price or 2026 receipt; 2026 paper reference248 is *crossed-out list value*, not checkout proof. Old EAN absent and newer formulation unknown: B/B/B research only. Full source URLs and risks in [C05 WIP report](../research/batch-09/checkpoint-05-wip.md) and [ledger](../research/batch-09/checkpoint-05-wip-ledger.csv). C05 latest **7 rows =5 individually research ADMISSIBLE, 2 provisional, C05 Checkpoint OPEN**; prior four checkpoint 80 frozen; user additional target **25/100**, research-grade aggregate85; canonical main181/600 NOT SEALED Index LOCKED. No Actions, main, workbook, merge, Index, deployed output or phone test.

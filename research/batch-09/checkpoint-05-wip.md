@@ -53,3 +53,20 @@ Three **new economic research price pairs** added to the existing C05 WIP ledger
 **Preflight and concentration:** Checked canonical 418 candidates and 1,566 original price evidence, C01–C04 full research ledger80, and older C05 4; no exact duplicate economic product. FMC house brand paper family1/2, Lay's original chips flavor1/2 and 統一陽光 400ml original sugar-free high fiber1/2. 2020-09 FamilyMart original source reused twice2/6; 2020-07 original reused once1/6; other prior original single source2020-11 was used by C04 three and C05 001/002 two -> **5/6** unaffected. Category capacities: 住／家用／紙品 existing research C04 one +newone =2 of 11 allocated, 食／甜點／零食 new1 of10, 食／包裝食品／飲料 C05 now3 of original19 incremental slots; no frozen overfilled segment entered.
 
 **Counts:** C05 working **7 rows = 5 ADMISSIBLE individually / 2 provisional**. User request additional100 normal-price research usable pairs **25/100** (C04 new20 + C05 five), previous C01–03 earlier60, total research economically distinct85, C05 full Checkpoint NOT PASS, formal main181/600 Basket NOT SEALED and Index LOCKED, no published index. No GitHub Actions, main/workbook/index, merge/deploy or iPhone change.
+
+
+## 2026-10-29 further nonduplicated family food price pairs — C05-008/009
+
+| ID | Same brand/size and FamilyMart channel | 2020 regular NT$ | 2026 retail-shop list NT$ | Evidence status |
+|---|---|---:|---:|---|
+| B09-C05-008 | 多力多滋超濃起司玉米片72g全家普通單袋價 | 30 | 35 | ADMISSIBLE B/B/B |
+| B09-C05-009 | 純喫茶無糖綠茶650ml全家一般單瓶價 | 25 | 25 | ADMISSIBLE B/B/B |
+
+**Two new individually research ADMISSIBLE price pairs** under existing C03 normal-price B historical, B current, B comparison level, **not Checkpoint C05 PASS and not canonical Basket_600 rows**.
+
+- **B09-C05-008**: [2020 contemporaneous private original normal price](https://www.ptt.cc/bbs/CVS/M.1601385921.A.134.html); [2026 FamilyMart branded seller listing](https://www.ubereats.com/tw/store/%E5%85%A8%E5%AE%B6%E4%BE%BF%E5%88%A9%E5%95%86%EF%BF%BD%E5%BA%97-%E5%9F%94%E5%BF%83%E7%BD%B2%E9%86%AB%E5%BA%97_008996/MAVNg3qUUxCWuXGGW8AnNA). 2020-09-29當期台灣全家APP原價轉載『樂事經典原味洋芋片/多力多滋超濃起司玉米片64g/72g 原價30元』，兩者依順序分別64g與72g，活動兩件45元排除。2026全家埔心署醫店Uber Eats商家原始搜尋索引明列多力多滋超濃起司玉米片72g單袋35，另一全家沙鹿三鹿店 https://guava.failover.uber.com/tw/brand-city/xitun-txg/family-mart 同口味72g35；2026同通路商家公開單件售價非實際已付款收據，B。2020來源直接打開403，使用同期原文索引且不假稱已載入，grade B，2020/2026包裝配方EAN未完整驗證，compare B。新品牌1/8，單品家族1/2，來源與C05-005/006共2020同原刊3/6。
+- **B09-C05-009**: [2020 contemporaneous private original normal price](https://www.ptt.cc/bbs/CVS/M.1594134987.A.ECB.html); [2026 FamilyMart branded seller listing](https://www.foodpanda.com.tw/shop/bh0n/quan-jia-bian-li-shang-dian-fang-xing-dian/category/7d66a6a8-343c-4299-90b2-c4416a1b6d72). 2020-07-07原始全家APP活動同期民間轉錄單獨列純喫茶無糖綠茶650ml 原價25 (第二件5折是促銷不使用)；2026全家芳興店Foodpanda直接公開同『純喫茶綠茶(無糖)650ml』25、現條碼4710088641212，另全家文祥UberEats https://www.ubereats.com/store/%E5%85%A8%E5%AE%B6%E4%BE%BF%E5%88%A9%E5%95%86%E5%BA%97-%E6%96%87%E7%A5%A5%E5%BA%97_001059/De4ers4eVVm9sauOjuxdZA 同650ml25；商品為無糖綠茶，非正式主籃LEG-EC-015純喫茶紅茶650ml，亦非同品牌有糖/無糖綠茶不同容量。2020原始PTT現可搜尋索引但直接open 403，歷史B；2026品牌門市外送價格B；2020舊條碼未證，跨年B。2020共享原始文章原C05-007一筆，本列是第二筆，2/6。
+
+**Concentration and duplicate:** 418 canonical titles, original 1566 source rows, 80 previously frozen C01-04 research rows, and older7 C05 rows have no identical economic product; in particular 原有 LEG-EC-015 是 **純喫茶紅茶650ml**而不是此次**無糖綠茶650ml**. Lays original64g and Doritos cheese72g are two different product families, and 2020 original Sep29 authored source used **3/6** so far; July7 source used **2/6**. New brands each1/8, brand×subcategory1/5. All pricing references exclude promotion and represent Taiwanese private merchandising; present SKU unknown in2020 restricts comparison grade B.
+
+**C05 WIP now9 rows = 7 individually research ADMISSIBLE, 2 PROVISIONAL; Checkpoint 05 still OPEN.** C01-C04 older80 research PASS unchanged. User incremental new100 target **27/100**, remaining73; research available total87; main formal181/600 NOT SEALED Index LOCKED, no Actions/merge/deployment or phone test.
