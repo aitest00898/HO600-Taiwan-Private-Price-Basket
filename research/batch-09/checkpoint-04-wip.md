@@ -542,3 +542,145 @@ Five existing private gyms with 2020 public normal price references come from [2
 **Existing admission criteria checked for each EA row:** 2020 contemporaneous and normal rate; 2026 direct original operator Taiwan TWD rate; term/brand/region/platform and service tier matching; cross-year content library variability labeled comparison **B**; 2020 price origin labeled **B** (not falsely upgraded to first party), 2026 **A**; fixed 1 month/12 month service priced independently (not monthly times twelve), no time-limited promotions; preflight against 418 canonical candidates +1566 canonical Evidence +C01–C03 60 research +C04 previously 19; no duplicate EA plan. Research category games/digital 2 Sony+Xbox plus4 EA =6/9 new slots; EA brand4/8, corporate group4/16, EA×subcategory4/5, Basic Steam and Pro EA app separate families each2/2, historical individual source max2 EA/6; overall research top-five brand count29/40, top-ten43/60 and maximal single prior historical source5/6. This uses the *same C03 research-only precedent* in which B historical and B comparability may pass; it does not create a new governance Gate.
 
 **Acceptance boundary:** 4 newly **research-usable** 2020→2026 normal price pairs toward user's requested +100, not 4 new canonical Exact items or C04 checkpoint PASS. C04 still lacks 16 additional individually qualified rows to reach the original 20 target; all 16 previous PROVISIONAL remain provisional, 3 HOLD remain HOLD. C01–C03 research 60 PASS unchanged; main 181/600 NOT SEALED Index LOCKED. No GitHub Actions, main/workbook/index/PR merge/production or deferred iPhone changes.
+
+
+## 2026-10-28 life-course-first HO600 candidate reorientation: 100 demand hypotheses (NO 2020/2026 price validation)
+
+**This is an actual product-contact search redesign after the user requested Taiwan age 25–70 daily life analysis**, not a price batch or 100 accepted concepts. Candidate pool/main status, existing 23 C04 rows, 60 research-approved C01–C03 and canonical 181/600 are **not modified**; the list intentionally includes existing concepts so those can be reused instead of falsely counted as new rows.
+
+### External data and scope controls
+
+- [Worldpanel 2025 Taiwan FMCG Brand Footprint](https://zh-tw.worldpanelbynumerator.com/insights/2025-taiwan-brand-footprint-ranking) analyses 2024 household purchase touchpoints; high observed brand penetration for I-Mei 89% households (8,210萬 contact points), Kuang Chuan 75%, and Fule 63%; beverage/dairy brands are numerous in top ten. These are **brand-level contact measures, not SKU-level purchase rankings**.
+- [Worldpanel Taiwan 2025 Q4 food & household outlook](https://zh-tw.worldpanelbynumerator.com/insights/2025-q4-fmcg-dynamics-taiwan) finds demand for foods needing cooking, cooking oils, frozen dumplings, household laundry/dish cleaning, paper and personal care. Do not confuse market revenue growth with individual purchase frequency.
+- [2025 TWNIC internet report official summary](https://twnic.tw/blog/contents.php?blog_lang=zh-tw&id=87) describes adult digital ubiquity but strong age differences; [2026-10-08 Ministry of Labor release](https://www.mol.gov.tw/1607/1632/1633/99470/) records 45–64 labor force participation 69.84% (2026 August), so **55–64 is not generally retirement**, and 65+ can still work. [NCCC 2025 card-transaction research](https://www.nccc.com.tw/wps/wcm/connect/zh/home/openinformation/CaseAnalysisIntroduce/2025Aa) identifies convenience channel as a relevant touchpoint but is cardholder-only, not a universal purchasing census.
+- [Worldpanel life-stage shift context](https://www.kantarworldpanel.com/tw/news/2025-FMCG-market-trends-Taiwan): single households/couples without children approximately 30.4% of households; neither marriage nor childbirth may be assumed mandatory. [Health ministry family caregiver report](https://cdj.sfaa.gov.tw/Journal/Content?gno=13320) supports a separate caregiving pathway, not a claim every adult 55–70 needs long-term care.
+- **HO600 source boundary:** Public demographic or consumption reports inform the *candidate search priority only*. No government price, government weight, synthetic market share, 2020 price inference, price interpolation, or new Index weighting. Usage frequency is a **qualitative hypothesis** until a separate product-level panel validates it.
+
+### Age 25–70 overlapping life pathways, not deterministic age stereotypes
+
+| Age / state as research lens | Daily / weekly exposure path | Candidate emphasis |
+|---|---|---|
+| 25–34 beginning work, living alone, renting or living with parents | commuter breakfast; convenience meals; rented-space cleaning; mobile/online shopping; public or own transport | single-serving dairy/soy milk, tea, noodles, body wash, laundry detergent, garbage bags, household paper, monthly connection plans |
+| 35–44 household formation OR remaining single/no-child | home grocery replenishment, shared meals, childcare for some, workday meals | staple rice, oils/soy sauce, frozen dumplings, milk, tissue, dish soap, baby wipes/diapers ONLY for households with infants |
+| 45–54 work and multi-generational household, or separate living | cooking, cleaning, workday retail, possibly school-age dependents/elder-care | dish soap/laundry/paper, food stock, toiletries, childcare or adult-care supplies where relevant |
+| 55–64 often still working; children may leave home; parents may need support | commuter and home consumption continue, packaging sizes and channels may change | core food/household + midlife skin care, fixed home internet, adult care supplies only for caregivers |
+| 65–70 working, semi-retired or retired; living alone, with spouse or family | smaller household food needs, repetitive home consumables, digital inclusion heterogeneous | milk/soy/rice/small portions, household paper/cleaning, basic hygiene, care supplies only if actually required |
+
+**Never infer an age stage determines a product.** Household composition, dietary choice, vehicle usage, pets, caregiving and locality are cross-cutting filters. Distinguish: used daily / purchased weekly / replenished monthly / paid annually. Product-contact frequency alone does not validate price observations.
+
+### Search priority / admission rules
+
+P1 = broad-coverage frequent food/household/hygiene demand; P2 = widely repeated packaged food, convenience, kitchen and skin care; P3 = conditional/pet/stationery/service; P4 = lower purchase frequency or historically harder fixed service/variant. P1–P4 are **research search-order heuristics**, not statistically estimated rank or quantity weights.
+
+For every future candidate, reuse an existing `LEG-EC-*` or `B09-*` identity when concept matches; freeze legacy-saturated breakfast/restaurants/coffee subcategories even if frequent. Lock **one maker / one Taiwan seller and region / one specific SKU and pack size / one unit / ordinary 2020 dated price and same-seller directly observed 2026 ordinary price** before admission. Promotional or conditional-member amounts and changed recipes/sizes are HOLD, not price pairs. Brand≤8, corporate group≤16, brand×subcategory≤5, family≤2, historical source≤6, top5 brand≤40, top10≤60; per-subcategory research remaining slots must be reduced for previously admitted research rows. A brand-level market rank never supplies a 2020 price.
+
+### Exactly 100 named *search targets*, NOT 100 admissible price pairs
+
+Preflight: checked all 418 existing canonical candidate **titles** with normalized string matching; probable existing IDs/hints shown, and known existing concepts explicitly pinned where available. **This is not full semantic duplicate clearance.** Some targets intentionally reference existing concepts; do not create another C04 row for them. Generic services and sizes require SKU/site/plan specificity before becoming price research. Each line has no 2020 or 2026 price yet.
+
+| Discovery ID | Priority | HO600 category | Item or fixed service concept to look up | Existing / title-match preflight |
+|---|---|---|---|---|
+| LIFE-001 | P1 | 住／家用／清潔／洗衣用品 | 一匙靈液體洗衣精 | DISCOVER / unmatched by normalized title |
+| LIFE-002 | P1 | 住／家用／紙品 | 五月花廚房紙巾 | DISCOVER / unmatched by normalized title |
+| LIFE-003 | P1 | 住／家用／清潔／洗衣用品 | 毛寶液體洗衣精 | DISCOVER / unmatched by normalized title |
+| LIFE-004 | P1 | 住／家用／清潔／洗衣用品 | 白蘭液體洗衣精 | LEG-EC-173 (canonical identity-only) |
+| LIFE-005 | P1 | 住／家用／清潔／洗衣用品 | 妙管家洗碗精 | DISCOVER / unmatched by normalized title |
+| LIFE-006 | P1 | 住／家用／清潔／洗衣用品 | 花仙子去污潔霜 | DISCOVER / unmatched by normalized title |
+| LIFE-007 | P1 | 住／家用／清潔／洗衣用品 | 威猛先生馬桶清潔劑 | DISCOVER / unmatched by normalized title |
+| LIFE-008 | P1 | 住／家用／紙品 | 春風抽取式衛生紙 | DISCOVER / unmatched by normalized title |
+| LIFE-009 | P1 | 住／家用／紙品 | 得意抽取式衛生紙 | DISCOVER / unmatched by normalized title |
+| LIFE-010 | P1 | 住／家用／紙品 | 舒潔抽取式衛生紙 | DISCOVER / unmatched by normalized title |
+| LIFE-011 | P1 | 住／家用／紙品 | 舒潔捲筒衛生紙 | DISCOVER / unmatched by normalized title |
+| LIFE-012 | P1 | 住／家用／清潔／洗衣用品 | 橘子工坊洗碗精 | DISCOVER / unmatched by normalized title |
+| LIFE-013 | P1 | 住／家用／清潔／洗衣用品 | 橘子工坊液體洗衣精 | DISCOVER / unmatched by normalized title |
+| LIFE-014 | P1 | 住／家用／清潔／洗衣用品 | 魔術靈浴室清潔劑 | DISCOVER / unmatched by normalized title |
+| LIFE-015 | P1 | 日常／個人／盥洗／衛生用品 | 多芬沐浴乳 | LEG-EC-169 (canonical current-only) |
+| LIFE-016 | P1 | 日常／個人／盥洗／衛生用品 | 好來黑人牙膏 | DISCOVER / unmatched by normalized title |
+| LIFE-017 | P1 | 日常／個人／盥洗／衛生用品 | 好奇嬰兒濕紙巾 | DISCOVER / unmatched by normalized title |
+| LIFE-018 | P1 | 日常／個人／盥洗／衛生用品 | 李施德霖經典漱口水 | LEG-EC-177 (canonical current-only) |
+| LIFE-019 | P1 | 日常／個人／盥洗／衛生用品 | 依必朗洗手乳 | DISCOVER / unmatched by normalized title |
+| LIFE-020 | P1 | 日常／個人／盥洗／衛生用品 | 海倫仙度絲去屑洗髮露 | DISCOVER / unmatched by normalized title |
+| LIFE-021 | P1 | 日常／個人／盥洗／衛生用品 | 高露潔三重功效牙膏 | LEG-EC-147 (canonical current-only) |
+| LIFE-022 | P1 | 日常／個人／盥洗／衛生用品 | 添寧成人復健褲M號 | DISCOVER / unmatched by normalized title |
+| LIFE-023 | P1 | 日常／個人／盥洗／衛生用品 | 歐樂B軟毛牙刷 | DISCOVER / unmatched by normalized title |
+| LIFE-024 | P1 | 日常／個人／盥洗／衛生用品 | 潘婷基礎洗髮乳 | DISCOVER / unmatched by normalized title |
+| LIFE-025 | P1 | 日常／個人／盥洗／衛生用品 | 靠得住夜用衛生棉 | DISCOVER / unmatched by normalized title |
+| LIFE-026 | P1 | 日常／個人／盥洗／衛生用品 | 幫寶適M號嬰兒尿布 | DISCOVER / unmatched by normalized title |
+| LIFE-027 | P1 | 日常／個人／盥洗／衛生用品 | 蘇菲夜用衛生棉 | DISCOVER / unmatched by normalized title |
+| LIFE-028 | P1 | 食／超市／自煮基礎食品 | 中興米臺灣米小包裝 | DISCOVER / unmatched by normalized title |
+| LIFE-029 | P1 | 食／超市／自煮基礎食品 | 台農原味保久乳 | DISCOVER / unmatched by normalized title |
+| LIFE-030 | P1 | 食／超市／自煮基礎食品 | 台糖大豆沙拉油 | DISCOVER / unmatched by normalized title |
+| LIFE-031 | P1 | 食／超市／自煮基礎食品 | 光泉全脂鮮乳 |  |
+| LIFE-032 | P1 | 食／超市／自煮基礎食品 | 光泉無加糖豆漿 | DISCOVER / unmatched by normalized title |
+| LIFE-033 | P1 | 食／超市／自煮基礎食品 | 林鳳營全脂鮮乳 | DISCOVER / unmatched by normalized title |
+| LIFE-034 | P1 | 食／超市／自煮基礎食品 | 金蘭醬油 | DISCOVER / unmatched by normalized title |
+| LIFE-035 | P1 | 食／超市／自煮基礎食品 | 桂冠芝麻湯圓 | DISCOVER / unmatched by normalized title |
+| LIFE-036 | P1 | 食／超市／自煮基礎食品 | 桂冠高麗菜豬肉冷凍水餃 | DISCOVER / unmatched by normalized title |
+| LIFE-037 | P1 | 食／超市／自煮基礎食品 | 桂格即沖燕麥片 | DISCOVER / unmatched by normalized title |
+| LIFE-038 | P1 | 食／超市／自煮基礎食品 | 桂格燕麥飲原味 | DISCOVER / unmatched by normalized title |
+| LIFE-039 | P1 | 食／超市／自煮基礎食品 | 泰山大豆沙拉油 | DISCOVER / unmatched by normalized title |
+| LIFE-040 | P1 | 食／超市／自煮基礎食品 | 統一陽光無加糖豆漿 | DISCOVER / unmatched by normalized title |
+| LIFE-041 | P1 | 食／超市／自煮基礎食品 | 瑞穗鮮乳原味 | DISCOVER / unmatched by normalized title |
+| LIFE-042 | P1 | 食／超市／自煮基礎食品 | 萬家香醬油 | DISCOVER / unmatched by normalized title |
+| LIFE-043 | P1 | 食／超市／自煮基礎食品 | 義美小籠湯包 | DISCOVER / unmatched by normalized title |
+| LIFE-044 | P1 | 食／超市／自煮基礎食品 | 義美全脂鮮乳 |  |
+| LIFE-045 | P1 | 食／超市／自煮基礎食品 | 義美高麗菜豬肉冷凍水餃 | DISCOVER / unmatched by normalized title |
+| LIFE-046 | P1 | 食／超市／自煮基礎食品 | 義美無加糖豆奶 | DISCOVER / unmatched by normalized title |
+| LIFE-047 | P1 | 食／超市／自煮基礎食品 | 福樂鮮乳原味 | DISCOVER / unmatched by normalized title |
+| LIFE-048 | P2 | 住／家用／廚房耗材 | 妙潔中型垃圾袋 | DISCOVER / unmatched by normalized title |
+| LIFE-049 | P2 | 住／家用／廚房耗材 | 妙潔保鮮膜盒裝 | DISCOVER / unmatched by normalized title |
+| LIFE-050 | P2 | 住／家用／廚房耗材 | 妙潔鋁箔紙 | DISCOVER / unmatched by normalized title |
+| LIFE-051 | P2 | 住／家用／廚房耗材 | 南亞PE保鮮膜盒裝 | DISCOVER / unmatched by normalized title |
+| LIFE-052 | P2 | 住／家用／廚房耗材 | 科克蘭廚房垃圾袋 | LEG-EC-174 (canonical current-only) |
+| LIFE-053 | P2 | 日常／個人／保養／化妝 | 凡士林身體乳液 | DISCOVER / unmatched by normalized title |
+| LIFE-054 | P2 | 日常／個人／保養／化妝 | 妮維雅身體乳液 | DISCOVER / unmatched by normalized title |
+| LIFE-055 | P2 | 日常／個人／保養／化妝 | 專科超微米潔顏乳 | LEG-EC-183 (canonical current-only) |
+| LIFE-056 | P2 | 日常／個人／保養／化妝 | 蜜妮洗面乳 | DISCOVER / unmatched by normalized title |
+| LIFE-057 | P2 | 食／便利即食 | 7-ELEVEN茶葉蛋單顆 | DISCOVER / unmatched by normalized title |
+| LIFE-058 | P2 | 食／便利即食 | 7-ELEVEN鮭魚御飯糰單顆 | DISCOVER / unmatched by normalized title |
+| LIFE-059 | P2 | 食／便利即食 | 7-ELEVEN雞肉便當單盒 | DISCOVER / unmatched by normalized title |
+| LIFE-060 | P2 | 食／包裝食品／飲料 | 可口可樂原味瓶裝 | DISCOVER / unmatched by normalized title |
+| LIFE-061 | P2 | 食／包裝食品／飲料 | 立頓原味奶茶包裝飲料 | DISCOVER / unmatched by normalized title |
+| LIFE-062 | P2 | 食／便利即食 | 全家茶葉蛋單顆 | DISCOVER / unmatched by normalized title |
+| LIFE-063 | P2 | 食／便利即食 | 全家鮪魚飯糰單顆 | DISCOVER / unmatched by normalized title |
+| LIFE-064 | P2 | 食／便利即食 | 全家雞胸沙拉單盒 | DISCOVER / unmatched by normalized title |
+| LIFE-065 | P2 | 食／包裝食品／飲料 | 味味A排骨雞麵袋麵 | DISCOVER / unmatched by normalized title |
+| LIFE-066 | P2 | 食／包裝食品／飲料 | 波蜜果菜汁瓶裝 | DISCOVER / unmatched by normalized title |
+| LIFE-067 | P2 | 食／包裝食品／飲料 | 純喫茶紅茶瓶裝 | DISCOVER / unmatched by normalized title |
+| LIFE-068 | P2 | 食／包裝食品／飲料 | 茶裏王無糖綠茶瓶裝 | DISCOVER / unmatched by normalized title |
+| LIFE-069 | P2 | 食／包裝食品／飲料 | 麥香紅茶紙盒 | DISCOVER / unmatched by normalized title |
+| LIFE-070 | P2 | 食／包裝食品／飲料 | 統一調味乳麥芽口味 | DISCOVER / unmatched by normalized title |
+| LIFE-071 | P2 | 食／包裝食品／飲料 | 統一麵肉燥風味袋麵 | DISCOVER / unmatched by normalized title |
+| LIFE-072 | P2 | 食／包裝食品／飲料 | 黑松沙士原味瓶裝 | DISCOVER / unmatched by normalized title |
+| LIFE-073 | P2 | 食／包裝食品／飲料 | 義美蘇打餅乾原味 | DISCOVER / unmatched by normalized title |
+| LIFE-074 | P2 | 食／包裝食品／飲料 | 維力炸醬麵袋麵 | DISCOVER / unmatched by normalized title |
+| LIFE-075 | P3 | 住／家用／網路／通訊固定服務 | 中華電信光世代固定電路100M／40M月費 | B09-C01-007 (research admitted) |
+| LIFE-076 | P3 | 住／家用／網路／通訊固定服務 | 固定服務區民營寬頻單月基礎上網費 | DISCOVER / unmatched by normalized title |
+| LIFE-077 | P3 | 日常／個人／寵物 | 好味小姐貓主食罐 | legacy pet candidate exists (SKU check required) |
+| LIFE-078 | P3 | 日常／個人／寵物 | 西莎犬餐盒 | DISCOVER / unmatched by normalized title |
+| LIFE-079 | P3 | 日常／個人／理髮／美容 | 曼都指定店單次標準洗髮 | LEG-EC-291 (canonical current-only) |
+| LIFE-080 | P3 | 日常／個人／寵物 | 藍鑽貓砂 | DISCOVER / unmatched by normalized title |
+| LIFE-081 | P3 | 日常／個人／寵物 | 寶路犬乾糧 | DISCOVER / unmatched by normalized title |
+| LIFE-082 | P3 | 日常／個人／寵物 | CIAO啾嚕貓肉泥 | legacy pet candidate exists (SKU check required) |
+| LIFE-083 | P3 | 日常／個人／理髮／美容 | QB HOUSE成人標準剪髮 | LEG-EC-297 (canonical existing) |
+| LIFE-084 | P3 | 日常／個人／洗衣／修繕 | SeSA指定店自助洗衣中型標準洗程 | LEG-EC-292 (canonical identity-only) |
+| LIFE-085 | P3 | 育／文具 | 利百代HB鉛筆包裝 | DISCOVER / unmatched by normalized title |
+| LIFE-086 | P3 | 育／文具 | 雄獅雙頭奇異筆 | DISCOVER / unmatched by normalized title |
+| LIFE-087 | P3 | 育／文具 | KOKUYO國譽A5筆記本 | DISCOVER / unmatched by normalized title |
+| LIFE-088 | P3 | 衣／內著／襪類 | 三花男士純棉襪包裝 | DISCOVER / unmatched by normalized title |
+| LIFE-089 | P3 | 衣／內著／襪類 | 宜而爽成人棉質內褲包裝 | DISCOVER / unmatched by normalized title |
+| LIFE-090 | P3 | 食／甜點／零食 | 乖乖五香口味 | DISCOVER / unmatched by normalized title |
+| LIFE-091 | P3 | 食／甜點／零食 | 統一科學麵小包裝 | DISCOVER / unmatched by normalized title |
+| LIFE-092 | P3 | 食／甜點／零食 | 義美小泡芙巧克力 |  |
+| LIFE-093 | P3 | 食／甜點／零食 | 樂事原味洋芋片 | DISCOVER / unmatched by normalized title |
+| LIFE-094 | P4 | 行／汽車保養 | 固定民營車廠同店一般機油更換服務 | DISCOVER / unmatched by normalized title |
+| LIFE-095 | P4 | 行／洗車／車用耗材 | 固定民營洗車店小型車基本外部清洗 | DISCOVER / unmatched by normalized title |
+| LIFE-096 | P4 | 行／停車 | 固定民營停車場小客車每小時一般價 | DISCOVER / unmatched by normalized title |
+| LIFE-097 | P4 | 行／機車保養 | 固定民營機車店125cc一般機油更換 | DISCOVER / unmatched by normalized title |
+| LIFE-098 | P4 | 衣／上衣 | lativ女款基本素色短袖T恤 | DISCOVER / unmatched by normalized title |
+| LIFE-099 | P4 | 衣／上衣 | lativ男款基本素色短袖T恤 | DISCOVER / unmatched by normalized title |
+| LIFE-100 | P4 | 衣／上衣 | NET男款基本素色短袖T恤 | DISCOVER / unmatched by normalized title |
+
+**Preliminary counts:** 100 unique text search concepts in 20 subcategory groups; 15 may correspond to existing canonical concept or a manually pinned older research identity, and 85 are not exact title matches (not certified novel). Food groups (supermarket20, packaged12, convenience6, snacks4) = 42; cleaning9, paper5, kitchen5 = 19; hygiene13, skin4, pet5, personal services3 =25; clothing5, auto/motor/parking4, stationery3, telecom2 =14. Total100.
+
+**Qualifying yield:** 0 newly authenticated 2020/2026 ordinary price pairs in this life-course re-prioritization itself. Existing separate source-scoped EA research ADMISSIBLE=4, prior C01–03=60, C04 23 working / 4 row research ADMISSIBLE +16 provisional +3 HOLD, C04 overall Checkpoint PASS 0. Formal main181/600, Basket NOT SEALED and Index LOCKED. Preserve historical CSV unmodified. Do not represent discovery search targets as approved prices, 100 product rankings, 100 new candidates, or 100 already distinct from earlier core.
