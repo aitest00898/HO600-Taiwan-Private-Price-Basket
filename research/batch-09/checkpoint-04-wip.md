@@ -6,7 +6,7 @@
 
 - Canonical `main`: Batch 8, **181/600**, remaining 419, candidate 418, evidence 1,566, Basket NOT SEALED, Index LOCKED.
 - C01/C02/C03: 20/20/20 **research ADMISSIBLE**, cumulative **60**; these ledgers are not revised.
-- C04 WIP: **19 leads**, of which **16 PROVISIONAL_ADMISSIBLE** and **3 HOLD** (C04-010 added after cross-year producer price reduction and 2026 canonical price-freshness audit on 2026-10-28). **Zero C04 checkpoint-certified new rows**. DO NOT call this 61 or 62 fully certified research rows, or 182/600 canonical.
+- C04 WIP: **23 leads**, of which **20 PROVISIONAL_ADMISSIBLE** and **3 HOLD** (C04-010 added after cross-year producer price reduction and 2026 canonical price-freshness audit on 2026-10-28). **Zero C04 checkpoint-certified new rows**. DO NOT call this 61 or 62 fully certified research rows, or 182/600 canonical.
 - Workflow correction: two C04 WIP pushes **automatically triggered** `Validate HO600` via the existing push workflow, even though nobody manually invoked Actions. They completed `success` (run IDs `38815794034` and `38815800007`). The research branch workflow was subsequently changed in commit `c3e292a28668ba5a5d40140afd028bd97f8c7244` to **manual-only** `workflow_dispatch`. Immediately after that commit, the checked run list showed no run for the guard commit. Do not dispatch it. The `main` workflow remains unchanged and can auto-trigger on future pushes/PRs; preserve the user's global Actions pause.
 - Visibility audit: live GitHub repository metadata reports `visibility=public` on 2026-10-16, despite the 2026-10-16 previous handoff labeling the repository `private`. Confirm intended visibility separately; no visibility setting changed in this research run.
 - No `main` mutation and no canonical workbook change.
@@ -36,6 +36,11 @@
 | B09-C04-017 | 樂 / 健身／運動 | 100 → 200 | PROVISIONAL_ADMISSIBLE, comparability B, 2020 B / 2026 B | 三健客板橋店普通自主訓練單次入場費；2020一般價有當期獨立文獻，2026另有現價，保留來源與範圍限制，**C04未認證**。 |
 | B09-C04-018 | 樂 / 健身／運動 | 1 → 1.3 | PROVISIONAL_ADMISSIBLE, comparability B, 2020 B / 2026 A | 好客健身房汐止館一般自主訓練每分鐘使用費；2020一般價有當期獨立文獻，2026另有現價，保留來源與範圍限制，**C04未認證**。 |
 | B09-C04-019 | 樂 / 健身／運動 | 1.1 → 1.3 | PROVISIONAL_ADMISSIBLE, comparability A, 2020 B / 2026 B | 體育客和平店一般自助訓練每分鐘使用費；2020一般價有當期獨立文獻，2026另有現價，保留來源與範圍限制，**C04未認證**。 |
+
+| B09-C04-020 | 樂 / 遊戲／數位娛樂 | 145 → 169 | PROVISIONAL_ADMISSIBLE, comparability B, 2020 B / 2026 A | EA Play Steam PC 一般月繳方案；2020當期報價、2024調價鏈、2026第一方現價；遊戲庫權益演變、2020原始商家頁未擷取，Checkpoint未認證。 |
+| B09-C04-021 | 樂 / 遊戲／數位娛樂 | 795 → 1199 | PROVISIONAL_ADMISSIBLE, comparability B, 2020 B / 2026 A | EA Play Steam PC 一般年繳方案；2020當期報價、2024調價鏈、2026第一方現價；遊戲庫權益演變、2020原始商家頁未擷取，Checkpoint未認證。 |
+| B09-C04-022 | 樂 / 遊戲／數位娛樂 | 499 → 570 | PROVISIONAL_ADMISSIBLE, comparability B, 2020 B / 2026 A | EA Play Pro PC EA app 月繳方案；2020當期報價、2024調價鏈、2026第一方現價；遊戲庫權益演變、2020原始商家頁未擷取，Checkpoint未認證。 |
+| B09-C04-023 | 樂 / 遊戲／數位娛樂 | 2899 → 3399 | PROVISIONAL_ADMISSIBLE, comparability B, 2020 B / 2026 A | EA Play Pro PC EA app 年繳方案；2020當期報價、2024調價鏈、2026第一方現價；遊戲庫權益演變、2020原始商家頁未擷取，Checkpoint未認證。 |
 
 ### Evidence directly retrieved 2026-10-16
 
@@ -508,3 +513,21 @@ Five existing private gyms with 2020 public normal price references come from [2
 **Multiple-category negative screens rather than fake productivity:** Nintendo Taiwan eShop 2025 launch means its 2026 TWD NSO prices cannot stand in for an equivalent **2020 Taiwan eShop normal price**. Refine/LifeLab data had no fixed 2020 same-branch tariff; gym 'FitMania' 2026 consumer-reported NT$100 conflicts with other undated NT$120 vendor reposts, so **excluded rather than fabricate stable 2026 amount**. 2020 iRent 99/hour was promotion, not ordinary price; old cosmetic/fresh food grocery circulars lacked 2020 non-promotion same-SKU and 2026 channel evidence; generic parking operator lots changed or mixed operator facilities. No new HOLD entries fabricated from excluded items.
 
 **Controlling counts after this phase:** C01–C03 = 60 research-grade ADMISSIBLE unchanged; C04 **19 work candidates = 16 provisional / 3 HOLD, checkpoint-certified 0**. Canonical `main` Batch 8 **181/600**, remaining 419, Basket NOT SEALED, Index LOCKED unchanged. 100 usable new price pairs **NOT ACHIEVED**; this phase has seven new *provisional* rows, **zero newly certified usable pairs**. No main/workbook/index, GitHub Actions, merging, production release or iPhone test.
+
+
+## 2026-10-28 next research phase — 4 source-traceable EA subscriptions, not checkpoint certification
+
+2020→2026 Taiwan regular published subscription rates (TWD), with historically distinct Basic Steam PC and Pro PC EA app service families:
+
+| ID | Fixed plan | 2020 normal price | 2026 normal price | 2020/2026/comparability | decision |
+|---|---|---:|---:|---|---|
+| B09-C04-020 | EA Play Steam PC 一般月繳方案 | 145 | 169 | B/A/B | PROVISIONAL_ADMISSIBLE |
+| B09-C04-021 | EA Play Steam PC 一般年繳方案 | 795 | 1199 | B/A/B | PROVISIONAL_ADMISSIBLE |
+| B09-C04-022 | EA Play Pro PC EA app 月繳方案 | 499 | 570 | B/A/B | PROVISIONAL_ADMISSIBLE |
+| B09-C04-023 | EA Play Pro PC EA app 年繳方案 | 2899 | 3399 | B/A/B | PROVISIONAL_ADMISSIBLE |
+
+**Historical first-party lineage, conservative evidence grading:** 2020-09-01 [contemporary Steam release with normal month145/year795](https://www.koc.com.tw/archives/341411), corroborated by [2020-09-03 separate publication](https://www.gamereactor.cn/ea-play-is-officially-available-on-steam-207843/). [EA original 2020 Steam launch statement](https://www.ea.com/zh-tw/ea-play/news/ea-play-now-on-steam) establishes Steam platform/plan lineage but prints no original Taiwan tariff; 2020 remains **B**, no invented A. [Steam operator's current original subscription listing](https://store.steampowered.com/subscriptions/ea/?l=tchinese) directly prints Taiwan 169/month and 1199/year (**2026 A**). 2020-08-20 [contemporaneous third-party republication of EA original announcement](https://esportstw.com/news/78914/) directly prints EA Pro (previously Origin Access Premier) Taiwan month499/year2899, but no original 2020 EA site tariff was independently accessed (**2020 B**). [2026 EA manufacturer page](https://www.ea.com/zh-tw/games/starwars/ea-play) directly prints Pro 570/month and 3399/year (**2026 A**). [2024-04-11 independent across-all-four price-change report](https://www.4gamers.com.tw/news/detail/63907/electronic-arts-is-raising-the-price-of-its-ea-play-subscription) confirms exactly the historical versus current price change for all four plans, not itself an observed 2026 checkout. The two annual rates are normal public annual subscription plans, not limited-time vouchers; *no monthly annualization*. Service libraries and rights changed, so **comparability B**. Basic PC Steam and Pro EA app are **not interchangeable**.
+
+**Preflight:** all 418 main candidates, 1566 historic Evidence rows, 60 C01-C03 research records and 19 existing C04 work rows screened; zero matching EA Basic Steam or EA Pro Taiwan subscription concepts. Existing Sony PS Plus and Microsoft Xbox Ultimate are different brands. Category '樂 / 遊戲／數位娛樂' has 9 new allowable research slots; Sony/Xbox2 + new EA4 = **6/9 used**. EA brand4/8, EA×subcategory4/5, two subscription term variants for the Basic and Pro service families2/2 each. Source reuse max two per 2020 article or EA source, below six; no price-change cherry picking.
+
+**Unchanged acceptance boundary:** C04 now **23 working rows, 20 provisional, 3 HOLD, certified Checkpoint PASS=0**. **20 provisional ≠ 20 research-qualified** and does not satisfy original checkpoint target. Existing C01-C03 research-grade PASS=60 (unchanged). Formal main remains 181/600, basket NOT SEALED, index LOCKED. User target new 100 qualified pairs **unmet**; only 4 source-backed provisional pairs newly added this phase. No Actions, main, workbook, index, merge, production, or postponed iPhone testing.
