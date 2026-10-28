@@ -594,13 +594,13 @@ Preflight: checked all 418 existing canonical candidate **titles** with normaliz
 | LIFE-012 | P1 | 住／家用／清潔／洗衣用品 | 橘子工坊洗碗精 | DISCOVER / unmatched by normalized title |
 | LIFE-013 | P1 | 住／家用／清潔／洗衣用品 | 橘子工坊液體洗衣精 | DISCOVER / unmatched by normalized title |
 | LIFE-014 | P1 | 住／家用／清潔／洗衣用品 | 魔術靈浴室清潔劑 | DISCOVER / unmatched by normalized title |
-| LIFE-015 | P1 | 日常／個人／盥洗／衛生用品 | 多芬沐浴乳 | LEG-EC-169 (canonical current-only) |
+| LIFE-015 | P1 | 日常／個人／盥洗／衛生用品 | 多芬沐浴乳 | LEG-EC-169 (2026 900g vs original 1000ml: NOT same-size admission) |
 | LIFE-016 | P1 | 日常／個人／盥洗／衛生用品 | 好來黑人牙膏 | DISCOVER / unmatched by normalized title |
 | LIFE-017 | P1 | 日常／個人／盥洗／衛生用品 | 好奇嬰兒濕紙巾 | DISCOVER / unmatched by normalized title |
 | LIFE-018 | P1 | 日常／個人／盥洗／衛生用品 | 李施德霖經典漱口水 | LEG-EC-177 (canonical current-only) |
 | LIFE-019 | P1 | 日常／個人／盥洗／衛生用品 | 依必朗洗手乳 | DISCOVER / unmatched by normalized title |
 | LIFE-020 | P1 | 日常／個人／盥洗／衛生用品 | 海倫仙度絲去屑洗髮露 | DISCOVER / unmatched by normalized title |
-| LIFE-021 | P1 | 日常／個人／盥洗／衛生用品 | 高露潔三重功效牙膏 | LEG-EC-147 (canonical current-only) |
+| LIFE-021 | P1 | 日常／個人／盥洗／衛生用品 | 高露潔三重功效牙膏 | LEG-EC-149 / LEG-EC-150 (bundle vs single-unitized; check unit) |
 | LIFE-022 | P1 | 日常／個人／盥洗／衛生用品 | 添寧成人復健褲M號 | DISCOVER / unmatched by normalized title |
 | LIFE-023 | P1 | 日常／個人／盥洗／衛生用品 | 歐樂B軟毛牙刷 | DISCOVER / unmatched by normalized title |
 | LIFE-024 | P1 | 日常／個人／盥洗／衛生用品 | 潘婷基礎洗髮乳 | DISCOVER / unmatched by normalized title |
@@ -631,10 +631,10 @@ Preflight: checked all 418 existing canonical candidate **titles** with normaliz
 | LIFE-049 | P2 | 住／家用／廚房耗材 | 妙潔保鮮膜盒裝 | DISCOVER / unmatched by normalized title |
 | LIFE-050 | P2 | 住／家用／廚房耗材 | 妙潔鋁箔紙 | DISCOVER / unmatched by normalized title |
 | LIFE-051 | P2 | 住／家用／廚房耗材 | 南亞PE保鮮膜盒裝 | DISCOVER / unmatched by normalized title |
-| LIFE-052 | P2 | 住／家用／廚房耗材 | 科克蘭廚房垃圾袋 | LEG-EC-174 (canonical current-only) |
+| LIFE-052 | P2 | 住／家用／廚房耗材 | 科克蘭廚房垃圾袋 | LEG-EC-160 (canonical current-only; 37.8L×500 candidate) |
 | LIFE-053 | P2 | 日常／個人／保養／化妝 | 凡士林身體乳液 | DISCOVER / unmatched by normalized title |
 | LIFE-054 | P2 | 日常／個人／保養／化妝 | 妮維雅身體乳液 | DISCOVER / unmatched by normalized title |
-| LIFE-055 | P2 | 日常／個人／保養／化妝 | 專科超微米潔顏乳 | LEG-EC-183 (canonical current-only) |
+| LIFE-055 | P2 | 日常／個人／保養／化妝 | 專科超微米潔顏乳 | LEG-EC-165 (canonical current-only; 120g) |
 | LIFE-056 | P2 | 日常／個人／保養／化妝 | 蜜妮洗面乳 | DISCOVER / unmatched by normalized title |
 | LIFE-057 | P2 | 食／便利即食 | 7-ELEVEN茶葉蛋單顆 | DISCOVER / unmatched by normalized title |
 | LIFE-058 | P2 | 食／便利即食 | 7-ELEVEN鮭魚御飯糰單顆 | DISCOVER / unmatched by normalized title |
@@ -656,14 +656,14 @@ Preflight: checked all 418 existing canonical candidate **titles** with normaliz
 | LIFE-074 | P2 | 食／包裝食品／飲料 | 維力炸醬麵袋麵 | DISCOVER / unmatched by normalized title |
 | LIFE-075 | P3 | 住／家用／網路／通訊固定服務 | 中華電信光世代固定電路100M／40M月費 | B09-C01-007 (research admitted) |
 | LIFE-076 | P3 | 住／家用／網路／通訊固定服務 | 固定服務區民營寬頻單月基礎上網費 | DISCOVER / unmatched by normalized title |
-| LIFE-077 | P3 | 日常／個人／寵物 | 好味小姐貓主食罐 | legacy pet candidate exists (SKU check required) |
+| LIFE-077 | P3 | 日常／個人／寵物 | 好味小姐貓主食罐 | LEG-EC-116 (81g SKU and channel need match) |
 | LIFE-078 | P3 | 日常／個人／寵物 | 西莎犬餐盒 | DISCOVER / unmatched by normalized title |
 | LIFE-079 | P3 | 日常／個人／理髮／美容 | 曼都指定店單次標準洗髮 | LEG-EC-291 (canonical current-only) |
 | LIFE-080 | P3 | 日常／個人／寵物 | 藍鑽貓砂 | DISCOVER / unmatched by normalized title |
 | LIFE-081 | P3 | 日常／個人／寵物 | 寶路犬乾糧 | DISCOVER / unmatched by normalized title |
-| LIFE-082 | P3 | 日常／個人／寵物 | CIAO啾嚕貓肉泥 | legacy pet candidate exists (SKU check required) |
+| LIFE-082 | P3 | 日常／個人／寵物 | CIAO啾嚕貓肉泥 | LEG-EC-122 (14g×4 SKU and channel need match) |
 | LIFE-083 | P3 | 日常／個人／理髮／美容 | QB HOUSE成人標準剪髮 | LEG-EC-297 (canonical existing) |
-| LIFE-084 | P3 | 日常／個人／洗衣／修繕 | SeSA指定店自助洗衣中型標準洗程 | LEG-EC-292 (canonical identity-only) |
+| LIFE-084 | P3 | 日常／個人／洗衣／修繕 | SeSA指定店自助洗衣中型標準洗程 | LEG-EC-292 (existing canonical class 理髮／美容; do not silently recategorize) |
 | LIFE-085 | P3 | 育／文具 | 利百代HB鉛筆包裝 | DISCOVER / unmatched by normalized title |
 | LIFE-086 | P3 | 育／文具 | 雄獅雙頭奇異筆 | DISCOVER / unmatched by normalized title |
 | LIFE-087 | P3 | 育／文具 | KOKUYO國譽A5筆記本 | DISCOVER / unmatched by normalized title |
@@ -684,3 +684,11 @@ Preflight: checked all 418 existing canonical candidate **titles** with normaliz
 **Preliminary counts:** 100 unique text search concepts in 20 subcategory groups; 15 may correspond to existing canonical concept or a manually pinned older research identity, and 85 are not exact title matches (not certified novel). Food groups (supermarket20, packaged12, convenience6, snacks4) = 42; cleaning9, paper5, kitchen5 = 19; hygiene13, skin4, pet5, personal services3 =25; clothing5, auto/motor/parking4, stationery3, telecom2 =14. Total100.
 
 **Qualifying yield:** 0 newly authenticated 2020/2026 ordinary price pairs in this life-course re-prioritization itself. Existing separate source-scoped EA research ADMISSIBLE=4, prior C01–03=60, C04 23 working / 4 row research ADMISSIBLE +16 provisional +3 HOLD, C04 overall Checkpoint PASS 0. Formal main181/600, Basket NOT SEALED and Index LOCKED. Preserve historical CSV unmodified. Do not represent discovery search targets as approved prices, 100 product rankings, 100 new candidates, or 100 already distinct from earlier core.
+
+
+### Direct 2020↔2026 source-feasibility sample: common wipes, not admitted
+
+A [2020 indexed COSMED private retailer circular](https://www.cosmed.com.tw/upload/ebook/22/pdf/0608.pdf) (summer 2020) prints LET-Green/立得清 alcohol cleaning wipes **35抽×3入 regular *original* NT$180** and distinguishes sale NT$139. Independently, the [2026 live COSMED eShop original seller listing](https://shop.cosmed.com.tw/tagCategory/%E7%AB%8B%E5%BE%97%E6%B8%85%2C%E6%93%A6%E6%BF%95%E5%B7%BE?pages=1&sortMode=Sales) still displays **35抽×3入 NT$180/NT$180**; separate 2022 COSMED circular also explicitly lists NT$180 as normal price. But **the historical 2020 direct PDF URL now redirects to the retailer home page**, so its historical text has only a search-index mirror, not a readable or screenshot-verifiable original 2020 file in the current run; and 2020/2026 barcode/pack genealogy was not obtained. **Disposition = source lead only, not HO600 research price ADMISSIBLE, not a C04 CSV row.** 2020 original/sale difference is explicitly distinguished. This is a concrete example of prioritizing relevant daily-use consumables yet preserving source-integrity boundaries.
+
+**Post-write mapping correction:** Explicit canonical IDs in the 100-row discovery table were remote-checked against `data/Candidate_Pool.csv`: Kirkland 37.8L trashbags=`LEG-EC-160` (not 174), Senka 120g cleanser=`LEG-EC-165` (not 183), Colgate three-pack/unitized=`LEG-EC-149/150` (not 147), Lady Flavor cat can=`LEG-EC-116`, CIAO 14g×4=`LEG-EC-122`; SeSA existing `LEG-EC-292` is already categorized under 理髮／美容, so future work must not recategorize it only to fill an empty class. Dove `LEG-EC-169` has known 900g-vs-1000ml replacement specification mismatch. No change to the original 418 pool or to historical price ledger.
+
