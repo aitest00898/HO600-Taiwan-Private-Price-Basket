@@ -8,6 +8,18 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## 2026-10-29 最新 GitHub 同步與交接｜C05 9筆、研究合格7筆、追加目標27/100
+
+**這是目前最上層權威快照，優先於下方歷次交接記錄。** 本輪僅同步既有進度及交接，**沒有新增、提升或撤回商品准入**。以研究分支原 HEAD `f2e7d40c2ceb1b783cfb5c6334b2505619e9c50b` 為本次唯讀核對起點；C05 工作帳本經讀回為 **9條（7 `ADMISSIBLE`、2 `PROVISIONAL_ADMISSIBLE`）**，C05 整批 Checkpoint 仍 **OPEN**。C01–C04 四個正式研究級 Checkpoint 各20，共80；累計研究級 **87**。使用者指定新增100筆已達 **27/100，剩73**。正式 `main` **181/600，尚缺419，Basket NOT SEALED，Index LOCKED**，沒有合併/上線。
+
+**C05 當前研究級七筆：** `001` 義美奶茶400ml 35→35；`002` 義美錫蘭紅茶400ml 25→25；`005` FMC衛生紙110抽×8包 200→248（僅 2026 外送平台**劃線原價參考**，非已完成 NT$248 全價成交），`006` 樂事64g 30→35、`007` 統一陽光無糖高纖豆漿400ml 20→25、`008` 多力多滋72g 30→35、`009` 純喫茶無糖綠茶650ml 25→25；全部 B/B/B 且不得當作已證實同條碼或正式物價。`003` 立得清35抽×3、`004` 白帥帥1650g 因 2020 康是美 DM 原檔轉址只保留暫定；原 C04 合格20與其他13未過資料未修改。
+
+**可立即接續的完成條件：** 在 C05 同一 WIP 上繼續搜尋可證實2020與2026同 SKU／規格的 **13 筆新民生商品**以達 C05研究Checkpoint候選20（不是新增 C06治理層），優先超市自煮、清潔洗衣、紙品、個人盥洗，避免全家來源與便利即食額度集中；原價與優惠價分開，2026商家牌價不偽稱店內實付。先驗真正去重及單源≤6、品牌≤8、子類與家族配額、跨年相同商品；2020原始文件不可讀則保留暫定。特別對C05-005的2026劃線價做獨立驗證，未能證實則不要以它製作通膨結論或正式入籃。詳細下一步與逐項結果在 [C05 WIP報告](../research/batch-09/checkpoint-05-wip.md) 與 [帳本](../research/batch-09/checkpoint-05-wip-ledger.csv)。下一里程碑應直接交付合格研究資料與來源，不要回到重複治理空轉。
+
+**限制：** GitHub Actions 維持使用者全域停用；不更動 `main`、正式 workbook、Index，不 merge、deploy 或做 iPhone 驗收。本次僅同步 Handoff 和 C05 工作摘要。Linear `OO1-143`／`OO1-102` 依本次結果同步。
+
+---
+
 ## 2026-10-29 C05 follow-on packaged foods: two more research-only pairs
 
 C05-008 多力多滋超濃起司玉米片 **72g** in FamilyMart ordinary 2020 price30→2026 branded-store menu35, and C05-009 純喫茶**無糖綠茶650ml** in same FamilyMart chain2020 25→2026 25. Historical directly dated 2020 Sep29 and July07 contemporaneous independent FamilyMart APP normal-price transcriptions (as search-index originals because direct opens may return403), current 2026 FamilyMart merchant storefront listings; same size/brand/tier, current EAN only for unsweet green, B/B/B internal research comparability. No mixing ordinary red tea LEG-EC-015 or Doritos 84g. Sources and quota/dup QC in [C05-WIP](../research/batch-09/checkpoint-05-wip.md) and [ledger](../research/batch-09/checkpoint-05-wip-ledger.csv). **C05 WIP 9 =7 row research ADMISSIBLE +2 PROVISIONAL, Checkpoint 05 OPEN. User new100 objective27/100, research total87, formal main181/600 NOT SEALED Index LOCKED.** No Actions, main/workbook/index/merge/release/iPhone.
