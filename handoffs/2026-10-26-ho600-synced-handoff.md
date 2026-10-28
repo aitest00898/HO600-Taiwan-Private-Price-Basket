@@ -8,6 +8,12 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## 2026-10-28 definitive research-only checkpoint-04 closeout — PASS, 20/20 fixed
+
+**CHECKPOINT-04 = PASS (RESEARCH-ONLY).** Fixed exact20 source-checked `ADMISSIBLE` economic normal-price pairs from former33 working rows into [checkpoint-04-ledger.csv](../research/batch-09/checkpoint-04-ledger.csv); [research-only QC and original quota/concentration review](../research/batch-09/checkpoint-04.md) recorded. Originals 33 C04 WIP unchanged as evidence ledger, of which 20 ADMISSIBLE,10 PROVISIONAL,3 HOLD; **remaining13 do not delay this 20-row checkpoint**, nor qualify for automatic promotion. Prior C01/C02/C03 checkpoint 20 each are unchanged: **total80 research checkpoint-qualified** (60 earlier+20 new). User requested +100 newly usable pairs still **20/100** (remaining80), and no misleading claim of +80 new. Pricing evidence still carries original 2020 B/A and 2026 A/B and comparability A/B; current seller menu is not actual in-store checkout; unknown EAN and recipe changes don't get silently upgraded. Aggregate C01–C04 top5 brands28/40, top10 42/60, largest 2020 source4/6, all allocated cells under cap. Formal canonical **main181/600, remaining419, NOT SEALED and Index LOCKED**, no published index. No GitHub Actions, main/workbook/index/merge/release/deployment/iPhone changes.
+
+---
+
 ## 2026-10-28 latest row-level source QC — 8 old provisional pairs promoted to individually research ADMISSIBLE
 
 Promoted **8 existing rows (NO newly invented candidate records)**: C04-001 MUJI洗臉起泡網39→39, C04-002 MUJI黃麻A3購物袋79→89, C04-008 台茂小客車一般停車每時30→40, C04-009 MUJI PP檔案盒寬A4原價300→299, C04-011/012 三井林口I館普通汽車停車平日20→20/假日40→40, C04-013/014 華泰名品城普通汽車平日30→30/假日50→50. Compared independently dated 2020 firsthand/producer normal prices with 2026 same private operator or documented official partner's current published tariff. Historical A or B, current A or partner B, conservative cross-year A/B retained; 2020 original EAN missing for MUJI, original 2020 venue parking source for three mall lots via contemporaneous visitors; discount and third-party *different lot* excluded. Exact sources and limits in [existing C04 report](../research/batch-09/checkpoint-04-wip.md) and [CSV](../research/batch-09/checkpoint-04-wip-ledger.csv).
