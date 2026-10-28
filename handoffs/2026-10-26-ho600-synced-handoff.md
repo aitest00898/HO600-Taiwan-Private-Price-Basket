@@ -8,6 +8,12 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## 2026-10-28 additional daily-use personal care pair — B09-C04-028
+
+New individual research ADMISSIBLE: same Hi-Life merchant chain 康乃馨 Double Care 20-sheet antibacterial wipes, 2020 original chain regular rate49 and 2026 live Hi-Life Uber Eats branch merchant list rate49. [Original contemporary 2020 Taiwan private chain industry news](https://www.tcfa.org.tw/announce_detail.asp?id=9200305) and [present Hi-Life store listing](https://www.ubereats.com/tw/store/%E8%90%8A%E7%88%BE%E5%AF%8C3413%E4%B8%AD%E7%B8%A3%E7%A5%9E%E5%B2%A1%E5%BA%97%E7%94%9F%E9%AE%AE%E8%A4%87%E5%90%88/tWUdnCY7UAO6JpA0BKa-CQ), [second Hi-Life present store](https://www.ubereats.com/tw/store/%E8%90%8A%E7%88%BE%E5%AF%8C3998%E7%AB%B9%E5%8C%97%E7%B6%A0%E8%83%BD%E5%BA%97/ZjqpgZGUXK-HXYF5Mx1sVg); history2020 B, current2026 B, comparabilityB (old barcode/recipe unknown; 2026 online delivery shelf price might not equal physical checkout). No promotional +11 second item used. Dedup 418 main, 1566 Evidence, earlier research rows no same product; brand1, source1, family1 within cap. **C04 now 28 working rows = 7 row-level research ADMISSIBLE, 18 provisional, 3 HOLD; whole C04 checkpoint PASS0. User additional goal 7/100 individually research-usable, not formal exact.** Original C01-C03 60 unchanged, main 181/600 Basket NOT SEALED Index LOCKED. No Actions, release, main, workbook, index or iPhone tests. [Detail](../research/batch-09/checkpoint-04-wip.md) · [research ledger](../research/batch-09/checkpoint-04-wip-ledger.csv).
+
+---
+
 ## 2026-10-28 household product 2020–26 paired-price QC continuation
 
 Four new C04 rows from daily life consumer needs: **024 COSMED soft wet wipes 10片×10包 150→150** and **025 COSMED pocket facial tissues 10抽×28包 59→59** passed **individual research ADMISSIBLE**, supported by 2020-03-17 Money101/Yahoo contemporaneous estimated normal market/list value plus first-party archived 2020 catalogue search index and 2026 first-party seller normal prices. 2020 grade B, 2026 A, comparability B (2020 UPC not established). No receipt or actual retail sales claimed. **026 COSMED wet wipes 80片×3包 237→237 and 027 basic tissue110抽×8包 119→approximately159 remain provisional**: 2020 first-party PDFs now redirect and 2026 tissue is a bank gift market estimate, with possible 2021 paper recipe change.
