@@ -8,6 +8,16 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## 2026-10-29 C06 搜尋排除結果｜IKEA原廠歷史價有效，但已達集中上限不重複准入
+
+本輪另找到了**直接可讀、2020-04-16發布的台灣 IKEA 原廠六頁新聞稿PDF** [官方原始文檔](https://www.ikea.com.tw/dairyfarm/tw/uploader/pdf/1587452205_618.pdf)，文內附2020單件牌價與同款產品編號，2026官方仍可同碼查價：BÄSTIS #704.256.27 19→29、KLIPSK #102.890.86 295→289、TEVALEN #104.242.54 199→149、KALLAX黑棕色 #503.518.92 1395→1999、NORDEN摺疊桌 #804.238.83 6490→7999。這是**高品質第一方歷史來源線索**；與Daybuy索引型歷史證據不同。
+
+但**這5個並未寫入C06研究合格帳本、不得計入新增100筆**：重新查核正式Candidate_Pool418發現IKEA已有10個候選（其中既有準備正式Exact的MÅLA #701.933.16、PÄRKLA #103.953.84、FRAKTA #602.992.19、KALLAX白色 #203.518.84、VITVAL #604.112.73 等），明確註記「IKEA新增品牌名額已達上限；IKEA×家居收納次類滿額，FREEZE NEW」。同來源PÄRKLA、FRAKTA、MÅLA已是既有候選，絕不能把重新發現2020原價當新成果；BEVARA舊30件#903.391.72與現行24件#606.254.86不可強行配對。原廠PDF仍可用於**不新增概念、既有候選原始來源補證**，但前提是通過正式證據比對。不違反品牌上限是優先限制。
+
+**C05固定20/20研究QC、C01-C05研究100、新增40/100剩60、main181/600和Index LOCKED全部不變**。下一研究應轉向不過量品牌且可取得獨立2020商家原始證據者；不能因第一方資料易找而濫加既有額度已滿品牌。
+
+---
+
 ## 2026-10-29｜最新正式交接：C05 20/20研究級PASS；新增100目標40/100
 
 **此節為最新分支真相，高於下方舊的C05 7／10／12筆數字；但不能取代main的正式真相。** C05 WIP 22筆，其中20 ADMISSIBLE、2 PROVISIONAL。固定 [C05研究級20筆帳本](../research/batch-09/checkpoint-05-ledger.csv) 與 [整批QC及逐項風險](../research/batch-09/checkpoint-05.md) 已建立，狀態 `PASS_RESEARCH_ONLY_WITH_EVIDENCE_LIMITATIONS`。前四個Checkpoint固定80，Batch9研究級總計**100**。使用者「再增加100筆」的可驗收新成果只算C04+ C05 = **40/100，尚差60**；不重算C01–C03既有60。正式main **181/600**、Basket NOT SEALED、Index LOCKED。
