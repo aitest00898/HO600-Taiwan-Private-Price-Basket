@@ -8,6 +8,19 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## 2026-10-29｜最新正式交接：C05 20/20研究級PASS；新增100目標40/100
+
+**此節為最新分支真相，高於下方舊的C05 7／10／12筆數字；但不能取代main的正式真相。** C05 WIP 22筆，其中20 ADMISSIBLE、2 PROVISIONAL。固定 [C05研究級20筆帳本](../research/batch-09/checkpoint-05-ledger.csv) 與 [整批QC及逐項風險](../research/batch-09/checkpoint-05.md) 已建立，狀態 `PASS_RESEARCH_ONLY_WITH_EVIDENCE_LIMITATIONS`。前四個Checkpoint固定80，Batch9研究級總計**100**。使用者「再增加100筆」的可驗收新成果只算C04+ C05 = **40/100，尚差60**；不重算C01–C03既有60。正式main **181/600**、Basket NOT SEALED、Index LOCKED。
+
+本輪實增**10個不同商品經濟概念**：屈臣氏KOTEX41cm7片、Colgate抗敏120g、好市多雀巢早餐脆片500g×2、MAGNUM咖啡豆907g、喜年來蛋捲72g×20、科克蘭三層衛生紙120抽×24、ARM & HAMMER小蘇打6.12kg、科克蘭無鹽奶油1.81kg、美國乾酪1.36kg、Nature's Touch青花菜454g×4；2020/2026原標價及證據出處在原WIP CSV逐列。驗證單一2020 URL最多5/6、品牌前五28/40、前十43/60、品牌最大8、品牌×子類最大5。與418原候選、前四Checkpoint及舊C05無同品項重複。
+
+**不可省略的研究限制**：C05的20筆有8筆Daybuy歷史價格（不同網頁但同一網站），多筆2020年記錄僅可由搜尋索引見到、缺同期購買收據；C05-005衛生紙248是2026平台劃線參考原價，非實際成交；屈臣氏013/014的2020活動日原價或高於一般非促銷時常價；不聲稱正式Exact、實付通膨或現行有貨。兩筆2020康是美原PDF失效候選仍只保留PROVISIONAL。
+
+**延續方向（無須再次盤點）**：從下一批 C06 直接找更獨立的2020原始商家/實購價格，優先超市自煮、家用清潔、紙品、個人衛生及其他有結構缺額子類，避開7/7滿額便利即食；從418候選補2020缺口優先。研究分支可繼續，不能擅改main、正式workbook、Index、GitHub Actions、merge或部署。Dashboard價格資料仍有舊快照，勿拿Dashboard當最新研究計數。
+
+
+---
+
 ## 2026-10-29 新增研究C05-010~012｜GitHub可驗收接續基準
 
 **本段為最新交接權威，下面舊的7/9與27/100都是歷史快照。** 原始C05 WIP 9筆不刪除；本輪在 [C05 ledger](../research/batch-09/checkpoint-05-wip-ledger.csv) 追加3條真正新研究配對：老楊經典原味方塊酥70g全家25→28、來一客鮮蝦魚板63g全家25→25、來一客牛肉蔬菜65g全家25→25。來源、歷史規格旁證、未核實舊EAN、同源上限及詳細QC見 [C05報告最新段](../research/batch-09/checkpoint-05-wip.md)。
