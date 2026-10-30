@@ -1,0 +1,161 @@
+﻿research_id,family_key,declared_family_count,review_status,basis
+B09-C01-001,SINGLETON::B09-C01-001,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C01-002,SINGLETON::B09-C01-002,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C01-003,SINGLETON::B09-C01-003,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C01-004,PILOT-INSTAWRT,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify two Instant-writing family variants.
+B09-C01-005,PILOT-INSTAWRT,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify two Instant-writing family variants.
+B09-C01-006,CHT-FIBER-PLANS,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Chunghwa Fiber service family; different speed tiers.
+B09-C01-007,CHT-FIBER-PLANS,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Chunghwa Fiber service family; different speed tiers.
+B09-C01-008,CHT-MOVE-FEES,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Chunghwa Fiber installation/move-fee family; distinct fee definitions.
+B09-C01-009,CHT-MOVE-FEES,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Chunghwa Fiber installation/move-fee family; distinct fee definitions.
+B09-C01-010,SINGLETON::B09-C01-010,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C01-011,UNRESOLVED_EXTERNAL::B09-C01-011,2,DECLARED_FAMILY_UNRESOLVED,"Ledger declares two variants, but no same-batch counterpart was confidently assigned in this audit."
+B09-C01-012,UNRESOLVED_EXTERNAL::B09-C01-012,2,DECLARED_FAMILY_UNRESOLVED,"Ledger declares two variants, but no same-batch counterpart was confidently assigned in this audit."
+B09-C01-013,SINGLETON::B09-C01-013,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C01-014,SINGLETON::B09-C01-014,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C01-015,SINGLETON::B09-C01-015,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C01-016,IBON-PRINT,1,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify black-and-white and color printing as two ibon print-family variants.
+B09-C01-017,APPLE-ONE,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Apple One plan family; individual and family variants.
+B09-C01-018,APPLE-ONE,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Apple One plan family; individual and family variants.
+B09-C01-019,MICROSOFT-365,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Microsoft 365 family; individual and household variants.
+B09-C01-020,MICROSOFT-365,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Microsoft 365 family; individual and household variants.
+B09-C02-001,SINGLETON::B09-C02-001,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-002,SINGLETON::B09-C02-002,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-003,UNIQLO-HEATTECH-ACCESSORY,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify scarf and knit-hat variants in one Heattech accessory family.
+B09-C02-004,UNIQLO-AIRISM-TOPS,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same AIRism cotton top family; sleeve and fit variants.
+B09-C02-005,UNIQLO-AIRISM-TOPS,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same AIRism cotton top family; sleeve and fit variants.
+B09-C02-006,SINGLETON::B09-C02-006,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-007,SINGLETON::B09-C02-007,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-008,UNIQLO-CASHMERE,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify two cashmere sweater variants.
+B09-C02-009,IBON-PRINT,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify black-and-white and color printing as two ibon print-family variants.
+B09-C02-010,SINGLETON::B09-C02-010,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-011,SINGLETON::B09-C02-011,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-012,SINGLETON::B09-C02-012,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-013,SINGLETON::B09-C02-013,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-014,SINGLETON::B09-C02-014,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-015,SINGLETON::B09-C02-015,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-016,SINGLETON::B09-C02-016,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-017,SINGLETON::B09-C02-017,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-018,SINGLETON::B09-C02-018,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C02-019,UNIQLO-CASHMERE,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify two cashmere sweater variants.
+B09-C02-020,UNIQLO-HEATTECH-ACCESSORY,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify scarf and knit-hat variants in one Heattech accessory family.
+B09-C03-001,SINGLETON::B09-C03-001,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-002,SINGLETON::B09-C03-002,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-003,SINGLETON::B09-C03-003,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-004,SINGLETON::B09-C03-004,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-005,SHALLOP-MOUTHWASH,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes explicitly identify two Shallop mouthwash family variants.
+B09-C03-006,SHALLOP-MOUTHWASH,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes explicitly identify two Shallop mouthwash family variants.
+B09-C03-007,SINGLETON::B09-C03-007,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-008,SINGLETON::B09-C03-008,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-009,SINGLETON::B09-C03-009,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-010,SINGLETON::B09-C03-010,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-011,SINGLETON::B09-C03-011,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-012,SINGLETON::B09-C03-012,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-013,SINGLETON::B09-C03-013,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-014,SINGLETON::B09-C03-014,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-015,TAIPEI101-PARKING,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same facility and vehicle/hourly rate family; weekday/weekend variants.
+B09-C03-016,TAIPEI101-PARKING,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same facility and vehicle/hourly rate family; weekday/weekend variants.
+B09-C03-017,SINGLETON::B09-C03-017,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-018,SINGLETON::B09-C03-018,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-019,SINGLETON::B09-C03-019,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C03-020,SINGLETON::B09-C03-020,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C04-001,SINGLETON::B09-C04-001,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C04-002,SINGLETON::B09-C04-002,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C04-008,SINGLETON::B09-C04-008,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C04-009,SINGLETON::B09-C04-009,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C04-011,MITSUI-PARKING,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Mitsui outlet facility; weekday/weekend hourly variants.
+B09-C04-012,MITSUI-PARKING,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Mitsui outlet facility; weekday/weekend hourly variants.
+B09-C04-013,GLORIA-PARKING,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Gloria facility; weekday/weekend hourly variants.
+B09-C04-014,GLORIA-PARKING,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Gloria facility; weekday/weekend hourly variants.
+B09-C04-020,EA-PLAY,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same EA Play plan family; monthly/annual billing variants.
+B09-C04-021,EA-PLAY,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same EA Play plan family; monthly/annual billing variants.
+B09-C04-022,EA-PLAY-PRO,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same EA Play Pro plan family; monthly/annual billing variants.
+B09-C04-023,EA-PLAY-PRO,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same EA Play Pro plan family; monthly/annual billing variants.
+B09-C04-024,UNRESOLVED_EXTERNAL::B09-C04-024,2,DECLARED_FAMILY_UNRESOLVED,"Ledger declares two variants, but no same-batch counterpart was confidently assigned in this audit."
+B09-C04-025,SINGLETON::B09-C04-025,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C04-028,SINGLETON::B09-C04-028,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C04-029,KUANGCHUAN-SOY-DRINK,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify two related Kuang Chuan 375 ml soy-drink variants.
+B09-C04-030,KUANGCHUAN-SOY-DRINK,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify two related Kuang Chuan 375 ml soy-drink variants.
+B09-C04-031,SINGLETON::B09-C04-031,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C04-032,SINGLETON::B09-C04-032,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C04-033,SINGLETON::B09-C04-033,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-001,SINGLETON::B09-C05-001,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-002,SINGLETON::B09-C05-002,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-005,SINGLETON::B09-C05-005,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-006,SINGLETON::B09-C05-006,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-007,SINGLETON::B09-C05-007,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-008,SINGLETON::B09-C05-008,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-009,SINGLETON::B09-C05-009,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-010,SINGLETON::B09-C05-010,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-011,SINGLETON::B09-C05-011,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-012,SINGLETON::B09-C05-012,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-013,SINGLETON::B09-C05-013,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-014,SINGLETON::B09-C05-014,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-015,SINGLETON::B09-C05-015,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-016,SINGLETON::B09-C05-016,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-017,SINGLETON::B09-C05-017,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-018,SINGLETON::B09-C05-018,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-019,SINGLETON::B09-C05-019,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-020,SINGLETON::B09-C05-020,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-021,SINGLETON::B09-C05-021,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C05-022,SINGLETON::B09-C05-022,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-001,SINGLETON::B09-C06-001,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-002,SINGLETON::B09-C06-002,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-003,SINGLETON::B09-C06-003,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-005,SINGLETON::B09-C06-005,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-008,SINGLETON::B09-C06-008,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-010,SINGLETON::B09-C06-010,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-011,SINGLETON::B09-C06-011,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-012,SINGLETON::B09-C06-012,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-014,SINGLETON::B09-C06-014,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-015,SINGLETON::B09-C06-015,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-016,SINGLETON::B09-C06-016,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-019,SINGLETON::B09-C06-019,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-020,UNRESOLVED_EXTERNAL::B09-C06-020,2,DECLARED_FAMILY_UNRESOLVED,"Ledger declares two variants, but no same-batch counterpart was confidently assigned in this audit."
+B09-C06-021,SINGLETON::B09-C06-021,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-022,SINGLETON::B09-C06-022,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-023,UNRESOLVED_EXTERNAL::B09-C06-023,2,DECLARED_FAMILY_UNRESOLVED,"Ledger declares two variants, but no same-batch counterpart was confidently assigned in this audit."
+B09-C06-024,SINGLETON::B09-C06-024,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-027,SINGLETON::B09-C06-027,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-028,SINGLETON::B09-C06-028,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C06-031,SINGLETON::B09-C06-031,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-001,SINGLETON::B09-C07-001,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-002,PURE-CUI-COFFEE,1,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify two Pure Clean coffee flavors in one family.
+B09-C07-003,PURE-CUI-COFFEE,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify two Pure Clean coffee flavors in one family.
+B09-C07-004,SINGLETON::B09-C07-004,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-005,SINGLETON::B09-C07-005,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-006,SINGLETON::B09-C07-006,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-007,SINGLETON::B09-C07-007,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-008,SINGLETON::B09-C07-008,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-009,SINGLETON::B09-C07-009,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-010,SINGLETON::B09-C07-010,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-011,SINGLETON::B09-C07-011,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-012,UNIFIED-TEA-COLLECTION,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify red and green milk-tea variants.
+B09-C07-013,UNIFIED-TEA-COLLECTION,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify red and green milk-tea variants.
+B09-C07-014,SINGLETON::B09-C07-014,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-015,SINGLETON::B09-C07-015,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-016,SINGLETON::B09-C07-016,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-017,SINGLETON::B09-C07-017,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-018,SINGLETON::B09-C07-018,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-019,SINGLETON::B09-C07-019,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C07-020,SINGLETON::B09-C07-020,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-001,SINGLETON::B09-C08-001,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-002,SINGLETON::B09-C08-002,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-003,SINGLETON::B09-C08-003,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-004,SINGLETON::B09-C08-004,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-005,SINGLETON::B09-C08-005,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-006,SINGLETON::B09-C08-006,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-007,SINGLETON::B09-C08-007,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-008,SINGLETON::B09-C08-008,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-009,SINGLETON::B09-C08-009,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-010,SINGLETON::B09-C08-010,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-011,SINGLETON::B09-C08-011,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-012,HUCC-TILAPIA,1,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify skinless and skin-on variants.
+B09-C08-013,HUCC-TILAPIA,2,EXPLICIT_MULTI_VARIANT_FAMILY,Checkpoint notes identify skinless and skin-on variants.
+B09-C08-014,SINGLETON::B09-C08-014,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-015,SINGLETON::B09-C08-015,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-016,THSRC-TAICHUNG-P1-PARKING,1,EXPLICIT_MULTI_VARIANT_FAMILY,Same Taichung P1 site; hourly rate and daily maximum are two distinct tariff units.
+B09-C08-017,THSRC-TAICHUNG-P1-PARKING,2,EXPLICIT_MULTI_VARIANT_FAMILY,Same Taichung P1 site; hourly rate and daily maximum are two distinct tariff units.
+B09-C08-018,SINGLETON::B09-C08-018,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-019,SINGLETON::B09-C08-019,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.
+B09-C08-020,SINGLETON::B09-C08-020,1,SINGLETON_IN_FIXED_BATCH,No same-batch family counterpart identified; unique row key retained.

@@ -1,0 +1,46 @@
+{
+  "generated_at_utc": "2026-10-30T09:53:23.236371Z",
+  "base_head": "5e896f36c10bb26844a719727552b1a202b85e32",
+  "fixed_ledger_rows": 160,
+  "candidate_pool_rows_compared": 418,
+  "preaudit_status_counts": {
+    "RESEARCH_ONLY": 127,
+    "NEEDS_EVIDENCE": 30,
+    "HOLD": 1,
+    "EXACT_READY_CANDIDATE": 2
+  },
+  "exact_ready_candidate_count": 2,
+  "confirmed_current_only_gap_reduction_if_admitted": 2,
+  "conditional_current_only_gap_reduction_after_evidence": 1,
+  "upper_bound_current_only_gap_reduction_if_all_three_pass": 3,
+  "formal_exact_count_before_and_after_research": 181,
+  "formal_exact_delta": 0,
+  "basket": "NOT SEALED",
+  "index": "LOCKED",
+  "source_readability_http_counts": {
+    "source-readability-receipts-2026-10-30.csv": {
+      "HTTP_BODY_READ:200": 203,
+      "TLS_ERROR:": 10,
+      "HTTP_ERROR:403": 15,
+      "FETCH_ERROR:": 1
+    },
+    "source-readability-c01-c05-2026-10-30.csv": {
+      "HTTP_BODY_READ:200": 125,
+      "TLS_ERROR:": 6,
+      "HTTP_ERROR:403": 15
+    },
+    "c03-grade-source-readback-2026-10-30.csv": {
+      "HTTP_BODY_READ:200": 8,
+      "HTTP_ERROR:403": 1
+    },
+    "exact-candidate-source-receipts-2026-10-30.csv": {
+      ":200": 2
+    }
+  },
+  "notes": [
+    "Exact-ready candidates remain research-branch review candidates, not formal admissions.",
+    "Corporate owners not affirmatively consolidated are marked UNRESOLVED_SINGLETON; reported group maxima are a verified lower bound.",
+    "The source-readability probe verifies strict TLS and HTTP response/body availability only; it does not prove the price text by itself.",
+    "Python urllib/OpenSSL strict validation failed on 10 of 229 URLs (including both THSRC pages); direct Mac curl SecureTransport strict verification returned HTTP 200 and ssl_verify_result=0 for the two THSRC candidate pages. Both outcomes are retained; no verifier was weakened."
+  ]
+}
