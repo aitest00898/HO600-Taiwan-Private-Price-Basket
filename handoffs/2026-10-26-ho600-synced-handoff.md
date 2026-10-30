@@ -17,7 +17,7 @@ This section supersedes the dated progress counts below for current Batch-9 stat
 - C06 WIP: 31 rows = 20 admitted, 3 provisional, 2 product-lineage holds, 6 duplicate canonical candidates. C07 and C08 each contain 20 admitted rows.
 - Repository validator passed 12 checks. Dashboard unit tests passed 24/24. The cohort-inflation test run had 54 passes and one import error because the unrelated XLSX test requires the unavailable `artifact_tool` package.
 - Formal `main` remains 181/600, Basket `NOT SEALED`, Index `LOCKED`. Actions were not invoked; no workbook, canonical candidate/evidence data or Index was changed.
-- See the detailed handoff for the one corrected/superseded C07 SHA-256 receipt, strict-TLS receipts, source concentration and Linear connector blocker.
+- See the detailed handoff for the corrected/superseded C07 SHA-256 receipt, strict-TLS receipts, source concentration and the automatic-review rejection of the Linear progress-comment attempt.
 
 
 ## 2026-10-29 最新交接權威｜C06=10/20 WIP、使用者新100筆目標50/100
