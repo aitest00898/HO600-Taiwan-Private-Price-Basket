@@ -1,4 +1,6 @@
-# HO600 Batch 9 — C06 status (WIP, OPEN 18/20)
+# HO600 Batch 9 — C06 WIP evidence log (historical snapshot)
+
+> **Superseded status notice (2026-10-30):** This file preserves the earlier research log. The accepted fixed checkpoint is now 20/20; use [the final checkpoint receipt](./checkpoint-06.md) and fixed ledger for current counts. Earlier count statements below describe the pre-completion snapshot.
 
 Date: 2026-10-30  | Branch: `research/batch-09`  | Base HEAD checked: `0c83ff044d3bd1b3e103a64ebb204d5a3fe90f7e`
 

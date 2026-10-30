@@ -1,0 +1,42 @@
+[
+  {
+    "filename": "2026-soulfit-gymnomad.html",
+    "requested_url": "https://www.gymnomadtw.com/gym/soulfit-Daan",
+    "retrieved_at_utc": "2026-10-30T07:20:27.310880Z",
+    "tls_validation": "ssl.create_default_context; CERT_REQUIRED; hostname verification enabled; no bypass",
+    "final_url": "https://www.gymnomadtw.com/gym/soulfit-Daan",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "content_bytes": 681844,
+    "sha256": "7963bf32923621db98e87446f0ff1af321bd3329ffe240127f1358573433f9b5"
+  },
+  {
+    "filename": "2026-soulfit-findglocal.html",
+    "requested_url": "https://www.findglocal.com/TW/Da-an-District%2C-Taipei/782814268529039/%E5%81%A5%E8%BA%AB%E9%AD%82-Soulfit",
+    "retrieved_at_utc": "2026-10-30T07:20:28.169184Z",
+    "tls_validation": "ssl.create_default_context; CERT_REQUIRED; hostname verification enabled; no bypass",
+    "final_url": "https://www.findglocal.com/TW/Taipei/782814268529039/%E5%81%A5%E8%BA%AB%E9%AD%82-Soulfit",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "content_bytes": 87400,
+    "sha256": "8c18f9b62275196bc49a200f4762fbc75f73ecbf4e5a8b50c581dc09f58ae137"
+  },
+  {
+    "filename": "2026-project-fit-findglocal.html",
+    "requested_url": "https://www.findglocal.com/TW/Taipei/454931798037813/%E5%81%A5%E8%BA%AB%E8%A8%88%E7%95%AB-Project-Fit",
+    "retrieved_at_utc": "2026-10-30T07:20:29.449375Z",
+    "tls_validation": "ssl.create_default_context; CERT_REQUIRED; hostname verification enabled; no bypass",
+    "final_url": "https://www.findglocal.com/TW/Taipei/454931798037813/%E5%81%A5%E8%BA%AB%E8%A8%88%E7%95%AB-Project-Fit",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "content_bytes": 100584,
+    "sha256": "4e128c674f904fd88b263d8d401c55e7827f16d07f81c817bfe356ca7bd9c203"
+  },
+  {
+    "filename": "2026-somebody-official-facebook.html",
+    "requested_url": "https://www.facebook.com/somebodyfitness/",
+    "retrieved_at_utc": "2026-10-30T07:20:30.234344Z",
+    "tls_validation": "ssl.create_default_context; CERT_REQUIRED; hostname verification enabled; no bypass",
+    "error": "HTTPError: HTTP Error 400: Bad Request"
+  }
+]

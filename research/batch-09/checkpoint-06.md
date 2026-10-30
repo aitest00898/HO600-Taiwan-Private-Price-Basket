@@ -1,27 +1,25 @@
-# HO600 Batch 9 — C06 progress receipt (18/20, OPEN)
+# HO600 Batch 9 — C06 checkpoint receipt
 
-Date: 2026-10-30  | Branch: `research/batch-09`  | Verified base: `0c83ff044d3bd1b3e103a64ebb204d5a3fe90f7e`
+Date: 2026-10-30  | Branch: `research/batch-09`  | Fixed ledger: [checkpoint-06-ledger.csv](./checkpoint-06-ledger.csv)
 
-**C06 is not complete.** The WIP ledger has 31 rows: 18 research-admissible, 5 provisional, 2 product-lineage holds, and 6 prequalified duplicates. The 18 counted IDs are `001`, `002`, `008`, `010`–`012`, `014`–`016`, `019`–`024`, `027`, `028`, and `031`. No fixed 20-pair checkpoint ledger was created.
+## Decision and scope
 
-Three new research pairs passed the row-level B-evidence screen:
+**CHECKPOINT-06 = PASS_RESEARCH_ONLY_WITH_EVIDENCE_LIMITATIONS (20/20).** These are B-level 2020/2026 published or displayed price observations for research. They are not 2020/2026 POS receipts, formal Exact admissions, a representative household price sample, or an HO600 index result.
 
-| ID | Pair | 2020 listed/reference price | 2026 listed price | Limit |
-|---|---|---:|---:|---|
-| C06-027 | VANS Old Skool `VN000D3HY28` | NT$2,380 | NT$2,080 | Same model ID; 2020 source is an annual campaign page with no exact day and displays a promotion beside the original/list price. Not a transaction or formal Exact. |
-| C06-028 | NIID R1 bag | NT$2,880 | NT$2,880 | 2020 series-level listing has no EAN or exact date; price is a listed/reference price. |
-| C06-031 | Lativ women's white 100% cotton crew T | NT$199 | NT$199 | 2020 consumer article records an actual purchase but no receipt/SKU; current item number does not prove 2020 SKU continuity. |
+C06 WIP has 31 rows: 20 `ADMISSIBLE`, 3 `PROVISIONAL_ADMISSIBLE`, 2 `HOLD_PRODUCT_LINEAGE`, and 6 `DUPLICATE_PREQUALIFIED_CANDIDATE`. The fixed 20-row ledger equals the admissible WIP extract and the 20 `ADMISSIBLE` WIP rows exactly. Non-admitted rows remain in the WIP record and are excluded from the fixed set.
 
-`C06-002` is retained as a B-level same-use/package-count comparison (two-pair invisible running socks). The 2026 official Decathlon product was visible in the official page's indexed rendering, while the strict raw category GET did not contain its card. That limitation is recorded and prevents an Exact or SKU-continuity claim. The Spring tissue and Dandelion hand-towel drafts (`029`/`030`) were reclassified as duplicates because their prequalified concepts and paired 2020/2026 Evidence records already exist in the Candidate Pool and `data/Evidence.csv`.
+## Fixed set
 
-## Validation
+The 20 accepted IDs are `001`, `002`, `003`, `005`, `008`, `010`–`012`, `014`–`016`, `019`–`024`, `027`, `028`, and `031`. They cover clothing and shoes, food and drink, hair and hotel guest laundry, personal care and household cooking oil. Both period prices are positive and both cited source fields are HTTPS.
 
-- `python3 scripts/validate_repo.py`: all reported repository checks passed; canonical workbook SHA-256 remained `c01bce376e45e715d9b8eac4f353c61d20b5973e1e1c4e32f90a6e512bed40b9`; formal Exact remains 181/600, Basket `NOT SEALED`, Index `LOCKED`.
-- Read-only CSV QC: C01–C05 100; C06 18; C07 11; C08 0; total 129 research-qualified; additional objective 69/100. B09 new-admission caps: max brand 4, max brand/subcategory 4, max same 2020 source URL 5. The repository's current CSV schemas have 23 columns; IDs were unique and accepted rows had positive prices and 2020/2026 source fields.
-- No unit-test directory covers these research ledgers. No test framework or tests were added. No Actions workflow was invoked or modified.
+Important limitations remain row-specific in the ledger. Examples include series rather than SKU continuity, non-identical 2020/2026 retailers, a published campaign/list price rather than a transaction, and Xitou Shante laundry services restricted to hotel guests. The hotel laundry entries are not public self-service laundry market prices. The three C06 provisional rows and six candidate-pool duplicates are not counted.
 
-## Source and scope limits
+## Source and cross-check receipts
 
-These are B-level price observations, not POS receipts. A campaign page's listed/original price is kept separate from its promotion and is not claimed as ordinary non-promotion checkout price. Product lineage, channel and exact dates remain qualified per row. This C06 work does not change canonical `main`, the workbook, Index, or any formal Exact admission. See [the WIP ledger](./checkpoint-06-wip-ledger.csv), [C06 status](./checkpoint-06-wip.md), and [source receipts](./checkpoint-06-source-receipts-2026-10-30.csv).
+The C06 receipt register has 45 records. All records report strict TLS verification; 40 are HTTP 200, while non-200 outcomes remain recorded as source-search diagnostics. Every source URL used by the fixed 20 rows has a matching strict-TLS HTTP-200 receipt. Receipt bodies are represented by captured-body SHA-256 values; not every historical response body is retained locally.
 
-**Next:** find two additional non-duplicate C06 pairs with traceable 2020 and 2026 source evidence; then run the checkpoint-level QC before creating a fixed 20-row C06 ledger. C07 remains 11/20 and C08 remains 0/20.
+Independent fixed-ledger checks across C01–C08 found 160 rows, 160 unique IDs, 23 columns per row, `ADMISSIBLE` for all fixed rows, positive 2020/2026 prices, and HTTPS sources. Grouped maxima are 8 admissions per merchant, 5 per merchant/subcategory, 6 rows per exact 2020 source URL, and 2 variants per recorded product family. These are research concentration controls, not proof of price representativeness.
+
+C01–C05 remain 100 fixed pairs; C06–C08 add 60, for **160 fixed research pairs**. The requested additional-100 objective counts C04–C08, 20 per checkpoint, and is **100/100 at research level**. Formal main remains 181/600, Basket `NOT SEALED`, Index `LOCKED`.
+
+Repository validation passed. The dashboard Python suite passed 24/24. The broad cohort-inflation suite had 54 passing cases and one import error because `artifact_tool` is not installed for the unrelated XLSX test module; details are in [the 2026-10-30 Handoff](./HANDOFF-2026-10-30.md). No canonical workbook, `main`, Index or Actions were changed.

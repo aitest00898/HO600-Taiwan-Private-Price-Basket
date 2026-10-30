@@ -8,6 +8,18 @@
 **Update note:** Read the **current handoff at the top** first. Older dated sections below remain an evidence trail and may include grades superseded by the current C04 ledger.
 
 
+## 2026-10-30 continuation — C06–C08 fixed 20/20; additional research objective 100/100
+
+This section supersedes the dated progress counts below for current Batch-9 status. C06, C07 and C08 each now have a fixed 20-row research ledger, bringing C01–C08 to **160 unique research-only pairs**. The C04–C08 additional-100 objective is **100/100 at research level**. None of these rows are automatically formal HO600 Exact observations.
+
+- Final detailed handoff: [research/batch-09/HANDOFF-2026-10-30.md](../research/batch-09/HANDOFF-2026-10-30.md).
+- Fixed checkpoint ledgers: [C06](../research/batch-09/checkpoint-06-ledger.csv), [C07](../research/batch-09/checkpoint-07-ledger.csv), [C08](../research/batch-09/checkpoint-08-ledger.csv).
+- C06 WIP: 31 rows = 20 admitted, 3 provisional, 2 product-lineage holds, 6 duplicate canonical candidates. C07 and C08 each contain 20 admitted rows.
+- Repository validator passed 12 checks. Dashboard unit tests passed 24/24. The cohort-inflation test run had 54 passes and one import error because the unrelated XLSX test requires the unavailable `artifact_tool` package.
+- Formal `main` remains 181/600, Basket `NOT SEALED`, Index `LOCKED`. Actions were not invoked; no workbook, canonical candidate/evidence data or Index was changed.
+- See the detailed handoff for the one corrected/superseded C07 SHA-256 receipt, strict-TLS receipts, source concentration and Linear connector blocker.
+
+
 ## 2026-10-29 最新交接權威｜C06=10/20 WIP、使用者新100筆目標50/100
 
 已實際增補2020/2026民間一般價四項（研究B級）：**C06-012 Dr. Martens 1461 Bex厚底三孔鞋5880→6770；014搖擺理髮部不指名男士剪髮最低服務350→400；015南投溪頭夏緹飯店住宿房客自助投幣洗衣一次60→60；016同飯店住客烘衣7分鐘10→10**。其中C06-014特別改由**2020-04-21 Bella儂儂同期直接報導350–450**為歷史來源，2019營運公告只供旁證，絕不代替2020；2026品牌官網400為最低一般標價、不用臨時300優惠。夏緹原始2020-12-01公告與2025-08-06新官網重刊、2026仍在現行官網列同價，**只有住宿房客可用，不是公共自助洗衣店的代表價**。DrMartens 2020/26產品系列連續性B但2020舊EAN/顏色未知。

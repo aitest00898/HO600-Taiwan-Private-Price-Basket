@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "2020-feds-banqiao-parking-prices.html",
+    "requested_url": "https://y32y32.pixnet.net/blog/posts/7120637329",
+    "retrieved_at_utc": "2026-10-30T07:21:41.083055Z",
+    "tls_validation": "ssl.create_default_context; CERT_REQUIRED; hostname verification enabled; no bypass",
+    "final_url": "https://y32y32.pixnet.net/blog/posts/7120637329",
+    "http_status": 200,
+    "content_type": "text/html",
+    "content_bytes": 66840,
+    "sha256": "76282647a0a775757cca590e502170c089cf4f5816ea9bda8473bc2f3ecbcf30"
+  },
+  {
+    "filename": "2026-feds-banqiao-parking.html",
+    "requested_url": "https://www.feds.com.tw/appredis/50/MallInfo?EntryPoint=topmenu_traffic&Source=Website&tab=traffic",
+    "retrieved_at_utc": "2026-10-30T07:21:41.218355Z",
+    "tls_validation": "ssl.create_default_context; CERT_REQUIRED; hostname verification enabled; no bypass",
+    "error": "URLError: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Missing Subject Key Identifier (_ssl.c:1144)>"
+  }
+]
