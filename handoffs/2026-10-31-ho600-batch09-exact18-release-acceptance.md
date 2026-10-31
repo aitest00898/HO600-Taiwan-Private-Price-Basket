@@ -60,4 +60,8 @@ The final release acceptance commands and exit codes are recorded here after exe
 - Isolated release assertions: `python3 scripts/validate_batch09_exact18_release.py` — PASS, 2,206 assertions, exit 0, including category/domain reconciliation, group and family limits, and source-use checks.
 - CSV snapshots retain the repository's CRLF line endings; `git -c core.whitespace=cr-at-eol diff --check` — PASS, exit 0.
 
-No GitHub Actions, deployment, force push, research-branch merge, Basket seal, Index unlock, or index headline was used or authorized by this acceptance receipt.
+## GitHub Actions setting and publication status
+
+- Opening PR #1 automatically triggered GitHub Actions workflow `Validate HO600`, run `41160717451`, event `pull_request`, at `2026-10-31T02:35:44Z`; it completed with conclusion `success`. This was an automatic GitHub run, not a local acceptance input. It remains in the GitHub run history and is not cleared or treated as acceptance evidence.
+- The repository Actions permission endpoint initially returned `enabled=true`. After the owner-authorized repository-scoped `gh api --method PUT repos/aitest00898/HO600-Taiwan-Private-Price-Basket/actions/permissions -F enabled=false`, a fresh GET returned `{"enabled":false,"sha_pinning_required":false}`. The setting was re-read as `enabled=false` immediately before release-record correction; it is to remain disabled through merge and final readback.
+- No GitHub Actions workflow was manually started or rerun, and no Actions result was used as acceptance evidence. No workflow file was changed. No deployment, force push, research-branch merge, Basket seal, Index unlock, or index headline was used or authorized by this acceptance receipt.
