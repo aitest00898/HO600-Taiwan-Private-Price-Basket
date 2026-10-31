@@ -6,11 +6,11 @@ HO600 (Historical-Observable Balanced 600) is a research project to construct a 
 
 | Field | Current canonical value |
 |---|---:|
-| Canonical batch | **Batch 8** |
-| Formal Exact-2020↔2026 concepts | **181 / 600** |
-| Remaining | **419** |
-| Candidate concepts | **418** |
-| Evidence records | **1,566** |
+| Canonical batch | **Batch 9** |
+| Formal Exact-2020↔2026 concepts | **199 / 600** |
+| Remaining | **401** |
+| Candidate concepts | **434** |
+| Evidence records | **1,600** |
 | Basket_600 | **NOT SEALED** |
 | Index_Calc | **LOCKED** |
 
@@ -44,7 +44,7 @@ Current canonical workbook:
 
 SHA-256:
 
-`c01bce376e45e715d9b8eac4f353c61d20b5973e1e1c4e32f90a6e512bed40b9`
+`5a801585b5352a71255deb5999707d2039980a62f514f61ae729705fd58c1808`
 
 ## Repository workflow
 
