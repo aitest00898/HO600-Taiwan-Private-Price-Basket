@@ -1,22 +1,22 @@
-﻿HO600-WIP — Shortfall Search Batch 8,,,
+﻿HO600-WIP — Shortfall Search Batch 9,,,
 ,,,
 Field,Value,State,Meaning
 Project goal,600 historically observable balanced economic concepts,WIP,Every final item must have Exact-2020 + Exact-2026 normal/base/list price.
 Migration source,TPI-500 v1.0 RC1,SEALED SOURCE,48ea05cb52c9de1fedc99d01fdf609caad3c532ea0d9ce2460f453a0281dccd7
 Legacy observation rows migrated,500,PASS,No existing observation identity discarded.
 Legacy economic concepts migrated,365,PASS,Quote-level duplicates consolidated to economic concepts.
-Prequalified Exact-2020 concepts,181,INCUMBENT CANDIDATES,"These are candidates, not guaranteed final members."
-Minimum additional exact concepts needed,419,LOWER BOUND,Actual search need can be higher after evidence review; final target remains 600.
+Prequalified Exact-2020 concepts,199,INCUMBENT CANDIDATES,"These are candidates, not guaranteed final members."
+Minimum additional exact concepts needed,401,LOWER BOUND,Actual search need can be higher after evidence review; final target remains 600.
 Candidate selection visibility,Prices/price-change hidden in Candidate_Pool,LOCKED,Selection remains blind to price change.
-Exact concepts added in current search batch,4,PASS,"Batch 8 added 4 direct exact concepts in underrepresented home/transport cells: 2 IKEA fixed-product-number items, 1 GoShare normal riding-rate component, and 1 THSR OD pair; no weak current-only candidate was force-upgraded."
+Exact concepts completed in current release,18,PASS,16 new Candidate Pool concepts plus two approved 2020 evidence backfills for existing concepts; Basket_600 remains unselected.
 Lifecycle,HO600-WIP,ACTIVE,"Next step is shortfall-driven candidate expansion, not more architecture."
-,,,
+Candidate concepts added in Batch 9,16,PASS,All 16 new economic concepts use unique canonical NEW-* IDs; the two THSRC records add no Candidate Pool concept.
 ,,,
 Continuation Contract,Current decision,Next valid action,Forbidden
 Legacy data,PRESERVE ALL,Use migrated concepts/evidence before new search,Starting over from zero
 Candidate grain,Economic concept,Add new concepts only where balance requires them,Counting retailer quotes as separate items
 Existing Exact-2020,GRANDFATHERED CANDIDATES,Keep even if legacy quota/brand/source cap is exceeded; do not auto-prune,Deleting already-researched valid pairs solely to satisfy a quota
-New research,Batch 8 completed — 4 exact concepts,"Continue shortfall search with clothing first, then home/transport/education; current-only Exact-2020 first. IKEA new admissions, IKEA×home-storage, GoShare family, and the reused THSR 2020 source are now frozen at reference caps.",Adding more to frozen brand/source/product-family surfaces or force-matching mismatched historical generations
+New research,"Batch 9 Exact-18 release completed — 16 new concepts, 34 Evidence records, and two approved 2020 backfills for existing THSRC concepts.",RELEASE SCOPE FROZEN,"Continue only under existing shortfall, concentration, source, and product-family rules; this release adds no exception beyond LEG-EC-041/042."
 Basket_600,NOT SEALED,Seal after 600 concepts and evidence gates pass; legacy incumbents remain eligible,Calculating headline before seal
 ,,,
 ,,,
