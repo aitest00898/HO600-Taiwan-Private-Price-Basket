@@ -1,6 +1,6 @@
 {
-  "reviewed_at_utc": "2026-10-31",
-  "base_branch_head": "b2a4f8bb567b384b0ae27f611ffd3f7eaa958828",
+  "reviewed_at_utc": "2026-10-31T01:56:44+00:00",
+  "base_branch_head": "c65aec589dde5c73591c2129ace0aaa302b4fcd5",
   "review_matrix_rows": 22,
   "selected_AAA_rows": 17,
   "selected_AAA_exact_ready_new_concepts": 16,
@@ -34,19 +34,12 @@
   "basket": "NOT SEALED",
   "index": "LOCKED",
   "notes": [
-    "All exact-ready rows are research branch candidates only; none formally admitted.",
-    "Two THSRC rows backfill existing Candidate Pool concepts; no new concepts.",
-    "2020 THSRC official rate source is independent from the 2020 PTT fare source that reached its six-use cap.",
-    "350/day is the maximum cap, not average spend.",
-    "Apple One pool link to standalone Apple Arcade is rejected; two Apple One tiers are proposed as separate new concepts.",
-    "Farglory 2020 voucher bundle is not comparable to current standard admission.",
-    "Salt government donation time-value is not 2020 retail price evidence.",
-    "Official 2021 bus tariff does not prove 2020 tariff.",
-    "Old preaudit file preserved; new file records second-pass adjudication.",
-    "Official corporate-group recheck resolves PILOT, Apple, and Amway; corporate sources were captured with strict Mac SecureTransport TLS and added as receipts.",
-    "THSRC rows fill 2020 observations on existing LEG-EC-041/042; 嘟嘟房 remains at brand cap 8/8 and no new Candidate Pool concepts are added.",
-    "The two THSRC rows close 2020 evidence gaps but are not unconditionally counted toward future Exact: 嘟嘟房 is already at its 8/8 brand cap; if those backfills are treated as new admissions and frozen, the safely projected increment is 16 (181→197), otherwise the upper conditional projection is 18 (181→199).",
-    "The WIP workbook has Basket_600 selected=0 and does not contain a row-level roster for the current 181 Exact concepts; the preflight can validate pool backfill and candidate eligibility but not certify final selection membership."
+    "The 16 new concepts and two explicitly owner-approved HSR historical backfills are research-branch/local acceptance candidates only; main and canonical workbook remain unchanged.",
+    "The two HSR backfills modify no Candidate Pool concept count; 嘟嘟房 brand cap remains 8/8 and this approval does not generalize.",
+    "LEG-EC-041 daily NT$350 is the maximum fee cap, not average or typical spend.",
+    "The owner approved only LEG-EC-041 and LEG-EC-042 on 2026-10-31 for use of their verified 2020 official THSRC evidence.",
+    "Top-five brand total remains 56/40 legacy and top-ten 85/60; the proposal package does not increase either total.",
+    "The 181 incumbent rows include 135 unresolved corporate_group fields; target proposal group checks pass, but the unrelated legacy group census is incomplete."
   ],
   "source_receipt_count": 45,
   "successful_http_200_receipts": 40,
@@ -54,22 +47,22 @@
   "exact_ready_candidates_with_verified_group_attribution": 18,
   "exact_ready_candidates_with_unresolved_group_attribution": 0,
   "group_concentration_projection": {
-    "CHUNGHSIN_GROUP": "8/16 unchanged; 嘟嘟房 brand is at 8/8 and both rows backfill existing pool concepts",
-    "CHT_GROUP": "11/16 (existing 6 + five fixed-network service proposals)",
-    "FAMILYMART_GROUP": "5/16 (existing 4 + one parcel-service proposal)",
-    "PILOT_CORPORATION_GROUP": "5/16 (five new stationery proposals)",
-    "APPLE_INC": "5/16 conservative (three existing Apple/Apple Music pool concepts + two Apple One tiers)",
-    "ALTICOR_AMWAY_GROUP": "3/16 (three Amway Home SKUs)"
+    "CHUNGHSIN_GROUP": "Exact roster: 0 incumbent rows +2 scoped backfills =2/16; full Candidate Pool group count remains 8/16; 嘟嘟房 brand 8/8 unchanged",
+    "CHT_GROUP": "Exact roster: 0 incumbent rows +5 proposals =5/16; full Candidate Pool after package 11/16",
+    "FAMILYMART_GROUP": "Exact alias-mapped roster 4+1=5/16",
+    "PILOT_CORPORATION_GROUP": "Exact roster 0+5=5/16",
+    "APPLE_INC": "Alias-mapped Exact roster 4+2=6/16",
+    "ALTICOR_AMWAY_GROUP": "Exact roster 0+3=3/16"
   },
   "price_evidence_ready_candidates": 18,
   "new_concept_candidates_with_current_caps_clear": 16,
-  "existing_pool_backfills_with_formal_brand_cap_condition": 2,
+  "existing_pool_backfills_with_formal_brand_cap_condition": 0,
   "formal_exact_delta_if_hsr_backfills_blocked_by_brand_freeze": 16,
   "formal_exact_projected_if_hsr_backfills_blocked_by_brand_freeze": 197,
   "formal_shortfall_if_hsr_backfills_blocked_by_brand_freeze": 403,
-  "formal_admission_condition": "The two THSRC price pairs are complete and backfill existing pool concepts without a pool-count increase, but 嘟嘟房 is at 8/8 brand cap. Authorized reviewer must determine whether these existing-concept backfills are grandfathered under KEEP LEGACY / FREEZE NEW before counting them as Exact. The local WIP workbook has Basket_600 selected=0 and contains no row-level roster identifying which of the 181 current Exact concepts are selected; final increment must be reconciled by the authorized reviewer.",
+  "formal_admission_condition": "Resolved: user approved only LEG-EC-041 and LEG-EC-042 on 2026-10-31 to receive verified 2020 price evidence and proceed through Exact admission acceptance, with zero Candidate Pool concept delta and 嘟嘟房 brand cap held at 8/8. This does not authorize canonical workbook update, main merge, official Exact count publication, or expansion to other brands/items.",
   "final_formal_adjudication": {
-    "recorded_at_utc": "2026-10-31T01:17:12+00:00",
+    "recorded_at_utc": "2026-10-31T01:53:00+00:00",
     "baseline_prequalified_exact": 181,
     "canonical_candidate_pool_concepts": 418,
     "canonical_evidence_rows": 1566,
@@ -77,18 +70,18 @@
     "basket_status": "NOT SEALED",
     "index_status": "LOCKED",
     "decision_counts": {
-      "READY_UNDER_EXISTING_POLICY": 16,
-      "REQUIRES_OWNER_POLICY_DECISION": 2,
+      "READY_UNDER_EXISTING_POLICY": 18,
+      "REQUIRES_OWNER_POLICY_DECISION": 0,
       "NEEDS_ADDITIONAL_EVIDENCE": 0,
       "REJECT": 0
     },
-    "ready_under_existing_policy_exact_projection": 197,
+    "ready_under_existing_policy_exact_projection": 199,
     "projection_if_both_hsr_upgrades_are_approved": 199,
     "candidate_pool_concept_additions_ready": 16,
-    "hsr_existing_concept_backfills_pending_owner_decision": 2,
+    "hsr_existing_concept_backfills_pending_owner_decision": 0,
     "main_top5_brand_total_before_and_after_ready_package": "56/40; legacy overage +16; unchanged under ready package",
     "main_top10_brand_total_before_and_after_ready_package": "85/60; legacy overage +25; unchanged under ready package",
-    "hsr_policy_issue": "Existing LEG-EC-041/042 Candidate Pool concepts add no economic concepts (pool delta 0), but move current-only→Exact. Existing docs cap new admissions at brand 8 and specify KEEP LEGACY / FREEZE NEW, while research workflow prioritizes upgrading current-only concepts; no explicit backfill exemption resolves whether these two count as new admissions. Owner decision required; brand cap remains in force.",
+    "hsr_policy_issue": "RESOLVED WITH SCOPED OWNER APPROVAL. Both existing IDs may use their verified 2020 price evidence for Exact admission acceptance without increasing Candidate Pool concepts or changing the 嘟嘟房 8/8 cap. LEG-EC-041 350/day remains explicitly a maximum fee cap, not average or typical spend.",
     "selected_price_source_receipts": 22,
     "strict_tls_http_200_sha256_matched_receipts": 22,
     "canonical_workbook_modified": false,
@@ -98,6 +91,21 @@
       "exact_roster_rows_with_UNRESOLVED_corporate_group_field": 135,
       "target_proposal_group_check": "Incoming target group identities were verified and relevant current Exact aliases reviewed; each target group remains below 16, with CHT canonical-pool total 11/16 and Dudu full-pool total 8/16.",
       "global_181_corporate_group_census": "PARTIAL: 135 baseline corporate_group fields are unresolved, so a complete unrelated-group census cannot be claimed. This does not identify a target-group overlap, but is retained as a limitation."
-    }
-  }
+    },
+    "owner_approval": "Received 2026-10-31. Only LEG-EC-041 and LEG-EC-042 may be backfilled and enter Exact acceptance; no new Candidate Pool concepts; 嘟嘟房 brand limit remains 8/8; no extension to any other brand or item.",
+    "owner_decisions_required": [],
+    "main_unchanged": true
+  },
+  "full_concentration_qc": {
+    "top5": "56/40; legacy +16; unchanged",
+    "top10": "85/60; legacy +25; unchanged",
+    "dudu_brand_pool": "8/8, unchanged",
+    "new_concepts": 16,
+    "existing_concept_backfills": 2,
+    "candidate_pool_concept_delta": 16,
+    "new_2020_source_max_per_url": 4,
+    "corporate_group_unresolved_incumbent_rows": 135,
+    "target_group_checks": "PASS_WITH_GLOBAL_LEGACY_METADATA_LIMITATION"
+  },
+  "scoped_owner_approved_existing_pool_backfills": 2
 }

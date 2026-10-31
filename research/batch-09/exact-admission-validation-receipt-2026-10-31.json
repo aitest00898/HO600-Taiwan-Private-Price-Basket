@@ -1,6 +1,6 @@
 {
-  "recorded_at_utc": "2026-10-31T01:18:14+00:00",
-  "base_head": "4e7eaedb157450492a0859a1fe670db8199f2872",
+  "recorded_at_utc": "2026-10-31T01:57:00+00:00",
+  "base_head": "c65aec589dde5c73591c2129ace0aaa302b4fcd5",
   "branch": "research/batch-09",
   "tests": [
     {
@@ -15,7 +15,8 @@
       "cases": 12,
       "passed": 12,
       "failed": 0,
-      "exit_code": 0
+      "exit_code": 0,
+      "note": "Regression assertions verify scoped owner approval, unchanged 8/8 cap, local 199 projection, and canonical 181/600 unchanged."
     },
     {
       "command": "python3 research/batch-09/validate_batch09_exact_preaudit.py",
@@ -31,7 +32,7 @@
       }
     },
     {
-      "command": "independent final-adjudication CSV and source-receipt assertions (one-off Python audit)",
+      "command": "independent owner-approved final matrix/source and identity audit",
       "cases": null,
       "passed": null,
       "failed": 0,
@@ -39,33 +40,47 @@
       "observed": {
         "rows": 18,
         "unique_research_ids": 18,
-        "unique_candidate_ids": 18,
         "decision_counts": {
-          "READY_UNDER_EXISTING_POLICY": 16,
-          "REQUIRES_OWNER_POLICY_DECISION": 2,
-          "NEEDS_ADDITIONAL_EVIDENCE": 0,
-          "REJECT": 0
+          "READY_UNDER_EXISTING_POLICY": 18
         },
-        "unique_used_price_source_receipts": 22,
-        "all_used_receipts_http_200_strict_tls_sha256_match": true,
-        "max_2020_source_uses_in_package": 4,
-        "main_exact_baseline": 181,
-        "main_candidate_pool": 418,
-        "main_evidence_rows": 1566,
-        "top5_baseline": 56,
-        "top10_baseline": 85,
-        "comparability_grades": {
-          "A": 16,
-          "B": 2
-        },
-        "evidence_grades_2020_2026": "A/A for all 18",
-        "canonical_candidate_pool_ids_unique": true,
-        "canonical_evidence_ids_unique": true,
-        "main_top5_brand_total": "56/40 (+16 legacy)",
-        "main_top10_brand_total": "85/60 (+25 legacy)",
-        "proposal_2020_sources_already_used_in_main_181": "0/18",
-        "unresolved_corporate_group_fields_in_main_exact_181": 135,
-        "target_group_checks": "all six incoming group labels verified; proposal-related counts remain within 16; global unrelated-group census partial"
+        "owner_approved_hsr_ids": [
+          "LEG-EC-041",
+          "LEG-EC-042"
+        ],
+        "hsr_candidate_pool_delta": 0,
+        "unique_price_receipts": 22,
+        "strict_tls_http200_sha256_capture_matches": 22,
+        "candidate_pool_main": 418,
+        "exact_main": 181,
+        "evidence_main": 1566,
+        "top5": "56/40",
+        "top10": "85/60",
+        "owner_approval_recorded_rows": 2,
+        "owner_approved_ids": [
+          "LEG-EC-041",
+          "LEG-EC-042"
+        ],
+        "candidate_pool_concept_delta_for_approved_ids": 0,
+        "all_other_rows_ready_under_existing_policy": 16
+      }
+    },
+    {
+      "command": "@oai/artifact-tool owner-approved isolated XLSX acceptance import/edit/export/reimport",
+      "cases": null,
+      "passed": null,
+      "failed": 0,
+      "exit_code": 0,
+      "observed": {
+        "path": "/private/tmp/ho600-final-admission-2026-10-31/owner-approved-acceptance.xlsx",
+        "sha256": "be5287f217a11883f2ad0715e8914682455840e4ad3d2edb9a353f89c1d194c3",
+        "exact_candidates": 199,
+        "candidate_pool_rows": 434,
+        "evidence_rows": 1600,
+        "basket_selected": 0,
+        "basket_status": "NOT SEALED",
+        "index_status": "LOCKED",
+        "all_boolean_checks_pass": true,
+        "daily_cap_marking": true
       }
     }
   ],
@@ -134,5 +149,14 @@
   "final_adjudication_artifact": "research/batch-09/exact-admission-final-adjudication-2026-10-31.csv",
   "main_unchanged": true,
   "github_actions_used": false,
-  "global_concentration_scope_note": "Target proposal groups and top-five/top-ten brand totals were reconciled. 135 of 181 incumbent Candidate_Pool corporate_group fields remain UNRESOLVED, so a complete corporate-group census across unrelated legacy concepts is not claimed."
+  "global_concentration_scope_note": "Target proposal groups and top-five/top-ten brand totals were reconciled. 135 of 181 incumbent Candidate_Pool corporate_group fields remain UNRESOLVED, so a complete corporate-group census across unrelated legacy concepts is not claimed.",
+  "prior_test_attempt_note": {
+    "attempt": "The first post-approval 12-case run had 1 failure because the summary value for formal_exact_current had been expanded with local-preview detail, conflicting with the canonical 181/600 assertion. Restored the source-of-truth field to 181/600 and put local projection in a separate acceptance field; updated the regression test to assert the new scoped approval. Final run 12/12 PASS."
+  },
+  "owner_approved_acceptance_receipt": "/private/tmp/ho600-final-admission-2026-10-31/owner-approved-acceptance-receipt.json",
+  "canonical_workbook_modified": false,
+  "intermediate_test_attempts_note": "After scoped approval, two intermediate 12-case runs each exposed one stale pre-approval assertion: first, the canonical count field had local-preview text; second, the candidate note still said not to count the HSR backfills. The canonical field is now 181/600 with local projection separate, the candidate note records the scoped approval, and the existing regression asserts approval plus unchanged 8/8 cap. Final suite passed 12/12; no threshold was relaxed.",
+  "owner_approval_scope": "Only LEG-EC-041 and LEG-EC-042; verified 2020 backfills; no added Candidate Pool concepts; 嘟嘟房 cap remains 8/8; no general exception.",
+  "local_exact_acceptance_projection": 199,
+  "main_formal_exact_current": "181/600"
 }

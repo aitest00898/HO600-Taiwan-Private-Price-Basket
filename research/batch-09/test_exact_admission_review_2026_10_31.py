@@ -112,7 +112,8 @@ class ExactAdmissionReviewTests(unittest.TestCase):
             self.assertEqual(matrix[rid]["candidate_pool_delta_if_admitted"], "0")
             self.assertIn("不增加", matrix[rid]["brand_or_subcategory_count_after"])
         self.assertIn("8/8", by_id["B09-C08-016"]["concentration_and_source_caps"])
-        self.assertIn("do not count", by_id["B09-C08-016"]["formal_status_note"].lower())
+        self.assertIn("owner approved on 2026-10-31", by_id["B09-C08-016"]["formal_status_note"].lower())
+        self.assertIn("cap remains 8/8", by_id["B09-C08-016"]["formal_status_note"].lower())
         self.assertIn("BRAND_CAP", matrix["B09-C08-016"]["preflight_state"])
 
     def test_hsr_pool_concepts_each_have_one_unfilled_2020_price_pair(self):
@@ -203,12 +204,17 @@ class ExactAdmissionReviewTests(unittest.TestCase):
         new_ids = {r["proposed_candidate_id"] for r in self.candidates if r["candidate_type"] == "NEW_CONCEPT"}
         self.assertFalse(new_ids & set(ids))
 
-    def test_projection_is_conditional_and_canonical_status_unchanged(self):
+    def test_scoped_owner_approval_updates_local_projection_without_canonical_change(self):
         self.assertEqual(self.summary["formal_exact_current"], "181/600")
         self.assertEqual(self.summary["formal_exact_delta_if_all_candidates_admitted"], 18)
         self.assertEqual(self.summary["formal_exact_projected_if_all_admitted"], 199)
         self.assertEqual(self.summary["formal_exact_projected_if_hsr_backfills_blocked_by_brand_freeze"], 197)
-        self.assertEqual(self.summary["existing_pool_backfills_with_formal_brand_cap_condition"], 2)
+        self.assertEqual(self.summary["scoped_owner_approved_existing_pool_backfills"], 2)
+        final = self.summary["final_formal_adjudication"]
+        self.assertEqual(final["decision_counts"]["READY_UNDER_EXISTING_POLICY"], 18)
+        self.assertEqual(final["decision_counts"]["REQUIRES_OWNER_POLICY_DECISION"], 0)
+        self.assertEqual(final["basket_selected"], 0)
+        self.assertIn("no new Candidate Pool concepts", final["owner_approval"])
         self.assertFalse(self.summary["canonical_workbook_modified"])
         self.assertEqual(self.summary["basket"], "NOT SEALED")
         self.assertEqual(self.summary["index"], "LOCKED")
