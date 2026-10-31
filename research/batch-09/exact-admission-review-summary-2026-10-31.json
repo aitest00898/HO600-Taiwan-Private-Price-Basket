@@ -67,5 +67,37 @@
   "formal_exact_delta_if_hsr_backfills_blocked_by_brand_freeze": 16,
   "formal_exact_projected_if_hsr_backfills_blocked_by_brand_freeze": 197,
   "formal_shortfall_if_hsr_backfills_blocked_by_brand_freeze": 403,
-  "formal_admission_condition": "The two THSRC price pairs are complete and backfill existing pool concepts without a pool-count increase, but 嘟嘟房 is at 8/8 brand cap. Authorized reviewer must determine whether these existing-concept backfills are grandfathered under KEEP LEGACY / FREEZE NEW before counting them as Exact. The local WIP workbook has Basket_600 selected=0 and contains no row-level roster identifying which of the 181 current Exact concepts are selected; final increment must be reconciled by the authorized reviewer."
+  "formal_admission_condition": "The two THSRC price pairs are complete and backfill existing pool concepts without a pool-count increase, but 嘟嘟房 is at 8/8 brand cap. Authorized reviewer must determine whether these existing-concept backfills are grandfathered under KEEP LEGACY / FREEZE NEW before counting them as Exact. The local WIP workbook has Basket_600 selected=0 and contains no row-level roster identifying which of the 181 current Exact concepts are selected; final increment must be reconciled by the authorized reviewer.",
+  "final_formal_adjudication": {
+    "recorded_at_utc": "2026-10-31T01:17:12+00:00",
+    "baseline_prequalified_exact": 181,
+    "canonical_candidate_pool_concepts": 418,
+    "canonical_evidence_rows": 1566,
+    "basket_selected": 0,
+    "basket_status": "NOT SEALED",
+    "index_status": "LOCKED",
+    "decision_counts": {
+      "READY_UNDER_EXISTING_POLICY": 16,
+      "REQUIRES_OWNER_POLICY_DECISION": 2,
+      "NEEDS_ADDITIONAL_EVIDENCE": 0,
+      "REJECT": 0
+    },
+    "ready_under_existing_policy_exact_projection": 197,
+    "projection_if_both_hsr_upgrades_are_approved": 199,
+    "candidate_pool_concept_additions_ready": 16,
+    "hsr_existing_concept_backfills_pending_owner_decision": 2,
+    "main_top5_brand_total_before_and_after_ready_package": "56/40; legacy overage +16; unchanged under ready package",
+    "main_top10_brand_total_before_and_after_ready_package": "85/60; legacy overage +25; unchanged under ready package",
+    "hsr_policy_issue": "Existing LEG-EC-041/042 Candidate Pool concepts add no economic concepts (pool delta 0), but move current-only→Exact. Existing docs cap new admissions at brand 8 and specify KEEP LEGACY / FREEZE NEW, while research workflow prioritizes upgrading current-only concepts; no explicit backfill exemption resolves whether these two count as new admissions. Owner decision required; brand cap remains in force.",
+    "selected_price_source_receipts": 22,
+    "strict_tls_http_200_sha256_matched_receipts": 22,
+    "canonical_workbook_modified": false,
+    "github_actions_used": false,
+    "main_modified": false,
+    "legacy_group_concentration_review": {
+      "exact_roster_rows_with_UNRESOLVED_corporate_group_field": 135,
+      "target_proposal_group_check": "Incoming target group identities were verified and relevant current Exact aliases reviewed; each target group remains below 16, with CHT canonical-pool total 11/16 and Dudu full-pool total 8/16.",
+      "global_181_corporate_group_census": "PARTIAL: 135 baseline corporate_group fields are unresolved, so a complete unrelated-group census cannot be claimed. This does not identify a target-group overlap, but is retained as a limitation."
+    }
+  }
 }

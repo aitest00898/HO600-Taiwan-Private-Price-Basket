@@ -1,6 +1,6 @@
 {
-  "recorded_at_utc": "2026-10-31T00:42:00Z",
-  "base_head": "b2a4f8bb567b384b0ae27f611ffd3f7eaa958828",
+  "recorded_at_utc": "2026-10-31T01:18:14+00:00",
+  "base_head": "4e7eaedb157450492a0859a1fe670db8199f2872",
   "branch": "research/batch-09",
   "tests": [
     {
@@ -26,39 +26,46 @@
       "observed": {
         "fixed_ledger_rows": 160,
         "unique_research_ids": 160,
-        "preaudit_status_counts_before_second_pass": {
-          "EXACT_READY_CANDIDATE": 2,
-          "RESEARCH_ONLY": 127,
-          "NEEDS_EVIDENCE": 30,
-          "HOLD": 1
-        },
-        "unresolved_group_labels_after_group_recheck": 68,
         "validation": "PASS",
-        "corporate_group_counts_after_crosswalk": {
-          "PILOT_CORPORATION_GROUP": 5,
-          "CHT_GROUP": 6,
-          "COSTCO_GROUP": 4,
-          "FAMILYMART_GROUP": 4,
-          "UNIPRESIDENT_GROUP": 13,
-          "APPLE_INC": 2,
-          "PEPSICO_GROUP": 2,
-          "DECATHLON_GROUP": 5,
-          "COCA_COLA_GROUP": 2,
-          "ALTICOR_AMWAY_GROUP": 3,
-          "CHUNGHSIN_GROUP": 2
+        "unresolved_group_labels": 68
+      }
+    },
+    {
+      "command": "independent final-adjudication CSV and source-receipt assertions (one-off Python audit)",
+      "cases": null,
+      "passed": null,
+      "failed": 0,
+      "exit_code": 0,
+      "observed": {
+        "rows": 18,
+        "unique_research_ids": 18,
+        "unique_candidate_ids": 18,
+        "decision_counts": {
+          "READY_UNDER_EXISTING_POLICY": 16,
+          "REQUIRES_OWNER_POLICY_DECISION": 2,
+          "NEEDS_ADDITIONAL_EVIDENCE": 0,
+          "REJECT": 0
         },
-        "hsr_existing_pool_gaps": {
-          "LEG-EC-042": {
-            "candidate_pool_rows": 1,
-            "2020_evidence_rows": 0,
-            "duplicated_2026_records_same_quote": 2
-          },
-          "LEG-EC-041": {
-            "candidate_pool_rows": 1,
-            "2020_evidence_rows": 0,
-            "duplicated_2026_records_same_quote": 2
-          }
-        }
+        "unique_used_price_source_receipts": 22,
+        "all_used_receipts_http_200_strict_tls_sha256_match": true,
+        "max_2020_source_uses_in_package": 4,
+        "main_exact_baseline": 181,
+        "main_candidate_pool": 418,
+        "main_evidence_rows": 1566,
+        "top5_baseline": 56,
+        "top10_baseline": 85,
+        "comparability_grades": {
+          "A": 16,
+          "B": 2
+        },
+        "evidence_grades_2020_2026": "A/A for all 18",
+        "canonical_candidate_pool_ids_unique": true,
+        "canonical_evidence_ids_unique": true,
+        "main_top5_brand_total": "56/40 (+16 legacy)",
+        "main_top10_brand_total": "85/60 (+25 legacy)",
+        "proposal_2020_sources_already_used_in_main_181": "0/18",
+        "unresolved_corporate_group_fields_in_main_exact_181": 135,
+        "target_group_checks": "all six incoming group labels verified; proposal-related counts remain within 16; global unrelated-group census partial"
       }
     }
   ],
@@ -93,5 +100,39 @@
     "current_181_item_level_roster_in_wip_workbook": "NOT_PRESENT; Basket_600 Selected concepts=0"
   },
   "python_artifact_tool_environment": "NOT_RESOLVED; not required for the JavaScript workbook-copy preflight and not changed in this task.",
-  "test_attempt_note": "Two preliminary failures were brittle assertions in the newly added test (wording/state-token expectation), not data-validation failures. Assertions were aligned to the recorded policy text; final review suite is 11/11."
+  "test_attempt_note": "Two preliminary failures were brittle assertions in the newly added test (wording/state-token expectation), not data-validation failures. Assertions were aligned to the recorded policy text; final review suite is 11/11.",
+  "final_workbook_scenarios": [
+    {
+      "scenario": "all 18 evidence-complete rows",
+      "path": "/private/tmp/ho600-final-admission-2026-10-31/isolated-preview.xlsx",
+      "sha256": "201497790622cce470b0fff75d3f94bf762e816a9cb0ec405aaff7d3be111a3f",
+      "bytes": 321891,
+      "exact_projection": 199,
+      "candidate_pool_rows": 434,
+      "evidence_rows": 1600,
+      "basket_selected": 0,
+      "basket_status": "NOT SEALED",
+      "index_status": "LOCKED",
+      "export_reimport_matrices_identical": true,
+      "source_receipts_strict_tls_http200_sha256_match": true
+    },
+    {
+      "scenario": "16 READY only; HSR withheld for owner policy",
+      "path": "/private/tmp/ho600-final-admission-2026-10-31/isolated-preview-16-only.xlsx",
+      "sha256": "0afa5c044f4e9302170f7b21b92d4c0e1088f7edb12cf62943c2d47be8f4cb94",
+      "bytes": 321380,
+      "exact_projection": 197,
+      "candidate_pool_rows": 434,
+      "evidence_rows": 1598,
+      "basket_selected": 0,
+      "basket_status": "NOT SEALED",
+      "index_status": "LOCKED",
+      "export_reimport_matrices_identical": true,
+      "source_receipts_strict_tls_http200_sha256_match": true
+    }
+  ],
+  "final_adjudication_artifact": "research/batch-09/exact-admission-final-adjudication-2026-10-31.csv",
+  "main_unchanged": true,
+  "github_actions_used": false,
+  "global_concentration_scope_note": "Target proposal groups and top-five/top-ten brand totals were reconciled. 135 of 181 incumbent Candidate_Pool corporate_group fields remain UNRESOLVED, so a complete corporate-group census across unrelated legacy concepts is not claimed."
 }
