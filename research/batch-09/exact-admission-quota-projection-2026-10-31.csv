@@ -1,0 +1,9 @@
+﻿domain,subcategory,baseline_new_exact_needed,exact_ready_additions,projected_remaining_if_all_admitted,candidate_pool_concept_change,status
+日常／個人,個人數位／會員服務,7,2,5,2,PROJECTION_ONLY_NOT_FORMAL
+行,停車,11,2,9,0,PROJECTION_ONLY_NOT_FORMAL; both HSR backfills conditional on brand-cap interpretation
+日常／個人,其他日常服務,7,1,6,1,PROJECTION_ONLY_NOT_FORMAL
+育,文具,9,5,4,5,PROJECTION_ONLY_NOT_FORMAL
+住／家用,清潔／洗衣用品,11,3,8,3,PROJECTION_ONLY_NOT_FORMAL
+住／家用,網路／通訊固定服務,11,5,6,5,PROJECTION_ONLY_NOT_FORMAL
+行,民營交通服務,2,0,2,0,NO_QUALIFYING_TARGET_CANDIDATE
+樂,樂園／休閒,2,0,2,0,NO_QUALIFYING_TARGET_CANDIDATE

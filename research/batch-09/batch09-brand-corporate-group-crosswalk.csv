@@ -2,7 +2,7 @@
 7-ELEVEN,UNIPRESIDENT_GROUP,VERIFIED_CONSOLIDATED_GROUP,Prior Batch 9 ownership reconciliation; Uni-President 2020 annual report: https://ir.sp88.tw/upload/file/fin_202312140946486458.pdf
 ARM & HAMMER,UNRESOLVED::ARM & HAMMER,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
 American Heritage,UNRESOLVED::American Heritage,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
-Apple,UNRESOLVED::Apple,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
+Apple,APPLE_INC,VERIFIED_CONSOLIDATED_GROUP,Apple official style guide states the company legal name is Apple Inc.; Apple One concepts are Apple-branded subscriptions; source receipt SRC-20261031-GROUP-APPLE: https://help.apple.com/pdf/applestyleguide/en_US/apple-style-guide.pdf
 COSMED 康是美,UNRESOLVED::COSMED 康是美,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
 Coca-Cola 可口可樂,COCA_COLA_GROUP,VERIFIED_CONSOLIDATED_GROUP,Official Taiwan Coca-Cola brand site: https://www.coca-cola.com/tw/
 Colgate 高露潔,UNRESOLVED::Colgate 高露潔,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
@@ -36,7 +36,7 @@ MyVideo,UNRESOLVED::MyVideo,UNRESOLVED_SINGLETON,No cross-brand consolidation as
 NESTLÉ 雀巢,UNRESOLVED::NESTLÉ 雀巢,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
 NIID,UNRESOLVED::NIID,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
 Nature's Touch,UNRESOLVED::Nature's Touch,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
-PILOT,UNRESOLVED::PILOT,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
+PILOT,PILOT_CORPORATION_GROUP,VERIFIED_CONSOLIDATED_GROUP,PILOT official Group Companies page and corporate profile identify PILOT CORPORATION as the group source; source receipt SRC-20261031-GROUP-PILOT: https://corp.pilot.co.jp/english/company/group/
 QUECHUA 迪卡儂,DECATHLON_GROUP,VERIFIED_CONSOLIDATED_GROUP,Official Taiwan brand/store: https://www.decathlon.tw/
 SERENA 喜年來,UNRESOLVED::SERENA 喜年來,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
 Steam（Valve）,UNRESOLVED::Steam（Valve）,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
@@ -61,7 +61,7 @@ lativ,UNRESOLVED::lativ,UNRESOLVED_SINGLETON,No cross-brand consolidation assert
 壹 Hair Salon（Annli／安莉）,UNRESOLVED::壹 Hair Salon（Annli／安莉）,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
 奇美博物館,UNRESOLVED::奇美博物館,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
 威秀影城,UNRESOLVED::威秀影城,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
-安麗 Amway Home,UNRESOLVED::安麗 Amway Home,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
+安麗 Amway Home,ALTICOR_AMWAY_GROUP,VERIFIED_CONSOLIDATED_GROUP,Amway Global official leadership page states Alticor is parent company of Amway; source receipt SRC-20261031-GROUP-AMWAY: https://www.amwayglobal.com/leadership-team/david-van-andel/
 小人國主題樂園,UNRESOLVED::小人國主題樂園,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.
 左岸咖啡館,UNIPRESIDENT_GROUP,VERIFIED_CONSOLIDATED_GROUP,Prior Batch 9 ownership reconciliation; Uni-President 2020 annual report: https://ir.sp88.tw/upload/file/fin_202312140946486458.pdf
 康乃馨 Carnation,UNRESOLVED::康乃馨 Carnation,UNRESOLVED_SINGLETON,No cross-brand consolidation asserted in this preaudit; exact ledger label retained. Parent-group ownership remains unverified.

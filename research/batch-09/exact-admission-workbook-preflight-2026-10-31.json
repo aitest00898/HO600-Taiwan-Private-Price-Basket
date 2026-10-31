@@ -1,0 +1,52 @@
+{
+  "recorded_at_utc": "2026-10-31T00:35:06Z",
+  "branch": "research/batch-09",
+  "base_head": "b2a4f8bb567b384b0ae27f611ffd3f7eaa958828",
+  "workbook_tool": {
+    "runtime": "Node.js v24.22.1",
+    "package": "@oai/artifact-tool",
+    "version": "2.8.106",
+    "workflow": "import original XLSX, write preview-only candidate/evidence rows, recalculate, export XLSX, reimport, read back"
+  },
+  "canonical_workbook": {
+    "path": "/Users/joe/Documents/Codex/2026-10-17/github-aitest00898-ho600-taiwan-private-price/work/ho600-git-checkout/workbook/HO600-WIP_shortfall-search_batch8.xlsx",
+    "sha256": "c01bce376e45e715d9b8eac4f353c61d20b5973e1e1c4e32f90a6e512bed40b9",
+    "bytes": 314235,
+    "worksheet_xml_count": 7,
+    "formula_cells": 0
+  },
+  "isolated_preview_workbook": {
+    "path": "/private/tmp/ho600-b09-exact-evidence-2026-10-31/isolated-preflight.xlsx",
+    "sha256": "b3089a1fa8c847e7843ca542fdd08a69b3bb5ed8fa968a48ac8329f07638bb97",
+    "bytes": 321097,
+    "worksheet_xml_count": 7,
+    "formula_cells": 0
+  },
+  "preview_checks": {
+    "canonical_sha_unchanged_from_baseline": "c01bce376e45e715d9b8eac4f353c61d20b5973e1e1c4e32f90a6e512bed40b9",
+    "canonical_workbook_modified": false,
+    "preview_outside_repository": true,
+    "candidate_pool_concepts_before": 418,
+    "candidate_pool_concepts_after": 434,
+    "new_proposed_concepts": 16,
+    "existing_pool_backfills": 2,
+    "evidence_records_before": 1566,
+    "evidence_records_after": 1600,
+    "new_preview_evidence_records": 34,
+    "candidate_ids_unique_after_export_reimport": true,
+    "evidence_record_ids_unique_after_export_reimport": true,
+    "preview_evidence_marked_RESEARCH_PREVIEW_and_PREVIEW_ONLY_NOT_ADMITTED": true,
+    "basket_status": "NOT SEALED",
+    "basket_selected": 0,
+    "price_reveal": "LOCKED",
+    "index_status": "LOCKED",
+    "formula_cells_before": 0,
+    "formula_cells_after": 0,
+    "seven_worksheet_names_preserved": true,
+    "exit_code": 0,
+    "conditional_formal_exact_increment_if_hsr_backfills_frozen": 16,
+    "maximum_conditional_formal_exact_increment_if_hsr_backfills_approved": 18,
+    "hsr_brand_cap_condition": "嘟嘟房 brand count is 8/8; pool concepts do not increase, but formal admission remains subject to authorized KEEP LEGACY / FREEZE NEW determination."
+  },
+  "scope_note": "The preview adds historical evidence to existing LEG-EC-041/042 and 16 proposed pool concepts only in a /private/tmp copy. It makes no canonical admission and does not update 181/600."
+}

@@ -1,0 +1,97 @@
+{
+  "recorded_at_utc": "2026-10-31T00:42:00Z",
+  "base_head": "b2a4f8bb567b384b0ae27f611ffd3f7eaa958828",
+  "branch": "research/batch-09",
+  "tests": [
+    {
+      "command": "python3 -m unittest discover -s research/batch-09 -p 'test_validate_batch09_exact_preaudit.py' -v",
+      "cases": 21,
+      "passed": 21,
+      "failed": 0,
+      "exit_code": 0
+    },
+    {
+      "command": "python3 -m unittest discover -s research/batch-09 -p 'test_exact_admission_review_2026_10_31.py' -v",
+      "cases": 12,
+      "passed": 12,
+      "failed": 0,
+      "exit_code": 0
+    },
+    {
+      "command": "python3 research/batch-09/validate_batch09_exact_preaudit.py",
+      "cases": null,
+      "passed": null,
+      "failed": 0,
+      "exit_code": 0,
+      "observed": {
+        "fixed_ledger_rows": 160,
+        "unique_research_ids": 160,
+        "preaudit_status_counts_before_second_pass": {
+          "EXACT_READY_CANDIDATE": 2,
+          "RESEARCH_ONLY": 127,
+          "NEEDS_EVIDENCE": 30,
+          "HOLD": 1
+        },
+        "unresolved_group_labels_after_group_recheck": 68,
+        "validation": "PASS",
+        "corporate_group_counts_after_crosswalk": {
+          "PILOT_CORPORATION_GROUP": 5,
+          "CHT_GROUP": 6,
+          "COSTCO_GROUP": 4,
+          "FAMILYMART_GROUP": 4,
+          "UNIPRESIDENT_GROUP": 13,
+          "APPLE_INC": 2,
+          "PEPSICO_GROUP": 2,
+          "DECATHLON_GROUP": 5,
+          "COCA_COLA_GROUP": 2,
+          "ALTICOR_AMWAY_GROUP": 3,
+          "CHUNGHSIN_GROUP": 2
+        },
+        "hsr_existing_pool_gaps": {
+          "LEG-EC-042": {
+            "candidate_pool_rows": 1,
+            "2020_evidence_rows": 0,
+            "duplicated_2026_records_same_quote": 2
+          },
+          "LEG-EC-041": {
+            "candidate_pool_rows": 1,
+            "2020_evidence_rows": 0,
+            "duplicated_2026_records_same_quote": 2
+          }
+        }
+      }
+    }
+  ],
+  "review_outputs": {
+    "matrix_rows": 22,
+    "exact_ready_candidates": 18,
+    "existing_candidate_pool_backfills": 2,
+    "new_proposed_concepts": 16,
+    "a_a_a_rows_rechecked": 17,
+    "a_a_a_new_exact_ready": 16,
+    "a_a_a_research_only": 1,
+    "needs_evidence_rows_triaged": 30,
+    "targeted_followups_retained_needs_evidence": 3,
+    "other_rows_not_retried": 27,
+    "source_receipts": 45,
+    "successful_http_200_capture_files_hash_verified": 40,
+    "new_concept_candidates_with_current_caps_clear": 16,
+    "existing_pool_backfills_with_formal_brand_cap_condition": 2,
+    "new_exact_review_tests_passed": 12,
+    "new_exact_review_tests_total": 12
+  },
+  "formal_status": {
+    "exact": "181/600",
+    "basket": "NOT SEALED",
+    "index": "LOCKED",
+    "candidate_pool": 418,
+    "canonical_workbook_sha256": "c01bce376e45e715d9b8eac4f353c61d20b5973e1e1c4e32f90a6e512bed40b9",
+    "canonical_workbook_modified": false,
+    "conditional_projection_if_all_18_approved": "199/600",
+    "conditional_projection_if_hsr_backfills_frozen": "197/600",
+    "hsr_brand_cap_condition": "嘟嘟房 8/8; confirm KEEP LEGACY / FREEZE NEW interpretation before counting either existing-pool backfill as new Exact.",
+    "current_181_item_level_roster_in_wip_workbook": "NOT_PRESENT; Basket_600 Selected concepts=0"
+  },
+  "python_artifact_tool_environment": "NOT_RESOLVED; not required for the JavaScript workbook-copy preflight and not changed in this task.",
+  "test_attempt_note": "Two preliminary failures were brittle assertions in the newly added test (wording/state-token expectation), not data-validation failures. Assertions were aligned to the recorded policy text; final review suite is 11/11."
+}
