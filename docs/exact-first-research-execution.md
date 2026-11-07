@@ -44,6 +44,13 @@ Run on the same canonical checkout, without network or GitHub Actions:
 
 The queue is written to stdout, not to main Candidate_Pool. A stored output snapshot is in research/batch-10/2026-11-07-price-blind-backfill-queue.csv; an evidence/probe register (which can contain prices, **separate from candidate selection**) is in research/batch-10/2026-11-07-source-probes.csv. No new CI workflow.
 
+For a later research batch, avoid re-issuing previously queued/probed candidate IDs by passing the saved files explicitly (the exclusion file must have a `candidate_id` header):
+
+    python3 scripts/triage_exact_backfill.py --repo-root . --limit 30 \
+      --exclude-csv research/batch-10/2026-11-07-price-blind-backfill-queue.csv
+
+Multiple `--exclude-csv` arguments may be supplied. The default command intentionally reproduces the first-batch snapshot; exclusions affect research ordering only and do not change eligibility or formal admission.
+
 ## Measure actual throughput
 
 - 正式新增 Exact 數量／來源 QA 完成的正式候選數（分母必須相同口徑）。
