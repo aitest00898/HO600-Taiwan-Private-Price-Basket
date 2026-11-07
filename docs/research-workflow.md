@@ -26,3 +26,15 @@ Internal QC does not update canonical progress or force an export.
 ## Batch close
 
 A large batch normally closes around +75–100 high-quality Exact concepts, or earlier/later when marginal evidence yield clearly justifies it. Do not lower admission thresholds to hit a target count.
+
+## Exact-first continuation (2026-11-07)
+
+The large research-checkpoint target of 75–100 is **not a prerequisite** for a formal review package. Review 5–20 fully evidenced Exact candidates when available, then apply the unchanged canonical workbook export/reimport, source/identity, concentration, and approval gates. Never inflate the formal tally with research-only pairs.
+
+For reproducible, price-blind prioritization of existing 2026-current-only candidates in underfilled subcategories:
+
+```bash
+python3 scripts/triage_exact_backfill.py --repo-root . --limit 30
+```
+
+See [Exact-first execution](exact-first-research-execution.md) and the held source probes under `research/batch-10/`. Research priority is based on missing historical evidence, structural shortfall and item identity; never on observed inflation magnitude. Existing Batch 9 fixed ledgers remain immutable; the authoritative formal status is still maintained in the canonical workbook on `main`.
