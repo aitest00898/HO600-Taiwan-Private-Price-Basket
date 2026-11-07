@@ -74,7 +74,7 @@ class BackfillQueueTests(unittest.TestCase):
         self.assertEqual(len(rows), 30)
         self.assertEqual(len({r["candidate_id"] for r in rows}), 30)
         self.assertTrue(all(r["subcategory_remaining_gap"] > 0 for r in rows))
-        self.assertEqual(len(quota), 57)  # 2026-10-31 post-Batch-9 snapshot
+        self.assertEqual(len(quota), 50)  # 2026-10-31 post-Batch-9 subcategory rows
 
 
 if __name__ == "__main__":
